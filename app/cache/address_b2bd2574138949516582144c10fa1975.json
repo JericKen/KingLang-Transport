@@ -1,0 +1,276 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Swiss-Belhotel Blulane, Tomas Mapua Street, Santa Cruz, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ5QqY3ATKlzMR7Mtn3WoxCjo",
+         "reference" : "ChIJ5QqY3ATKlzMR7Mtn3WoxCjo",
+         "structured_formatting" : 
+         {
+            "main_text" : "Swiss-Belhotel Blulane",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Tomas Mapua Street, Santa Cruz, Manila, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Swiss-Belhotel Blulane"
+            },
+            {
+               "offset" : 24,
+               "value" : "Tomas Mapua Street"
+            },
+            {
+               "offset" : 44,
+               "value" : "Santa Cruz"
+            },
+            {
+               "offset" : 56,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 64,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 78,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Swissôtel Clark Philippines, Angeles, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJraT4uaCTljMRGuhkHnyTlhM",
+         "reference" : "ChIJraT4uaCTljMRGuhkHnyTlhM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Swissôtel Clark Philippines",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Angeles, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Swissôtel Clark Philippines"
+            },
+            {
+               "offset" : 29,
+               "value" : "Angeles"
+            },
+            {
+               "offset" : 38,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 48,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Swiss Resort, Aguinaldo Highway, Dasmariñas, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJcepq2KnVlzMRZL1mDuMSMRE",
+         "reference" : "ChIJcepq2KnVlzMRZL1mDuMSMRE",
+         "structured_formatting" : 
+         {
+            "main_text" : "Swiss Resort",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Aguinaldo Highway, Dasmariñas, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Swiss Resort"
+            },
+            {
+               "offset" : 14,
+               "value" : "Aguinaldo Highway"
+            },
+            {
+               "offset" : 33,
+               "value" : "Dasmariñas"
+            },
+            {
+               "offset" : 45,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 53,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Swire Elan Suites Condominium Corporation, Annapolis Street, San Juan City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJw8XWe963lzMRO9H_AlknVwM",
+         "reference" : "ChIJw8XWe963lzMRO9H_AlknVwM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Swire Elan Suites Condominium Corporation",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Annapolis Street, San Juan City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Swire Elan Suites Condominium Corporation"
+            },
+            {
+               "offset" : 43,
+               "value" : "Annapolis Street"
+            },
+            {
+               "offset" : 61,
+               "value" : "San Juan City"
+            },
+            {
+               "offset" : 76,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 90,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Switch Coffee, Tolentino Street, Sampaloc, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJD-SsegDLlzMR1HhJq9pHV38",
+         "reference" : "ChIJD-SsegDLlzMR1HhJq9pHV38",
+         "structured_formatting" : 
+         {
+            "main_text" : "Switch Coffee",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Tolentino Street, Sampaloc, Manila, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Switch Coffee"
+            },
+            {
+               "offset" : 15,
+               "value" : "Tolentino Street"
+            },
+            {
+               "offset" : 33,
+               "value" : "Sampaloc"
+            },
+            {
+               "offset" : 43,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 51,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "cafe",
+            "establishment",
+            "food",
+            "point_of_interest",
+            "store"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,0 +1,265 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "C Star Travellers Inn RedPartner, Oslob, Cebu, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 32,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJk_sV9PN1qzMR8lKxVRmqVDE",
+         "reference" : "ChIJk_sV9PN1qzMR8lKxVRmqVDE",
+         "structured_formatting" : 
+         {
+            "main_text" : "C Star Travellers Inn RedPartner",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 32,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Oslob, Cebu, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "C Star Travellers Inn RedPartner"
+            },
+            {
+               "offset" : 34,
+               "value" : "Oslob"
+            },
+            {
+               "offset" : 41,
+               "value" : "Cebu"
+            },
+            {
+               "offset" : 47,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Castanas, Sariaya, Quezon, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJMQNzwhNKvTMRoAylAVWSj78",
+         "reference" : "ChIJMQNzwhNKvTMRoAylAVWSj78",
+         "structured_formatting" : 
+         {
+            "main_text" : "Castanas",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Sariaya, Quezon, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Castanas"
+            },
+            {
+               "offset" : 10,
+               "value" : "Sariaya"
+            },
+            {
+               "offset" : 19,
+               "value" : "Quezon"
+            },
+            {
+               "offset" : 27,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "CSTA LIBRARY REPROGRAPHICS, Quirino Highway, Novaliches, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJhW9NojSxlzMR652avYCkVPE",
+         "reference" : "ChIJhW9NojSxlzMR652avYCkVPE",
+         "structured_formatting" : 
+         {
+            "main_text" : "CSTA LIBRARY REPROGRAPHICS",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Quirino Highway, Novaliches, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "CSTA LIBRARY REPROGRAPHICS"
+            },
+            {
+               "offset" : 28,
+               "value" : "Quirino Highway"
+            },
+            {
+               "offset" : 45,
+               "value" : "Novaliches"
+            },
+            {
+               "offset" : 57,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 70,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 84,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Buli brgy.castañas sariaya quezon, Bypass Road, Sariaya, Quezon, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 33,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJMSuSfqVLvTMRCLAPQKc7XtA",
+         "reference" : "ChIJMSuSfqVLvTMRCLAPQKc7XtA",
+         "structured_formatting" : 
+         {
+            "main_text" : "Buli brgy.castañas sariaya quezon",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 33,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bypass Road, Sariaya, Quezon, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Buli brgy.castañas sariaya quezon"
+            },
+            {
+               "offset" : 35,
+               "value" : "Bypass Road"
+            },
+            {
+               "offset" : 48,
+               "value" : "Sariaya"
+            },
+            {
+               "offset" : 57,
+               "value" : "Quezon"
+            },
+            {
+               "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Cstan Merchandising Corp., Talomo, Davao City, Davao del Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ0aDczSlt-TIRKtfaJhtctbk",
+         "reference" : "ChIJ0aDczSlt-TIRKtfaJhtctbk",
+         "structured_formatting" : 
+         {
+            "main_text" : "Cstan Merchandising Corp.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Talomo, Davao City, Davao del Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Cstan Merchandising Corp."
+            },
+            {
+               "offset" : 27,
+               "value" : "Talomo"
+            },
+            {
+               "offset" : 35,
+               "value" : "Davao City"
+            },
+            {
+               "offset" : 47,
+               "value" : "Davao del Sur"
+            },
+            {
+               "offset" : 62,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

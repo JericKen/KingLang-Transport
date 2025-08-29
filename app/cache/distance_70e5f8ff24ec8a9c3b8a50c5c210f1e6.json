@@ -1,0 +1,48 @@
+{
+   "destination_addresses" : 
+   [
+      "",
+      "Maligaya St, Quezon City, Metro Manila, Philippines"
+   ],
+   "origin_addresses" : 
+   [
+      "Maligaya St, Quezon City, Metro Manila, Philippines",
+      ""
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "status" : "NOT_FOUND"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "status" : "NOT_FOUND"
+            },
+            {
+               "status" : "NOT_FOUND"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,0 +1,266 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "KingLang Tours and Transport Services Inc., M. L. Quezon Avenue, Lower Bicutan, Taguig, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJb6l52BbPlzMRcLRMZWqJQMU",
+         "reference" : "ChIJb6l52BbPlzMRcLRMZWqJQMU",
+         "structured_formatting" : 
+         {
+            "main_text" : "KingLang Tours and Transport Services Inc.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "M. L. Quezon Avenue, Lower Bicutan, Taguig, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "KingLang Tours and Transport Services Inc."
+            },
+            {
+               "offset" : 44,
+               "value" : "M. L. Quezon Avenue"
+            },
+            {
+               "offset" : 65,
+               "value" : "Lower Bicutan"
+            },
+            {
+               "offset" : 80,
+               "value" : "Taguig"
+            },
+            {
+               "offset" : 88,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 102,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Kingland Hopia, Mampang - Arena Blanco Road, Zamboanga City, Zamboanga del Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJu882NZ1DUDIR9JbiqLN5CEs",
+         "reference" : "ChIJu882NZ1DUDIR9JbiqLN5CEs",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kingland Hopia",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 14,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Mampang - Arena Blanco Road, Zamboanga City, Zamboanga del Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kingland Hopia"
+            },
+            {
+               "offset" : 16,
+               "value" : "Mampang - Arena Blanco Road"
+            },
+            {
+               "offset" : 45,
+               "value" : "Zamboanga City"
+            },
+            {
+               "offset" : 61,
+               "value" : "Zamboanga del Sur"
+            },
+            {
+               "offset" : 80,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Three Kings Safari Purifies Drinking Water, Candon City, Ilocos Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 6
+            }
+         ],
+         "place_id" : "ChIJBdYvxkAXjjMRj5WrjrSkmxI",
+         "reference" : "ChIJBdYvxkAXjjMRj5WrjrSkmxI",
+         "structured_formatting" : 
+         {
+            "main_text" : "Three Kings Safari Purifies Drinking Water",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 6
+               }
+            ],
+            "secondary_text" : "Candon City, Ilocos Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Three Kings Safari Purifies Drinking Water"
+            },
+            {
+               "offset" : 44,
+               "value" : "Candon City"
+            },
+            {
+               "offset" : 57,
+               "value" : "Ilocos Sur"
+            },
+            {
+               "offset" : 69,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "King's Coffee Green Breeze, Langkaan 2, Dasmariñas, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 26,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJN4XlVl3VlzMRQDWIdLyjLFo",
+         "reference" : "ChIJN4XlVl3VlzMRQDWIdLyjLFo",
+         "structured_formatting" : 
+         {
+            "main_text" : "King's Coffee Green Breeze",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 26,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Langkaan 2, Dasmariñas, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "King's Coffee Green Breeze"
+            },
+            {
+               "offset" : 28,
+               "value" : "Langkaan 2"
+            },
+            {
+               "offset" : 40,
+               "value" : "Dasmariñas"
+            },
+            {
+               "offset" : 52,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 60,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
+         "description" : "king's Apartments Dasmariñas, Dasmanriñas, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 28,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ3S1hkiLVlzMRoYfEIvWowh8",
+         "reference" : "ChIJ3S1hkiLVlzMRoYfEIvWowh8",
+         "structured_formatting" : 
+         {
+            "main_text" : "king's Apartments Dasmariñas",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 28,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Dasmanriñas, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "king's Apartments Dasmariñas"
+            },
+            {
+               "offset" : 30,
+               "value" : "Dasmanriñas"
+            },
+            {
+               "offset" : 43,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 51,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

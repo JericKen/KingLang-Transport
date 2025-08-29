@@ -1,0 +1,262 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Intramuros, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ--F1Ez3KlzMRCLrAWKa_ngQ",
+         "reference" : "ChIJ--F1Ez3KlzMRCLrAWKa_ngQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Intramuros",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Manila, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Intramuros"
+            },
+            {
+               "offset" : 12,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 20,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 34,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_1"
+         ]
+      },
+      {
+         "description" : "Intramuros, Intramuros, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJBdFqWD3KlzMR1UOCEG4QzGU",
+         "reference" : "ChIJBdFqWD3KlzMR1UOCEG4QzGU",
+         "structured_formatting" : 
+         {
+            "main_text" : "Intramuros",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Intramuros, Manila, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Intramuros"
+            },
+            {
+               "offset" : 12,
+               "value" : "Intramuros"
+            },
+            {
+               "offset" : 24,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 32,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 46,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Intersection MC Arthur Hotel, San Fernando, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJGYRtctv2ljMRlURGJE4cbuU",
+         "reference" : "ChIJGYRtctv2ljMRlURGJE4cbuU",
+         "structured_formatting" : 
+         {
+            "main_text" : "Intersection MC Arthur Hotel",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Fernando, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Intersection MC Arthur Hotel"
+            },
+            {
+               "offset" : 30,
+               "value" : "San Fernando"
+            },
+            {
+               "offset" : 44,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 54,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Intercity Industrial Complex, MacArthur Highway, Bocaue, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJJ6RGNkCtlzMRMPuGbzlaLYg",
+         "reference" : "ChIJJ6RGNkCtlzMRMPuGbzlaLYg",
+         "structured_formatting" : 
+         {
+            "main_text" : "Intercity Industrial Complex",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "MacArthur Highway, Bocaue, Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Intercity Industrial Complex"
+            },
+            {
+               "offset" : 30,
+               "value" : "MacArthur Highway"
+            },
+            {
+               "offset" : 49,
+               "value" : "Bocaue"
+            },
+            {
+               "offset" : 57,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 66,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "premise"
+         ]
+      },
+      {
+         "description" : "International School Manila (ISM), University Parkway, Taguig, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJo4vAEYvIlzMRSa1aQg_JP_U",
+         "reference" : "ChIJo4vAEYvIlzMRSa1aQg_JP_U",
+         "structured_formatting" : 
+         {
+            "main_text" : "International School Manila (ISM)",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "University Parkway, Taguig, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "International School Manila (ISM)"
+            },
+            {
+               "offset" : 35,
+               "value" : "University Parkway"
+            },
+            {
+               "offset" : 55,
+               "value" : "Taguig"
+            },
+            {
+               "offset" : 63,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 77,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

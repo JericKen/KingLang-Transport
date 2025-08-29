@@ -1,0 +1,250 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Batangas City, Batangas, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJE9AcTB0bvTMRdxFBDoIqWeQ",
+         "reference" : "ChIJE9AcTB0bvTMRdxFBDoIqWeQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Batangas City",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Batangas, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Batangas City"
+            },
+            {
+               "offset" : 15,
+               "value" : "Batangas"
+            },
+            {
+               "offset" : 25,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Batangas Port, Batangas Port Access Rd, Batangas City, Batangas, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJoe190EMFvTMRwNsHHaIgmxk",
+         "reference" : "ChIJoe190EMFvTMRwNsHHaIgmxk",
+         "structured_formatting" : 
+         {
+            "main_text" : "Batangas Port",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Batangas Port Access Rd, Batangas City, Batangas, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Batangas Port"
+            },
+            {
+               "offset" : 15,
+               "value" : "Batangas Port Access Rd"
+            },
+            {
+               "offset" : 40,
+               "value" : "Batangas City"
+            },
+            {
+               "offset" : 55,
+               "value" : "Batangas"
+            },
+            {
+               "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Batangas, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJEZspM4ISvTMRo_3ntNgZqaE",
+         "reference" : "ChIJEZspM4ISvTMRo_3ntNgZqaE",
+         "structured_formatting" : 
+         {
+            "main_text" : "Batangas",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Batangas"
+            },
+            {
+               "offset" : 10,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "administrative_area_level_2",
+            "geocode",
+            "political"
+         ]
+      },
+      {
+         "description" : "Batangas State University-Alangilan Campus, Batangas City, Batangas, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJAQAAAPEPvTMRHyGfViw8VW4",
+         "reference" : "ChIJAQAAAPEPvTMRHyGfViw8VW4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Batangas State University-Alangilan Campus",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Batangas City, Batangas, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Batangas State University-Alangilan Campus"
+            },
+            {
+               "offset" : 44,
+               "value" : "Batangas City"
+            },
+            {
+               "offset" : 59,
+               "value" : "Batangas"
+            },
+            {
+               "offset" : 69,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "university"
+         ]
+      },
+      {
+         "description" : "Batangas State University Pablo Borbon Main 1, Rizal Avenue, Poblacion, Batangas City, Batangas, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJT-mKLmsFvTMRGgpwX-eldyQ",
+         "reference" : "ChIJT-mKLmsFvTMRGgpwX-eldyQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Batangas State University Pablo Borbon Main 1",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Rizal Avenue, Poblacion, Batangas City, Batangas, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Batangas State University Pablo Borbon Main 1"
+            },
+            {
+               "offset" : 47,
+               "value" : "Rizal Avenue"
+            },
+            {
+               "offset" : 61,
+               "value" : "Poblacion"
+            },
+            {
+               "offset" : 72,
+               "value" : "Batangas City"
+            },
+            {
+               "offset" : 87,
+               "value" : "Batangas"
+            },
+            {
+               "offset" : 97,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "university"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

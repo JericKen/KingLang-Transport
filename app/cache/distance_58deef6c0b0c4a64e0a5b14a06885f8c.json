@@ -1,0 +1,78 @@
+{
+   "destination_addresses" : 
+   [
+      "Baguio, Benguet, Philippines",
+      "176, Caloocan, Metro Manila, Philippines"
+   ],
+   "origin_addresses" : 
+   [
+      "176, Caloocan, Metro Manila, Philippines",
+      "Baguio, Benguet, Philippines"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "235 km",
+                  "value" : 234564
+               },
+               "duration" : 
+               {
+                  "text" : "4 hours 1 min",
+                  "value" : 14457
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "235 km",
+                  "value" : 235318
+               },
+               "duration" : 
+               {
+                  "text" : "3 hours 59 mins",
+                  "value" : 14365
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

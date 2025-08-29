@@ -1,0 +1,274 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Books and Blooms, East Lopez Street, Jaro, Iloilo City, Iloilo, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJKxfKVgDlrjMReBjeWhwniHw",
+         "reference" : "ChIJKxfKVgDlrjMReBjeWhwniHw",
+         "structured_formatting" : 
+         {
+            "main_text" : "Books and Blooms",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "East Lopez Street, Jaro, Iloilo City, Iloilo, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Books and Blooms"
+            },
+            {
+               "offset" : 18,
+               "value" : "East Lopez Street"
+            },
+            {
+               "offset" : 37,
+               "value" : "Jaro"
+            },
+            {
+               "offset" : 43,
+               "value" : "Iloilo City"
+            },
+            {
+               "offset" : 56,
+               "value" : "Iloilo"
+            },
+            {
+               "offset" : 64,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "cafe",
+            "establishment",
+            "food",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "Book Museum cum Ethnology Center, Southeast Dao, Marikina, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJtZ5oiaG5lzMRWTUfY-h3i8Y",
+         "reference" : "ChIJtZ5oiaG5lzMRWTUfY-h3i8Y",
+         "structured_formatting" : 
+         {
+            "main_text" : "Book Museum cum Ethnology Center",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Southeast Dao, Marikina, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Book Museum cum Ethnology Center"
+            },
+            {
+               "offset" : 34,
+               "value" : "Southeast Dao"
+            },
+            {
+               "offset" : 49,
+               "value" : "Marikina"
+            },
+            {
+               "offset" : 59,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 73,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "museum",
+            "point_of_interest",
+            "tourist_attraction"
+         ]
+      },
+      {
+         "description" : "Book Club Coffee, Mandaluyong City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJlSj8GqnJlzMR5ryX3hz7BTU",
+         "reference" : "ChIJlSj8GqnJlzMR5ryX3hz7BTU",
+         "structured_formatting" : 
+         {
+            "main_text" : "Book Club Coffee",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Mandaluyong City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Book Club Coffee"
+            },
+            {
+               "offset" : 18,
+               "value" : "Mandaluyong City"
+            },
+            {
+               "offset" : 36,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 50,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "cafe",
+            "establishment",
+            "food",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "Bookchigo Corp Warehouse, Silang, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJYyYCUwB_vTMRhrb1yVrFVWY",
+         "reference" : "ChIJYyYCUwB_vTMRhrb1yVrFVWY",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bookchigo Corp Warehouse",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Silang, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bookchigo Corp Warehouse"
+            },
+            {
+               "offset" : 26,
+               "value" : "Silang"
+            },
+            {
+               "offset" : 34,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 42,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "book_store",
+            "establishment",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "BOOKENDS, T. Claudio Street, Baguio, Benguet, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJBVNCAmihkTMRhcF0H_H6Rkc",
+         "reference" : "ChIJBVNCAmihkTMRhcF0H_H6Rkc",
+         "structured_formatting" : 
+         {
+            "main_text" : "BOOKENDS",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "T. Claudio Street, Baguio, Benguet, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "BOOKENDS"
+            },
+            {
+               "offset" : 10,
+               "value" : "T. Claudio Street"
+            },
+            {
+               "offset" : 29,
+               "value" : "Baguio"
+            },
+            {
+               "offset" : 37,
+               "value" : "Benguet"
+            },
+            {
+               "offset" : 46,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "book_store",
+            "establishment",
+            "point_of_interest",
+            "store"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

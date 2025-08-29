@@ -1,0 +1,90 @@
+.summary-metrics-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+/* .summary-metrics-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+} */
+
+.summary-metrics-card .icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.summary-metrics-card h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+    color: #333;
+}
+
+.summary-metrics-card p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments for the grid */
+@media (max-width: 1199.98px) {
+    .summary-metrics-card h4 {
+        font-size: 1.5rem;
+    }
+    
+    .summary-metrics-card .icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .summary-metrics-card {
+        margin-bottom: 1rem;
+    }
+}
+
+.charts {
+    background-color: #ffffff;
+}
+
+/* Custom colors for the metrics icons */
+.icon.bg-warning-subtle {
+    background-color: rgba(255, 245, 225, 1);
+}
+
+.icon.bg-warning-subtle .bi-calendar-check {
+    color: #2e7d32 !important;
+}
+
+.icon.bg-warning-subtle .bi-cash-stack {
+    color: #1976d2 !important;
+}
+
+.icon.bg-warning-subtle .bi-bus-front {
+    color: #7b1fa2 !important;
+}
+
+.icon.bg-warning-subtle .bi-hourglass-split {
+    color: #ef6c00 !important;
+}
+
+.icon.bg-warning-subtle .bi-exclamation-triangle {
+    color: #d32f2f !important;
+}
+
+/* Style for the content area */
+.content {
+    background-color: #f8f9fa;
+}
+
+/* Make charts look better */
+canvas {
+    margin-top: 15px;
+}

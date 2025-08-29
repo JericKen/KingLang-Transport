@@ -1,0 +1,277 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Tokyo Spa, San Rafael Street, Pasig, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ4ZpkuWvIlzMRikX3syMP46o",
+         "reference" : "ChIJ4ZpkuWvIlzMRikX3syMP46o",
+         "structured_formatting" : 
+         {
+            "main_text" : "Tokyo Spa",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Rafael Street, Pasig, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Tokyo Spa"
+            },
+            {
+               "offset" : 11,
+               "value" : "San Rafael Street"
+            },
+            {
+               "offset" : 30,
+               "value" : "Pasig"
+            },
+            {
+               "offset" : 37,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 51,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "spa"
+         ]
+      },
+      {
+         "description" : "Tokyo Grill (Unlimited Japanese Restaurant), Tomas Morato Avenue, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJhfmY4om3lzMReDEahrFfD4c",
+         "reference" : "ChIJhfmY4om3lzMReDEahrFfD4c",
+         "structured_formatting" : 
+         {
+            "main_text" : "Tokyo Grill (Unlimited Japanese Restaurant)",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Tomas Morato Avenue, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Tokyo Grill (Unlimited Japanese Restaurant)"
+            },
+            {
+               "offset" : 45,
+               "value" : "Tomas Morato Avenue"
+            },
+            {
+               "offset" : 66,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 79,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 93,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
+         "description" : "Tokyo Gyu Japanese Yakiniku Restaurant, West Avenue, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJsd_EsDrJlzMRrYYvG04LE9Y",
+         "reference" : "ChIJsd_EsDrJlzMRrYYvG04LE9Y",
+         "structured_formatting" : 
+         {
+            "main_text" : "Tokyo Gyu Japanese Yakiniku Restaurant",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "West Avenue, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Tokyo Gyu Japanese Yakiniku Restaurant"
+            },
+            {
+               "offset" : 40,
+               "value" : "West Avenue"
+            },
+            {
+               "offset" : 53,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 66,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 80,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
+         "description" : "Tokyo Mart - West Avenue, West Avenue, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJI2JPUvK3lzMRmBMu_NKWgCU",
+         "reference" : "ChIJI2JPUvK3lzMRmBMu_NKWgCU",
+         "structured_formatting" : 
+         {
+            "main_text" : "Tokyo Mart - West Avenue",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "West Avenue, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Tokyo Mart - West Avenue"
+            },
+            {
+               "offset" : 26,
+               "value" : "West Avenue"
+            },
+            {
+               "offset" : 39,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 52,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 66,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "convenience_store",
+            "establishment",
+            "food",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "Tokyo Healthlink 東京ヘルスリンク - Alabang, Madrigal Avenue, Muntinlupa, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJRX1Yos7RlzMRUWtfHBnvvZM",
+         "reference" : "ChIJRX1Yos7RlzMRUWtfHBnvvZM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Tokyo Healthlink 東京ヘルスリンク - Alabang",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Madrigal Avenue, Muntinlupa, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Tokyo Healthlink 東京ヘルスリンク - Alabang"
+            },
+            {
+               "offset" : 37,
+               "value" : "Madrigal Avenue"
+            },
+            {
+               "offset" : 54,
+               "value" : "Muntinlupa"
+            },
+            {
+               "offset" : 66,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 80,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "doctor",
+            "establishment",
+            "health",
+            "hospital",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

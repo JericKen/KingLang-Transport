@@ -1,0 +1,253 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Teresa, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ8_CHgnDAlzMRHayLDGzGdk4",
+         "reference" : "ChIJ8_CHgnDAlzMRHayLDGzGdk4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Teresa",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Teresa"
+            },
+            {
+               "offset" : 8,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 15,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Teresa Municipal Hall, Teresa, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ-Tt9HI3AlzMRmhXzZEhIGYU",
+         "reference" : "ChIJ-Tt9HI3AlzMRmhXzZEhIGYU",
+         "structured_formatting" : 
+         {
+            "main_text" : "Teresa Municipal Hall",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Teresa, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Teresa Municipal Hall"
+            },
+            {
+               "offset" : 23,
+               "value" : "Teresa"
+            },
+            {
+               "offset" : 31,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 38,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "city_hall",
+            "establishment",
+            "local_government_office",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Teresa, Santa Mesa, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "EjVUZXJlc2EsIFNhbnRhIE1lc2EsIE1hbmlsYSwgTWV0cm8gTWFuaWxhLCBQaGlsaXBwaW5lcyIuKiwKFAoSCUc8tr_dyZczEUnq-aEgncqjEhQKEgmvS-VC5smXMxEsaftKxISnFw",
+         "reference" : "EjVUZXJlc2EsIFNhbnRhIE1lc2EsIE1hbmlsYSwgTWV0cm8gTWFuaWxhLCBQaGlsaXBwaW5lcyIuKiwKFAoSCUc8tr_dyZczEUnq-aEgncqjEhQKEgmvS-VC5smXMxEsaftKxISnFw",
+         "structured_formatting" : 
+         {
+            "main_text" : "Teresa",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Santa Mesa, Manila, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Teresa"
+            },
+            {
+               "offset" : 8,
+               "value" : "Santa Mesa"
+            },
+            {
+               "offset" : 20,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 28,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 42,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      },
+      {
+         "description" : "Teresa Park Avenue, Las Piñas, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "EjlUZXJlc2EgUGFyayBBdmVudWUsIExhcyBQacOxYXMsIE1ldHJvIE1hbmlsYSwgUGhpbGlwcGluZXMiLiosChQKEgn7jbmd7NGXMxFVCQhbh05KURIUChIJbyuXNQjOlzMRS3eB0pUy8w8",
+         "reference" : "EjlUZXJlc2EgUGFyayBBdmVudWUsIExhcyBQacOxYXMsIE1ldHJvIE1hbmlsYSwgUGhpbGlwcGluZXMiLiosChQKEgn7jbmd7NGXMxFVCQhbh05KURIUChIJbyuXNQjOlzMRS3eB0pUy8w8",
+         "structured_formatting" : 
+         {
+            "main_text" : "Teresa Park Avenue",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Las Piñas, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Teresa Park Avenue"
+            },
+            {
+               "offset" : 20,
+               "value" : "Las Piñas"
+            },
+            {
+               "offset" : 31,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 45,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      },
+      {
+         "description" : "Teresa Basketball Covered Court, Santa Mesa, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJgcaL1d3JlzMR-lpPqXVJE20",
+         "reference" : "ChIJgcaL1d3JlzMR-lpPqXVJE20",
+         "structured_formatting" : 
+         {
+            "main_text" : "Teresa Basketball Covered Court",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Santa Mesa, Manila, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Teresa Basketball Covered Court"
+            },
+            {
+               "offset" : 33,
+               "value" : "Santa Mesa"
+            },
+            {
+               "offset" : 45,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 53,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 67,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,0 +1,245 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Malico, San Nicolas, Pangasinan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ1XM_HzQDkTMRdQyAZdS_rjo",
+         "reference" : "ChIJ1XM_HzQDkTMRdQyAZdS_rjo",
+         "structured_formatting" : 
+         {
+            "main_text" : "Malico",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Nicolas, Pangasinan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Malico"
+            },
+            {
+               "offset" : 8,
+               "value" : "San Nicolas"
+            },
+            {
+               "offset" : 21,
+               "value" : "Pangasinan"
+            },
+            {
+               "offset" : 33,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Malinta, Valenzuela, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJG7WUynK0lzMRXbK5YF7qI3w",
+         "reference" : "ChIJG7WUynK0lzMRXbK5YF7qI3w",
+         "structured_formatting" : 
+         {
+            "main_text" : "Malinta",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Valenzuela, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Malinta"
+            },
+            {
+               "offset" : 9,
+               "value" : "Valenzuela"
+            },
+            {
+               "offset" : 21,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 35,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Malita, Davao Occidental, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJA13_ZiJj9zIRWK2HqzOkZHM",
+         "reference" : "ChIJA13_ZiJj9zIRWK2HqzOkZHM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Malita",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Davao Occidental, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Malita"
+            },
+            {
+               "offset" : 8,
+               "value" : "Davao Occidental"
+            },
+            {
+               "offset" : 26,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Malico San Nicolas Viewpoint, San Nicolas, Pangasinan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJF4o4IvMDkTMRdXu-qfqfPZE",
+         "reference" : "ChIJF4o4IvMDkTMRdXu-qfqfPZE",
+         "structured_formatting" : 
+         {
+            "main_text" : "Malico San Nicolas Viewpoint",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Nicolas, Pangasinan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Malico San Nicolas Viewpoint"
+            },
+            {
+               "offset" : 30,
+               "value" : "San Nicolas"
+            },
+            {
+               "offset" : 43,
+               "value" : "Pangasinan"
+            },
+            {
+               "offset" : 55,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "tourist_attraction"
+         ]
+      },
+      {
+         "description" : "Malitbog, Bukidnon, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJOY3D56XG_zIR9HyfmPDDEyY",
+         "reference" : "ChIJOY3D56XG_zIR9HyfmPDDEyY",
+         "structured_formatting" : 
+         {
+            "main_text" : "Malitbog",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bukidnon, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Malitbog"
+            },
+            {
+               "offset" : 10,
+               "value" : "Bukidnon"
+            },
+            {
+               "offset" : 20,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

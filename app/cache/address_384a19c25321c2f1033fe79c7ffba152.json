@@ -1,0 +1,263 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Colegio De Sta. Teresa De Avila Foundation, Skylark, Novaliches, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJyZFeZ1uwlzMRqOg1m3FPVJg",
+         "reference" : "ChIJyZFeZ1uwlzMRqOg1m3FPVJg",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio De Sta. Teresa De Avila Foundation",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 14,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Skylark, Novaliches, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio De Sta. Teresa De Avila Foundation"
+            },
+            {
+               "offset" : 44,
+               "value" : "Skylark"
+            },
+            {
+               "offset" : 53,
+               "value" : "Novaliches"
+            },
+            {
+               "offset" : 65,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 78,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 92,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "university"
+         ]
+      },
+      {
+         "description" : "Colegio De Sta. Ana De Victorias, Osmeña Avenue, Victorias, Negros Occidental, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJAQCQlSstrzMRYz0PsZqoKSM",
+         "reference" : "ChIJAQCQlSstrzMRYz0PsZqoKSM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio De Sta. Ana De Victorias",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 14,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Osmeña Avenue, Victorias, Negros Occidental, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio De Sta. Ana De Victorias"
+            },
+            {
+               "offset" : 34,
+               "value" : "Osmeña Avenue"
+            },
+            {
+               "offset" : 49,
+               "value" : "Victorias"
+            },
+            {
+               "offset" : 60,
+               "value" : "Negros Occidental"
+            },
+            {
+               "offset" : 79,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "university"
+         ]
+      },
+      {
+         "description" : "Colegio De Sta. Lourdes of Leyte Foundation, Inc., Tabontabon, Leyte, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJzcgsXWXbBzMR3qZh0QsatS8",
+         "reference" : "ChIJzcgsXWXbBzMR3qZh0QsatS8",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio De Sta. Lourdes of Leyte Foundation, Inc.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 14,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Tabontabon, Leyte, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio De Sta. Lourdes of Leyte Foundation, Inc."
+            },
+            {
+               "offset" : 51,
+               "value" : "Tabontabon"
+            },
+            {
+               "offset" : 63,
+               "value" : "Leyte"
+            },
+            {
+               "offset" : 70,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "university"
+         ]
+      },
+      {
+         "description" : "Colegio de Sta. Monica de Angat, Angat, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJd90-Z2IHlzMRE6cR_WKecaQ",
+         "reference" : "ChIJd90-Z2IHlzMRE6cR_WKecaQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio de Sta. Monica de Angat",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 14,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Angat, Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio de Sta. Monica de Angat"
+            },
+            {
+               "offset" : 33,
+               "value" : "Angat"
+            },
+            {
+               "offset" : 40,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 49,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      },
+      {
+         "description" : "Colegio de Sta. Isabel Laguna Inc., Siniloan, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ_dg8UcPxlzMRtc5BH3V4_aE",
+         "reference" : "ChIJ_dg8UcPxlzMRtc5BH3V4_aE",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio de Sta. Isabel Laguna Inc.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 14,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Siniloan, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio de Sta. Isabel Laguna Inc."
+            },
+            {
+               "offset" : 36,
+               "value" : "Siniloan"
+            },
+            {
+               "offset" : 46,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 54,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

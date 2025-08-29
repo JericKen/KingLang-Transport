@@ -1,0 +1,274 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Baguio City, Benguet, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJP_HeeWihkTMRwHU6vjT13o4",
+         "reference" : "ChIJP_HeeWihkTMRwHU6vjT13o4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Baguio City",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Benguet, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Baguio City"
+            },
+            {
+               "offset" : 13,
+               "value" : "Benguet"
+            },
+            {
+               "offset" : 22,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Baguio Night Market, Harrison Road, Baguio, Benguet, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJvbe53mehkTMR8T_ioyknfYk",
+         "reference" : "ChIJvbe53mehkTMR8T_ioyknfYk",
+         "structured_formatting" : 
+         {
+            "main_text" : "Baguio Night Market",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Harrison Road, Baguio, Benguet, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Baguio Night Market"
+            },
+            {
+               "offset" : 21,
+               "value" : "Harrison Road"
+            },
+            {
+               "offset" : 36,
+               "value" : "Baguio"
+            },
+            {
+               "offset" : 44,
+               "value" : "Benguet"
+            },
+            {
+               "offset" : 53,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "tourist_attraction"
+         ]
+      },
+      {
+         "description" : "Baguio General Hospital and Medical Center, Gov. Pack Road, Baguio, Benguet, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJI9YvQxWhkTMRwdYGhgM7jc4",
+         "reference" : "ChIJI9YvQxWhkTMRwdYGhgM7jc4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Baguio General Hospital and Medical Center",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Gov. Pack Road, Baguio, Benguet, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Baguio General Hospital and Medical Center"
+            },
+            {
+               "offset" : 44,
+               "value" : "Gov. Pack Road"
+            },
+            {
+               "offset" : 60,
+               "value" : "Baguio"
+            },
+            {
+               "offset" : 68,
+               "value" : "Benguet"
+            },
+            {
+               "offset" : 77,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "health",
+            "hospital",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Baguio Center Mall, Magsaysay Avenue, Baguio, Benguet, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJCeHHZ2ehkTMR_v9aMZ9QjCU",
+         "reference" : "ChIJCeHHZ2ehkTMR_v9aMZ9QjCU",
+         "structured_formatting" : 
+         {
+            "main_text" : "Baguio Center Mall",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Magsaysay Avenue, Baguio, Benguet, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Baguio Center Mall"
+            },
+            {
+               "offset" : 20,
+               "value" : "Magsaysay Avenue"
+            },
+            {
+               "offset" : 38,
+               "value" : "Baguio"
+            },
+            {
+               "offset" : 46,
+               "value" : "Benguet"
+            },
+            {
+               "offset" : 55,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "bakery",
+            "bowling_alley",
+            "drugstore",
+            "electronics_store",
+            "establishment",
+            "food",
+            "grocery_or_supermarket",
+            "health",
+            "point_of_interest",
+            "restaurant",
+            "shopping_mall",
+            "store",
+            "supermarket"
+         ]
+      },
+      {
+         "description" : "Baguio Country Club, Country Club Road, Baguio, Benguet, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJz8rv_lKhkTMR1k0hotLtSCI",
+         "reference" : "ChIJz8rv_lKhkTMR1k0hotLtSCI",
+         "structured_formatting" : 
+         {
+            "main_text" : "Baguio Country Club",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Country Club Road, Baguio, Benguet, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Baguio Country Club"
+            },
+            {
+               "offset" : 21,
+               "value" : "Country Club Road"
+            },
+            {
+               "offset" : 40,
+               "value" : "Baguio"
+            },
+            {
+               "offset" : 48,
+               "value" : "Benguet"
+            },
+            {
+               "offset" : 57,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

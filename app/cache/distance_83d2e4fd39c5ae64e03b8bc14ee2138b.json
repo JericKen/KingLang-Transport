@@ -1,0 +1,78 @@
+{
+   "destination_addresses" : 
+   [
+      "295-B, Purok 4, M. L. Quezon Ave, Lower Bicutan, Taguig, 1632 Metro Manila, Philippines",
+      "Maligaya Pob. (Brgy 1), El Nido, Palawan, Philippines"
+   ],
+   "origin_addresses" : 
+   [
+      "Maligaya Pob. (Brgy 1), El Nido, Palawan, Philippines",
+      "295-B, Purok 4, M. L. Quezon Ave, Lower Bicutan, Taguig, 1632 Metro Manila, Philippines"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "589 km",
+                  "value" : 588879
+               },
+               "duration" : 
+               {
+                  "text" : "22 hours 4 mins",
+                  "value" : 79466
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "585 km",
+                  "value" : 585132
+               },
+               "duration" : 
+               {
+                  "text" : "21 hours 56 mins",
+                  "value" : 78981
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

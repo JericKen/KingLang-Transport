@@ -1,0 +1,8 @@
+This is a placeholder file for the slideshow images directory.
+
+Please add your slideshow images here with the following names:
+- slide1.jpg (or use the existing bus3.jpg from the parent directory)
+- slide2.jpg
+- slide3.jpg
+
+Images should ideally be the same size, approximately 800x500 pixels or similar widescreen ratio. 

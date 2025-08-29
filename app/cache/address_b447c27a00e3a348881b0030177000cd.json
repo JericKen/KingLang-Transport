@@ -1,0 +1,256 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Sadsadan, Bauko, Mountain Province, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJy3zpm8fUkTMRUgvc8CCE2ms",
+         "reference" : "ChIJy3zpm8fUkTMRUgvc8CCE2ms",
+         "structured_formatting" : 
+         {
+            "main_text" : "Sadsadan",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bauko, Mountain Province, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Sadsadan"
+            },
+            {
+               "offset" : 10,
+               "value" : "Bauko"
+            },
+            {
+               "offset" : 17,
+               "value" : "Mountain Province"
+            },
+            {
+               "offset" : 36,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Sadsadan - Bansa Rd, Bauko, Mountain Province, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "EjpTYWRzYWRhbiAtIEJhbnNhIFJkLCBCYXVrbywgTW91bnRhaW4gUHJvdmluY2UsIFBoaWxpcHBpbmVzIi4qLAoUChIJrQyoYbbUkTMRQ4XTtbFCOmoSFAoSCX1x7McB1ZEzERKYi72bhzg4",
+         "reference" : "EjpTYWRzYWRhbiAtIEJhbnNhIFJkLCBCYXVrbywgTW91bnRhaW4gUHJvdmluY2UsIFBoaWxpcHBpbmVzIi4qLAoUChIJrQyoYbbUkTMRQ4XTtbFCOmoSFAoSCX1x7McB1ZEzERKYi72bhzg4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Sadsadan - Bansa Rd",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bauko, Mountain Province, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Sadsadan - Bansa Rd"
+            },
+            {
+               "offset" : 21,
+               "value" : "Bauko"
+            },
+            {
+               "offset" : 28,
+               "value" : "Mountain Province"
+            },
+            {
+               "offset" : 47,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      },
+      {
+         "description" : "Sadsadan Barangay Hall, Halsema Highway, Bauko, Mountain Province, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJXZB-9LzUkTMR5UJzgUcfu4U",
+         "reference" : "ChIJXZB-9LzUkTMR5UJzgUcfu4U",
+         "structured_formatting" : 
+         {
+            "main_text" : "Sadsadan Barangay Hall",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Halsema Highway, Bauko, Mountain Province, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Sadsadan Barangay Hall"
+            },
+            {
+               "offset" : 24,
+               "value" : "Halsema Highway"
+            },
+            {
+               "offset" : 41,
+               "value" : "Bauko"
+            },
+            {
+               "offset" : 48,
+               "value" : "Mountain Province"
+            },
+            {
+               "offset" : 67,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "SADSAD RESIDENCE, Tramo, Lubao, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJs8FHA9ZfljMR6xQBeXwJQ48",
+         "reference" : "ChIJs8FHA9ZfljMR6xQBeXwJQ48",
+         "structured_formatting" : 
+         {
+            "main_text" : "SADSAD RESIDENCE",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Tramo, Lubao, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SADSAD RESIDENCE"
+            },
+            {
+               "offset" : 18,
+               "value" : "Tramo"
+            },
+            {
+               "offset" : 25,
+               "value" : "Lubao"
+            },
+            {
+               "offset" : 32,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 42,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Sadsadan Farm to Market Road, Bauko, Mountain Province, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "EkNTYWRzYWRhbiBGYXJtIHRvIE1hcmtldCBSb2FkLCBCYXVrbywgTW91bnRhaW4gUHJvdmluY2UsIFBoaWxpcHBpbmVzIi4qLAoUChIJtSN565nUkTMRtUwuaWYUb3YSFAoSCX1x7McB1ZEzERKYi72bhzg4",
+         "reference" : "EkNTYWRzYWRhbiBGYXJtIHRvIE1hcmtldCBSb2FkLCBCYXVrbywgTW91bnRhaW4gUHJvdmluY2UsIFBoaWxpcHBpbmVzIi4qLAoUChIJtSN565nUkTMRtUwuaWYUb3YSFAoSCX1x7McB1ZEzERKYi72bhzg4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Sadsadan Farm to Market Road",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bauko, Mountain Province, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Sadsadan Farm to Market Road"
+            },
+            {
+               "offset" : 30,
+               "value" : "Bauko"
+            },
+            {
+               "offset" : 37,
+               "value" : "Mountain Province"
+            },
+            {
+               "offset" : 56,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      }
+   ],
+   "status" : "OK"
+}
