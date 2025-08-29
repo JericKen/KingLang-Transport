@@ -439,8 +439,8 @@ if (!isset($_SESSION["role"]) || ($_SESSION["role"] !== "Super Admin" && $_SESSI
                 </div>
                 <div class="col-md-6">
                     <div class="section-title">Booking Details</div>
-                    <p><i class="bi bi-calendar-check text-success me-1"></i><strong>Booking Date:</strong> <?php echo date('F d, Y', strtotime($booking['booked_at'])); ?></p>
-                    <p><i class="bi bi-calendar-event text-success me-1"></i><strong>Tour Date:</strong> <?php echo date('M d, Y', strtotime($booking['date_of_tour'])) . " to " . date('M d, Y', strtotime($booking['end_of_tour'])); ?></p>
+                                            <p><i class="bi bi-calendar-check text-success me-1"></i><strong>Booking Date:</strong> <?php echo convertToManilaTime($booking['booked_at'], 'F d, Y'); ?></p>
+                                            <p><i class="bi bi-calendar-event text-success me-1"></i><strong>Tour Date:</strong> <?php echo convertToManilaTime($booking['date_of_tour'], 'M d, Y') . " to " . convertToManilaTime($booking['end_of_tour'], 'M d, Y'); ?></p>
                     <p><i class="bi bi-clock-fill text-success me-1"></i><strong>Duration:</strong> <?php echo $booking['number_of_days']; ?> day(s)</p>
                     <p><i class="bi bi-alarm text-success me-1"></i><strong>Pickup Time:</strong> <?php echo $booking['pickup_time']; ?></p>
                 </div>
@@ -487,7 +487,7 @@ if (!isset($_SESSION["role"]) || ($_SESSION["role"] !== "Super Admin" && $_SESSI
                     <?php foreach ($payments as $payment): ?>
                     <?php if ($payment['is_canceled'] == 0): ?>
                     <tr>
-                        <td><?php echo date('M d, Y', strtotime($payment['payment_date'])); ?></td>
+                                                        <td><?php echo convertToManilaTime($payment['payment_date'], 'M d, Y'); ?></td>
                         <td>₱<?php echo number_format($payment['amount'], 2); ?></td>
                         <td><?php echo $payment['payment_method']; ?></td>
                         <td>

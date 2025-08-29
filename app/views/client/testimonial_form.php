@@ -35,7 +35,7 @@
                                 <?php foreach ($eligibleBookings as $booking): ?>
                                     <option value="<?php echo $booking['booking_id']; ?>">
                                         <?php echo htmlspecialchars($booking['destination']); ?> 
-                                        (<?php echo date('M d, Y', strtotime($booking['date_of_tour'])); ?>)
+                                        (<?php echo convertToManilaTime($booking['date_of_tour'], 'M d, Y'); ?>)
                                     </option>
                                 <?php endforeach; ?>
                             </select>
@@ -112,12 +112,12 @@
                             <h3><?php echo htmlspecialchars($testimonial['title']); ?></h3>
                             <p class="trip-info">
                                 <i class="fas fa-map-marker-alt"></i> <?php echo htmlspecialchars($testimonial['destination']); ?>
-                                <span class="date"><?php echo date('M d, Y', strtotime($testimonial['date_of_tour'])); ?></span>
+                                <span class="date"><?php echo convertToManilaTime($testimonial['date_of_tour'], 'M d, Y'); ?></span>
                             </p>
                             <p class="testimonial-content"><?php echo htmlspecialchars($testimonial['content']); ?></p>
                             <div class="testimonial-footer">
                                 <small class="submission-date">
-                                    Submitted on <?php echo date('M d, Y', strtotime($testimonial['created_at'])); ?>
+                                    Submitted on <?php echo convertToManilaTime($testimonial['created_at'], 'M d, Y'); ?>
                                 </small>
                             </div>
                         </div>

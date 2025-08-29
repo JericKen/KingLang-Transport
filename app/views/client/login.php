@@ -17,6 +17,8 @@ require_once __DIR__ . '/../../../config/google_auth.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google" content="notranslate">
+    <meta http-equiv="Accept-Language" content="en">
+    <meta name="language" content="en">
     <link rel="icon" href="../../../public/images/main-logo-icon.png" type="">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -24,7 +26,7 @@ require_once __DIR__ . '/../../../config/google_auth.php';
     <link rel="stylesheet" href="../../../public/css/slideshow.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="https://accounts.google.com/gsi/client?hl=en" async></script>
     <title>Log In</title>
     <style>
         /* More compact form styling */
@@ -70,6 +72,15 @@ require_once __DIR__ . '/../../../config/google_auth.php';
         }
         /* Force English language for Google button */
         .g_id_signin * {
+            font-family: 'Roboto', sans-serif !important;
+        }
+        /* Force English text for Google Sign-In */
+        .g_id_signin iframe {
+            font-family: 'Roboto', sans-serif !important;
+        }
+        /* Override any language-specific styling */
+        [data-lang="en"] .g_id_signin,
+        [lang="en"] .g_id_signin {
             font-family: 'Roboto', sans-serif !important;
         }
         .or-divider {
@@ -172,11 +183,14 @@ require_once __DIR__ . '/../../../config/google_auth.php';
                          data-ux_mode="popup"
                          data-callback="handleGoogleSignIn"
                          data-auto_prompt="false"
-                         data-locale="en">
+                         data-locale="en"
+                         data-lang="en"
+                         data-hl="en">
                     </div>
 
                     <div class="google-btn-wrapper rounded-pill">
-                        <div class="g_id_signin"
+                        <div id="google-signin-button"
+                             class="g_id_signin"
                              data-type="standard"
                              data-shape="rectangular"
                              data-theme="outline"
@@ -184,6 +198,8 @@ require_once __DIR__ . '/../../../config/google_auth.php';
                              data-size="large"
                              data-logo_alignment="left"
                              data-width="100%"
+                             data-lang="en"
+                             data-hl="en"
                              lang="en">
                         </div>
                     </div>
@@ -202,14 +218,59 @@ require_once __DIR__ . '/../../../config/google_auth.php';
         // Set Google button language to English
         document.documentElement.lang = 'en';
         
-        // Initialize Google Sign-In
-        window.onload = function() {
-            // Force English language
-            document.querySelectorAll('.g_id_signin iframe').forEach(function(iframe) {
-                if (iframe.contentWindow && iframe.contentWindow.document) {
-                    iframe.contentWindow.document.documentElement.lang = 'en';
+        // Initialize Google Sign-In with forced English
+        function initializeGoogleSignIn() {
+            if (window.google && window.google.accounts) {
+                window.google.accounts.id.initialize({
+                    client_id: '<?php echo GOOGLE_CLIENT_ID; ?>',
+                    callback: handleGoogleSignIn,
+                    auto_select: false,
+                    cancel_on_tap_outside: true,
+                    locale: 'en',
+                    hl: 'en'
+                });
+                
+                // Render the Google Sign-In button with English settings
+                const buttonElement = document.getElementById('google-signin-button');
+                if (buttonElement) {
+                    window.google.accounts.id.renderButton(buttonElement, {
+                        type: 'standard',
+                        theme: 'outline',
+                        size: 'large',
+                        text: 'signin_with',
+                        shape: 'rectangular',
+                        logo_alignment: 'left',
+                        width: '100%',
+                        locale: 'en',
+                        hl: 'en'
+                    });
                 }
-            });
+            }
+        }
+        
+        // Wait for Google API to load
+        window.onload = function() {
+            // Set page language to English
+            document.documentElement.lang = 'en';
+            document.documentElement.setAttribute('data-lang', 'en');
+            
+            // Check if Google API is already loaded
+            if (window.google && window.google.accounts) {
+                initializeGoogleSignIn();
+            } else {
+                // Wait for Google API to load
+                let checkCount = 0;
+                const checkGoogleAPI = setInterval(function() {
+                    checkCount++;
+                    if (window.google && window.google.accounts) {
+                        clearInterval(checkGoogleAPI);
+                        initializeGoogleSignIn();
+                    } else if (checkCount > 50) { // 5 seconds timeout
+                        clearInterval(checkGoogleAPI);
+                        console.log('Google API failed to load');
+                    }
+                }, 100);
+            }
         };
         
         function togglePasswordVisibility() {

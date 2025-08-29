@@ -1131,6 +1131,7 @@ $current_page = "chat";
                 currentConversationId: null,
                 conversations: [],
                 messages: [],
+                conversationStatus: null,
                 isLoading: false
             },
             
@@ -1215,11 +1216,7 @@ $current_page = "chat";
                     });
                 }
                 
-                if (this.elements.endConversationButton) {
-                    this.elements.endConversationButton.addEventListener('click', function() {
-                        self.endConversation();
-                    });
-                }
+                // End conversation button is created dynamically, so we'll handle it with onclick attribute
             },
             
             loadDashboard: function() {
@@ -1437,8 +1434,35 @@ $current_page = "chat";
                 console.log("=𙔠Opening conversation " + conversationId);
                 this.state.currentConversationId = conversationId;
                 
+                // Get initial conversation status from the conversation list
+                var conversation = this.state.conversations.find(function(conv) {
+                    return conv.id == conversationId;
+                });
+                
+                // Initialize conversation status from list data
+                this.state.conversationStatus = conversation ? conversation.status : null;
+                
+                console.log("Conversation from list:", conversation);
+                console.log("Initial conversation status:", this.state.conversationStatus);
+                
+                // If status is not found, determine based on active tab
+                if (this.state.conversationStatus === null || this.state.conversationStatus === undefined) {
+                    var activeTab = document.querySelector('.nav-link.active');
+                    if (activeTab && activeTab.textContent.includes('Ended')) {
+                        this.state.conversationStatus = 'ended';
+                        console.log("Setting status to 'ended' based on active tab");
+                    } else {
+                        // For active/pending tabs, assume it's an active conversation
+                        this.state.conversationStatus = 'human_assigned';
+                        console.log("Setting status to 'human_assigned' based on active tab");
+                    }
+                }
+                
                 // Load and display the actual messages
                 this.loadMessages(conversationId);
+                
+                // Check conversation status immediately to get the latest status
+                this.checkConversationStatus(conversationId);
                 
                 // Start tracking conversation status (matching client-side behavior)
                 this.trackConversationStatus(conversationId);
@@ -1539,6 +1563,9 @@ $current_page = "chat";
                     console.log("Displaying messages for conversation " + conversationId);
                 }
                 
+                console.log("Current conversation status:", this.state.conversationStatus);
+                console.log("Should show end button:", this.state.conversationStatus !== 'ended');
+                
                 if (!this.elements.chatArea) {
                     console.error("Chat area not found");
                     return;
@@ -1560,9 +1587,15 @@ $current_page = "chat";
                            '<i class="fas fa-wifi" style="font-size: 10px; margin-right: 2px;"></i>Connected' +
                            '</span>' +
                            '</div>' +
-                           '<button class="btn btn-sm text-white ms-auto" onclick="AdminChatManager.closeChat()" style="background: none; border: none; font-size: 18px; opacity: 0.8; padding: 4px 8px;">' +
+                           '<div class="d-flex align-items-center">' +
+                           (this.state.conversationStatus !== 'ended' ? 
+                           '<button class="btn btn-outline-light btn-sm me-2" onclick="AdminChatManager.endConversation()" style="border-radius: 6px; padding: 6px 12px; font-size: 12px; border: 1px solid rgba(255,255,255,0.3);">' +
+                           '<i class="fas fa-times-circle me-1"></i>End Chat' +
+                           '</button>' : '') +
+                           '<button class="btn btn-sm text-white" onclick="AdminChatManager.closeChat()" style="background: none; border: none; font-size: 18px; opacity: 0.8; padding: 4px 8px;">' +
                            '<i class="fas fa-times"></i>' +
                            '</button>' +
+                           '</div>' +
                            '</div>' +
                            
                            // Messages Container with system theme
@@ -1786,6 +1819,9 @@ $current_page = "chat";
             },
             
             handleConversationStatusChange: function(status) {
+                // Store the conversation status in state
+                this.state.conversationStatus = status.status;
+                
                 // Handle conversation status changes (matching client-side Socket.io events)
                 switch (status.status) {
                     case 'human_assigned':
@@ -1801,6 +1837,11 @@ $current_page = "chat";
                     case 'human_requested':
                         console.log("=𢸍⁂☏︠Human assistance requested");
                         break;
+                }
+                
+                // Refresh the chat interface to update the end button visibility
+                if (this.state.currentConversationId) {
+                    this.displayMessages(this.state.currentConversationId, true);
                 }
             },
             
@@ -1899,6 +1940,10 @@ $current_page = "chat";
                 
                 if (!confirm('Are you sure you want to end this conversation?')) return;
                 
+                // Prompt for reason
+                var reason = prompt('Please provide a reason for ending this conversation (optional):');
+                if (reason === null) return; // User cancelled
+                
                 var self = this;
                 
                 fetch(this.config.apiBase + '/end', {
@@ -1907,7 +1952,8 @@ $current_page = "chat";
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        conversation_id: this.state.currentConversationId
+                        conversation_id: this.state.currentConversationId,
+                        reason: reason || 'Admin ended the conversation'
                     })
                 })
                 .then(function(response) {
@@ -1915,6 +1961,9 @@ $current_page = "chat";
                 })
                 .then(function(data) {
                     if (data.success) {
+                        // Update conversation status to ended
+                        self.state.conversationStatus = 'ended';
+                        
                         alert("Conversation ended successfully");
                         self.hideChatContainer();
                         // Refresh active list and global stats so counts update immediately
@@ -1935,6 +1984,7 @@ $current_page = "chat";
                     this.elements.chatArea.innerHTML = '<div class="empty-state"><i class="fas fa-comment-dots"></i><h4>Select a conversation</h4><p>Choose a conversation from the list to start chatting with customers</p></div>';
                 }
                 this.state.currentConversationId = null;
+                this.state.conversationStatus = null;
             },
             
             startPolling: function() {
