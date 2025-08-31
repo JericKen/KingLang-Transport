@@ -959,10 +959,6 @@ $current_page = "chat";
 
             <!-- Sidebar Footer -->
             <div class="border-top border-secondary">
-                <a href="#" class="sidebar-link">
-                    <i class="bi bi-question-circle"></i>
-                    <span class="menu-text">Help</span>
-                </a>
                 <a href="/admin/logout" class="sidebar-link">
                     <i class="bi bi-box-arrow-left"></i>
                     <span class="menu-text">Logout</span>

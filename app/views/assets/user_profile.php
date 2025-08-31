@@ -1,6 +1,7 @@
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <style>
     /* Booking details popup styling */
     .booking-details-popup {
@@ -205,8 +206,112 @@
         padding: 0.35em 0.65em;
         font-weight: 500;
     }
+    
+    /* Profile dropdown styling */
+    .profile-dropdown {
+        animation: dropdownFadeIn 0.3s ease-out forwards;
+    }
+    
+    .profile-toggle {
+        transition: all 0.2s ease;
+        border-radius: 0.5rem;
+        padding: 0.25rem;
+    }
+    
+    .profile-toggle:hover {
+        background-color: rgba(25, 135, 84, 0.05);
+    }
+    
+    .profile-dropdown .dropdown-item {
+        transition: all 0.2s ease;
+        border-radius: 0.25rem;
+        margin: 0 0.25rem;
+    }
+    
+    .profile-dropdown .dropdown-item:hover {
+        background-color: rgba(25, 135, 84, 0.05);
+        /* transform: translateX(2px); */
+    }
+    
+    .profile-dropdown .dropdown-item.text-danger:hover {
+        background-color: rgba(220, 53, 69, 0.05);
+    }
+    
+    /* SweetAlert2 custom styling */
+    .swal2-popup-custom {
+        border-radius: 0.75rem !important;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .swal2-popup-custom .swal2-title {
+        color: #198754 !important;
+        font-weight: 600 !important;
+    }
+    
+    .swal2-popup-custom .swal2-html-container {
+        color: #6c757d !important;
+    }
+    
+    .swal2-popup-custom .swal2-confirm {
+        background-color: #198754 !important;
+        border-color: #198754 !important;
+        border-radius: 0.5rem !important;
+        font-weight: 500 !important;
+        padding: 0.5rem 1.5rem !important;
+    }
+    
+    .swal2-popup-custom .swal2-confirm:hover {
+        background-color: #0d6a3e !important;
+        border-color: #0d6a3e !important;
+    }
+    
+    .swal2-popup-custom .swal2-cancel {
+        background-color: #6c757d !important;
+        border-color: #6c757d !important;
+        border-radius: 0.5rem !important;
+        font-weight: 500 !important;
+        padding: 0.5rem 1.5rem !important;
+    }
+    
+    .swal2-popup-custom .swal2-cancel:hover {
+        background-color: #5a6268 !important;
+        border-color: #5a6268 !important;
+    }
 </style>
 </head>
+
+<?php
+// Function to get user's profile picture
+function getUserProfilePicture($user_id) {
+    global $pdo;
+    try {
+        $stmt = $pdo->prepare("SELECT profile_picture FROM users WHERE user_id = :user_id");
+        $stmt->execute([":user_id" => $user_id]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result['profile_picture'] ?? null;
+    } catch (PDOException $e) {
+        return null;
+    }
+}
+
+// Get the current user's profile picture - check session first, then database
+$userProfilePicture = $_SESSION["profile_picture"] ?? getUserProfilePicture($_SESSION["user_id"] ?? null);
+
+// Determine the correct image source
+if ($userProfilePicture) {
+    // Check if it's a local file or external URL
+    if (strpos($userProfilePicture, '/app/uploads/') === 0) {
+        // Local file - prepend the base path
+        $profileImageSrc = $userProfilePicture;
+    } else {
+        // External URL (like Google profile picture)
+        $profileImageSrc = $userProfilePicture;
+    }
+} else {
+    // Default profile image
+    $profileImageSrc = "../../../public/images/profile.png";
+}
+?>
 
 <div class="p-2 d-flex align-items-center gap-2">
     <a href="/home/book" class="text-success"><i class="bi bi-plus-square-fill me-2 fs-5"></i></a>
@@ -225,7 +330,7 @@
         <div class="dropdown-menu dropdown-menu-end notification-dropdown" id="notificationDropdownMenu">
             <div class="notification-header">
                 <h6><i class="bi bi-bell-fill"></i>Notifications</h6>
-                <a href="javascript:void(0)" class="text-decoration-none small mark-all-read d-none">Mark all as read</a>
+                <a href="javascript:void(0)" class="text-decoration-none small mark-all-read">Mark all as read</a>
             </div>
             <div class="notification-list">
                 <!-- Notifications will be loaded here dynamically -->
@@ -273,10 +378,39 @@
         </div>
     </div>
     
-    <img src="../../../public/images/profile.png" alt="profile" class="me-2" height="35px">
-    <div class="text-sm">
-        <div class="name text-success fw-bold" style="font-size: 12px"><?= $_SESSION["client_name"]; ?> </div>
-        <div class="email" style="font-size: 10px"><?= $_SESSION["email"]; ?></div>
+    <!-- Profile Dropdown -->
+    <div class="dropdown">
+        <a href="#" class="d-flex align-items-center gap-2 text-decoration-none profile-toggle" id="profileToggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="<?= $profileImageSrc ?>" alt="profile" height="35px" class="rounded-circle">
+            <div class="text-sm">
+                <div class="name text-success fw-bold" style="font-size: 12px"><?= $_SESSION["client_name"]; ?></div>
+                <div class="email" style="font-size: 10px"><?= $_SESSION["email"]; ?></div>
+            </div>
+            <i class="bi bi-chevron-down text-success" style="font-size: 10px;"></i>
+        </a>
+        
+        <!-- Profile Dropdown Menu -->
+        <div class="dropdown-menu dropdown-menu-end profile-dropdown" id="profileDropdownMenu" style="min-width: 200px; border-radius: 0.75rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); border: none; padding: 0.5rem 0;">
+            <div class="px-3 py-2 border-bottom">
+                <div class="d-flex align-items-center gap-2">
+                    <img src="<?= $profileImageSrc ?>" alt="profile" height="40px" class="rounded-circle">
+                    <div>
+                        <div class="fw-bold text-dark" style="font-size: 14px;"><?= $_SESSION["client_name"]; ?></div>
+                        <div class="text-muted" style="font-size: 12px;"><?= $_SESSION["email"]; ?></div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-1">
+                <a href="/home/my-account" class="dropdown-item d-flex align-items-center gap-2 py-2 px-3" style="font-size: 14px;">
+                    <i class="bi bi-person-fill text-success"></i>
+                    View Profile
+                </a>
+                <a href="#" id="logoutLink" class="dropdown-item d-flex align-items-center gap-2 py-2 px-3 text-danger" style="font-size: 14px;">
+                    <i class="bi bi-box-arrow-left"></i>
+                    Logout
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -646,5 +780,63 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Refresh notifications every 30 seconds
     // setInterval(loadNotifications, 30000);
+    
+    // Profile dropdown functionality
+    const profileToggle = document.getElementById('profileToggle');
+    const profileDropdown = document.getElementById('profileDropdownMenu');
+    
+    // Close profile dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!profileToggle.contains(e.target) && !profileDropdown.contains(e.target)) {
+            const dropdown = bootstrap.Dropdown.getInstance(profileToggle);
+            if (dropdown) {
+                dropdown.hide();
+            }
+        }
+    });
+    
+    // Handle logout confirmation
+    const logoutLink = document.getElementById('logoutLink');
+    if (logoutLink) {
+        logoutLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            Swal.fire({
+                title: 'Logout Confirmation',
+                text: 'Are you sure you want to logout?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#198754',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Yes, Logout',
+                cancelButtonText: 'Cancel',
+                reverseButtons: true,
+                customClass: {
+                    popup: 'swal2-popup-custom',
+                    confirmButton: 'btn btn-success',
+                    cancelButton: 'btn btn-secondary'
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Show loading state
+                    Swal.fire({
+                        title: 'Logging out...',
+                        text: 'Please wait while we log you out.',
+                        allowOutsideClick: false,
+                        allowEscapeKey: false,
+                        showConfirmButton: false,
+                        didOpen: () => {
+                            Swal.showLoading();
+                        }
+                    });
+                    
+                    // Redirect to logout
+                    setTimeout(() => {
+                        window.location.href = '/logout';
+                    }, 1000);
+                }
+            });
+        });
+    }
 });
 </script>

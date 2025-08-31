@@ -1,10 +1,13 @@
-<?php require_client_auth(); ?>
+<?php 
+require_client_auth(); 
+require_once __DIR__ . '/chat_widget_core.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Share Your Experience - KingLang Transport</title>
+    <title>Share Your Experience</title>
     <link rel="icon" href="../../../public/images/main-logo-icon.png" type="">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -15,18 +18,18 @@
 
     <div class="content collapsed" id="content">
         <div class="container-fluid py-3 px-3 px-xl-4">
-            <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap p-0 m-0 mb-2">
+            <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap p-0 m-0 mb-3">
                 <div class="p-0">
-                    <h3><i class="bi bi-star me-2 text-success"></i>Share Your Experience</h3>
-                    <p class="text-muted mb-0">Help other travelers by sharing your experience with KingLang Transport</p>
+                    <h3 class="mb-1"><i class="bi bi-chat-square-quote me-2 text-success"></i>Share Your Experience</h3>
+                    <p class="text-muted mb-0 small">Help other travelers by sharing your experience with KingLang Transport</p>
                 </div>
                 <?php include_once __DIR__ . "/../assets/user_profile.php"; ?>
             </div>
-            <hr>
+            <hr class="my-3">
 
             <?php if (!empty($eligibleBookings)): ?>
                 <section class="testimonial-form-section">
-                    <h2>Submit a Review</h2>
+                    <h2 class="mb-3">Submit a Review</h2>
                     <form id="testimonialForm" class="testimonial-form">
                         <div class="form-group">
                             <label for="booking_id">Select Trip</label>
@@ -67,7 +70,7 @@
 
                         <div class="form-group">
                             <label for="content">Your Review</label>
-                            <textarea id="contentText" name="content" maxlength="1000" rows="6" required 
+                            <textarea id="contentText" name="content" maxlength="1000" rows="5" required 
                                       placeholder="Share your experience with KingLang Transport..."></textarea>
                             <small class="char-count">0 / 1000</small>
                         </div>
@@ -81,9 +84,9 @@
                 <section class="no-eligible-trips">
                     <div class="no-trips-message">
                         <i class="fas fa-calendar-times"></i>
-                        <h3>No Completed Trips</h3>
-                        <p>You don't have any completed trips to review yet. Complete a trip with us first!</p>
-                        <a href="/home/booking-requests" class="btn btn-primary">Book a Trip</a>
+                        <h3 class="mb-2">No Completed Trips</h3>
+                        <p class="mb-3">You don't have any completed trips to review yet. Complete a trip with us first!</p>
+                        <a href="/home/book" class="btn btn-primary">Book a Trip</a>
                     </div>
                 </section>
                 <?php endif; ?>
@@ -91,7 +94,7 @@
                 <!-- User's Previous Testimonials -->
                 <?php if (!empty($userTestimonials)): ?>
                 <section class="user-testimonials-section">
-                    <h2>Your Reviews</h2>
+                    <h2 class="mb-3">Your Reviews</h2>
                     <div class="testimonials-grid">
                         <?php foreach ($userTestimonials as $testimonial): ?>
                         <div class="testimonial-card">
@@ -139,6 +142,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Set user login status for chat widget
+        var userLoggedIn = <?php echo isset($_SESSION['user_id']) ? 'true' : 'false'; ?>;
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="../public/js/testimonial_form.js"></script>

@@ -46,6 +46,7 @@ require_once __DIR__ . "/../../models/admin/Settings.php";
             }
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body>
     <?php include_once __DIR__ . "/../assets/admin_sidebar.php"; ?>
@@ -203,7 +204,6 @@ require_once __DIR__ . "/../../models/admin/Settings.php";
     </div>
 
     <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../../../public/js/assets/sidebar.js"></script>
     <script>

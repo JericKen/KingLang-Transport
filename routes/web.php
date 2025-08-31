@@ -180,7 +180,7 @@ switch ($requestPath) {
 
         break;
 
-    case "/my-account":
+    case "/home/my-account":
 
         require_once $controllerClasses['client']['AuthController'];
 
@@ -230,11 +230,23 @@ switch ($requestPath) {
 
         break;
 
+    case "/upload-profile-image":
+        require_once $controllerClasses['client']['AuthController'];
+        $controller = new ClientAuthController();
+        $controller->uploadProfileImage();
+        break;
+
+    case "/remove-profile-image":
+        require_once $controllerClasses['client']['AuthController'];
+        $controller = new ClientAuthController();
+        $controller->removeProfileImage();
+        break;
+
 
 
     // testimonials
 
-    case "/home/testimonials":
+    case "/home/feedback":
 
         require_once $controllerClasses['client']['TestimonialController'];
 

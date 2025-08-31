@@ -2,6 +2,59 @@
    "predictions" : 
    [
       {
+         "description" : "Kingland Hopia, Mampang - Arena Blanco Road, Zamboanga City, Zamboanga del Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJu882NZ1DUDIR9JbiqLN5CEs",
+         "reference" : "ChIJu882NZ1DUDIR9JbiqLN5CEs",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kingland Hopia",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 14,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Mampang - Arena Blanco Road, Zamboanga City, Zamboanga del Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kingland Hopia"
+            },
+            {
+               "offset" : 16,
+               "value" : "Mampang - Arena Blanco Road"
+            },
+            {
+               "offset" : 45,
+               "value" : "Zamboanga City"
+            },
+            {
+               "offset" : 61,
+               "value" : "Zamboanga del Sur"
+            },
+            {
+               "offset" : 80,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest"
+         ]
+      },
+      {
          "description" : "KingLang Tours and Transport Services Inc., M. L. Quezon Avenue, Lower Bicutan, Taguig, Metro Manila, Philippines",
          "matched_substrings" : 
          [
@@ -58,59 +111,6 @@
          ]
       },
       {
-         "description" : "Kingland Hopia, Mampang - Arena Blanco Road, Zamboanga City, Zamboanga del Sur, Philippines",
-         "matched_substrings" : 
-         [
-            {
-               "length" : 14,
-               "offset" : 0
-            }
-         ],
-         "place_id" : "ChIJu882NZ1DUDIR9JbiqLN5CEs",
-         "reference" : "ChIJu882NZ1DUDIR9JbiqLN5CEs",
-         "structured_formatting" : 
-         {
-            "main_text" : "Kingland Hopia",
-            "main_text_matched_substrings" : 
-            [
-               {
-                  "length" : 14,
-                  "offset" : 0
-               }
-            ],
-            "secondary_text" : "Mampang - Arena Blanco Road, Zamboanga City, Zamboanga del Sur, Philippines"
-         },
-         "terms" : 
-         [
-            {
-               "offset" : 0,
-               "value" : "Kingland Hopia"
-            },
-            {
-               "offset" : 16,
-               "value" : "Mampang - Arena Blanco Road"
-            },
-            {
-               "offset" : 45,
-               "value" : "Zamboanga City"
-            },
-            {
-               "offset" : 61,
-               "value" : "Zamboanga del Sur"
-            },
-            {
-               "offset" : 80,
-               "value" : "Philippines"
-            }
-         ],
-         "types" : 
-         [
-            "establishment",
-            "food",
-            "point_of_interest"
-         ]
-      },
-      {
          "description" : "Three Kings Safari Purifies Drinking Water, Candon City, Ilocos Sur, Philippines",
          "matched_substrings" : 
          [
@@ -160,6 +160,60 @@
          ]
       },
       {
+         "description" : "King's Coffee Green Breeze, Langkaan 2, Dasmariñas, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 26,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJN4XlVl3VlzMRQDWIdLyjLFo",
+         "reference" : "ChIJN4XlVl3VlzMRQDWIdLyjLFo",
+         "structured_formatting" : 
+         {
+            "main_text" : "King's Coffee Green Breeze",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 26,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Langkaan 2, Dasmariñas, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "King's Coffee Green Breeze"
+            },
+            {
+               "offset" : 28,
+               "value" : "Langkaan 2"
+            },
+            {
+               "offset" : 40,
+               "value" : "Dasmariñas"
+            },
+            {
+               "offset" : 52,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 60,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
          "description" : "king's Apartments Dasmariñas, Dasmanriñas, Cavite, Philippines",
          "matched_substrings" : 
          [
@@ -205,56 +259,6 @@
          [
             "establishment",
             "point_of_interest"
-         ]
-      },
-      {
-         "description" : "Dairy Kings & Ice Creme Deluxe, San Pedro, Laguna, Philippines",
-         "matched_substrings" : 
-         [
-            {
-               "length" : 5,
-               "offset" : 6
-            }
-         ],
-         "place_id" : "ChIJb57iQe7WlzMRD4v5dFlWtvI",
-         "reference" : "ChIJb57iQe7WlzMRD4v5dFlWtvI",
-         "structured_formatting" : 
-         {
-            "main_text" : "Dairy Kings & Ice Creme Deluxe",
-            "main_text_matched_substrings" : 
-            [
-               {
-                  "length" : 5,
-                  "offset" : 6
-               }
-            ],
-            "secondary_text" : "San Pedro, Laguna, Philippines"
-         },
-         "terms" : 
-         [
-            {
-               "offset" : 0,
-               "value" : "Dairy Kings & Ice Creme Deluxe"
-            },
-            {
-               "offset" : 32,
-               "value" : "San Pedro"
-            },
-            {
-               "offset" : 43,
-               "value" : "Laguna"
-            },
-            {
-               "offset" : 51,
-               "value" : "Philippines"
-            }
-         ],
-         "types" : 
-         [
-            "establishment",
-            "food",
-            "point_of_interest",
-            "store"
          ]
       }
    ],

@@ -259,26 +259,18 @@ $currentPage = basename(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
                     <i class="bi bi-journal-plus fs-5"></i>
                     <span class="menu-text">Book a Trip</span>
                 </a>
-                <a href="/my-account" class="sidebar-link <?= $currentPage == 'my-account' ? 'active' : '' ?>">
+                <a href="/home/my-account" class="sidebar-link <?= $currentPage == 'my-account' ? 'active' : '' ?>">
                     <i class="bi bi-person fs-5"></i>
                     <span class="menu-text">My Account</span>
                 </a>
-                <a href="/home/testimonials" class="sidebar-link <?= $currentPage == 'testimonials' || $currentPage == 'testimonial' ? 'active' : ''; ?>">
-                    <i class="bi bi-star"></i>
-                    <span class="menu-text">Testimonials</span>  
-                </a>
-                <a href="#" class="sidebar-link <?= $currentPage == '#' ? 'active' : '' ?>">
+                <a href="/home/feedback" class="sidebar-link <?= $currentPage == 'feedback' ? 'active' : '' ?>">
                     <i class="bi bi-chat-square-quote icon fs-5"></i>
-                    <span class="menu-text">Feedback & Support</span>
+                    <span class="menu-text">Feedback</span>
                 </a>
             </div>
 
             <!-- Sidebar Footer -->
             <div class="border-top border-secondary">
-                <a href="#" class="sidebar-link">
-                    <i class="bi bi-question-circle"></i>
-                    <span class="menu-text">Help</span>
-                </a>
                 <a href="/logout" class="sidebar-link">
                     <i class="bi bi-box-arrow-left"></i>
                     <span class="menu-text">Logout</span>
@@ -288,5 +280,98 @@ $currentPage = basename(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+        // Handle sidebar logout confirmation
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarLogoutLink = document.querySelector('.sidebar-link[href="/logout"]');
+            
+            if (sidebarLogoutLink) {
+                sidebarLogoutLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    Swal.fire({
+                        title: 'Logout Confirmation',
+                        text: 'Are you sure you want to logout?',
+                        icon: 'question',
+                        showCancelButton: true,
+                        confirmButtonColor: '#198754',
+                        cancelButtonColor: '#6c757d',
+                        confirmButtonText: 'Yes, Logout',
+                        cancelButtonText: 'Cancel',
+                        reverseButtons: true,
+                        customClass: {
+                            popup: 'swal2-popup-custom',
+                            confirmButton: 'btn btn-success',
+                            cancelButton: 'btn btn-secondary'
+                        }
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Show loading state
+                            Swal.fire({
+                                title: 'Logging out...',
+                                text: 'Please wait while we log you out.',
+                                allowOutsideClick: false,
+                                allowEscapeKey: false,
+                                showConfirmButton: false,
+                                didOpen: () => {
+                                    Swal.showLoading();
+                                }
+                            });
+                            
+                            // Redirect to logout
+                            setTimeout(() => {
+                                window.location.href = '/logout';
+                            }, 1000);
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+    
+    <style>
+        /* SweetAlert2 custom styling for sidebar */
+        .swal2-popup-custom {
+            border-radius: 0.75rem !important;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+        }
+        
+        .swal2-popup-custom .swal2-title {
+            color: #198754 !important;
+            font-weight: 600 !important;
+        }
+        
+        .swal2-popup-custom .swal2-html-container {
+            color: #6c757d !important;
+        }
+        
+        .swal2-popup-custom .swal2-confirm {
+            background-color: #198754 !important;
+            border-color: #198754 !important;
+            border-radius: 0.5rem !important;
+            font-weight: 500 !important;
+            padding: 0.5rem 1.5rem !important;
+        }
+        
+        .swal2-popup-custom .swal2-confirm:hover {
+            background-color: #0d6a3e !important;
+            border-color: #0d6a3e !important;
+        }
+        
+        .swal2-popup-custom .swal2-cancel {
+            background-color: #6c757d !important;
+            border-color: #6c757d !important;
+            border-radius: 0.5rem !important;
+            font-weight: 500 !important;
+            padding: 0.5rem 1.5rem !important;
+        }
+        
+        .swal2-popup-custom .swal2-cancel:hover {
+            background-color: #5a6268 !important;
+            border-color: #5a6268 !important;
+        }
+    </style>
 </body>
 </html>

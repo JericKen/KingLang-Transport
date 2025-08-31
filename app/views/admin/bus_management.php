@@ -54,6 +54,25 @@ require_once __DIR__ . "/../../controllers/admin/BusManagementController.php";
         .table tbody tr:hover {
             background-color: rgba(40, 167, 69, 0.05);
         }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
         @media (min-width: 1400px) {
             .container-fluid {
                 max-width: 98%;

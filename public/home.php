@@ -3,20 +3,25 @@ if (is_client_authenticated()) {
     header("Location: /home/booking-requests");
     exit();
 } 
+
+require_once __DIR__ . '/../config/settings.php';
+require_once __DIR__ . '/visitor-chat-widget.php';
+
+$site_name = get_setting('site_name', 'KingLang Transport');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KingLang Transport - Go far. Go together.</title>
+    <title><?= $site_name ?> - Go far. Go together.</title>
     <link rel="icon" href="public/images/main-logo-icon.png" type="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="public/css/home.css">
-    <link rel="stylesheet" href="public/css/chat-widget.css">
+    <!-- <link rel="stylesheet" href="public/css/chat-widget.css">    -->
 </head>
 <body>
     <!-- Header Section -->
@@ -177,8 +182,10 @@ if (is_client_authenticated()) {
         </div>
      </footer>
     <script src="public/js/home.js"></script>
-    <script src="public/js/chat-widget-visitor.js"></script>
+    <!-- <script src="public/js/chat-widget-visitor.js"></script> -->
     <script>
+
+
         // Initialize chat widget for visitors
         document.addEventListener('DOMContentLoaded', function() {
             // Set userLoggedIn to false for visitors

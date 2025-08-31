@@ -1,3 +1,8 @@
+<?php
+require_client_auth();
+require_once __DIR__ . '/chat_widget_core.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +40,9 @@
                                     <div class="upload-overlay" id="uploadOverlay">
                                         <i class="bi bi-camera"></i> Change
                                     </div>
+                                    <button type="button" id="removeProfileImage" class="btn btn-sm btn-danger position-absolute top-0 end-0 rounded-circle" style="display: none; width: 25px; height: 25px; font-size: 10px;">
+                                        <i class="bi bi-x"></i>
+                                    </button>
                                     <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
                                 </div>
                                 <div class="profile-info">
@@ -281,6 +289,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Set user login status for chat widget
+        var userLoggedIn = <?php echo isset($_SESSION['user_id']) ? 'true' : 'false'; ?>;
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="../../../public/js/client/user_account.js"></script>
