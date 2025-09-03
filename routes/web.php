@@ -18,6 +18,9 @@ $controllerClasses = [
 
         'ChatController' => __DIR__ . "/../app/controllers/client/ChatController.php",
 
+        'SlideshowController' => __DIR__ . "/../app/controllers/client/SlideshowController.php",
+        'PastTripsController' => __DIR__ . "/../app/controllers/client/PastTripsController.php",
+
     ],
 
     'admin' => [
@@ -45,6 +48,9 @@ $controllerClasses = [
         'BookingReviewReminderController' => __DIR__ . "/../app/controllers/admin/BookingReviewReminderController.php",
 
         'TestimonialManagementController' => __DIR__ . "/../app/controllers/admin/TestimonialManagementController.php",
+
+        'SlideshowManagementController' => __DIR__ . "/../app/controllers/admin/SlideshowManagementController.php",
+        'PastTripsController' => __DIR__ . "/../app/controllers/admin/PastTripsController.php",
 
         'AdminChatController' => __DIR__ . "/../app/controllers/admin/AdminChatController.php",
 
@@ -294,6 +300,25 @@ switch ($requestPath) {
 
         $controller->getApprovedTestimonials();
 
+        break;
+
+    // Slideshow API for frontend
+
+    case "/api/slideshow/images":
+
+        require_once $controllerClasses['client']['SlideshowController'];
+
+        $controller = new SlideshowController();
+
+        $controller->getActiveSlideshowImages();
+
+        break;
+
+    // Past Trips API for frontend
+    case "/api/past-trips/images":
+        require_once $controllerClasses['client']['PastTripsController'];
+        $controller = new PastTripsController();
+        $controller->getActivePastTrips();
         break;
 
 
@@ -1870,6 +1895,120 @@ switch ($requestPath) {
 
         $controller->getTestimonialDetails();
 
+        break;
+
+    // Slideshow Management
+
+    case "/admin/slideshow":
+
+        require_once $controllerClasses['admin']['SlideshowManagementController'];
+
+        $controller = new SlideshowManagementController();
+
+        $controller->slideshowManagement();
+
+        break;
+
+    case "/admin/slideshow/list":
+
+        require_once $controllerClasses['admin']['SlideshowManagementController'];
+
+        $controller = new SlideshowManagementController();
+
+        $controller->getSlideshowImages();
+
+        break;
+
+    case "/admin/slideshow/upload":
+
+        require_once $controllerClasses['admin']['SlideshowManagementController'];
+
+        $controller = new SlideshowManagementController();
+
+        $controller->uploadSlideshowImage();
+
+        break;
+
+    case "/admin/slideshow/update":
+
+        require_once $controllerClasses['admin']['SlideshowManagementController'];
+
+        $controller = new SlideshowManagementController();
+
+        $controller->updateSlideshowImage();
+
+        break;
+
+    case "/admin/slideshow/delete":
+
+        require_once $controllerClasses['admin']['SlideshowManagementController'];
+
+        $controller = new SlideshowManagementController();
+
+        $controller->deleteSlideshowImage();
+
+        break;
+
+    case "/admin/slideshow/toggle-status":
+
+        require_once $controllerClasses['admin']['SlideshowManagementController'];
+
+        $controller = new SlideshowManagementController();
+
+        $controller->toggleSlideshowImageStatus();
+
+        break;
+
+    case "/admin/slideshow/update-order":
+
+        require_once $controllerClasses['admin']['SlideshowManagementController'];
+
+        $controller = new SlideshowManagementController();
+
+        $controller->updateDisplayOrder();
+
+        break;
+
+    case "/admin/slideshow/stats":
+
+        require_once $controllerClasses['admin']['SlideshowManagementController'];
+
+        $controller = new SlideshowManagementController();
+
+        $controller->getSlideshowStats();
+
+        break;
+
+    // Past Trips Management
+    case "/admin/past-trips/list":
+        require_once $controllerClasses['admin']['PastTripsController'];
+        $controller = new PastTripsController();
+        $controller->list();
+        break;
+    case "/admin/past-trips/upload":
+        require_once $controllerClasses['admin']['PastTripsController'];
+        $controller = new PastTripsController();
+        $controller->upload();
+        break;
+    case "/admin/past-trips/update":
+        require_once $controllerClasses['admin']['PastTripsController'];
+        $controller = new PastTripsController();
+        $controller->update();
+        break;
+    case "/admin/past-trips/delete":
+        require_once $controllerClasses['admin']['PastTripsController'];
+        $controller = new PastTripsController();
+        $controller->delete();
+        break;
+    case "/admin/past-trips/toggle-status":
+        require_once $controllerClasses['admin']['PastTripsController'];
+        $controller = new PastTripsController();
+        $controller->toggleStatus();
+        break;
+    case "/admin/past-trips/update-order":
+        require_once $controllerClasses['admin']['PastTripsController'];
+        $controller = new PastTripsController();
+        $controller->updateOrder();
         break;
 
     case "/admin/get-entity-history":

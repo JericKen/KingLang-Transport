@@ -938,6 +938,10 @@ $current_page = "chat";
                     <i class="bi bi-star"></i>
                     <span class="menu-text">Testimonials</span>  
                 </a>
+                <a href="/admin/slideshow" class="sidebar-link <?= $currentPage == 'slideshow' ? 'active' : ''; ?>">
+                    <i class="bi bi-images"></i>
+                    <span class="menu-text">Slideshow</span>  
+                </a>
                 <a href="/admin/bus-management" class="sidebar-link">
                     <i class="bi bi-bus-front"></i>
                     <span class="menu-text">Buses</span>  

@@ -8,6 +8,10 @@ require_once __DIR__ . '/../config/settings.php';
 require_once __DIR__ . '/visitor-chat-widget.php';
 
 $site_name = get_setting('site_name', 'KingLang Transport');
+$company_contact = get_setting('company_contact', '0917-882-2727');
+$comapny_address = get_setting('company_address', '295 Manuel L. Quezon Ave, Lower Bicutan, Taguig City Lower Bicutan, Philippines');
+$company_email = get_setting('company_email');  
+$company_facebook_link = get_setting('company_facebook_link', 'https://www.facebook.com/KingLangTransport/');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -158,19 +162,19 @@ $site_name = get_setting('site_name', 'KingLang Transport');
                     <div class="footer-section">
                         <h3 class="account">SOCIALS</h3>
                         <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="<?= $company_facebook_link ?>" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
                     <div class="footer-section">
                         <h3 class="account">CONTACT US</h3>
                         <ul class="footers">
-                            <li>0917-882-2727</li>
-                            <li>bsmillamina@yahoo.com</li>
+                            <li><?= $company_contact ?></li>
+                            <li><?= $company_email ?></li>
                         </ul>
                     </div>
                     <div class="footer-section">
                         <h3 class="account">FIND US</h3>
-                        <p class="footers">295 Manuel L. Quezon Ave, Lower Bicutan, <br/> Taguig City Lower Bicutan, Philippines</p>
+                        <p class="footers"><?= $comapny_address ?></p>
                         <p class="footer-hours">Everyday from 8:00 am to 11:00 pm</p>
                     </div>
                 </div>

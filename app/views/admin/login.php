@@ -7,6 +7,11 @@ if (is_admin_authenticated()) {
     header("Location: /admin/dashboard");
     exit();
 }
+
+require_once __DIR__ . '/../../../config/settings.php';
+
+$company_contact = get_setting('company_contact', '0917-882-2727');
+$company_email = get_setting('company_email');
 ?>
 
 <!DOCTYPE html>
@@ -68,63 +73,56 @@ if (is_admin_authenticated()) {
 
     <div class="content container-fluid p-0 m-0 d-flex flex-wrap">
         <div class="image-container">
-            <div class="slideshow-container">
-                <div class="slideshow-slide">
-                    <img src="../../../public/images/bus3.jpg" alt="Bus Image 1">
-                    <div class="slideshow-text">YOUR ON-THE-GO TOURIST BUS RENTAL!</div>
-                    <div class="slideshow-contact-info">
-                        <div class="slideshow-contact-details">
-                            <a href="tel:0917-8822727" class="contact-item">
-                                <span>📞 0917 882 2727 | 0933 862 4323</span>
-                            </a>
-                            <a href="mailto:bsmillamina@yahoo.com" class="contact-item">
-                                <span>✉️ bsmillamina@yahoo.com</span>
-                            </a>
+            <div class="slideshow-container" id="slideshow-container">
+                <?php
+                // Load slideshow images directly from PHP
+                require_once __DIR__ . '/../../../app/models/admin/SlideshowManagementModel.php';
+                $slideshowModel = new SlideshowManagementModel();
+                $activeImages = $slideshowModel->getActiveSlideshowImages();
+                
+                if ($activeImages && count($activeImages) > 0) {
+                    foreach ($activeImages as $index => $image) {
+                        $isActive = $index === 0 ? 'active-slide' : '';
+                        $visibility = $index === 0 ? 'visible' : 'hidden';
+                        ?>
+                        <div class="slideshow-slide <?= $isActive ?>" style="visibility: <?= $visibility ?>;">
+                            <img src="../../../public/images/slideshow/<?= htmlspecialchars($image['filename']) ?>" alt="<?= htmlspecialchars($image['title'] ?? 'Slideshow Image') ?>">
+                            <?php if ($image['title']): ?>
+                                <div class="slideshow-text"><?= htmlspecialchars($image['title']) ?></div>
+                            <?php endif; ?>
+                            <div class="slideshow-contact-info">
+                                <div class="slideshow-contact-details">
+                                    <a href="tel:0917-8822727" class="contact-item">
+                                        <span><i class="bi bi-telephone-fill"></i> <?= $company_contact ?></span>
+                                    </a>
+                                    <a href="mailto:bsmillamina@yahoo.com" class="contact-item">
+                                        <span><i class="bi bi-envelope-fill"></i> <?= $company_email ?></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                } else {
+                    // Fallback to default images if no database images
+                    ?>
+                    <div class="slideshow-slide active-slide">
+                        <img src="../../../public/images/slideshow/slide2.jpg" alt="Experience Comfort and Luxury">
+                        <div class="slideshow-text">EXPERIENCE COMFORT AND LUXURY</div>
+                        <div class="slideshow-contact-info">
+                            <div class="slideshow-contact-details">
+                                <a href="tel:0917-8822727" class="contact-item">
+                                    <span><i class="bi bi-telephone-fill"></i> <?= $company_contact ?></span>
+                                </a>
+                                <a href="mailto:bsmillamina@yahoo.com" class="contact-item">
+                                    <span><i class="bi bi-envelope-fill"></i> <?= $company_email ?></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="slideshow-slide">
-                    <img src="../../../public/images/slideshow/slide2.jpg" alt="Bus Image 2">
-                    <div class="slideshow-text">EXPERIENCE COMFORT AND LUXURY</div>
-                    <div class="slideshow-contact-info">
-                        <div class="slideshow-contact-details">
-                            <a href="tel:0917-8822727" class="contact-item">
-                                <span>📞 0917 882 2727 | 0933 862 4323</span>
-                            </a>
-                            <a href="mailto:bsmillamina@yahoo.com" class="contact-item">
-                                <span>✉️ bsmillamina@yahoo.com</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slideshow-slide">
-                    <img src="../../../public/images/slideshow/slide3.jpg" alt="Bus Image 3">
-                    <div class="slideshow-text">TRAVEL WITH STYLE AND SAFETY</div>
-                    <div class="slideshow-contact-info">
-                        <div class="slideshow-contact-details">
-                            <a href="tel:0917-8822727" class="contact-item">
-                                <span>📞 0917 8822 727 | 0933 862 4323</span>
-                            </a>
-                            <a href="mailto:bsmillamina@yahoo.com" class="contact-item">
-                                <span>✉️ bsmillamina@yahoo.com</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slideshow-slide">
-                    <img src="../../../public/images/slideshow/slide4.jpg" alt="Bus Image 4">
-                    <div class="slideshow-text">TRAVEL WITH STYLE AND SAFETY</div>
-                    <div class="slideshow-contact-info">
-                        <div class="slideshow-contact-details">
-                            <a href="tel:0917-8822727" class="contact-item">
-                                <span>📞 0917 8822 727 | 0933 862 4323</span>
-                            </a>
-                            <a href="mailto:bsmillamina@yahoo.com" class="contact-item">
-                                <span>✉️ bsmillamina@yahoo.com</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
         <div class="form-container d-flex flex-column justify-content-center">
@@ -155,9 +153,29 @@ if (is_admin_authenticated()) {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="../../../public/js/jquery/jquery-3.6.4.min.js"></script>
-    <script src="../../../public/js/slideshow.js"></script>
     <script src="../../../public/js/admin/login.js"></script>
     <script>
+        // Simple slideshow functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slideshow-slide');
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.visibility = i === index ? 'visible' : 'hidden';
+                slide.classList.toggle('active-slide', i === index);
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        
+        // Auto-advance slides every 5 seconds
+        if (slides.length > 1) {
+            setInterval(nextSlide, 5000);
+        }
+        
         function togglePasswordVisibility() {
             const passwordInput = document.getElementById('password');
             const toggleIcon = document.getElementById('togglePassword');
