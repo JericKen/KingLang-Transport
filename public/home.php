@@ -25,7 +25,7 @@ $company_facebook_link = get_setting('company_facebook_link', 'https://www.faceb
     <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="public/css/home.css">
-    <!-- <link rel="stylesheet" href="public/css/chat-widget.css">    -->
+    <link rel="stylesheet" href="public/css/chat-widget.css">
 </head>
 <body>
     <!-- Header Section -->

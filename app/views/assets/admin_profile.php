@@ -615,7 +615,7 @@
                 </div>
             </div>
             <div class="py-1">
-                <a href="#" id="logoutLink" class="dropdown-item d-flex align-items-center gap-2 py-2 px-3 text-danger" style="font-size: 14px;">
+                <a href="" id="logoutLink" class="dropdown-item d-flex align-items-center gap-2 py-2 px-3 text-danger" style="font-size: 14px;">
                     <i class="bi bi-box-arrow-left"></i>
                     Logout
                 </a>
@@ -1377,42 +1377,41 @@ document.addEventListener('DOMContentLoaded', function() {
     const logoutLink = document.getElementById('logoutLink');
     if (logoutLink) {
         logoutLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            
+            e.preventDefault();         
             Swal.fire({
-                title: 'Logout Confirmation',
-                text: 'Are you sure you want to logout?',
-                icon: 'question',
-                showCancelButton: true,
-                confirmButtonColor: '#198754',
-                cancelButtonColor: '#6c757d',
-                confirmButtonText: 'Yes, Logout',
-                cancelButtonText: 'Cancel',
-                reverseButtons: true,
-                customClass: {
-                    popup: 'swal2-popup-custom',
-                    confirmButton: 'btn btn-success',
-                    cancelButton: 'btn btn-secondary'
-                }
+                 title: 'Logout Confirmation',
+                 text: 'Are you sure you want to logout?',
+                 icon: 'question',
+                 showCancelButton: true,
+                 confirmButtonColor: '#198754',
+                 cancelButtonColor: '#6c757d',
+                 confirmButtonText: 'Yes, Logout',
+                 cancelButtonText: 'Cancel',
+                 reverseButtons: true,
+                 customClass: {
+                     popup: 'swal2-popup-custom',
+                     confirmButton: 'btn btn-success',
+                     cancelButton: 'btn btn-secondary'
+                 }
             }).then((result) => {
-                if (result.isConfirmed) {
-                    // Show loading state
-                    Swal.fire({
-                        title: 'Logging out...',
-                        text: 'Please wait while we log you out.',
-                        allowOutsideClick: false,
-                        allowEscapeKey: false,
-                        showConfirmButton: false,
-                        didOpen: () => {
-                            Swal.showLoading();
-                        }
-                    });
-                    
-                    // Redirect to logout
-                    setTimeout(() => {
-                        window.location.href = '/admin/logout';
-                    }, 1000);
-                }
+                 if (result.isConfirmed) {
+                     // Show loading state
+                     Swal.fire({
+                         title: 'Logging out...',
+                         text: 'Please wait while we log you out.',
+                         allowOutsideClick: false,
+                         allowEscapeKey: false,
+                         showConfirmButton: false,
+                         didOpen: () => {
+                             Swal.showLoading();
+                         }
+                     });
+              
+                     // Redirect to logout
+                     setTimeout(() => {
+                         window.location.href = '/admin/logout';
+                     }, 1000);
+                 }
             });
         });
     }

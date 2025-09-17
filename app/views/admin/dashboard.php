@@ -72,6 +72,16 @@ require_admin_auth(); // Use helper function
             color: white !important;
             border-color: var(--primary-green) !important;
         }
+        /* Stats icon styling to match other modules */
+        .stats-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
@@ -151,8 +161,8 @@ require_admin_auth(); // Use helper function
             <div class="row mt-3">
                 <div class="col-md-6 col-lg-4 col-xl mb-4">
                     <div class="summary-metrics-card d-flex gap-4 align-items-center p-4 h-100">
-                        <div class="icon bg-warning-subtle rounded-circle px-3 py-2">
-                            <i class="bi bi-calendar-check fs-4 text-success"></i>
+                        <div class="stats-icon bg-primary-subtle text-primary">
+                            <i class="bi bi-calendar-check"></i>
                         </div>
                         <div>
                             <h4 id="totalBookings" class="fw-bolder"></h4>
@@ -162,8 +172,8 @@ require_admin_auth(); // Use helper function
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl mb-4">
                     <div class="summary-metrics-card d-flex gap-4 align-items-center p-4 h-100">
-                        <div class="icon bg-warning-subtle rounded-circle px-3 py-2">
-                            <i class="bi bi-cash-stack fs-4 text-success"></i>
+                        <div class="stats-icon bg-success-subtle text-success">
+                            <i class="bi bi-cash-stack"></i>
                         </div>
                         <div>
                             <h4 id="totalRevenue" class="fw-bolder"></h4>
@@ -173,8 +183,8 @@ require_admin_auth(); // Use helper function
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl mb-4">
                     <div class="summary-metrics-card d-flex gap-4 align-items-center p-4 h-100">
-                        <div class="icon bg-warning-subtle rounded-circle px-3 py-2">
-                            <i class="bi bi-bus-front fs-4 text-success"></i>
+                        <div class="stats-icon bg-info-subtle text-info">
+                            <i class="bi bi-bus-front"></i>
                         </div>
                         <div>
                             <h4 id="upcomingTrips" class="fw-bolder"></h4>
@@ -184,8 +194,8 @@ require_admin_auth(); // Use helper function
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl mb-4">
                     <div class="summary-metrics-card d-flex gap-4 align-items-center p-4 h-100">
-                        <div class="icon bg-warning-subtle rounded-circle px-3 py-2">
-                            <i class="bi bi-hourglass-split fs-4 text-success"></i>
+                        <div class="stats-icon bg-warning-subtle text-warning">
+                            <i class="bi bi-hourglass-split"></i>
                         </div>
                         <div>
                             <h4 id="pendingBookings" class="fw-bolder"></h4>
@@ -195,8 +205,8 @@ require_admin_auth(); // Use helper function
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl mb-4">
                     <div class="summary-metrics-card d-flex gap-4 align-items-center p-4 h-100">
-                        <div class="icon bg-warning-subtle rounded-circle px-3 py-2">
-                            <i class="bi bi-exclamation-triangle fs-4 text-success"></i>
+                        <div class="stats-icon bg-danger-subtle text-danger">
+                            <i class="bi bi-exclamation-triangle"></i>
                         </div>
                         <div>
                             <h4 id="flaggedBookings" class="fw-bolder"></h4>

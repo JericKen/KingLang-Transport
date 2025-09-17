@@ -1,0 +1,78 @@
+{
+   "destination_addresses" : 
+   [
+      "Louisville Int'l Airport (SDF), 600 Terminal Drive, Louisville, KY 40209, USA",
+      "1 Loyola Marymount University Dr, Los Angeles, CA 90045, USA"
+   ],
+   "origin_addresses" : 
+   [
+      "1 Loyola Marymount University Dr, Los Angeles, CA 90045, USA",
+      "Louisville Int'l Airport (SDF), 600 Terminal Drive, Louisville, KY 40209, USA"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "3,395 km",
+                  "value" : 3395412
+               },
+               "duration" : 
+               {
+                  "text" : "1 day 6 hours",
+                  "value" : 109719
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "3,399 km",
+                  "value" : 3399071
+               },
+               "duration" : 
+               {
+                  "text" : "1 day 7 hours",
+                  "value" : 110298
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

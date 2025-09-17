@@ -1,7 +1,5 @@
 <?php
 require_client_auth(); // Use helper function
-
-require_once __DIR__ . '/chat_widget_core.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,6 +50,9 @@ require_once __DIR__ . '/chat_widget_core.php';
             background-position: right 0.75rem center;
             background-size: 16px 12px;
             height: 38px;
+            display: flex;
+            align-items: center;
+            line-height: 1;
         }
 
         /* Make options compact */
@@ -81,8 +82,9 @@ require_once __DIR__ . '/chat_widget_core.php';
             /* Chrome/Safari specific styles */
             select.custom-select {
                 height: 38px;
-                padding-top: 0.25rem;
-                padding-bottom: 0.25rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                padding-left: 1rem;
             }
         }
     </style>
@@ -240,6 +242,8 @@ require_once __DIR__ . '/chat_widget_core.php';
             </div>
         </div>
     </div>
+    
+    <?php include_once __DIR__ . '/chat_widget_core.php'; ?>
 
     <script>
     // Set user login status for chat widget

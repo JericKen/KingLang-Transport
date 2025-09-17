@@ -1,6 +1,5 @@
 <?php 
 require_client_auth(); 
-require_once __DIR__ . '/chat_widget_core.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -142,6 +141,8 @@ require_once __DIR__ . '/chat_widget_core.php';
             </div>
         </div>
     </div>
+
+    <?php include_once __DIR__ . '/chat_widget_core.php'; ?>
 
     <script>
         // Set user login status for chat widget

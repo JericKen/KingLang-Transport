@@ -235,7 +235,7 @@ class SlideshowManager {
             const data = await response.json();
             
             if (data.success) {
-                this.showSuccess(data.message);
+                // this.showSuccess(data.message);
                 this.loadImages();
             } else {
                 this.showError(data.message);

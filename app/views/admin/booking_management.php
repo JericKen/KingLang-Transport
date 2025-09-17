@@ -142,7 +142,94 @@ require_once __DIR__ . "/../../controllers/admin/BookingManagementController.php
             padding: 0.4rem 0.7rem;
             font-weight: 500;
         }
-        /* Custom Scrollbar */
+        /* Quick Filter Carousel Styles */
+        .filter-carousel-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .filter-carousel {
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            gap: 8px;
+            padding: 8px 0;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+            position: relative;
+            flex: 1;
+        }
+        
+        /* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+        .filter-carousel::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .filter-carousel .btn {
+            white-space: nowrap;
+            flex-shrink: 0;
+            min-width: fit-content;
+            transition: all 0.2s ease;
+        }
+        
+        /* Navigation arrows */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            /* background: transparent; */
+            border: 1px solid transparent;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            background: rgba(255, 255, 255);
+            /* transition: all 0.2s ease;    */
+        }
+        
+        .carousel-arrow:hover {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #dee2e6;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .carousel-arrow.left {
+            left: -16px;
+        }
+        
+        .carousel-arrow.right {
+            right: -16px;
+        }
+        
+        .carousel-arrow i {
+            font-size: 16px;
+            font-weight: 600;
+            color: #6c757d;
+        }
+        
+        .carousel-arrow:hover i {
+            color: #495057;
+        }
+        
+        /* Hide arrows when not needed */
+        .carousel-arrow.disabled {
+            opacity: 0;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        /* .filter-carousel .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        } */
+
+        /* Custom Scrollbar for other elements */
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -346,43 +433,49 @@ require_once __DIR__ . "/../../controllers/admin/BookingManagementController.php
 
             <!-- Quick Filter Pills & Export Tools Row -->
             <div class="row g-3 mb-3">
-                <div class="col-xl-10">
-                    <div class="d-flex gap-2 flex-wrap">
-                        <button class="btn btn-sm btn-outline-secondary quick-filter" data-status="All">
-                            <i class="bi bi-funnel"></i> All
+                <div class="col-xl-6">
+                    <div class="filter-carousel-container">
+                        <button class="carousel-arrow left" id="scrollLeft">
+                            <i class="bi bi-chevron-left"></i>
                         </button>
-                        <button class="btn btn-sm btn-outline-warning quick-filter" data-status="Pending">
-                            <i class="bi bi-hourglass-split"></i> Pending
-                        </button>
-                        <button class="btn btn-sm btn-outline-success quick-filter" data-status="Confirmed">
-                            <i class="bi bi-check-circle"></i> Confirmed
-                        </button>
-                        <button class="btn btn-sm btn-outline-info quick-filter" data-status="Processing">
-                            <i class="bi bi-arrow-repeat"></i> Processing
-                        </button>
-                        <button class="btn btn-sm btn-outline-info quick-filter" data-status="Rebooking">
-                            <i class="bi bi-arrow-repeat"></i> Rebooking
-                        </button>
-                        <button class="btn btn-sm btn-outline-primary quick-filter" data-status="Upcoming">
-                            <i class="bi bi-calendar-check"></i> Upcoming
-                        </button>
-                        <button class="btn btn-sm btn-outline-danger quick-filter" data-status="Canceled">
-                            <i class="bi bi-x-circle"></i> Canceled
-                        </button>
-                        <button class="btn btn-sm btn-outline-secondary quick-filter" data-status="Rejected">
-                            <i class="bi bi-dash-circle"></i> Rejected
-                        </button>
-                        <button class="btn btn-sm btn-outline-primary quick-filter" data-status="Completed">
-                            <i class="bi bi-check-all"></i> Completed
-                        </button>
-                        <button class="btn btn-sm btn-outline-danger quick-filter" data-payment="Unpaid">
-                            <i class="bi bi-cash"></i> Unpaid
-                        </button>
-                        <button class="btn btn-sm btn-outline-warning quick-filter" data-payment="Partially Paid">
-                            <i class="bi bi-cash-coin"></i> Partially Paid
+                        <div class="filter-carousel" id="filterCarousel">
+                            <button class="btn btn-sm btn-outline-secondary quick-filter" data-status="All">
+                                <i class="bi bi-funnel"></i> All
+                            </button>
+                            <button class="btn btn-sm btn-outline-warning quick-filter" data-status="Pending">
+                                <i class="bi bi-hourglass-split"></i> Pending
+                            </button>
+                            <button class="btn btn-sm btn-outline-success quick-filter" data-status="Confirmed">
+                                <i class="bi bi-check-circle"></i> Confirmed
+                            </button>
+                            <button class="btn btn-sm btn-outline-info quick-filter" data-status="Processing">
+                                <i class="bi bi-arrow-repeat"></i> Processing
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary quick-filter" data-status="Upcoming">
+                                <i class="bi bi-calendar-check"></i> Upcoming
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger quick-filter" data-status="Canceled">
+                                <i class="bi bi-x-circle"></i> Canceled
+                            </button>
+                            <button class="btn btn-sm btn-outline-secondary quick-filter" data-status="Rejected">
+                                <i class="bi bi-dash-circle"></i> Rejected
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary quick-filter" data-status="Completed">
+                                <i class="bi bi-check-all"></i> Completed
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger quick-filter" data-payment="Unpaid">
+                                <i class="bi bi-cash"></i> Unpaid
+                            </button>
+                            <button class="btn btn-sm btn-outline-warning quick-filter" data-payment="Partially Paid">
+                                <i class="bi bi-cash-coin"></i> Partially Paid
+                            </button>
+                        </div>
+                        <button class="carousel-arrow right" id="scrollRight">
+                            <i class="bi bi-chevron-right"></i>
                         </button>
                     </div>
                 </div>
+                <div class="col-xl-4"></div>
                 <div class="col-xl-2">
                     <div class="d-flex gap-2 justify-content-end">
                         <div class="btn-group">
@@ -672,5 +765,62 @@ require_once __DIR__ . "/../../controllers/admin/BookingManagementController.php
     <script src="../../../public/js/utils/pagination.js"></script>
     <script src="../../../public/js/admin/booking_management.js"></script>
     <script src="../../../public/js/assets/sidebar.js"></script>
+    
+    <script>
+        // Carousel navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('filterCarousel');
+            const leftArrow = document.getElementById('scrollLeft');
+            const rightArrow = document.getElementById('scrollRight');
+            
+            function updateArrowVisibility() {
+                const scrollLeft = carousel.scrollLeft;
+                const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                
+                // Show/hide left arrow
+                if (scrollLeft <= 0) {
+                    leftArrow.classList.add('disabled');
+                } else {
+                    leftArrow.classList.remove('disabled');
+                }
+                
+                // Show/hide right arrow
+                if (scrollLeft >= maxScroll - 1) { // -1 for rounding issues
+                    rightArrow.classList.add('disabled');
+                } else {
+                    rightArrow.classList.remove('disabled');
+                }
+            }
+            
+            // Initial check
+            updateArrowVisibility();
+            
+            // Left arrow click
+            leftArrow.addEventListener('click', function() {
+                if (!this.classList.contains('disabled')) {
+                    carousel.scrollBy({
+                        left: -200,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+            
+            // Right arrow click
+            rightArrow.addEventListener('click', function() {
+                if (!this.classList.contains('disabled')) {
+                    carousel.scrollBy({
+                        left: 200,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+            
+            // Update arrows on scroll
+            carousel.addEventListener('scroll', updateArrowVisibility);
+            
+            // Update arrows on window resize
+            window.addEventListener('resize', updateArrowVisibility);
+        });
+    </script>
 </body>
 </html>

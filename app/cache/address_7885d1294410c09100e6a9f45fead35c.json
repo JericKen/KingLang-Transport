@@ -1,0 +1,278 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Makati City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJAe2gZALJlzMRzsoweNVuBis",
+         "reference" : "ChIJAe2gZALJlzMRzsoweNVuBis",
+         "structured_formatting" : 
+         {
+            "main_text" : "Makati City",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Makati City"
+            },
+            {
+               "offset" : 13,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 27,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Makati Medical Center, Amorsolo Street, Legazpi Village, Makati City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ0wmu7AvJlzMRA-6w4Np_FSs",
+         "reference" : "ChIJ0wmu7AvJlzMRA-6w4Np_FSs",
+         "structured_formatting" : 
+         {
+            "main_text" : "Makati Medical Center",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Amorsolo Street, Legazpi Village, Makati City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Makati Medical Center"
+            },
+            {
+               "offset" : 23,
+               "value" : "Amorsolo Street"
+            },
+            {
+               "offset" : 40,
+               "value" : "Legazpi Village"
+            },
+            {
+               "offset" : 57,
+               "value" : "Makati City"
+            },
+            {
+               "offset" : 70,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 84,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "health",
+            "hospital",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Makati City Hall, Angono, Makati City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ8XIoia7JlzMRbpMXuVFmt88",
+         "reference" : "ChIJ8XIoia7JlzMRbpMXuVFmt88",
+         "structured_formatting" : 
+         {
+            "main_text" : "Makati City Hall",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Angono, Makati City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Makati City Hall"
+            },
+            {
+               "offset" : 18,
+               "value" : "Angono"
+            },
+            {
+               "offset" : 26,
+               "value" : "Makati City"
+            },
+            {
+               "offset" : 39,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 53,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "city_hall",
+            "establishment",
+            "local_government_office",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Makati Shangri-La, Makati Avenue, Makati City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ9yYMAQXJlzMRw9EjaWpOh24",
+         "reference" : "ChIJ9yYMAQXJlzMRw9EjaWpOh24",
+         "structured_formatting" : 
+         {
+            "main_text" : "Makati Shangri-La",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Makati Avenue, Makati City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Makati Shangri-La"
+            },
+            {
+               "offset" : 19,
+               "value" : "Makati Avenue"
+            },
+            {
+               "offset" : 34,
+               "value" : "Makati City"
+            },
+            {
+               "offset" : 47,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 61,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "bar",
+            "establishment",
+            "food",
+            "lodging",
+            "night_club",
+            "point_of_interest",
+            "restaurant",
+            "spa"
+         ]
+      },
+      {
+         "description" : "Makati Diamond Residences, Legazpi Street, Legazpi Village, Makati City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJnWJG7w_JlzMROHVDC8jzfrU",
+         "reference" : "ChIJnWJG7w_JlzMROHVDC8jzfrU",
+         "structured_formatting" : 
+         {
+            "main_text" : "Makati Diamond Residences",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Legazpi Street, Legazpi Village, Makati City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Makati Diamond Residences"
+            },
+            {
+               "offset" : 27,
+               "value" : "Legazpi Street"
+            },
+            {
+               "offset" : 43,
+               "value" : "Legazpi Village"
+            },
+            {
+               "offset" : 60,
+               "value" : "Makati City"
+            },
+            {
+               "offset" : 73,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 87,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

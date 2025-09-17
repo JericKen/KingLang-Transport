@@ -1,6 +1,5 @@
 <?php 
 require_client_auth(); // Use helper function
-require_once __DIR__ . '/chat_widget_core.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -115,36 +114,35 @@ require_once __DIR__ . '/chat_widget_core.php';
                             <div class="row g-2 align-items-center">
                                 <!-- Search -->
                                 <div class="col-lg-8 col-md-8">
-                                    <div class="input-group">
-                                        <span class="input-group-text bg-light border-end-0">
+                                    <div class="input-group" style="gap: 0;">
+                                        <span class="input-group-text bg-light">
                                             <i class="bi bi-search"></i>
                                         </span>
-                                        <input type="text" id="searchBookings" class="form-control border-start-0" placeholder="Search destinations...">
-                                        <button id="searchBtn" class="btn btn-success">Search</button>
+                                        <input type="text" id="searchBookings" class="form-control rounded-end" placeholder="Search destinations or pickup points...">
+                                        <!-- <button id="searchBtn" class="btn btn-success">Search</button> -->
                                     </div>
                                 </div>
                                 
                                 <!-- Status Filter -->
-                                <div class="col-lg-4 col-md-4 d-none">
-                                    <div class="input-group">
+                                <div class="col-lg-0 col-md-0 d-none">
+                                    <div class="input-group" style="gap: 0;">
                                         <span class="input-group-text bg-light">
                                             <i class="bi bi-filter"></i>
                                         </span>
                                         <select name="status" id="statusSelect" class="form-select">
-                                            <option value="all">All Bookings</option>
-                                            <option value="pending" selected>Pending</option>
-                                            <option value="confirmed">Confirmed</option>
-                                            <option value="processing">Processing</option>
-                                            <option value="canceled">Canceled</option>
-                                            <option value="rejected">Rejected</option>
-                                            <option value="completed">Completed</option>
+                                            <option value="All">All Bookings</option>
+                                            <option value="Pending" selected>Pending</option>
+                                            <option value="Confirmed">Confirmed</option>
+                                            <option value="Canceled">Canceled</option>
+                                            <option value="Rejected">Rejected</option>
+                                            <option value="Completed">Completed</option>
                                         </select>
                                     </div>
                                 </div>
                                 
                                 <!-- Records Per Page -->
                                 <div class="col-lg-4 col-md-4">
-                                    <div class="input-group">
+                                    <div class="input-group" style="gap: 0;">
                                         <span class="input-group-text bg-light">
                                             <i class="bi bi-list-ol"></i>
                                         </span>
@@ -153,6 +151,7 @@ require_once __DIR__ . '/chat_widget_core.php';
                                             <option value="10" selected>10 rows</option>
                                             <option value="25">25 rows</option>
                                             <option value="50">50 rows</option>
+                                            <option value="100">100 rows</option>
                                         </select>
                                     </div>
                                 </div>
@@ -218,6 +217,9 @@ require_once __DIR__ . '/chat_widget_core.php';
                         </button>
                         <button class="btn btn-sm btn-outline-danger quick-filter" data-balance="unpaid">
                             <i class="bi bi-cash"></i> Unpaid
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary quick-filter" data-status="rejected">
+                            <i class="bi bi-dash-circle"></i> Rejected
                         </button>
                     </div>
                 </div>
@@ -430,6 +432,8 @@ require_once __DIR__ . '/chat_widget_core.php';
             </div>
         </div>
     </div>
+
+    <?php include_once __DIR__ . '/chat_widget_core.php'; ?>
 
     <script>
         // Set user login status for chat widget

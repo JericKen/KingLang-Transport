@@ -1016,6 +1016,10 @@ class BookingManagementController {
 
             $booking['payments'] = $payments;
 
+            // Include assignment overview
+
+            $booking['assignments'] = $this->bookingModel->getBookingAssignments($booking_id);
+
             echo json_encode([
 
                 "success" => true,
@@ -1036,6 +1040,34 @@ class BookingManagementController {
 
         }
 
+    }
+
+    // New endpoint: get buses/drivers and current mapping for a booking
+    public function getBookingAssignments() {
+        header("Content-Type: application/json");
+        $data = json_decode(file_get_contents("php://input"), true);
+        $booking_id = isset($data["bookingId"]) ? (int)$data["bookingId"] : 0;
+        if ($booking_id <= 0) {
+            echo json_encode(["success" => false, "message" => "Invalid booking id"]);
+            return;
+        }
+        $assignments = $this->bookingModel->getBookingAssignments($booking_id);
+        echo json_encode(["success" => true, "assignments" => $assignments]);
+    }
+
+    // New endpoint: update buses and multi-driver assignments for a booking
+    public function updateBookingAssignments() {
+        header("Content-Type: application/json");
+        $data = json_decode(file_get_contents("php://input"), true);
+        $booking_id = isset($data["bookingId"]) ? (int)$data["bookingId"] : 0;
+        $bus_ids = isset($data["busIds"]) && is_array($data["busIds"]) ? $data["busIds"] : [];
+        $bus_to_driver_ids = isset($data["busToDriverIds"]) && is_array($data["busToDriverIds"]) ? $data["busToDriverIds"] : [];
+        if ($booking_id <= 0) {
+            echo json_encode(["success" => false, "message" => "Invalid booking id"]);
+            return;
+        }
+        $result = $this->bookingModel->updateBookingAssignments($booking_id, $bus_ids, $bus_to_driver_ids);
+        echo json_encode(["success" => $result["success"], "message" => $result["success"] ? "Assignments updated" : ($result["message"] ?? "Failed to update")]);
     }
 
 

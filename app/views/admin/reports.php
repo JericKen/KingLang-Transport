@@ -69,6 +69,16 @@
             color: white !important;
             border-color: var(--primary-green) !important;
         }
+        /* Stats icon styling to match other modules */
+        .stats-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
         .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)), 
         .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)), 
         .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
@@ -264,8 +274,8 @@
            <div class="row mt-3">
                 <div class="col-md-6 col-lg-4 col-xl mb-4">
                     <div class="summary-metrics-card d-flex gap-4 align-items-center p-4">
-                        <div class="icon bg-warning-subtle rounded-circle px-3 py-2">
-                            <i class="bi bi-calendar-check fs-4 text-success"></i>
+                        <div class="stats-icon bg-primary-subtle text-primary">
+                            <i class="bi bi-calendar-check"></i>
                         </div>
                         <div>
                             <h4 id="totalBookings" class="fw-bolder">-</h4>
@@ -275,8 +285,8 @@
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl mb-4">
                     <div class="summary-metrics-card d-flex gap-4 align-items-center p-4">
-                        <div class="icon bg-warning-subtle rounded-circle px-3 py-2">
-                            <i class="bi bi-cash-stack fs-4 text-success"></i>
+                        <div class="stats-icon bg-success-subtle text-success">
+                            <i class="bi bi-cash-stack"></i>
                         </div>
                         <div>
                             <h4 id="totalRevenue" class="fw-bold fs-4">-</h4>
@@ -286,8 +296,8 @@
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl mb-4">
                     <div class="summary-metrics-card d-flex gap-4 align-items-center p-4">
-                        <div class="icon bg-warning-subtle rounded-circle px-3 py-2">
-                            <i class="bi bi-wallet2 fs-4 text-success"></i>
+                        <div class="stats-icon bg-warning-subtle text-warning">
+                            <i class="bi bi-wallet2"></i>
                         </div>
                         <div>
                             <h4 id="outstandingBalance" class="fw-bolder">-</h4>
@@ -297,8 +307,8 @@
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl mb-4">
                     <div class="summary-metrics-card d-flex gap-4 align-items-center p-4">
-                        <div class="icon bg-warning-subtle rounded-circle px-3 py-2">
-                            <i class="bi bi-bar-chart-line fs-4 text-success"></i>
+                        <div class="stats-icon bg-info-subtle text-info">
+                            <i class="bi bi-bar-chart-line"></i>
                         </div>
                         <div>
                             <h4 id="avgBookingValue" class="fw-bolder">-</h4>

@@ -1,0 +1,274 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "SDF Residence, Dior Street, Novaliches, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ7ZrK6aaxlzMRylFCsfp4_ow",
+         "reference" : "ChIJ7ZrK6aaxlzMRylFCsfp4_ow",
+         "structured_formatting" : 
+         {
+            "main_text" : "SDF Residence",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Dior Street, Novaliches, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SDF Residence"
+            },
+            {
+               "offset" : 15,
+               "value" : "Dior Street"
+            },
+            {
+               "offset" : 28,
+               "value" : "Novaliches"
+            },
+            {
+               "offset" : 40,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 53,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 67,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "SDF1 Motor Cafe, Cainta, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJjVu8ZHfHlzMRD02mJBxdUeY",
+         "reference" : "ChIJjVu8ZHfHlzMRD02mJBxdUeY",
+         "structured_formatting" : 
+         {
+            "main_text" : "SDF1 Motor Cafe",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Cainta, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SDF1 Motor Cafe"
+            },
+            {
+               "offset" : 17,
+               "value" : "Cainta"
+            },
+            {
+               "offset" : 25,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 32,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "cafe",
+            "establishment",
+            "food",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "SDF Solutions, San Diego Street, Sampaloc, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJG4J36UHJlzMRl0BeH-Abg4s",
+         "reference" : "ChIJG4J36UHJlzMRl0BeH-Abg4s",
+         "structured_formatting" : 
+         {
+            "main_text" : "SDF Solutions",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Diego Street, Sampaloc, Manila, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SDF Solutions"
+            },
+            {
+               "offset" : 15,
+               "value" : "San Diego Street"
+            },
+            {
+               "offset" : 33,
+               "value" : "Sampaloc"
+            },
+            {
+               "offset" : 43,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 51,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "SDF Lodge, Quirino Street, Malita, Davao del Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJP1aL8nnn-TIRn08Y6UFlcc8",
+         "reference" : "ChIJP1aL8nnn-TIRn08Y6UFlcc8",
+         "structured_formatting" : 
+         {
+            "main_text" : "SDF Lodge",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Quirino Street, Malita, Davao del Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SDF Lodge"
+            },
+            {
+               "offset" : 11,
+               "value" : "Quirino Street"
+            },
+            {
+               "offset" : 27,
+               "value" : "Malita"
+            },
+            {
+               "offset" : 35,
+               "value" : "Davao del Sur"
+            },
+            {
+               "offset" : 50,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "sdfas, Bucal Bypass Road, Calamba, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJJUhvJ5xjvTMRkxc6E4d3LZM",
+         "reference" : "ChIJJUhvJ5xjvTMRkxc6E4d3LZM",
+         "structured_formatting" : 
+         {
+            "main_text" : "sdfas",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bucal Bypass Road, Calamba, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "sdfas"
+            },
+            {
+               "offset" : 7,
+               "value" : "Bucal Bypass Road"
+            },
+            {
+               "offset" : 26,
+               "value" : "Calamba"
+            },
+            {
+               "offset" : 35,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 43,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "store"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

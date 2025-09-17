@@ -1,0 +1,78 @@
+{
+   "destination_addresses" : 
+   [
+      "Splaiul Independenței 15, București 050092, Romania",
+      "7 Lambwood Hill, Grazeley, Reading RG7 1JS, UK"
+   ],
+   "origin_addresses" : 
+   [
+      "7 Lambwood Hill, Grazeley, Reading RG7 1JS, UK",
+      "Splaiul Independenței 15, București 050092, Romania"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "2,633 km",
+                  "value" : 2632831
+               },
+               "duration" : 
+               {
+                  "text" : "1 day 4 hours",
+                  "value" : 99245
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "2,630 km",
+                  "value" : 2630456
+               },
+               "duration" : 
+               {
+                  "text" : "1 day 3 hours",
+                  "value" : 98883
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

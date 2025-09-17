@@ -260,6 +260,28 @@
 
 
 
+        .btn-assistance:disabled {
+
+            background: rgba(255, 255, 255, 0.1) !important;
+
+            cursor: not-allowed !important;
+
+            opacity: 0.6 !important;
+
+        }
+
+
+
+        .btn-assistance:disabled:hover {
+
+            background: rgba(255, 255, 255, 0.1) !important;
+
+            transform: none !important;
+
+        }
+
+
+
         .btn-end-chat {
 
             background: rgba(231, 76, 60, 0.8);
@@ -601,9 +623,7 @@
         .message-text {
 
             font-size: 14px;
-
             line-height: 1.4;
-
             margin: 0;
 
         }
@@ -638,7 +658,7 @@
 
 
 
-        .input-group input {
+        .input-group #message-input {
 
             flex: 1;
 
@@ -1014,6 +1034,8 @@
 
         constructor() {
 
+            console.log('KingLangChat constructor called');
+            
             this.conversationId = null;
 
             this.isOpen = false;
@@ -1034,6 +1056,8 @@
 
         init() {
 
+            console.log('Initializing KingLangChat...');
+            
             this.createWidget();
 
             this.bindEvents();
@@ -1043,6 +1067,8 @@
             this.initializeConversation();
 
             this.startPolling();
+            
+            console.log('KingLangChat initialization complete');
 
         }
 
@@ -1160,7 +1186,7 @@
 
                                     <input type="text" id="message-input" placeholder="Type your message..." onkeypress="chatWidget.handleKeyPress(event)">
 
-                                    <button type="button" class="send-button" onclick="chatWidget.sendMessage()">
+                                    <button type="button" class="send-button" style="border-radius: 50%;    " onclick="chatWidget.sendMessage()">
 
                                         <i class="fas fa-paper-plane"></i>
 
@@ -1198,6 +1224,8 @@
 
         async initializeConversation() {
 
+            console.log('Initializing conversation...');
+            
             try {
 
                 const response = await fetch('/api/chat/conversation', {
@@ -1210,18 +1238,26 @@
 
                 });
 
-                
+                console.log('Conversation API response status:', response.status);
 
                 if (response.ok) {
 
                     const data = await response.json();
-
+                    console.log('Conversation data received:', data);
+                    
                     this.conversationId = data.conversation_id;
 
                     localStorage.setItem('kinglang_conversation_id', this.conversationId);
+                    
+                    console.log('Conversation ID set:', this.conversationId);
 
                     this.loadMessages();
+                    
+                    // Check assistance request state after loading messages
+                    this.checkAssistanceRequestState();
 
+                } else {
+                    console.error('Failed to initialize conversation, status:', response.status);
                 }
 
             } catch (error) {
@@ -1346,7 +1382,7 @@
 
                     <div class="message-meta">
 
-                        <strong>${senderName}   </strong><small class="text-muted"> • ${timestamp}</small>
+                        <strong>${senderName}</strong>&nbsp;<small class="text-muted"> • ${timestamp}</small>
 
                     </div>
 
@@ -1359,6 +1395,12 @@
             
 
             chatMessages.appendChild(messageDiv);
+            
+            // Add click handlers for buttons in bot messages
+            this.attachButtonHandlers(messageDiv);
+            
+            // Hide quick questions when conversation becomes active
+            this.hideQuickQuestionsIfActive();
 
             
 
@@ -1382,9 +1424,18 @@
 
             const message = input.value.trim();
 
-            
+            console.log('Attempting to send message:', message);
+            console.log('Conversation ID:', this.conversationId);
 
-            if (!message || !this.conversationId) return;
+            if (!message) {
+                console.error('No message to send');
+                return;
+            }
+            
+            if (!this.conversationId) {
+                console.error('No conversation ID available for sending message');
+                return;
+            }
 
             
 
@@ -1470,15 +1521,41 @@
 
         askPredefinedQuestion(question) {
 
-            document.getElementById('message-input').value = question;
-
-            this.sendMessage();
+            console.log('Quick question clicked:', question);
+            const messageInput = document.getElementById('message-input');
+            
+            if (!messageInput) {
+                console.error('Message input element not found');
+                return;
+            }
+            
+            messageInput.value = question;
+            
+            // If no conversation ID, initialize conversation first
+            if (!this.conversationId) {
+                console.log('No conversation ID, initializing conversation...');
+                this.initializeConversation().then(() => {
+                    console.log('Conversation initialized, sending message...');
+                    this.sendMessage();
+                });
+            } else {
+                this.sendMessage();
+            }
 
         }
 
         
 
         async requestHumanAssistance() {
+
+            const assistanceButton = document.querySelector('.btn-assistance');
+
+            
+            // Disable the button immediately to prevent multiple clicks
+            assistanceButton.disabled = true;
+            assistanceButton.style.opacity = '0.6';
+            assistanceButton.style.cursor = 'not-allowed';
+            assistanceButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Requesting...';
 
             try {
 
@@ -1496,9 +1573,26 @@
 
                 this.loadMessages();
 
+                // Update button to show request was sent
+                assistanceButton.innerHTML = '<i class="fas fa-check"></i> Request Sent';
+                
+                // Store the assistance request state in localStorage
+                localStorage.setItem('kinglang_assistance_requested', 'true');
+                localStorage.setItem('kinglang_assistance_conversation_id', this.conversationId);
+
             } catch (error) {
 
                 console.error('Error requesting human assistance:', error);
+
+                // Re-enable button on error
+                assistanceButton.disabled = false;
+                assistanceButton.style.opacity = '1';
+                assistanceButton.style.cursor = 'pointer';
+                assistanceButton.innerHTML = '<i class="fas fa-user-headset"></i> Get Help';
+                
+                // Clear the assistance request state on error
+                localStorage.removeItem('kinglang_assistance_requested');
+                localStorage.removeItem('kinglang_assistance_conversation_id');
 
             }
 
@@ -1520,11 +1614,11 @@
 
             // Show confirmation dialog
 
-            if (!confirm('Are you sure you want to end this conversation? This action cannot be undone.')) {
+            // if (!confirm('Are you sure you want to end this conversation? This action cannot be undone.')) {
 
-                return;
+            //     return;
 
-            }
+            // }
 
             
 
@@ -1572,7 +1666,14 @@
 
                         document.getElementById('end-chat-btn').style.display = 'none';
 
-                        document.querySelector('.btn-assistance').style.display = 'flex';
+                        const assistanceButton = document.querySelector('.btn-assistance');
+                        assistanceButton.style.display = 'flex';
+                        
+                        // Reset assistance button state
+                        assistanceButton.disabled = false;
+                        assistanceButton.style.opacity = '1';
+                        assistanceButton.style.cursor = 'pointer';
+                        assistanceButton.innerHTML = '<i class="fas fa-user-headset"></i> Get Help';
 
                         
 
@@ -1691,6 +1792,13 @@
             sendButton.disabled = false;
 
             
+            // Reset assistance button state
+            this.resetAssistanceButton();
+            
+            // Show quick questions for new conversation
+            this.showQuickQuestions();
+
+            
 
             // Display welcome message
 
@@ -1724,9 +1832,146 @@
 
             document.getElementById('connection-status').classList.add('admin-connected');
 
-            document.querySelector('.btn-assistance').style.display = 'none';
+            const assistanceButton = document.querySelector('.btn-assistance');
+            assistanceButton.style.display = 'none';
 
             document.getElementById('end-chat-btn').style.display = 'flex';
+            
+            // Clear the assistance request state since admin is now connected
+            localStorage.removeItem('kinglang_assistance_requested');
+            localStorage.removeItem('kinglang_assistance_conversation_id');
+
+        }
+
+        
+
+        resetAssistanceButton() {
+
+            const assistanceButton = document.querySelector('.btn-assistance');
+
+            if (assistanceButton) {
+
+                assistanceButton.disabled = false;
+
+                assistanceButton.style.opacity = '1';
+
+                assistanceButton.style.cursor = 'pointer';
+
+                assistanceButton.innerHTML = '<i class="fas fa-user-headset"></i> Get Help';
+
+                assistanceButton.style.display = 'flex';
+
+            }
+            
+            // Clear the assistance request state
+            localStorage.removeItem('kinglang_assistance_requested');
+            localStorage.removeItem('kinglang_assistance_conversation_id');
+
+        }
+        
+        
+
+        checkAssistanceRequestState() {
+
+            const assistanceRequested = localStorage.getItem('kinglang_assistance_requested') === 'true';
+            const storedConversationId = localStorage.getItem('kinglang_assistance_conversation_id');
+            
+            // Only apply the disabled state if it's for the same conversation
+            if (assistanceRequested && storedConversationId === this.conversationId) {
+                
+                const assistanceButton = document.querySelector('.btn-assistance');
+                
+                if (assistanceButton && !this.isAdminConnected) {
+                    
+                    assistanceButton.disabled = true;
+                    assistanceButton.style.opacity = '0.6';
+                    assistanceButton.style.cursor = 'not-allowed';
+                    assistanceButton.innerHTML = '<i class="fas fa-check"></i> Request Sent';
+                    
+                }
+                
+            } else if (storedConversationId !== this.conversationId) {
+                
+                // Clear the state if it's for a different conversation
+                localStorage.removeItem('kinglang_assistance_requested');
+                localStorage.removeItem('kinglang_assistance_conversation_id');
+                
+            }
+
+        }
+        
+        
+
+        attachButtonHandlers(messageDiv) {
+
+            // Find all buttons within the message
+            const buttons = messageDiv.querySelectorAll('.btn');
+            
+            buttons.forEach(button => {
+                
+                const buttonText = button.textContent.trim();
+                
+                if (buttonText.includes('Yes, connect me with an agent') || 
+                    buttonText.includes('connect me with an agent')) {
+                    
+                    button.addEventListener('click', () => {
+                        this.requestHumanAssistance();
+                    });
+                    
+                } else if (buttonText.includes('No, I\'ll ask something else') || 
+                          buttonText.includes('ask something else')) {
+                    
+                    button.addEventListener('click', () => {
+                        this.handleNoAssistanceRequest();
+                    });
+                    
+                }
+                
+            });
+
+        }
+        
+        
+
+        handleNoAssistanceRequest() {
+
+            // Display a message indicating the user will continue with the bot
+            this.displayMessage({
+                id: Date.now(),
+                sender_type: 'system',
+                message: 'No problem! Feel free to ask me anything else. I\'m here to help.',
+                sent_at: new Date().toISOString()
+            });
+
+        }
+        
+        
+
+        hideQuickQuestionsIfActive() {
+
+            const chatMessages = document.getElementById('chat-messages');
+            const quickQuestions = document.querySelector('.quick-questions');
+            
+            // Count non-system messages (actual conversation messages)
+            const conversationMessages = chatMessages.querySelectorAll('.message:not(.system-message)');
+            
+            // Only hide quick questions if there are more than 2 conversation messages
+            // This allows users to use quick questions even after starting a conversation
+            if (conversationMessages.length > 2 && quickQuestions) {
+                quickQuestions.style.display = 'none';
+            }
+
+        }
+        
+        
+
+        showQuickQuestions() {
+
+            const quickQuestions = document.querySelector('.quick-questions');
+            
+            if (quickQuestions) {
+                quickQuestions.style.display = 'block';
+            }
 
         }
 
@@ -1763,6 +2008,9 @@
                 document.getElementById('chat-panel').classList.add('active');
 
             }
+            
+            // Check if assistance was requested for this conversation
+            this.checkAssistanceRequestState();
 
         }
 
@@ -1854,10 +2102,16 @@
 
     document.addEventListener('DOMContentLoaded', function() {
 
+        console.log('DOM loaded, userLoggedIn:', typeof userLoggedIn !== 'undefined' ? userLoggedIn : 'undefined');
+        
         if (typeof userLoggedIn !== 'undefined' && userLoggedIn) {
 
+            console.log('Initializing chat widget...');
             chatWidget = new KingLangChat();
+            console.log('Chat widget initialized:', chatWidget);
 
+        } else {
+            console.log('User not logged in or userLoggedIn variable not defined');
         }
 
     });

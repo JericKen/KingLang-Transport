@@ -939,6 +939,16 @@ switch ($requestPath) {
 
         break;
 
+    case "/admin/get-booking-assignments":
+        require_once $controllerClasses['admin']['BookingManagementController'];
+        $controller = new BookingManagementController();
+        $controller->getBookingAssignments();
+        break;
+    case "/admin/update-booking-assignments":
+        require_once $controllerClasses['admin']['BookingManagementController'];
+        $controller = new BookingManagementController();
+        $controller->updateBookingAssignments();
+        break;
     case "/admin/print-invoice":
 
     case preg_match('|^/admin/print-invoice/([0-9]+)$|', $requestPath, $matches) ? $requestPath : "":

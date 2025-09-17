@@ -128,8 +128,8 @@ $current_page = "chat";
                     '<td>' + escapeHtmlInline(truncated) + '</td>' +
                     '<td class="text-center">' + (String(item.is_active) === '1' || item.is_active === 1 ? '<span class="badge bg-success">Yes</span>' : '<span class="badge bg-secondary">No</span>') + '</td>' +
                     '<td class="text-end">' +
-                        '<button class="btn btn-sm btn-outline-primary me-2" onclick="showEditResponseForm(' + item.id + ')"><i class="fas fa-edit me-1"></i>Edit</button>' +
-                        '<button class="btn btn-sm btn-outline-danger" onclick="deleteBotResponse(' + item.id + ')"><i class="fas fa-trash me-1"></i>Delete</button>' +
+                            '<button class="btn btn-sm btn-outline-primary me-2" onclick="showEditResponseForm(' + item.id + ')"><i class="fas fa-edit me-1"></i></button>' +
+                        '<button class="btn btn-sm btn-outline-danger" onclick="deleteBotResponse(' + item.id + ')"><i class="fas fa-trash me-1"></i></button>' +
                     '</td>' +
                 '</tr>';
             }
@@ -764,6 +764,7 @@ $current_page = "chat";
         .message.admin-message {
             background-color: rgba(25, 135, 84, 0.1);
             border: 1px solid rgba(25, 135, 84, 0.2);
+            max-width: 100%;
         }
 
         .message.bot-message {
@@ -1132,7 +1133,9 @@ $current_page = "chat";
                 conversations: [],
                 messages: [],
                 conversationStatus: null,
-                isLoading: false
+                isLoading: false,
+                endedBy: null, // 'admin' | 'client' | null
+                currentConversationClientName: null
             },
             
             elements: {},
@@ -1441,6 +1444,8 @@ $current_page = "chat";
                 
                 // Initialize conversation status from list data
                 this.state.conversationStatus = conversation ? conversation.status : null;
+                // Cache client name for display purposes
+                this.state.currentConversationClientName = conversation && conversation.client_name ? conversation.client_name : null;
                 
                 console.log("Conversation from list:", conversation);
                 console.log("Initial conversation status:", this.state.conversationStatus);
@@ -1610,9 +1615,11 @@ $current_page = "chat";
                     }
                 }
                 
-                html += '</div>' +
-                        
-                        // Input Area with system theme
+                html += '</div>';
+                
+                // Only show input area if conversation is not ended
+                if (this.state.conversationStatus !== 'ended') {
+                    html += // Input Area with system theme
                         '<div class="chat-input-area" style="padding: 16px 20px; border-top: 1px solid var(--border-gray); background: white; border-radius: 0 0 10px 10px;">' +
                         '<div class="input-group">' +
                         '<input type="text" class="form-control" id="admin-message-input" placeholder="Type your message..." style="border-radius: 20px 0 0 20px; border: 1px solid var(--border-gray); padding: 12px 16px;" onkeypress="if(event.key===\'Enter\') AdminChatManager.sendAdminMessage()">' +
@@ -1620,9 +1627,21 @@ $current_page = "chat";
                         '<i class="fas fa-paper-plane"></i>' +
                         '</button>' +
                         '</div>' +
-                        '</div>' +
-                        
                         '</div>';
+                } else {
+                    // Show ended conversation message instead of input
+                    var endedBy = this.state.endedBy || 'client';
+                    var clientName = this.state.currentConversationClientName || 'Client';
+                    var endedMsg = endedBy !== 'client' ? `This conversation has been ended by you.` : ('This conversation has been ended by ' + this.escapeHtml(clientName) + '.');
+                    html += '<div class="chat-ended-message" style="padding: 16px 20px; border-top: 1px solid var(--border-gray); background: #f8f9fa; border-radius: 0 0 10px 10px; text-align: center;">' +
+                        '<div class="text-muted">' +
+                        '<i class="fas fa-lock me-2"></i>' +
+                        endedMsg + ' No further messages can be sent.' +
+                        '</div>' +
+                        '</div>';
+                }
+                
+                html += '</div>';
                 
                 this.elements.chatArea.innerHTML = html;
                 
@@ -1649,7 +1668,7 @@ $current_page = "chat";
                     case 'admin':
                         // Admin messages - right aligned, green background
                         return '<div class="message message-admin mb-3 d-flex justify-content-end">' +
-                               '<div class="message-bubble" style="background: var(--primary-green); color: white; padding: 12px 16px; border-radius: 18px 18px 4px 18px; max-width: 70%; box-shadow: 0 1px 2px rgba(0,0,0,0.1);">' +
+                               '<div class="message-bubble" style="background: var(--primary-green); color: white; padding: 12px 16px; border-radius: 18px 18px 4px 18px; max-width: 100%; box-shadow: 0 1px 2px rgba(0,0,0,0.1);">' +
                                '<div class="message-content" style="font-size: 14px; line-height: 1.4;">' + messageContent + '</div>' +
                                '<div class="message-time text-end mt-1" style="font-size: 11px; opacity: 0.8;">You • ' + time + '</div>' +
                                '</div>' +
@@ -1821,6 +1840,12 @@ $current_page = "chat";
             handleConversationStatusChange: function(status) {
                 // Store the conversation status in state
                 this.state.conversationStatus = status.status;
+                if (status.ended_by) {
+                    this.state.endedBy = status.ended_by; // expect 'admin' or 'client'
+                }
+                if (status.client_name) {
+                    this.state.currentConversationClientName = status.client_name;
+                }
                 
                 // Handle conversation status changes (matching client-side Socket.io events)
                 switch (status.status) {
@@ -1938,11 +1963,11 @@ $current_page = "chat";
             endConversation: function() {
                 if (!this.state.currentConversationId) return;
                 
-                if (!confirm('Are you sure you want to end this conversation?')) return;
+                // if (!confirm('Are you sure you want to end this conversation?')) return;
                 
                 // Prompt for reason
-                var reason = prompt('Please provide a reason for ending this conversation (optional):');
-                if (reason === null) return; // User cancelled
+                // var reason = prompt('Please provide a reason for ending this conversation (optional):');
+                // if (reason === null) return; // User cancelled
                 
                 var self = this;
                 
@@ -1953,7 +1978,7 @@ $current_page = "chat";
                     },
                     body: JSON.stringify({
                         conversation_id: this.state.currentConversationId,
-                        reason: reason || 'Admin ended the conversation'
+                        reason: 'Admin ended the conversation'
                     })
                 })
                 .then(function(response) {
@@ -1963,8 +1988,9 @@ $current_page = "chat";
                     if (data.success) {
                         // Update conversation status to ended
                         self.state.conversationStatus = 'ended';
+                        self.state.endedBy = 'admin';
                         
-                        alert("Conversation ended successfully");
+                        // alert("Conversation ended successfully");
                         self.hideChatContainer();
                         // Refresh active list and global stats so counts update immediately
                         self.loadConversations('active');
@@ -1985,6 +2011,8 @@ $current_page = "chat";
                 }
                 this.state.currentConversationId = null;
                 this.state.conversationStatus = null;
+                this.state.endedBy = null;
+                this.state.currentConversationClientName = null;
             },
             
             startPolling: function() {

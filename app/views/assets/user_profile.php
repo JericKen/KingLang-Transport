@@ -405,7 +405,7 @@ if ($userProfilePicture) {
                     <i class="bi bi-person-fill text-success"></i>
                     View Profile
                 </a>
-                <a href="#" id="logoutLink" class="dropdown-item d-flex align-items-center gap-2 py-2 px-3 text-danger" style="font-size: 14px;">
+                <a href="" id="logoutLink" class="dropdown-item d-flex align-items-center gap-2 py-2 px-3 text-danger" style="font-size: 14px;">
                     <i class="bi bi-box-arrow-left"></i>
                     Logout
                 </a>

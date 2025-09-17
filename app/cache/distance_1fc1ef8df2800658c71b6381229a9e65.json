@@ -1,0 +1,58 @@
+{
+   "destination_addresses" : 
+   [
+      "Louisville Int'l Airport (SDF), 600 Terminal Drive, Louisville, KY 40209, USA",
+      "7 Lambwood Hill, Grazeley, Reading RG7 1JS, UK"
+   ],
+   "origin_addresses" : 
+   [
+      "7 Lambwood Hill, Grazeley, Reading RG7 1JS, UK",
+      "Louisville Int'l Airport (SDF), 600 Terminal Drive, Louisville, KY 40209, USA"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "status" : "ZERO_RESULTS"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "status" : "ZERO_RESULTS"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

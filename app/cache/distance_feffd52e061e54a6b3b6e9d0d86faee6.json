@@ -18,12 +18,12 @@
                "distance" : 
                {
                   "text" : "41.7 km",
-                  "value" : 41713
+                  "value" : 41715
                },
                "duration" : 
                {
-                  "text" : "1 hour 16 mins",
-                  "value" : 4540
+                  "text" : "1 hour 17 mins",
+                  "value" : 4602
                },
                "status" : "OK"
             },
@@ -66,8 +66,8 @@
                },
                "duration" : 
                {
-                  "text" : "1 hour 15 mins",
-                  "value" : 4486
+                  "text" : "1 hour 16 mins",
+                  "value" : 4564
                },
                "status" : "OK"
             }
