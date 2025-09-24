@@ -748,7 +748,7 @@ class Booking {
 
                 SELECT COUNT(*) FROM bookings b
 
-                WHERE b.user_id = :user_id AND b.is_rebooking = 0 AND b.is_rebooked = 0
+                WHERE b.user_id = :user_id
 
                 $status_condition $search_condition $date_condition $balance_condition
 
@@ -784,7 +784,7 @@ class Booking {
 
                        b.number_of_days, b.number_of_buses, b.user_id, b.balance, b.status, 
 
-                       b.payment_status, b.is_rebooking, b.is_rebooked, 
+                       b.payment_status, 
 
                        c.base_cost, c.diesel_cost, c.total_cost, c.base_rate, c.diesel_price, c.total_distance, 
 
@@ -796,7 +796,7 @@ class Booking {
 
                 LEFT JOIN users u ON b.user_id = u.user_id
 
-                WHERE b.user_id = :user_id AND b.is_rebooking = 0 AND b.is_rebooked = 0
+                WHERE b.user_id = :user_id
 
                 $status_condition $search_condition $date_condition $balance_condition
 
@@ -914,7 +914,7 @@ class Booking {
 
                 FROM bookings 
 
-                WHERE user_id = :user_id AND is_rebooking = 0 AND is_rebooked = 0
+                WHERE user_id = :user_id
 
                 $status_condition
 
@@ -953,10 +953,6 @@ class Booking {
                 FROM bookings 
 
                 WHERE user_id = :user_id 
-
-                  AND is_rebooking = 0 
-
-                  AND is_rebooked = 0
 
                   AND date_of_tour >= CURDATE()
 
@@ -1001,10 +997,6 @@ class Booking {
                 LEFT JOIN booking_costs c ON b.booking_id = c.booking_id
 
                 WHERE b.user_id = :user_id 
-
-                  AND b.is_rebooking = 0 
-
-                  AND b.is_rebooked = 0
 
                   AND ((b.date_of_tour BETWEEN :start_date AND :end_date) 
 

@@ -110,7 +110,7 @@ class ClientAuthModel {
 
     function isValidPassword($password) {
 
-        $pattern = "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/";
+        $pattern = "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&_])[A-Za-z\d@$!%*?&_]{8,}$/";
 
     
 

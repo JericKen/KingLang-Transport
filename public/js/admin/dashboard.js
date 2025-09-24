@@ -1224,41 +1224,41 @@ async function renderMonthlyTrendsChart() {
 
                     },
 
-                    y1: {
+                    // y1: {
 
-                        beginAtZero: true,
+                    //     beginAtZero: true,
 
-                        type: 'linear',
+                    //     type: 'linear',
 
-                        display: true,
+                    //     display: true,
 
-                        position: 'right',
+                    //     position: 'right',
 
-                        title: {
+                    //     title: {
 
-                            display: true,
+                    //         display: false,
 
-                            text: 'Revenue (₱)'
+                    //         text: 'Revenue (₱)'
 
-                        },
+                    //     },
 
-                        grid: {
+                    //     grid: {
 
-                            drawOnChartArea: false
+                    //         drawOnChartArea: false
 
-                        },
+                    //     },
 
-                        ticks: {
+                    //     ticks: {
 
-                            callback: function(value) {
+                    //         callback: function(value) {
 
-                                return '₱' + value.toLocaleString();
+                    //             return '₱' + value.toLocaleString();
 
-                            }
+                    //         }
 
-                        }
+                    //     }
 
-                    }
+                    // }
 
                 }
 
@@ -2022,7 +2022,7 @@ async function renderRevenueTrendsChart() {
 
                         title: {
 
-                            display: true,
+                            display: false,
 
                             text: 'Number of Bookings'
 

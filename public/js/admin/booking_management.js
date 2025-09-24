@@ -3083,7 +3083,7 @@ function renderCardView() {
 
                                 <i class="bi bi-cash-coin text-success me-1"></i>
 
-                                <strong>Total Cost:</strong> ${booking.total_cost}
+                                <strong>Total Cost:</strong> ₱${parseFloat(booking.total_cost).toLocaleString('en-PH')}
 
                             </p>
 

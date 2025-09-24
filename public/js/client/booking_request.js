@@ -264,104 +264,145 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         limit = parseInt(limitSelect.value);
 
-        // Use the active quick filter button to determine initial status instead of hidden dropdown
+        // Smart initialization: Check for data availability and set the best default filter
 
-        const activeQuickFilter = document.querySelector('.quick-filter.active');
+        // Hide the main content initially to prevent flickering
 
-        if (activeQuickFilter && activeQuickFilter.getAttribute('data-status')) {
+        const mainContent = document.querySelector('.main-content');
 
-            filterStatus = activeQuickFilter.getAttribute('data-status');
+        if (mainContent) {
 
-        } else {
-
-            filterStatus = statusSelect.value.toLowerCase(); // Convert to lowercase to match server expectations
+            mainContent.style.opacity = '0.5';
 
         }
 
-
         
 
-        // Get initial data with pending status
+        // Check all statuses in parallel to avoid blinking
 
-        let result = await getAllBookings(filterStatus, "booking_id", "desc", currentPage, limit, searchTerm);
+        try {
 
-        
+            const [pendingResponse, processingResponse, confirmedResponse] = await Promise.all([
 
-        // If we have pending bookings, ensure the pending filter is marked as active
+                getAllBookings("pending", "booking_id", "desc", currentPage, limit, searchTerm),
 
-        if (result.bookings.length > 0 && filterStatus === "pending") {
+                getAllBookings("processing", "booking_id", "desc", currentPage, limit, searchTerm),
+
+                getAllBookings("confirmed", "booking_id", "desc", currentPage, limit, searchTerm)
+
+            ]);
+
+            
+
+            // Determine the best filter based on available data
+
+            let bestFilter = "all";
+
+            let bestResponse = null;
+
+            
+
+            // Priority order: pending > processing > confirmed > all
+
+            if (pendingResponse.success && pendingResponse.bookings && pendingResponse.bookings.length > 0) {
+
+                bestFilter = "pending";
+
+                bestResponse = pendingResponse;
+
+            } else if (processingResponse.success && processingResponse.bookings && processingResponse.bookings.length > 0) {
+
+                bestFilter = "processing";
+
+                bestResponse = processingResponse;
+
+            } else if (confirmedResponse.success && confirmedResponse.bookings && confirmedResponse.bookings.length > 0) {
+
+                bestFilter = "confirmed";
+
+                bestResponse = confirmedResponse;
+
+            } else {
+
+                // If no bookings in main categories, get all bookings
+
+                bestResponse = await getAllBookings("all", "booking_id", "desc", currentPage, limit, searchTerm);
+
+            }
+
+            
+
+            // Set the filter status and UI elements
+
+            filterStatus = bestFilter;
+
+            statusSelect.value = bestFilter.charAt(0).toUpperCase() + bestFilter.slice(1);
+
+            result = bestResponse;
+
+            
+
+            // Update UI only once with the final result
+
+            renderBookings(result.bookings);
+
+            renderPagination(result.pagination);
+
+            
+
+            // Update filter buttons
 
             document.querySelectorAll('.quick-filter').forEach(b => b.classList.remove('active'));
 
-            document.querySelector('.quick-filter[data-status="pending"]').classList.add('active');
+            document.querySelector(`.quick-filter[data-status="${bestFilter}"]`).classList.add('active');
 
-        }
+            
 
-        // If no pending bookings, try processing bookings first
+        } catch (error) {
 
-        else if (result.bookings.length === 0 && filterStatus === "pending") {
+            console.error("Error during initial status check:", error);
 
-            filterStatus = "processing";
+            // If any error occurs, fall back to loading all bookings
 
-            statusSelect.value = "Processing";
+            filterStatus = "all";
+
+            statusSelect.value = "All";
 
             result = await getAllBookings(filterStatus, "booking_id", "desc", currentPage, limit, searchTerm);
+
+            renderBookings(result.bookings);
+
+            renderPagination(result.pagination);
 
             
 
             document.querySelectorAll('.quick-filter').forEach(b => b.classList.remove('active'));
 
-            document.querySelector('.quick-filter[data-status="processing"]').classList.add('active');
-
-            // If no processing bookings, try confirmed bookings
-
-            if (result.bookings.length === 0) {
-
-                filterStatus = "confirmed";
-
-                statusSelect.value = "Confirmed";
-
-                result = await getAllBookings(filterStatus, "booking_id", "desc", currentPage, limit, searchTerm);
-
-                
-
-                document.querySelectorAll('.quick-filter').forEach(b => b.classList.remove('active'));
-
-                document.querySelector('.quick-filter[data-status="confirmed"]').classList.add('active');
-
-                // If no confirmed bookings either, use "all"
-
-                if (result.bookings.length === 0) {
-
-                    filterStatus = "all";
-
-                    statusSelect.value = "All";
-
-                    result = await getAllBookings(filterStatus, "booking_id", "desc", currentPage, limit, searchTerm);
-
-                    
-
-                    document.querySelectorAll('.quick-filter').forEach(b => b.classList.remove('active'));
-
-                    document.querySelector('.quick-filter[data-status="all"]').classList.add('active');
-
-                }
-
-            }
+            document.querySelector('.quick-filter[data-status="all"]').classList.add('active');
 
         }
 
         
 
-        // Update views based on the data
+        // Restore full opacity after initialization is complete
 
-        renderBookings(result.bookings);
+        if (mainContent) {
 
-        renderPagination(result.pagination);
+            mainContent.style.opacity = '1';
+
+        }
+
+        
+
+        // Update statistics and check for upcoming tours
 
         updateStatistics();
 
-        checkForUpcomingTours(result.bookings);
+        if (result && result.bookings) {
+
+            checkForUpcomingTours(result.bookings);
+
+        }
 
         
 
@@ -2787,7 +2828,19 @@ function renderCardView() {
 
         
 
-        // Create card content with improved spacing
+        // Create card content with improved spacing and header matching screenshot
+        
+        // compute ID badge class
+        let idBadgeClass = "bg-secondary text-white";
+        switch (booking.status.toLowerCase()) {
+            case 'pending': idBadgeClass = "bg-warning text-dark"; break;
+            case 'confirmed': idBadgeClass = "bg-success text-white"; break;
+            case 'processing':
+            case 'rebooking': idBadgeClass = "bg-info text-dark"; break;
+            case 'canceled':
+            case 'rejected': idBadgeClass = "bg-danger text-white"; break;
+            case 'completed': idBadgeClass = "bg-primary text-white"; break;
+        }
 
         card.innerHTML = `
 
@@ -2795,9 +2848,12 @@ function renderCardView() {
 
                 <div class="d-flex justify-content-between align-items-center">
 
-                    <h5 class="mb-0 text-truncate" title="${booking.destination}" style="max-width: 70%;">${booking.destination}</h5>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-bookmark status-icon"></i>
+                        <span class="fw-bold">${booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}</span>
+                    </div>
 
-                    <span class="status-badge status-${booking.status.toLowerCase()}">${booking.status}</span>
+                    <span class="badge id-badge ${idBadgeClass}">ID: ${booking.booking_id}</span>
 
                 </div>
 
@@ -2917,9 +2973,10 @@ function addCardActions(container, booking) {
 
     const viewBtn = document.createElement("button");
 
-    viewBtn.className = "btn btn-sm btn-outline-primary";
+    viewBtn.className = "btn btn-sm btn-outline-primary d-inline-flex align-items-center justify-content-center";
+    viewBtn.style.fontSize = '0.875rem';
 
-    viewBtn.innerHTML = '<i class="bi bi-info-circle"></i> Details';
+    viewBtn.innerHTML = '<i class="bi bi-info-circle me-1"></i><span>Details</span>';
 
     viewBtn.addEventListener("click", function() {
 
@@ -2937,9 +2994,10 @@ function addCardActions(container, booking) {
 
         const payBtn = document.createElement("button");
 
-        payBtn.className = "btn btn-sm btn-outline-primary";
+        payBtn.className = "btn btn-sm btn-outline-primary d-inline-flex align-items-center justify-content-center";
+        payBtn.style.fontSize = '0.875rem';
 
-        payBtn.innerHTML = '<i class="bi bi-credit-card"></i> Pay';
+        payBtn.innerHTML = '<i class="bi bi-credit-card me-1"></i><span>Pay</span>';
 
         payBtn.setAttribute("data-bs-toggle", "modal");
 
@@ -3083,9 +3141,10 @@ function addCardActions(container, booking) {
 
         const cancelBtn = document.createElement("button");
 
-        cancelBtn.className = "btn btn-sm btn-outline-danger";
+        cancelBtn.className = "btn btn-sm btn-outline-danger d-inline-flex align-items-center justify-content-center";
+        cancelBtn.style.fontSize = '0.875rem';
 
-        cancelBtn.innerHTML = '<i class="bi bi-x-circle"></i> Cancel';
+        cancelBtn.innerHTML = '<i class="bi bi-x-circle me-1"></i><span>Cancel</span>';
 
         cancelBtn.setAttribute("data-booking-id", booking.booking_id);
 
@@ -4025,7 +4084,8 @@ function createActionButton(className, iconClass, text, clickHandler) {
 
     const button = document.createElement('button');
 
-    button.className = className;
+    button.className = className + ' d-inline-flex align-items-center justify-content-center';
+    button.style.fontSize = '0.875rem';
 
     button.title = text;
 

@@ -389,7 +389,7 @@
             </div>
 
             <!-- Financial Summary -->
-            <div class="row mt-4">
+            <div class="row mt-4 d-none">
                 <div class="col-12 mb-4">
                     <div class="summary-metrics-card p-4">
                         <h4>Financial Summary</h4>

@@ -16,6 +16,162 @@ require_client_auth(); // Use helper function
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <title>My Bookings</title>
+    <style>
+        .compact-card {
+            padding: 0.5rem;
+        }
+        .compact-card .card-body {
+            padding: 0.75rem;
+        }
+        .stats-dashboard {
+            margin-bottom: 1rem;
+        }
+        .stats-number {
+            font-size: 1.5rem;
+        }
+        .table-container {
+            margin-bottom: 1rem;
+        }
+        .actions-compact {
+            display: flex;
+            gap: 0.25rem;
+        }
+        .actions-compact .btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
+        .stats-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .table thead th {
+            background-color: #d1f7c4;
+            font-weight: 600;
+            padding: 12px 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            user-select: none;
+        }
+        .table thead th:hover {
+            background-color: rgba(40, 167, 69, 0.2);
+        }
+        .table thead th.active:after {
+            content: attr(data-order) === "asc" ? " ↑" : " ↓";
+            font-size: 0.8rem;
+            margin-left: 5px;
+        }
+        .sort-icon {
+            font-size: 0.75rem;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+        .table tbody tr:hover {
+            background-color: rgba(40, 167, 69, 0.05);
+        }
+        .table-group-divider {
+            border-top: 2px solid #dee2e6;
+        }
+        .pagination .page-link {
+            color: #198754;
+            border-radius: 5px;
+            margin: 0 2px;
+            padding: 0.375rem 0.75rem;
+        }
+        .pagination .page-item.active .page-link {
+            background-color: #198754;
+            border-color: #198754;
+        }
+        /* Card header style to match admin */
+        .card .card-header {
+            background-color: #d1f7c4; /* similar to bg-success-subtle */
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            font-weight: 600;
+            padding: 0.5rem 0.75rem; /* reduce height similar to admin */
+        }
+        .card .card-header h5,
+        .card .card-header h6 {
+            margin: 0;
+        }
+        .card.border-0 .card-header {
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        @media (min-width: 1400px) {
+            .container-fluid {
+                max-width: 98%;
+            }
+        }
+        /* Booking details modal styling */
+        .booking-detail-section {
+            margin-bottom: 1.5rem;
+        }
+        .booking-detail-section h6 {
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            color: #28a745;
+        }
+        .booking-detail-section p {
+            margin-bottom: 0.5rem;
+        }
+        .booking-detail-section:last-child {
+            margin-bottom: 0;
+        }
+        .booking-detail-section strong {
+            color: #495057;
+        }
+        #bookingDetailsModal .modal-header {
+            background-color: var(--light-green);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        #bookingDetailsModal .modal-body {
+            padding: 20px;
+        }
+        #bookingDetailsModal .modal-content {
+            border: none;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        #bookingDetailsModal .badge {
+            padding: 0.4rem 0.7rem;
+            font-weight: 500;
+        }
+        /* ID pill on card headers */
+        .id-badge {
+            border-radius: 12px;
+            padding: 0.25rem 0.5rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        /* Normalize header icon and text sizing */
+        .booking-card .card-header .status-icon {
+            font-size: 1rem;
+        }
+        .booking-card .card-header .fw-semibold {
+            font-size: 0.95rem;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+    </style>
 </head>
 <body>
     <?php include_once __DIR__ . "/../assets/sidebar.php"; ?> 
@@ -171,15 +327,15 @@ require_client_auth(); // Use helper function
                                 <label class="btn btn-outline-secondary" for="tableView">
                                     <i class="bi bi-table"></i> Table
                                 </label>
+
+                                <input type="radio" class="btn-check" name="viewOption" id="calendarView" autocomplete="off">
+                                <label class="btn btn-outline-secondary d-none" for="calendarView">
+                                    <i class="bi bi-calendar3"></i> Calendar
+                                </label>
                                 
                                 <input type="radio" class="btn-check" name="viewOption" id="cardView" autocomplete="off">
                                 <label class="btn btn-outline-secondary" for="cardView">
                                     <i class="bi bi-grid-3x3-gap"></i> Cards
-                                </label>
-                                
-                                <input type="radio" class="btn-check" name="viewOption" id="calendarView" autocomplete="off">
-                                <label class="btn btn-outline-secondary" for="calendarView">
-                                    <i class="bi bi-calendar3"></i> Calendar
                                 </label>
                             </div>
                         </div>
@@ -194,7 +350,7 @@ require_client_auth(); // Use helper function
                         <button class="btn btn-sm btn-outline-secondary quick-filter" data-status="all">
                             <i class="bi bi-funnel"></i> All
                         </button>
-                        <button class="btn btn-sm btn-outline-warning quick-filter active" data-status="pending">
+                        <button class="btn btn-sm btn-outline-warning quick-filter" data-status="pending">
                             <i class="bi bi-hourglass-split"></i> Pending
                         </button>
                         <button class="btn btn-sm btn-outline-success quick-filter" data-status="confirmed">
@@ -224,7 +380,7 @@ require_client_auth(); // Use helper function
                     </div>
                 </div>
                 <div class="col-xl-4">
-                    <div class="d-flex gap-2 justify-content-end">
+                    <div class="d-flex gap-2 justify-content-end d-none ">
                         <div class="btn-group">
                             <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-download"></i> Export

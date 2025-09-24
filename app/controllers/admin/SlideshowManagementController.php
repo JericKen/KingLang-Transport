@@ -98,7 +98,7 @@ class SlideshowManagementController {
                 'description' => $description,
                 'display_order' => $displayOrder,
                 'is_active' => 1,
-                'created_by' => $_SESSION['user_id'] ?? null
+                'created_by' => $_SESSION['admin_id'] ?? null
             ];
             
             $imageId = $this->slideshowModel->addSlideshowImage($imageData);
@@ -110,7 +110,8 @@ class SlideshowManagementController {
                     'Slideshow Image',
                     $imageId,
                     null,
-                    $imageData
+                    $imageData,
+                    $_SESSION['admin_id'] ?? null
                 );
                 
                 echo json_encode([
@@ -167,7 +168,8 @@ class SlideshowManagementController {
                 'Slideshow Image',
                 $imageId,
                 null,
-                $updateData
+                $updateData,
+                $_SESSION['admin_id'] ?? null
             );
             
             echo json_encode(['success' => true, 'message' => 'Image updated successfully']);
@@ -208,7 +210,8 @@ class SlideshowManagementController {
                 'Slideshow Image',
                 $imageId,
                 $image,
-                null
+                null,
+                $_SESSION['admin_id'] ?? null
             );
             
             echo json_encode(['success' => true, 'message' => 'Image deleted successfully']);
@@ -250,7 +253,8 @@ class SlideshowManagementController {
                 'Slideshow Image',
                 $imageId,
                 null,
-                $image
+                $image,
+                $_SESSION['admin_id'] ?? null
             );
             
             echo json_encode(['success' => true, 'message' => 'Image status updated successfully']);
@@ -286,7 +290,8 @@ class SlideshowManagementController {
                 'Slideshow Images',
                 0,
                 null,
-                $data['orders']
+                $data['orders'],
+                $_SESSION['admin_id'] ?? null
             );
             
             echo json_encode(['success' => true, 'message' => 'Display order updated successfully']);

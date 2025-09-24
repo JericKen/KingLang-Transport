@@ -415,15 +415,15 @@ require_once __DIR__ . "/../../controllers/admin/BookingManagementController.php
                                 <label class="btn btn-outline-secondary" for="tableView">
                                     <i class="bi bi-table"></i> Table
                                 </label>
+
+                                <input type="radio" class="btn-check d-none" name="viewOption" id="calendarView" autocomplete="off">
+                                <label class="btn btn-outline-secondary d-none" for="calendarView">
+                                    <i class="bi bi-calendar3"></i> Calendar
+                                </label>
                                 
                                 <input type="radio" class="btn-check" name="viewOption" id="cardView" autocomplete="off">
                                 <label class="btn btn-outline-secondary" for="cardView">
                                     <i class="bi bi-grid-3x3-gap"></i> Cards
-                                </label>
-                                
-                                <input type="radio" class="btn-check" name="viewOption" id="calendarView" autocomplete="off">
-                                <label class="btn btn-outline-secondary" for="calendarView">
-                                    <i class="bi bi-calendar3"></i> Calendar
                                 </label>
                             </div>
                         </div>
@@ -476,7 +476,7 @@ require_once __DIR__ . "/../../controllers/admin/BookingManagementController.php
                     </div>
                 </div>
                 <div class="col-xl-4"></div>
-                <div class="col-xl-2">
+                <div class="col-xl-2 d-none">
                     <div class="d-flex gap-2 justify-content-end">
                         <div class="btn-group">
                             <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

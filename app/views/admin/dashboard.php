@@ -203,7 +203,7 @@ require_admin_auth(); // Use helper function
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl mb-4">
+                <div class="col-md-6 col-lg-4 col-xl mb-4 d-none">
                     <div class="summary-metrics-card d-flex gap-4 align-items-center p-4 h-100">
                         <div class="stats-icon bg-danger-subtle text-danger">
                             <i class="bi bi-exclamation-triangle"></i>

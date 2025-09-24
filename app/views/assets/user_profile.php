@@ -309,7 +309,7 @@ if ($userProfilePicture) {
     }
 } else {
     // Default profile image
-    $profileImageSrc = "../../../public/images/profile.png";
+    $profileImageSrc = "../../../public/images/profile.jpg";
 }
 ?>
 
@@ -330,7 +330,7 @@ if ($userProfilePicture) {
         <div class="dropdown-menu dropdown-menu-end notification-dropdown" id="notificationDropdownMenu">
             <div class="notification-header">
                 <h6><i class="bi bi-bell-fill"></i>Notifications</h6>
-                <a href="javascript:void(0)" class="text-decoration-none small mark-all-read">Mark all as read</a>
+                <a href="javascript:void(0)" class="text-decoration-none small mark-all-read" style="display: none;">Mark all as read</a>
             </div>
             <div class="notification-list">
                 <!-- Notifications will be loaded here dynamically -->
@@ -452,6 +452,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     notificationCount.textContent = (data.unreadCount > 9) ? '9+' : data.unreadCount;
                 } else {
                     notificationBadge.style.display = 'none';
+                }
+                // Show the "Mark all as read" button only when unread > 1
+                if (markAllReadBtn) {
+                    markAllReadBtn.style.display = (data.unreadCount > 1) ? 'inline' : 'none';
                 }
                 
                 // Render notifications

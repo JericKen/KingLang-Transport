@@ -225,12 +225,12 @@ class ClientAuthController {
                 'failure_reason' => $result,
 
                 'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? null,
-
+ 
                 'ip_address' => $_SERVER['REMOTE_ADDR'] ?? null
 
             ];
 
-            $this->logAudit('login_failed', 'user', null, null, $failedLoginData, $_SESSION['user_id']);
+            $this->logAudit('login_failed', 'user', null, null, $failedLoginData, $_SESSION['user_id'] ?? null);
 
             
 

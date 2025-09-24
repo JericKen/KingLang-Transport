@@ -532,7 +532,7 @@
 
                 <h6><i class="bi bi-bell-fill"></i>Notifications</h6>
 
-                <a href="javascript:void(0)" class="text-decoration-none small mark-all-read">Mark all as read</a>
+                <a href="javascript:void(0)" class="text-decoration-none small mark-all-read" style="display: none;">Mark all as read</a>
 
             </div>
 
@@ -595,7 +595,7 @@
     <!-- Profile Dropdown -->
     <div class="dropdown">
         <a href="#" class="d-flex align-items-center gap-2 text-decoration-none profile-toggle" id="profileToggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="../../../public/images/profile.png" alt="profile" height="35px" class="rounded-circle">
+            <img src="../../../public/images/profile.jpg" alt="profile" height="35px" class="rounded-circle">
             <div class="text-sm">
                 <div class="name text-success fw-bold" style="font-size: 12px"><?= $_SESSION["admin_name"]; ?></div>
                 <div class="role" style="font-size: 10px"><?= $_SESSION["role"]; ?></div>
@@ -607,7 +607,7 @@
         <div class="dropdown-menu dropdown-menu-end profile-dropdown" id="profileDropdownMenu" style="min-width: 200px; border-radius: 0.75rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); border: none; padding: 0.5rem 0;">
             <div class="px-3 py-2 border-bottom">
                 <div class="d-flex align-items-center gap-2">
-                    <img src="../../../public/images/profile.png" alt="profile" height="40px" class="rounded-circle">
+                    <img src="../../../public/images/profile.jpg" alt="profile" height="40px" class="rounded-circle">
                     <div>
                         <div class="fw-bold text-dark" style="font-size: 14px;"><?= $_SESSION["admin_name"]; ?></div>
                         <div class="text-muted" style="font-size: 12px;"><?= $_SESSION["role"]; ?></div>
@@ -699,6 +699,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     notificationBadge.style.display = 'none';
 
+                }
+
+                // Show the "Mark all as read" button only when unread > 1
+                if (markAllReadBtn) {
+                    markAllReadBtn.style.display = (data.unreadCount > 1) ? 'inline' : 'none';
                 }
 
                 

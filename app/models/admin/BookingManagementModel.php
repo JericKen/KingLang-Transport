@@ -78,8 +78,6 @@ class BookingManagementModel {
 
                 JOIN booking_costs c ON b.booking_id = c.booking_id
 
-                WHERE is_rebooking = 0 AND is_rebooked = 0
-
                 $status
 
                 ORDER BY $column $order 
@@ -154,7 +152,7 @@ class BookingManagementModel {
 
         $status = in_array($status, $allowed_status) ? $status : "";
 
-        $status == "All" ? $status = "" : $status = " AND b.status = '$status'";
+        $status == "All" ? $status = "" : $status = "WHERE b.status = '$status'";
 
 
 
@@ -165,8 +163,6 @@ class BookingManagementModel {
                 SELECT COUNT(*) as total
 
                 FROM bookings b
-
-                WHERE is_rebooking = 0 AND is_rebooked = 0
 
                 $status
 
@@ -1542,7 +1538,7 @@ class BookingManagementModel {
 
             
 
-            $stmt = $this->conn->prepare("SELECT COUNT(*) total_bookings FROM bookings WHERE is_rebooking = 0 AND is_rebooked = 0 $dateFilter");
+            $stmt = $this->conn->prepare("SELECT COUNT(*) total_bookings FROM bookings WHERE 1=1 $dateFilter");
 
             if (!empty($params)) {
 
@@ -1570,8 +1566,6 @@ class BookingManagementModel {
 
                             WHERE p.is_canceled = 0 AND p.status = 'Confirmed'";
 
-            
-
             if ($startDate && $endDate) {
 
                 $revenueQuery .= " AND b.date_of_tour BETWEEN :start_date AND :end_date";
@@ -1598,7 +1592,7 @@ class BookingManagementModel {
 
 
 
-            $stmt = $this->conn->prepare("SELECT COUNT(*) as upcoming_trips FROM bookings WHERE status = 'Confirmed' AND date_of_tour > CURDATE() AND is_rebooking = 0 AND is_rebooked = 0 AND payment_status IN ('Paid', 'Partially Paid') $dateFilter");
+            $stmt = $this->conn->prepare("SELECT COUNT(*) as upcoming_trips FROM bookings WHERE status = 'Confirmed' AND date_of_tour > CURDATE() AND payment_status IN ('Paid', 'Partially Paid') $dateFilter");
 
             if (!empty($params)) {
 
@@ -1616,7 +1610,7 @@ class BookingManagementModel {
 
 
 
-            $stmt = $this->conn->prepare("SELECT COUNT(*) as pending_bookings FROM bookings WHERE status = 'Pending' AND is_rebooking = 0 AND is_rebooked = 0 $dateFilter");
+            $stmt = $this->conn->prepare("SELECT COUNT(*) as pending_bookings FROM bookings WHERE status = 'Pending' $dateFilter");
 
             if (!empty($params)) {
 
@@ -1634,7 +1628,7 @@ class BookingManagementModel {
 
 
 
-            $stmt = $this->conn->prepare("SELECT COUNT(*) as processing_payments FROM bookings WHERE status = 'Processing' AND payment_status IN ('Unpaid', 'Partially Paid') AND is_rebooking = 0 AND is_rebooked = 0 $dateFilter");
+            $stmt = $this->conn->prepare("SELECT COUNT(*) as processing_payments FROM bookings WHERE status = 'Processing' AND payment_status IN ('Unpaid', 'Partially Paid') $dateFilter");
 
             if (!empty($params)) {
 
@@ -1652,7 +1646,7 @@ class BookingManagementModel {
 
 
 
-            $stmt = $this->conn->prepare("SELECT COUNT(*) as flagged_bookings FROM bookings WHERE status = 'Confirmed' AND payment_status IN ('Unpaid', 'Partially Paid') AND is_rebooking = 0 AND is_rebooked = 0 AND date_of_tour < CURDATE() $dateFilter");
+            $stmt = $this->conn->prepare("SELECT COUNT(*) as flagged_bookings FROM bookings WHERE status = 'Confirmed' AND payment_status IN ('Unpaid', 'Partially Paid') AND date_of_tour < CURDATE() $dateFilter");
 
             if (!empty($params)) {
 
@@ -1740,10 +1734,7 @@ class BookingManagementModel {
 
                 FROM bookings
 
-                WHERE is_rebooking = 0 
-
-                AND is_rebooked = 0
-
+                WHERE 1=1
             ";
 
             
@@ -1791,10 +1782,6 @@ class BookingManagementModel {
                 FROM bookings b
 
                 LEFT JOIN payments p ON b.booking_id = p.booking_id
-
-                WHERE b.is_rebooking = 0 
-
-                AND b.is_rebooked = 0
 
             ";
 
@@ -1948,9 +1935,7 @@ class BookingManagementModel {
 
                 LEFT JOIN payments p ON b.booking_id = p.booking_id
 
-                WHERE b.is_rebooking = 0 AND b.is_rebooked = 0 
-
-                AND b.status IN ('Confirmed', 'Completed') 
+                WHERE b.status IN ('Confirmed', 'Completed') 
 
                 AND b.payment_status IN ('Paid', 'Partially Paid') 
 
@@ -2062,9 +2047,7 @@ class BookingManagementModel {
 
                 JOIN booking_costs c ON b.booking_id = c.booking_id
 
-                WHERE is_rebooking = 0 AND is_rebooked = 0
-
-                $dateFilter
+                WHERE 1=1 $dateFilter
 
                 GROUP BY status
 
@@ -2306,9 +2289,7 @@ class BookingManagementModel {
 
                 FROM bookings
 
-                WHERE is_rebooking = 0
-
-                AND is_rebooked = 0
+                WHERE 1=1
 
             ";
 
@@ -2357,10 +2338,6 @@ class BookingManagementModel {
                 FROM bookings b
 
                 LEFT JOIN payments p ON b.booking_id = p.booking_id
-
-                WHERE b.is_rebooking = 0
-
-                AND b.is_rebooked = 0
 
             ";
 
@@ -2492,8 +2469,6 @@ class BookingManagementModel {
 
                 FROM bookings 
 
-                WHERE is_rebooking = 0 AND is_rebooked = 0
-
             ");
 
             $stmt->execute();
@@ -2510,7 +2485,7 @@ class BookingManagementModel {
 
                 FROM bookings 
 
-                WHERE status = 'Confirmed' AND is_rebooking = 0 AND is_rebooked = 0
+                WHERE status = 'Confirmed'
 
             ");
 
@@ -2528,7 +2503,7 @@ class BookingManagementModel {
 
                 FROM bookings 
 
-                WHERE status = 'Pending' AND is_rebooking = 0 AND is_rebooked = 0
+                WHERE status = 'Pending'
 
             ");
 
@@ -2548,9 +2523,7 @@ class BookingManagementModel {
 
                 WHERE status = 'Confirmed' 
 
-                AND date_of_tour >= CURDATE() 
-
-                AND is_rebooking = 0 AND is_rebooked = 0
+                AND date_of_tour >= CURDATE()
 
             ");
 
@@ -2606,9 +2579,7 @@ class BookingManagementModel {
 
                 JOIN booking_costs c ON b.booking_id = c.booking_id
 
-                WHERE b.is_rebooking = 0 AND b.is_rebooked = 0
-
-                AND ((b.date_of_tour BETWEEN :start AND :end) 
+                WHERE ((b.date_of_tour BETWEEN :start AND :end) 
 
                     OR (b.end_of_tour BETWEEN :start AND :end)
 
@@ -2672,9 +2643,7 @@ class BookingManagementModel {
 
                 JOIN booking_costs c ON b.booking_id = c.booking_id
 
-                WHERE is_rebooking = 0 AND is_rebooked = 0
-
-                AND (
+                WHERE (
 
                     CONCAT(u.first_name, ' ', u.last_name) LIKE :search
 
@@ -2752,9 +2721,7 @@ class BookingManagementModel {
 
                 JOIN users u ON b.user_id = u.user_id
 
-                WHERE is_rebooking = 0 AND is_rebooked = 0
-
-                AND (
+                WHERE (
 
                     CONCAT(u.first_name, ' ', u.last_name) LIKE :search
 
@@ -2844,9 +2811,7 @@ class BookingManagementModel {
 
                 JOIN booking_costs c ON b.booking_id = c.booking_id
 
-                WHERE is_rebooking = 0 AND is_rebooked = 0
-
-                AND b.status = 'Confirmed'
+                WHERE b.status = 'Confirmed'
 
                 AND b.payment_status = 'Unpaid'
 
@@ -2890,9 +2855,7 @@ class BookingManagementModel {
 
                 FROM bookings b
 
-                WHERE is_rebooking = 0 AND is_rebooked = 0 
-
-                AND status = 'Confirmed'
+                WHERE status = 'Confirmed'
 
                 AND b.payment_status = 'Unpaid'
 
@@ -2958,9 +2921,7 @@ class BookingManagementModel {
 
                 JOIN booking_costs c ON b.booking_id = c.booking_id
 
-                WHERE is_rebooking = 0 AND is_rebooked = 0
-
-                AND (b.status = 'Confirmed' OR b.status = 'Completed')
+                WHERE (b.status = 'Confirmed' OR b.status = 'Completed')
 
                 AND b.payment_status = 'Partially Paid'
 
@@ -3004,9 +2965,7 @@ class BookingManagementModel {
 
                 FROM bookings b
 
-                WHERE is_rebooking = 0 AND is_rebooked = 0
-
-                AND b.payment_status = 'Partially Paid'
+                WHERE b.payment_status = 'Partially Paid'
 
             ");
 
@@ -3060,9 +3019,7 @@ class BookingManagementModel {
 
                 JOIN booking_costs c ON b.booking_id = c.booking_id
 
-                WHERE b.is_rebooking = 0 AND b.is_rebooked = 0
-
-                $status_condition
+                WHERE $status_condition
 
                 ORDER BY b.booking_id DESC
 
@@ -3240,9 +3197,7 @@ class BookingManagementModel {
 
                     user_id, destination, pickup_point, date_of_tour, end_of_tour,
 
-                    number_of_days, number_of_buses, status, payment_status, 
-
-                    is_rebooking, is_rebooked, created_at, booked_at, balance,
+                    number_of_days, number_of_buses, status, payment_status, created_at, booked_at, balance,
 
                     estimated_pax, notes, created_by
 
@@ -3251,8 +3206,8 @@ class BookingManagementModel {
                     :user_id, :destination, :pickup_point, :date_of_tour, :end_of_tour,
 
                     :number_of_days, :number_of_buses, :status, :payment_status,
-
-                    0, 0, NOW(), NOW(), :balance, :estimated_pax, :notes, :created_by
+                    
+                    NOW(), NOW(), :balance, :estimated_pax, :notes, :created_by
 
                 )
 
