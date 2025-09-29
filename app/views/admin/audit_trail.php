@@ -154,6 +154,8 @@ $pageTitle = "Audit Trail Management";
         ::-webkit-scrollbar-thumb:hover {
             background: #999;
         }
+        /* Lightweight loading state to avoid full-reload feel */
+        .table-container.loading { opacity: 0.6; transition: opacity 150ms ease; }
     </style>
 </head>
 <body>
@@ -248,7 +250,7 @@ $pageTitle = "Audit Trail Management";
                                             <i class="bi bi-search"></i>
                                         </span>
                                         <input type="text" id="searchAudit" class="form-control border-start-0" placeholder="Search by user or entity...">
-                                        <button id="searchBtn" class="btn btn-success">Search</button>
+                                        <!-- <button id="searchBtn" class="btn btn-success">Search</button> -->
                                     </div>
                                 </div>
                                 
@@ -459,7 +461,7 @@ $pageTitle = "Audit Trail Management";
 
     <!-- Entity History Modal -->
     <div class="modal fade" id="entityHistoryModal" tabindex="-1" aria-labelledby="entityHistoryModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header bg-light">
                     <h5 class="modal-title" id="entityHistoryModalLabel">
@@ -473,13 +475,12 @@ $pageTitle = "Audit Trail Management";
                             <thead class="table-light">
                                 <tr>
                                     <th width="8%">ID</th>
-                                    <th width="15%">User</th>
-                                    <th width="10%">Role</th>
-                                    <th width="10%">Action</th>
-                                    <th width="15%">Date/Time</th>
+                                    <th width="18%">User</th>
+                                    <th width="12%">Role</th>
+                                    <th width="12%">Action</th>
+                                    <th width="18%">Date/Time</th>
                                     <th width="12%">IP Address</th>
-                                    <th width="15%">Changes</th>
-                                    <th width="15%">Actions</th>
+                                    <th width="20%">Changes</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -510,10 +511,15 @@ $pageTitle = "Audit Trail Management";
         loadStats();
         
         // Search functionality
+        // Debounced search to feel responsive without flicker
+        let searchDebounceTimer = null;
         $("#searchAudit").on("input", function(e) {
             e.preventDefault();
             currentPage = 1;
-            loadAuditTrails();
+            clearTimeout(searchDebounceTimer);
+            searchDebounceTimer = setTimeout(() => {
+                loadAuditTrails();
+            }, 250);
         });
         
         // Per page selector
@@ -596,8 +602,8 @@ $pageTitle = "Audit Trail Management";
         
         // Load audit trails with pagination and filters
         function loadAuditTrails() {
-            // Show loading indicator
-            $("#auditTrailTable tbody").html('<tr><td colspan="9" class="text-center"><i class="bi bi-arrow-repeat spin"></i> Loading...</td></tr>');
+            // Lightweight loading indicator
+            $(".table-container").addClass('loading');
             
             // Prepare data to send
             const data = {
@@ -643,6 +649,9 @@ $pageTitle = "Audit Trail Management";
                 },
                 error: function() {
                     $("#auditTrailTable tbody").html('<tr><td colspan="9" class="text-center text-danger">Error loading data. Please try again.</td></tr>');
+                },
+                complete: function() {
+                    $(".table-container").removeClass('loading');
                 }
             });
         }
@@ -718,7 +727,7 @@ $pageTitle = "Audit Trail Management";
                 row.append(`<td><small class="font-monospace">${record.ip_address}</small></td>`);
                 
                 // Action buttons
-                const actionsCell = $("<td class='text-center'>");
+                const actionsCell = $("<td class='text-left'>");
                 
                 // View details button
                 const viewBtn = $(`<button class="btn btn-outline-primary btn-sm me-1 view-audit-details" data-id="${record.audit_id}" title="View Details">
@@ -972,7 +981,7 @@ $pageTitle = "Audit Trail Management";
                     tbody.empty();
                     
                     if (response.length === 0) {
-                        tbody.html('<tr><td colspan="8" class="text-center text-muted fst-italic">No history records found</td></tr>');
+                        tbody.html('<tr><td colspan="7" class="text-center text-muted fst-italic">No history records found</td></tr>');
                     } else {
                         for (const record of response) {
                             const row = $("<tr>");
@@ -986,14 +995,6 @@ $pageTitle = "Audit Trail Management";
                             // Summarize changes
                             const changesSummary = generateChangesSummary(record);
                             row.append(`<td><small>${changesSummary}</small></td>`);
-                            
-                            // View details button
-                            const actionsCell = $("<td class='text-center'>");
-                            const viewBtn = $(`<button class="btn btn-outline-info btn-sm view-audit-details" data-id="${record.audit_id}" title="View Details">
-                                <i class="bi bi-eye"></i>
-                            </button>`);
-                            actionsCell.append(viewBtn);
-                            row.append(actionsCell);
                             
                             tbody.append(row);
                         }

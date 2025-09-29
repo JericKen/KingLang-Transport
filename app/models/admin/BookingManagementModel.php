@@ -3706,6 +3706,78 @@ class BookingManagementModel {
 		}
 	}
 
+	public function getAvailableBusesForRange(string $startDate, string $endDate): array {
+		try {
+			$sql = "
+				SELECT b.*
+				FROM buses b
+				WHERE (LOWER(b.status) = 'active')
+				AND b.bus_id NOT IN (
+					SELECT bb.bus_id
+					FROM booking_buses bb
+					JOIN bookings bo ON bb.booking_id = bo.booking_id
+					WHERE (bo.status = 'Confirmed' OR bo.status = 'Processing')
+					AND (
+						(bo.date_of_tour <= :start_date AND bo.end_of_tour >= :start_date)
+						OR
+						(bo.date_of_tour <= :end_date AND bo.end_of_tour >= :end_date)
+						OR
+						(bo.date_of_tour >= :start_date AND bo.end_of_tour <= :end_date)
+					)
+				)
+				ORDER BY b.name ASC
+			";
+			$stmt = $this->conn->prepare($sql);
+			$stmt->execute([':start_date' => $startDate, ':end_date' => $endDate]);
+			return $stmt->fetchAll(PDO::FETCH_ASSOC) ?: [];
+		} catch (PDOException $e) {
+			return [];
+		}
+	}
+
+	public function getAvailableDriversForRange(string $startDate, string $endDate): array {
+		try {
+			$sql = "
+				SELECT d.*
+				FROM drivers d
+				WHERE d.status = 'Active' AND d.availability = 'Available'
+				AND d.driver_id NOT IN (
+					SELECT bd.driver_id
+					FROM booking_driver bd
+					JOIN bookings bo ON bd.booking_id = bo.booking_id
+					WHERE (bo.status = 'Confirmed' OR bo.status = 'Processing')
+					AND (
+						(bo.date_of_tour <= :start_date AND bo.end_of_tour >= :start_date)
+						OR
+						(bo.date_of_tour <= :end_date AND bo.end_of_tour >= :end_date)
+						OR
+						(bo.date_of_tour >= :start_date AND bo.end_of_tour <= :end_date)
+					)
+				)
+				ORDER BY d.full_name ASC
+			";
+			$stmt = $this->conn->prepare($sql);
+			$stmt->execute([':start_date' => $startDate, ':end_date' => $endDate]);
+			return $stmt->fetchAll(PDO::FETCH_ASSOC) ?: [];
+		} catch (PDOException $e) {
+			return [];
+		}
+	}
+
+	public function getAvailableResourcesForBooking(int $booking_id): array {
+		try {
+			$booking = $this->getBooking($booking_id);
+			if (!$booking) return ['buses' => [], 'drivers' => []];
+			$start = $booking['date_of_tour'];
+			$end = $booking['end_of_tour'] ?? $booking['date_of_tour'];
+			$buses = $this->getAvailableBusesForRange($start, $end);
+			$drivers = $this->getAvailableDriversForRange($start, $end);
+			return ['buses' => $buses, 'drivers' => $drivers];
+		} catch (PDOException $e) {
+			return ['buses' => [], 'drivers' => []];
+		}
+	}
+
 }
 
 ?>

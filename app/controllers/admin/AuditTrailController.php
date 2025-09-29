@@ -68,6 +68,8 @@ class AuditTrailController {
 
             'date_to' => $_POST['date_to'] ?? null,
 
+            'search' => $_POST['search'] ?? null,
+
         ];
 
         
@@ -104,9 +106,8 @@ class AuditTrailController {
 
             
 
-            // Format date with proper timezone conversion
-
-            $record['created_at_formatted'] = convertToManilaTime($record['created_at'], 'Y-m-d H:i:s');
+            // Format date assuming the DB timestamp is already in Asia/Manila
+            $record['created_at_formatted'] = date('Y-m-d H:i:s', strtotime($record['created_at']));
 
         }
 
@@ -168,9 +169,8 @@ class AuditTrailController {
 
             
 
-            // Format date with proper timezone conversion
-
-            $auditDetails['created_at_formatted'] = convertToManilaTime($auditDetails['created_at'], 'Y-m-d H:i:s');
+            // Format date assuming the DB timestamp is already in Asia/Manila
+            $auditDetails['created_at_formatted'] = date('Y-m-d H:i:s', strtotime($auditDetails['created_at']));
 
         }
 
@@ -344,7 +344,7 @@ class AuditTrailController {
 
                 $record['ip_address'],
 
-                convertToManilaTime($record['created_at'], 'Y-m-d H:i:s')
+                date('Y-m-d H:i:s', strtotime($record['created_at']))
 
             ]);
 

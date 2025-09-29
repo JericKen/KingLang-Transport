@@ -165,8 +165,8 @@ require_admin_auth(); // Use helper function
                             <i class="bi bi-calendar-check"></i>
                         </div>
                         <div>
+                            <h6 class="mb-0 text-muted">Total Bookings</h6>
                             <h4 id="totalBookings" class="fw-bolder"></h4>
-                            <p class="text-secondary">Total Bookings</p>
                         </div>
                     </div>
                 </div>
@@ -176,8 +176,8 @@ require_admin_auth(); // Use helper function
                             <i class="bi bi-cash-stack"></i>
                         </div>
                         <div>
+                            <h6 class="mb-0 text-muted">Total Revenue</h6>
                             <h4 id="totalRevenue" class="fw-bolder"></h4>
-                            <p class="text-secondary">Total Revenue</p>
                         </div>
                     </div>
                 </div>
@@ -187,8 +187,8 @@ require_admin_auth(); // Use helper function
                             <i class="bi bi-bus-front"></i>
                         </div>
                         <div>
+                            <h6 class="mb-0 text-muted">Upcoming Trips</h6>
                             <h4 id="upcomingTrips" class="fw-bolder"></h4>
-                            <p class="text-secondary">Upcoming Trips</p>
                         </div>
                     </div>
                 </div>
@@ -198,8 +198,8 @@ require_admin_auth(); // Use helper function
                             <i class="bi bi-hourglass-split"></i>
                         </div>
                         <div>
+                            <h6 class="mb-0 text-muted">Pending Bookings</h6>
                             <h4 id="pendingBookings" class="fw-bolder"></h4>
-                            <p class="text-secondary">Pending Bookings</p>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,225 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Batangas City, Batangas, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJE9AcTB0bvTMRdxFBDoIqWeQ",
+         "reference" : "ChIJE9AcTB0bvTMRdxFBDoIqWeQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Batangas City",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Batangas, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Batangas City"
+            },
+            {
+               "offset" : 15,
+               "value" : "Batangas"
+            },
+            {
+               "offset" : 25,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Batanes, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJnQkasavueTQRnwfojKB2fZk",
+         "reference" : "ChIJnQkasavueTQRnwfojKB2fZk",
+         "structured_formatting" : 
+         {
+            "main_text" : "Batanes",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Batanes"
+            },
+            {
+               "offset" : 9,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "administrative_area_level_2",
+            "geocode",
+            "political"
+         ]
+      },
+      {
+         "description" : "Batangas Port, Batangas Port Access Rd, Batangas City, Batangas, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJoe190EMFvTMRwNsHHaIgmxk",
+         "reference" : "ChIJoe190EMFvTMRwNsHHaIgmxk",
+         "structured_formatting" : 
+         {
+            "main_text" : "Batangas Port",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Batangas Port Access Rd, Batangas City, Batangas, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Batangas Port"
+            },
+            {
+               "offset" : 15,
+               "value" : "Batangas Port Access Rd"
+            },
+            {
+               "offset" : 40,
+               "value" : "Batangas City"
+            },
+            {
+               "offset" : 55,
+               "value" : "Batangas"
+            },
+            {
+               "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Batangas, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJEZspM4ISvTMRo_3ntNgZqaE",
+         "reference" : "ChIJEZspM4ISvTMRo_3ntNgZqaE",
+         "structured_formatting" : 
+         {
+            "main_text" : "Batangas",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Batangas"
+            },
+            {
+               "offset" : 10,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "administrative_area_level_2",
+            "geocode",
+            "political"
+         ]
+      },
+      {
+         "description" : "Batanes Islands, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJfYh2gVMZejQRAeaCaSAWRcQ",
+         "reference" : "ChIJfYh2gVMZejQRAeaCaSAWRcQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Batanes Islands",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Batanes Islands"
+            },
+            {
+               "offset" : 17,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "natural_feature"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

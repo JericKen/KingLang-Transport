@@ -240,7 +240,7 @@ require_once __DIR__ . "/../../controllers/admin/DriverManagementController.php"
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-md-4 col-sm-6">
+                <div class="col-xl-2 col-md-4 col-sm-6 d-none">
                     <div class="card border-0 shadow-sm stats-card compact-card">
                         <div class="card-body">
                             <div class="d-flex align-items-center">

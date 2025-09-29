@@ -4078,41 +4078,124 @@ async function openManageAssignmentsNew(bookingId) {
             }
         });
 
-        // Fetch current assignments and available resources
-        const [assignmentsResp, busesResp, driversResp] = await Promise.all([
+        // Helper to safely parse JSON and surface HTML/error responses
+        const parseJsonSafe = async (resp, label) => {
+            const url = resp.url || label;
+            const contentType = (resp.headers && resp.headers.get && resp.headers.get('content-type')) || '';
+            let bodyText = '';
+            try {
+                bodyText = await resp.text();
+            } catch (e) {
+                console.error('Failed reading response body for', label, e);
+                throw new Error(`${label} response unreadable`);
+            }
+            try {
+                return JSON.parse(bodyText);
+            } catch (e) {
+                console.error(`Non-JSON response from ${label}`, { status: resp.status, url, contentType, preview: bodyText.slice(0, 300) });
+                throw new Error(`${label} did not return JSON (status ${resp.status}). Check server logs.`);
+            }
+        };
+
+        // Fetch current assignments, booking details, and available resources
+        const [assignmentsResp, bookingResp, availResp] = await Promise.all([
             fetch('/admin/get-booking-assignments', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ bookingId })
             }),
+            fetch('/admin/get-booking-details', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ bookingId })
+            }),
+            fetch('/admin/get-available-resources-for-booking', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ bookingId })
+            })
+        ]);
+
+        const assignmentsData = await parseJsonSafe(assignmentsResp, 'get-booking-assignments');
+        const bookingData = await parseJsonSafe(bookingResp, 'get-booking-details');
+        const availData = await parseJsonSafe(availResp, 'get-available-resources-for-booking');
+
+        if (!assignmentsData.success) throw new Error(assignmentsData.message || 'Failed to load assignments');
+        if (!bookingData.success || !bookingData.booking) throw new Error(bookingData.message || 'Failed to load booking');
+        if (!availData.success) throw new Error(availData.message || 'Failed to load available resources');
+        
+        const requiredBusCountRaw = bookingData.booking.number_of_buses || 0;
+        const requiredBusCount = parseInt(requiredBusCountRaw, 10) || 0;
+        const assignments = assignmentsData.assignments || {};
+        const assignedBusIds = (assignments.bus_list || []).map(b => parseInt(b.bus_id));
+        const assignedMap = assignments.bus_driver_map || {};
+        const assignedFlatDriverIds = Array.isArray(assignments.driver_list) ? assignments.driver_list.map(d => parseInt(d.driver_id)) : [];
+        console.log('[Assignments]', { requiredBusCount, requiredBusCountRaw, assignedBusIds, assignedMap, assignedFlatDriverIds });
+
+        // Availability-filtered lists
+        let buses = Array.isArray(availData?.buses) ? availData.buses : [];
+        let drivers = Array.isArray(availData?.drivers) ? availData.drivers : [];
+
+        // Additionally fetch full lists to enrich any already-assigned items that are not currently available
+        const [allBusesResp, allDriversResp] = await Promise.all([
             fetch('/admin/get-all-buses', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({}) }),
             fetch('/admin/api/drivers/all', { method: 'GET' })
         ]);
+        const allBusesData = await parseJsonSafe(allBusesResp, 'get-all-buses');
+        const allDriversData = await parseJsonSafe(allDriversResp, 'drivers/all');
+        const allBuses = Array.isArray(allBusesData?.buses) ? allBusesData.buses : [];
+        const allDrivers = Array.isArray(allDriversData?.data) ? allDriversData.data : [];
 
-        const assignmentsData = await assignmentsResp.json();
-        const busesData = await busesResp.json();
-        const driversData = await driversResp.json();
+        // Merge: ensure already-assigned buses are included in the list
+        const busIdToBus = new Map(buses.map(b => [parseInt(b.bus_id), b]));
+        const allBusIdToBus = new Map(allBuses.map(b => [parseInt(b.bus_id), b]));
+        assignedBusIds.forEach(id => {
+            const bid = parseInt(id);
+            if (!busIdToBus.has(bid)) {
+                const found = allBusIdToBus.get(bid);
+                if (found) {
+                    busIdToBus.set(bid, found);
+                } else {
+                    // Minimal fallback
+                    busIdToBus.set(bid, { bus_id: bid, name: `Bus #${bid}`, capacity: '', license_plate: '', status: 'Active' });
+                }
+            }
+        });
+        buses = Array.from(busIdToBus.values());
+        console.log('[Buses after merge]', { total: buses.length, buses });
 
-        if (!assignmentsData.success) throw new Error(assignmentsData.message || 'Failed to load assignments');
-        
-        const assignments = assignmentsData.assignments || {};
-        const assignedBusIds = (assignments.bus_list || []).map(b => b.bus_id);
-        const assignedMap = assignments.bus_driver_map || {};
-
-        // Normalize arrays
-        const allBuses = Array.isArray(busesData?.buses) ? busesData.buses : [];
-        const allDrivers = Array.isArray(driversData?.data) ? driversData.data : [];
-
-        // Filter active resources
-        const buses = allBuses.filter(b => (b.status || '').toLowerCase() !== 'maintenance');
-        const drivers = allDrivers.filter(d => (d.status || '').toLowerCase() !== 'inactive');
+        // Merge: ensure already-assigned drivers are included in the list
+        const driverIdToDriver = new Map(drivers.map(d => [parseInt(d.driver_id), d]));
+        const allDriverIdToDriver = new Map(allDrivers.map(d => [parseInt(d.driver_id), d]));
+        Object.values(assignedMap).forEach(ids => {
+            (ids || []).forEach(id => {
+                const did = parseInt(id);
+                if (!driverIdToDriver.has(did)) {
+                    const found = allDriverIdToDriver.get(did);
+                    if (found) {
+                        driverIdToDriver.set(did, found);
+                    } else {
+                        driverIdToDriver.set(did, { driver_id: did, full_name: `Driver #${did}`, license_number: '', contact_number: '', availability: 'Unknown', status: 'Active' });
+                    }
+                }
+            });
+        });
+        // Also include flat assigned drivers
+        assignedFlatDriverIds.forEach(did => {
+            if (!driverIdToDriver.has(did)) {
+                const found = allDriverIdToDriver.get(did);
+                if (found) driverIdToDriver.set(did, found);
+            }
+        });
+        drivers = Array.from(driverIdToDriver.values());
+        console.log('[Drivers after merge]', { total: drivers.length, drivers });
 
         if (buses.length === 0) {
-            Swal.fire('No Buses Available', 'No active buses found for assignment.', 'warning');
+            Swal.fire('No Buses Available', 'No available buses for the booking dates.', 'warning');
             return;
         }
         if (drivers.length === 0) {
-            Swal.fire('No Drivers Available', 'No active drivers found for assignment.', 'warning');
+            Swal.fire('No Drivers Available', 'No available drivers for the booking dates.', 'warning');
             return;
         }
 
@@ -4121,7 +4204,10 @@ async function openManageAssignmentsNew(bookingId) {
             <div class="assignment-manager">
                 <div class="row">
                     <div class="col-md-6">
-                        <h6 class="mb-3"><i class="bi bi-bus-front"></i> Available Buses</h6>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0"><i class="bi bi-bus-front"></i> Available Buses</h6>
+                            <small class="text-muted">Required: <span id="requiredBusCount">${requiredBusCount}</span> · Selected: <span id="selectedBusCount">0</span></small>
+                        </div>
                         <div class="bus-cards" style="max-height: 400px; overflow-y: auto;">
                             ${buses.map(bus => `
                                 <div class="bus-card card mb-2 ${assignedBusIds.includes(bus.bus_id) ? 'border-success' : ''}" 
@@ -4198,8 +4284,13 @@ async function openManageAssignmentsNew(bookingId) {
             preConfirm: () => {
                 const selectedBuses = Array.from(document.querySelectorAll('.bus-checkbox:checked'))
                     .map(cb => parseInt(cb.value));
+
+                if (requiredBusCount > 0 && selectedBuses.length !== requiredBusCount) {
+                    Swal.showValidationMessage(`Please select exactly ${requiredBusCount} bus(es).`);
+                    return false;
+                }
+
                 const assignments = {};
-                
                 selectedBuses.forEach(busId => {
                     const busCard = document.querySelector(`[data-bus-id="${busId}"]`);
                     const selectedDrivers = Array.from(busCard.querySelectorAll('.driver-checkbox:checked'))
@@ -4212,125 +4303,95 @@ async function openManageAssignmentsNew(bookingId) {
                 return { buses: selectedBuses, assignments };
             },
             didOpen: () => {
-                // Add click handlers for bus cards
-                document.querySelectorAll('.bus-card').forEach(card => {
-                    card.addEventListener('click', function(e) {
-                        if (e.target.type !== 'checkbox') {
-                            const checkbox = this.querySelector('.bus-checkbox');
-                            checkbox.checked = !checkbox.checked;
-                            updateBusSelection();
-                        }
-                    });
-                });
+                const selectedCountEl = document.getElementById('selectedBusCount');
 
-                // Add checkbox change handlers
-                document.querySelectorAll('.bus-checkbox').forEach(checkbox => {
-                    checkbox.addEventListener('change', updateBusSelection);
-                });
+                function enforceLimitAndUpdate() {
+                    const checked = Array.from(document.querySelectorAll('.bus-checkbox:checked'));
+                    const effectiveLimit = (requiredBusCount > 0) ? requiredBusCount : Math.max(assignedBusIds.length, 0);
+                    if (effectiveLimit > 0 && checked.length > effectiveLimit) {
+                        const last = checked[checked.length - 1];
+                        last.checked = false;
+                    }
+                    const selectedBuses = Array.from(document.querySelectorAll('.bus-checkbox:checked')).map(cb => parseInt(cb.value));
+                    selectedCountEl.textContent = selectedBuses.length;
 
-                function updateBusSelection() {
-                    const selectedBuses = Array.from(document.querySelectorAll('.bus-checkbox:checked'))
-                        .map(cb => parseInt(cb.value));
-                    
-                    // Update bus card styles
                     document.querySelectorAll('.bus-card').forEach(card => {
                         const busId = parseInt(card.dataset.busId);
                         if (selectedBuses.includes(busId)) {
                             card.classList.add('border-success', 'bg-light');
                         } else {
                             card.classList.remove('border-success', 'bg-light');
+                            const driverSelection = card.querySelector('.driver-selection');
+                            if (driverSelection) driverSelection.remove();
                         }
                     });
 
-                    // Add driver checkboxes to selected buses
+                    // Render driver selectors for selected buses
                     document.querySelectorAll('.bus-card').forEach(card => {
                         const busId = parseInt(card.dataset.busId);
-                        const bus = buses.find(b => b.bus_id === busId);
-                        
+                        const bus = buses.find(b => parseInt(b.bus_id) === busId);
                         if (selectedBuses.includes(busId)) {
-                            // Add driver selection area
                             let driverSelection = card.querySelector('.driver-selection');
                             if (!driverSelection) {
                                 driverSelection = document.createElement('div');
                                 driverSelection.className = 'driver-selection mt-2 p-2 border-top';
                                 driverSelection.innerHTML = `
-                                    <small class="text-muted d-block mb-2">Select drivers for ${bus.name}:</small>
-                                    <div class="driver-checkboxes"></div>
+                                    <small class=\"text-muted d-block mb-2\">Select drivers for ${bus ? bus.name : ('Bus #'+busId)}:</small>
+                                    <div class=\"driver-checkboxes\"></div>
                                 `;
                                 card.querySelector('.card-body').appendChild(driverSelection);
                             }
-                            
-                            // Populate driver checkboxes
                             const checkboxesContainer = driverSelection.querySelector('.driver-checkboxes');
                             checkboxesContainer.innerHTML = drivers.map(driver => `
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input driver-checkbox" type="checkbox" 
-                                           value="${driver.driver_id}" 
-                                           data-bus-id="${busId}"
-                                           ${(assignedMap[busId] || []).includes(driver.driver_id) ? 'checked' : ''}>
-                                    <label class="form-check-label small">${driver.full_name}</label>
+                                <div class=\"form-check form-check-inline\">
+                                    <input class=\"form-check-input driver-checkbox\" type=\"checkbox\" 
+                                           value=\"${driver.driver_id}\" 
+                                           data-bus-id=\"${busId}\">
+                                    <label class=\"form-check-label small\">${driver.full_name}</label>
                                 </div>
                             `).join('');
-                            
-                            // Add change handlers to new checkboxes
+
+                            // Determine which drivers to preselect: use map if present; otherwise fallback to flat assigned list
+                            const mapIds = (assignedMap[busId] && assignedMap[busId].length) ? assignedMap[busId].map(n => parseInt(n)) : [];
+                            const preselectIds = mapIds.length ? mapIds : assignedFlatDriverIds;
+                            preselectIds.forEach(driverId => {
+                                const opt = checkboxesContainer.querySelector(`input.driver-checkbox[value=\"${driverId}\"]`);
+                                if (opt) { opt.checked = true; }
+                            });
+
                             checkboxesContainer.querySelectorAll('.driver-checkbox').forEach(checkbox => {
                                 checkbox.addEventListener('change', updateAssignmentPreview);
                             });
-                        } else {
-                            // Remove driver selection area
-                            const driverSelection = card.querySelector('.driver-selection');
-                            if (driverSelection) {
-                                driverSelection.remove();
-                            }
                         }
                     });
-                    
+
                     updateAssignmentPreview();
                 }
 
-                function updateAssignmentPreview() {
-                    const selectedBuses = Array.from(document.querySelectorAll('.bus-checkbox:checked'))
-                        .map(cb => parseInt(cb.value));
-                    const preview = document.getElementById('assignmentPreview');
-                    
-                    if (selectedBuses.length === 0) {
-                        preview.innerHTML = '<p class="text-muted mb-0">Select buses and drivers to see assignments</p>';
-                        return;
-                    }
-                    
-                    let previewHtml = '';
-                    selectedBuses.forEach(busId => {
-                        const bus = buses.find(b => b.bus_id === busId);
-                        const selectedDrivers = Array.from(document.querySelectorAll(`.driver-checkbox[data-bus-id="${busId}"]:checked`))
-                            .map(cb => parseInt(cb.value));
-                        
-                        if (selectedDrivers.length > 0) {
-                            const driverNames = selectedDrivers.map(driverId => {
-                                const driver = drivers.find(d => d.driver_id === driverId);
-                                return driver ? driver.full_name : `Driver ${driverId}`;
-                            }).join(', ');
-                            
-                            previewHtml += `
-                                <div class="assignment-item mb-2 p-2 border rounded bg-white">
-                                    <strong>${bus.name}</strong> 
-                                    <span class="badge bg-primary ms-2">${bus.capacity} seats</span>
-                                    <div class="mt-1">
-                                        <small class="text-muted">Drivers:</small> ${driverNames}
-                                    </div>
-                                </div>
-                            `;
+                // Toggle by clicking card
+                document.querySelectorAll('.bus-card').forEach(card => {
+                    card.addEventListener('click', function(e) {
+                        if (e.target.type !== 'checkbox') {
+                            const checkbox = this.querySelector('.bus-checkbox');
+                            checkbox.checked = !checkbox.checked;
+                            enforceLimitAndUpdate();
                         }
                     });
-                    
-                    if (previewHtml) {
-                        preview.innerHTML = previewHtml;
-                    } else {
-                        preview.innerHTML = '<p class="text-muted mb-0">Select drivers for the chosen buses</p>';
-                    }
-                }
+                });
+
+                // On checkbox change
+                document.querySelectorAll('.bus-checkbox').forEach(checkbox => {
+                    checkbox.addEventListener('change', enforceLimitAndUpdate);
+                });
 
                 // Initial setup
-                updateBusSelection();
+                const effectiveLimit = (requiredBusCount > 0) ? requiredBusCount : Math.max(assignedBusIds.length, 0);
+                const preselected = effectiveLimit > 0 ? assignedBusIds.slice(0, effectiveLimit) : assignedBusIds;
+                document.querySelectorAll('.bus-checkbox').forEach(cb => {
+                    const id = parseInt(cb.value, 10);
+                    cb.checked = preselected.includes(id);
+                });
+                enforceLimitAndUpdate();
             }
         });
 
@@ -4361,7 +4422,6 @@ async function openManageAssignmentsNew(bookingId) {
             const saveData = await saveResp.json();
             if (saveData.success) {
                 Swal.fire('Success!', 'Assignments updated successfully.', 'success');
-                // Optionally refresh the booking details
                 if (window.refreshBookingDetails) {
                     window.refreshBookingDetails();
                 }

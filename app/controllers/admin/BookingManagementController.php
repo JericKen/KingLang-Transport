@@ -1060,13 +1060,36 @@ class BookingManagementController {
         header("Content-Type: application/json");
         $data = json_decode(file_get_contents("php://input"), true);
         $booking_id = isset($data["bookingId"]) ? (int)$data["bookingId"] : 0;
-        $bus_ids = isset($data["busIds"]) && is_array($data["busIds"]) ? $data["busIds"] : [];
-        $bus_to_driver_ids = isset($data["busToDriverIds"]) && is_array($data["busToDriverIds"]) ? $data["busToDriverIds"] : [];
+
+        // Accept both legacy and new payload keys
+        $bus_ids = [];
+        if (isset($data["busIds"]) && is_array($data["busIds"])) {
+            $bus_ids = $data["busIds"]; // legacy key
+        } elseif (isset($data["buses"]) && is_array($data["buses"])) {
+            $bus_ids = $data["buses"]; // new key
+        }
+
+        $bus_to_driver_ids = [];
+        if (isset($data["busToDriverIds"]) && is_array($data["busToDriverIds"])) {
+            $bus_to_driver_ids = $data["busToDriverIds"]; // legacy key
+        } elseif (isset($data["assignments"]) && is_array($data["assignments"])) {
+            $bus_to_driver_ids = $data["assignments"]; // new key
+        }
+
         if ($booking_id <= 0) {
             echo json_encode(["success" => false, "message" => "Invalid booking id"]);
             return;
         }
-        $result = $this->bookingModel->updateBookingAssignments($booking_id, $bus_ids, $bus_to_driver_ids);
+
+        // Normalize types to integers
+        $bus_ids = array_values(array_unique(array_map('intval', $bus_ids)));
+        $normalized_map = [];
+        foreach ($bus_to_driver_ids as $busId => $driverIds) {
+            $busIdInt = (int)$busId;
+            $normalized_map[$busIdInt] = array_values(array_unique(array_map('intval', (array)$driverIds)));
+        }
+
+        $result = $this->bookingModel->updateBookingAssignments($booking_id, $bus_ids, $normalized_map);
         echo json_encode(["success" => $result["success"], "message" => $result["success"] ? "Assignments updated" : ($result["message"] ?? "Failed to update")]);
     }
 
@@ -1619,6 +1642,32 @@ class BookingManagementController {
             }
 
         }
+
+    }
+
+
+
+    // Return only available buses and drivers for this booking's date range
+
+    public function getAvailableResourcesForBooking() {
+
+        header("Content-Type: application/json");
+
+        $data = json_decode(file_get_contents("php://input"), true);
+
+        $booking_id = isset($data["bookingId"]) ? (int)$data["bookingId"] : 0;
+
+        if ($booking_id <= 0) {
+
+            echo json_encode(["success" => false, "message" => "Invalid booking id"]);
+
+            return;
+
+        }
+
+        $resources = $this->bookingModel->getAvailableResourcesForBooking($booking_id);
+
+        echo json_encode(["success" => true, "buses" => $resources['buses'], "drivers" => $resources['drivers']]);
 
     }
 

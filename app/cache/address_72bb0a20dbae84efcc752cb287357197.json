@@ -1,0 +1,253 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Impasug-ong, Bukidnon, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJTTqbQ3q2_zIRN-KVPb_upDY",
+         "reference" : "ChIJTTqbQ3q2_zIRN-KVPb_upDY",
+         "structured_formatting" : 
+         {
+            "main_text" : "Impasug-ong",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bukidnon, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Impasug-ong"
+            },
+            {
+               "offset" : 13,
+               "value" : "Bukidnon"
+            },
+            {
+               "offset" : 23,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Imperial, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "EjBJbXBlcmlhbCwgUXVlem9uIENpdHksIE1ldHJvIE1hbmlsYSwgUGhpbGlwcGluZXMiLiosChQKEglfjdqgvreXMxFuGQpLHEFosxIUChIJdXPvQgm6lzMRQD0I_tkymko",
+         "reference" : "EjBJbXBlcmlhbCwgUXVlem9uIENpdHksIE1ldHJvIE1hbmlsYSwgUGhpbGlwcGluZXMiLiosChQKEglfjdqgvreXMxFuGQpLHEFosxIUChIJdXPvQgm6lzMRQD0I_tkymko",
+         "structured_formatting" : 
+         {
+            "main_text" : "Imperial",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Imperial"
+            },
+            {
+               "offset" : 10,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 23,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 37,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      },
+      {
+         "description" : "Impalutao, Impasug-ong, Bukidnon, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJN-qUOHel_zIR2QgCcNKq8fk",
+         "reference" : "ChIJN-qUOHel_zIR2QgCcNKq8fk",
+         "structured_formatting" : 
+         {
+            "main_text" : "Impalutao",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Impasug-ong, Bukidnon, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Impalutao"
+            },
+            {
+               "offset" : 11,
+               "value" : "Impasug-ong"
+            },
+            {
+               "offset" : 24,
+               "value" : "Bukidnon"
+            },
+            {
+               "offset" : 34,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Imperial Plaza, Diosdado Macapagal Boulevard, Tambo, Parañaque, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJO8R5kTzPlzMRBnzWNRVqm2M",
+         "reference" : "ChIJO8R5kTzPlzMRBnzWNRVqm2M",
+         "structured_formatting" : 
+         {
+            "main_text" : "Imperial Plaza",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Diosdado Macapagal Boulevard, Tambo, Parañaque, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Imperial Plaza"
+            },
+            {
+               "offset" : 16,
+               "value" : "Diosdado Macapagal Boulevard"
+            },
+            {
+               "offset" : 46,
+               "value" : "Tambo"
+            },
+            {
+               "offset" : 53,
+               "value" : "Parañaque"
+            },
+            {
+               "offset" : 64,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 78,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "impasugong Bukidnon, Impasug-ong, Bukidnon, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ2TLHlJm3_zIRmOzV-huYCS4",
+         "reference" : "ChIJ2TLHlJm3_zIRmOzV-huYCS4",
+         "structured_formatting" : 
+         {
+            "main_text" : "impasugong Bukidnon",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Impasug-ong, Bukidnon, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "impasugong Bukidnon"
+            },
+            {
+               "offset" : 21,
+               "value" : "Impasug-ong"
+            },
+            {
+               "offset" : 34,
+               "value" : "Bukidnon"
+            },
+            {
+               "offset" : 44,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

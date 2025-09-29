@@ -944,6 +944,11 @@ switch ($requestPath) {
         $controller = new BookingManagementController();
         $controller->getBookingAssignments();
         break;
+    case "/admin/get-available-resources-for-booking":
+        require_once $controllerClasses['admin']['BookingManagementController'];
+        $controller = new BookingManagementController();
+        $controller->getAvailableResourcesForBooking();
+        break;
     case "/admin/update-booking-assignments":
         require_once $controllerClasses['admin']['BookingManagementController'];
         $controller = new BookingManagementController();

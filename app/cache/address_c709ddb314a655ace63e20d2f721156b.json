@@ -58,51 +58,50 @@
          ]
       },
       {
-         "description" : "Three Kings Safari Purifies Drinking Water, Candon City, Ilocos Sur, Philippines",
+         "description" : "Kings Rubber International Incorporated, Dasmariñas, Cavite, Philippines",
          "matched_substrings" : 
          [
             {
                "length" : 5,
-               "offset" : 6
+               "offset" : 0
             }
          ],
-         "place_id" : "ChIJBdYvxkAXjjMRj5WrjrSkmxI",
-         "reference" : "ChIJBdYvxkAXjjMRj5WrjrSkmxI",
+         "place_id" : "ChIJvz77jtZ_vTMR64xzqWYVZLM",
+         "reference" : "ChIJvz77jtZ_vTMR64xzqWYVZLM",
          "structured_formatting" : 
          {
-            "main_text" : "Three Kings Safari Purifies Drinking Water",
+            "main_text" : "Kings Rubber International Incorporated",
             "main_text_matched_substrings" : 
             [
                {
                   "length" : 5,
-                  "offset" : 6
+                  "offset" : 0
                }
             ],
-            "secondary_text" : "Candon City, Ilocos Sur, Philippines"
+            "secondary_text" : "Dasmariñas, Cavite, Philippines"
          },
          "terms" : 
          [
             {
                "offset" : 0,
-               "value" : "Three Kings Safari Purifies Drinking Water"
+               "value" : "Kings Rubber International Incorporated"
             },
             {
-               "offset" : 44,
-               "value" : "Candon City"
+               "offset" : 41,
+               "value" : "Dasmariñas"
             },
             {
-               "offset" : 57,
-               "value" : "Ilocos Sur"
+               "offset" : 53,
+               "value" : "Cavite"
             },
             {
-               "offset" : 69,
+               "offset" : 61,
                "value" : "Philippines"
             }
          ],
          "types" : 
          [
             "establishment",
-            "food",
             "point_of_interest"
          ]
       },
@@ -157,54 +156,6 @@
          ]
       },
       {
-         "description" : "king's Apartments Dasmariñas, Dasmanriñas, Cavite, Philippines",
-         "matched_substrings" : 
-         [
-            {
-               "length" : 28,
-               "offset" : 0
-            }
-         ],
-         "place_id" : "ChIJ3S1hkiLVlzMRoYfEIvWowh8",
-         "reference" : "ChIJ3S1hkiLVlzMRoYfEIvWowh8",
-         "structured_formatting" : 
-         {
-            "main_text" : "king's Apartments Dasmariñas",
-            "main_text_matched_substrings" : 
-            [
-               {
-                  "length" : 28,
-                  "offset" : 0
-               }
-            ],
-            "secondary_text" : "Dasmanriñas, Cavite, Philippines"
-         },
-         "terms" : 
-         [
-            {
-               "offset" : 0,
-               "value" : "king's Apartments Dasmariñas"
-            },
-            {
-               "offset" : 30,
-               "value" : "Dasmanriñas"
-            },
-            {
-               "offset" : 43,
-               "value" : "Cavite"
-            },
-            {
-               "offset" : 51,
-               "value" : "Philippines"
-            }
-         ],
-         "types" : 
-         [
-            "establishment",
-            "point_of_interest"
-         ]
-      },
-      {
          "description" : "King's Coffee Green Breeze, Langkaan 2, Dasmariñas, Cavite, Philippines",
          "matched_substrings" : 
          [
@@ -256,6 +207,54 @@
             "food",
             "point_of_interest",
             "restaurant"
+         ]
+      },
+      {
+         "description" : "king's Apartments Dasmariñas, Dasmanriñas, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 28,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ3S1hkiLVlzMRoYfEIvWowh8",
+         "reference" : "ChIJ3S1hkiLVlzMRoYfEIvWowh8",
+         "structured_formatting" : 
+         {
+            "main_text" : "king's Apartments Dasmariñas",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 28,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Dasmanriñas, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "king's Apartments Dasmariñas"
+            },
+            {
+               "offset" : 30,
+               "value" : "Dasmanriñas"
+            },
+            {
+               "offset" : 43,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 51,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
          ]
       }
    ],

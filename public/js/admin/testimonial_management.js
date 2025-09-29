@@ -18,43 +18,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setupEventListeners();
 
-    setupQuickFilters();    
-
 
 
     function setupEventListeners() {
 
-        // Status filter tabs
-
+        // Status filter buttons/tabs
         document.querySelectorAll('[data-status]').forEach(tab => {
-
             tab.addEventListener('click', function(e) {
-
                 e.preventDefault();
 
-                
-
-                // Update active tab
-
-                document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-
-                this.classList.add('active');
-
-                
+                // Update active state on quick filter buttons if present
+                document.querySelectorAll('.quick-filter').forEach(btn => btn.classList.remove('active'));
+                if (this.classList.contains('quick-filter')) {
+                    this.classList.add('active');
+                }
 
                 currentStatus = this.dataset.status;
-
                 currentPage = 1;
-
                 selectedTestimonials.clear();
-
                 updateBulkActions();
-
                 loadTestimonials();
-
             });
-
         });
+
+        // Refresh button
+        const refreshBtn = document.getElementById('refreshBookings');
+        if (refreshBtn) {
+            refreshBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                loadStats();
+                loadTestimonials();
+            });
+        }
 
 
 
@@ -138,59 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    function setupQuickFilters() {
-
-        const quickFilterBtns = document.querySelectorAll(".quick-filter");
-
-
-
-        quickFilterBtns.forEach(button => {
-
-            button.addEventListener("click", function() {
-
-                // Remove active class from all buttons
-
-                quickFilterBtns.forEach(btn => btn.classList.remove("active"));
-
-
-
-                // Add active class to the clicked button
-
-                this.classList.add("active");   
-
-
-
-                // Hide no results message initially when switching filters
-
-                document.getElementById("noResultsFound").style.display = "none";
-
-
-
-                const status = this.getAttribute("data-status");
-
-                
-
-                if (status) {
-
-                    currentFilter = status;
-
-                    document.getElementById("statusSelect").value = status;
-
-                }
-
-                
-
-                // Load bookings with the new filter
-
-                loadBookings();
-
-            });
-
-        });
-
-    
-
-    }
+    // Removed legacy setupQuickFilters copied from bookings page to prevent double handlers and undefined references
 
 
 
@@ -231,24 +174,6 @@ document.addEventListener('DOMContentLoaded', function() {
     async function loadTestimonials() {
 
         const tableBody = document.getElementById('testimonialsTableBody');
-
-        tableBody.innerHTML = `
-
-            <tr>
-
-                <td colspan="9" class="text-center">
-
-                    <div class="spinner-border text-primary" role="status">
-
-                        <span class="visually-hidden">Loading...</span>
-
-                    </div>
-
-                </td>
-
-            </tr>
-
-        `;
 
 
 
