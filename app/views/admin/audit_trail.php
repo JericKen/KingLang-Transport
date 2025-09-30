@@ -794,7 +794,7 @@ $pageTitle = "Audit Trail Management";
             
             // Previous button
             const prevLi = $('<li class="page-item">');
-            const prevLink = $('<a class="page-link" href="#" data-page="prev">&raquo;</a>');
+            const prevLink = $('<a class="page-link" href="#" data-page="prev">&laquo;</a>');
             if (currentPage === 1) {
                 prevLi.addClass('disabled');
             }

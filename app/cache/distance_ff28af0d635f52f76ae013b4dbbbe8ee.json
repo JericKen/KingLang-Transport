@@ -1,13 +1,13 @@
 {
    "destination_addresses" : 
    [
-      "Caliraya Resort Club Inc., Brgy. Lewin, Lumban, Laguna, Philippines",
-      "Maligaya St, Quezon City, Metro Manila, Philippines"
+      "G299+GW5, Newport Blvd, Pasay City, 1309 Metro Manila, Philippines",
+      "295-B, Purok 4, M. L. Quezon Ave, Lower Bicutan, Taguig, 1632 Metro Manila, Philippines"
    ],
    "origin_addresses" : 
    [
-      "Maligaya St, Quezon City, Metro Manila, Philippines",
-      "Caliraya Resort Club Inc., Brgy. Lewin, Lumban, Laguna, Philippines"
+      "295-B, Purok 4, M. L. Quezon Ave, Lower Bicutan, Taguig, 1632 Metro Manila, Philippines",
+      "G299+GW5, Newport Blvd, Pasay City, 1309 Metro Manila, Philippines"
    ],
    "rows" : 
    [
@@ -17,13 +17,13 @@
             {
                "distance" : 
                {
-                  "text" : "130 km",
-                  "value" : 129639
+                  "text" : "8.2 km",
+                  "value" : 8214
                },
                "duration" : 
                {
-                  "text" : "3 hours 11 mins",
-                  "value" : 11455
+                  "text" : "22 mins",
+                  "value" : 1331
                },
                "status" : "OK"
             },
@@ -61,13 +61,13 @@
             {
                "distance" : 
                {
-                  "text" : "105 km",
-                  "value" : 104746
+                  "text" : "10.0 km",
+                  "value" : 10011
                },
                "duration" : 
                {
-                  "text" : "3 hours 8 mins",
-                  "value" : 11260
+                  "text" : "23 mins",
+                  "value" : 1403
                },
                "status" : "OK"
             }

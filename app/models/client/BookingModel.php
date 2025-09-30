@@ -344,6 +344,32 @@ class Booking {
 
         try {
 
+            // Enforce max rebookings per client setting
+
+            require_once __DIR__ . "/../admin/Settings.php";
+
+            $settings = new Settings();
+
+            $maxRebooks = (int)($settings->getSetting('max_rebookings_per_client') ?? 0);
+
+            if ($maxRebooks > 0) {
+
+                $stmt = $this->conn->prepare("SELECT COUNT(*) FROM rebooking_request WHERE user_id = :user_id");
+
+                $stmt->execute([':user_id' => $user_id]);
+
+                $count = (int)$stmt->fetchColumn();
+
+                if ($count >= $maxRebooks) {
+
+                    return ["success" => false, "message" => "You have reached the maximum number of rebooking requests allowed."];
+
+                }
+
+            }
+
+            
+
             $stmt = $this->conn->prepare("UPDATE bookings SET status = 'Rebooking' WHERE booking_id = :booking_id");
 
             $stmt->execute([":booking_id" => $booking_id]);

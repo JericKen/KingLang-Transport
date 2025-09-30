@@ -18,19 +18,16 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Initial data load - get all requests first to check counts
 
-    const allRequests = await getRebookingRequests('All', 'asc', 'booking_id');
+    const initialAll = await getRebookingRequestsPaginated('All', 'asc', 'booking_id', 1, getSelectedLimit());
 
-    
-
-    // Update stats counters
-
-    updateStatsCounters(allRequests);
+    // Update stats counters (based on current page items only initially)
+    updateStatsCounters(initialAll.items || []);
 
     
 
     // Check if there are any pending requests
 
-    const pendingRequests = allRequests.filter(r => r.status === 'Pending');
+    const pendingRequests = (initialAll.items || []).filter(r => r.status === 'Pending');
 
     
 
@@ -64,15 +61,10 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Render the appropriate requests
 
-    if (defaultStatus === 'Pending') {
-
-        renderRebookingRequests(pendingRequests);
-
-    } else {
-
-        renderRebookingRequests(allRequests);
-
-    }
+    const initialStatusData = await getRebookingRequestsPaginated(defaultStatus, 'asc', 'booking_id', 1, getSelectedLimit());
+    renderRebookingRequests(initialStatusData.items || []);
+    renderPaginationControls(initialStatusData.pagination);
+    updateRecordInfo(initialStatusData.pagination);
 
     
 
@@ -85,6 +77,18 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 
 function setupEventListeners() {
+    // Rows per page selector
+    const rowsSelect = document.getElementById('rowsPerPage');
+    if (rowsSelect) {
+        rowsSelect.addEventListener('change', async function () {
+            const status = document.getElementById('statusSelect').value;
+            const limit = getSelectedLimit();
+            const data = await getRebookingRequestsPaginated(status, 'asc', 'booking_id', 1, limit);
+            renderRebookingRequests(data.items || []);
+            renderPaginationControls(data.pagination);
+            updateRecordInfo(data.pagination);
+        });
+    }
 
     // Status select filter
 
@@ -94,9 +98,10 @@ function setupEventListeners() {
 
         console.log(status);
 
-        const requests = await getRebookingRequests(status, 'asc', 'client_name');
-
-        renderRebookingRequests(requests);
+        const data = await getRebookingRequestsPaginated(status, 'asc', 'client_name', 1, getSelectedLimit());
+        renderRebookingRequests(data.items || []);
+        renderPaginationControls(data.pagination);
+        updateRecordInfo(data.pagination);
 
         
 
@@ -119,8 +124,7 @@ function setupEventListeners() {
         // Show/hide no results message
 
         document.getElementById('noResultsFound').style.display = 
-
-            (!requests || requests.length === 0) ? 'block' : 'none';
+            (!data.items || data.items.length === 0) ? 'block' : 'none';
 
     });
 
@@ -174,9 +178,10 @@ function setupEventListeners() {
 
 
 
-            const requests = await getRebookingRequests(status, order, column);
-
-            renderRebookingRequests(requests);
+            const data = await getRebookingRequestsPaginated(status, order, column, 1, getSelectedLimit());
+            renderRebookingRequests(data.items || []);
+            renderPaginationControls(data.pagination);
+            updateRecordInfo(data.pagination);
 
 
 
@@ -218,17 +223,17 @@ function setupEventListeners() {
 
             
 
-            const requests = await getRebookingRequests(status, 'asc', 'client_name');
-
-            renderRebookingRequests(requests);
+            const data = await getRebookingRequestsPaginated(status, 'asc', 'client_name', 1, getSelectedLimit());
+            renderRebookingRequests(data.items || []);
+            renderPaginationControls(data.pagination);
+            updateRecordInfo(data.pagination);
 
             
 
             // Show/hide no results message
 
             document.getElementById('noResultsFound').style.display = 
-
-                (!requests || requests.length === 0) ? 'block' : 'none';
+                (!data.items || data.items.length === 0) ? 'block' : 'none';
 
         });
 
@@ -238,32 +243,26 @@ function setupEventListeners() {
 
     // Search functionality
 
-    const searchBtn = document.getElementById('searchBtn');
-
     const searchInput = document.getElementById('searchRequests');
-
     
 
-    if (searchBtn && searchInput) {
-
-        // Search on button click
-
-        searchBtn.addEventListener('click', performSearch);
-
-        
-
-        // Search on Enter key
-
-        searchInput.addEventListener('keyup', function(event) {
-
+    if (searchInput) {
+        const debounce = (fn, delay = 300) => {
+            let t;
+            return (...args) => {
+                clearTimeout(t);
+                t = setTimeout(() => fn.apply(this, args), delay);
+            };
+        };
+        const onSearch = debounce(async () => {
+            await performSearch();
+        }, 300);
+        searchInput.addEventListener('input', onSearch);
+        searchInput.addEventListener('keyup', async function(event) {
             if (event.key === 'Enter') {
-
-                performSearch();
-
+                await performSearch();
             }
-
         });
-
     }
 
     
@@ -306,11 +305,11 @@ function setupEventListeners() {
 
             // Load all requests
 
-            const requests = await getRebookingRequests('All', 'asc', 'booking_id');
-
-            renderRebookingRequests(requests);
-
-            updateStatsCounters(requests);
+            const data = await getRebookingRequestsPaginated('All', 'asc', 'booking_id', 1, getSelectedLimit());
+            renderRebookingRequests(data.items || []);
+            renderPaginationControls(data.pagination);
+            updateRecordInfo(data.pagination);
+            updateStatsCounters(data.items || []);
 
             
 
@@ -334,11 +333,11 @@ function setupEventListeners() {
 
             const status = document.getElementById('statusSelect').value;
 
-            const requests = await getRebookingRequests(status, 'asc', 'booking_id');
-
-            renderRebookingRequests(requests);
-
-            updateStatsCounters(requests);
+            const data = await getRebookingRequestsPaginated(status, 'asc', 'booking_id', 1, getSelectedLimit());
+            renderRebookingRequests(data.items || []);
+            renderPaginationControls(data.pagination);
+            updateRecordInfo(data.pagination);
+            updateStatsCounters(data.items || []);
 
             
 
@@ -419,7 +418,6 @@ function setupEventListeners() {
         });
 
     }
-
 }
 
 
@@ -438,9 +436,10 @@ async function performSearch() {
 
         // If search term is empty, just load based on status
 
-        const requests = await getRebookingRequests(status, 'asc', 'client_name');
-
-        renderRebookingRequests(requests);
+        const data = await getRebookingRequestsPaginated(status, 'asc', 'client_name', 1, getSelectedLimit());
+        renderRebookingRequests(data.items || []);
+        renderPaginationControls(data.pagination);
+        updateRecordInfo(data.pagination);
 
         return;
 
@@ -452,13 +451,13 @@ async function performSearch() {
 
         // Get all requests for the current status
 
-        const allRequests = await getRebookingRequests(status, 'asc', 'client_name');
+        const data = await getRebookingRequestsPaginated(status, 'asc', 'client_name', 1, getSelectedLimit());
 
         
 
         // Filter requests based on search term (client name, email, or destination)
 
-        const filteredRequests = allRequests.filter(request => {
+        const filteredRequests = (data.items || []).filter(request => {
 
             const searchFields = [
 
@@ -546,7 +545,7 @@ function formatDate(date) {
 
 
 
-async function getRebookingRequests(status, order, column) {
+async function getRebookingRequestsPaginated(status, order, column, page = 1, limit = 10) {
 
     try {
 
@@ -556,7 +555,7 @@ async function getRebookingRequests(status, order, column) {
 
             headers: { 'Content-Type': 'application/json' },
 
-            body: JSON.stringify({ status, order, column })
+            body: JSON.stringify({ status, order, column, page, limit })
 
         });
 
@@ -568,7 +567,10 @@ async function getRebookingRequests(status, order, column) {
 
         if (data.success) {
 
-            return data.requests;
+            return {
+                items: data.requests,
+                pagination: data.pagination || { total: (data.requests || []).length, totalPages: 1, currentPage: page, limit }
+            };
 
         }
 
@@ -576,7 +578,7 @@ async function getRebookingRequests(status, order, column) {
 
         console.error('Fetch error:', error);
 
-        return [];
+        return { items: [], pagination: { total: 0, totalPages: 1, currentPage: page, limit } };
 
     }
 
@@ -630,7 +632,7 @@ async function renderRebookingRequests(requests) {
 
 
 
-        bookingIdCell.textContent = request.booking_id;
+        bookingIdCell.textContent = request.request_id;
 
         clientNameCell.textContent = request.client_name;
 
@@ -710,7 +712,7 @@ function createActionButtons(request) {
 
     const buttonGroup = document.createElement('div');
 
-    buttonGroup.classList.add('d-flex', 'gap-2', 'justify-content-center');   
+    buttonGroup.classList.add('d-flex', 'gap-2', 'justify-content-start');   
 
 
 
@@ -718,7 +720,7 @@ function createActionButtons(request) {
 
     const viewButton = createButton('btn-outline-primary', 'bi-info-circle', 'Details', function() {
 
-        showBookingDetails(request.booking_id);
+        showBookingDetails(request.booking_id, request.request_id);
 
     });
 
@@ -1112,9 +1114,9 @@ function formatValue(value) {
 
 // Function to show booking details in a modal
 
-async function showBookingDetails(bookingId) {
+async function showBookingDetails(bookingId, requestId = null) {
 
-    const auditDetails = await getBookingAuditDetails(bookingId);
+    const auditDetails = await getBookingAuditDetails(bookingId, requestId);
 
     console.log("Audit details: ", auditDetails);
 
@@ -1152,7 +1154,10 @@ async function showBookingDetails(bookingId) {
 
     
 
-    const statusColor = statusColors[booking.status] || 'secondary';
+    // Merge updated values from audit trail so modal reflects proposed changes
+    const displayBooking = Object.assign({}, booking, auditDetails && auditDetails.new_values ? auditDetails.new_values : {});
+
+    const statusColor = statusColors[displayBooking.status] || 'secondary';
 
     
 
@@ -1166,21 +1171,21 @@ async function showBookingDetails(bookingId) {
 
                 <div class="col-md-6">
 
-                    <p><strong>Booking ID:</strong> #${booking.booking_id}</p>
+                    <p><strong>Booking ID:</strong> #${displayBooking.booking_id}</p>
 
-                    <p><strong>Booking Date:</strong> ${formatDate(booking.booked_at)}</p>
+                    <p><strong>Booking Date:</strong> ${formatDate(displayBooking.booked_at)}</p>
 
-                    <p><strong>Status:</strong> <span class="badge bg-${statusColor}">${booking.status}</span></p>
+                    <p><strong>Status:</strong> <span class="badge bg-${statusColor}">${displayBooking.status}</span></p>
 
                 </div>
 
                 <div class="col-md-6">
 
-                    <p><strong>Client Name:</strong> ${booking.client_name || 'N/A'}</p>
+                    <p><strong>Client Name:</strong> ${displayBooking.client_name || 'N/A'}</p>
 
-                    <p><strong>Email:</strong> ${booking.email || 'N/A'}</p>
+                    <p><strong>Email:</strong> ${displayBooking.email || 'N/A'}</p>
 
-                    <p><strong>Phone:</strong> ${booking.contact_number || 'N/A'}</p>
+                    <p><strong>Phone:</strong> ${displayBooking.contact_number || 'N/A'}</p>
 
                 </div>
 
@@ -1196,13 +1201,13 @@ async function showBookingDetails(bookingId) {
 
                 <div class="col-md-6">
 
-                    <p class="mb-2"><strong>Pickup Point:</strong> ${booking.pickup_point || 'N/A'}</p>
+                    <p class="mb-2"><strong>Pickup Point:</strong> ${displayBooking.pickup_point || 'N/A'}</p>
 
                     <p class="mb-2"><strong>Destination:</strong> 
 
-                        ${booking.stops && booking.stops.length > 0 ? 
+                        ${displayBooking.stops && displayBooking.stops.length > 0 ? 
 
-                            `${booking.stops.map(stop => 
+                            `${displayBooking.stops.map(stop => 
 
                                 `<span>${stop.location}</span>`
 
@@ -1212,7 +1217,7 @@ async function showBookingDetails(bookingId) {
 
                         : ''}
 
-                        <span>${booking.destination}</span>
+                        <span>${displayBooking.destination}</span>
 
                     </p>
 
@@ -1220,11 +1225,11 @@ async function showBookingDetails(bookingId) {
 
                 <div class="col-md-6">
 
-                    <p class="mb-2"><strong>Tour Date:</strong> ${formatDate(booking.date_of_tour)}${booking.end_of_tour ? ` to ${formatDate(booking.end_of_tour)}` : ''}</p>
+                    <p class="mb-2"><strong>Tour Date:</strong> ${formatDate(displayBooking.date_of_tour)}${displayBooking.end_of_tour ? ` to ${formatDate(displayBooking.end_of_tour)}` : ''}</p>
 
-                    <p class="mb-2"><strong>Duration:</strong> ${booking.number_of_days} day${booking.number_of_days > 1 ? 's' : ''}</p>
+                    <p class="mb-2"><strong>Duration:</strong> ${displayBooking.number_of_days} day${displayBooking.number_of_days > 1 ? 's' : ''}</p>
 
-                    <p class="mb-2"><strong>Number of Buses:</strong> ${booking.number_of_buses}</p>
+                    <p class="mb-2"><strong>Number of Buses:</strong> ${displayBooking.number_of_buses}</p>
 
                 </div>
 
@@ -1234,7 +1239,7 @@ async function showBookingDetails(bookingId) {
 
         
 
-        ${['Paid', 'Partially Paid'].includes(booking.payment_status) ? `
+        ${['Paid', 'Partially Paid'].includes(displayBooking.payment_status) ? `
 
             <div class="booking-detail-section mb-3">
 
@@ -1244,17 +1249,17 @@ async function showBookingDetails(bookingId) {
 
                     <div class="col-md-6">
 
-                        <p><strong>Total Cost:</strong> ₱${parseFloat(booking.total_cost).toLocaleString('en-PH')}</p>
+                        <p><strong>Total Cost:</strong> ₱${parseFloat(displayBooking.total_cost).toLocaleString('en-PH')}</p>
 
-                        <p><strong>Payment Status:</strong> <span class="badge bg-${booking.payment_status === 'Paid' ? 'success' : booking.payment_status === 'Partially Paid' ? 'warning' : 'danger'}">${booking.payment_status}</span></p>
+                        <p><strong>Payment Status:</strong> <span class="badge bg-${displayBooking.payment_status === 'Paid' ? 'success' : displayBooking.payment_status === 'Partially Paid' ? 'warning' : 'danger'}">${displayBooking.payment_status}</span></p>
 
                     </div>
 
                     <div class="col-md-6">
 
-                        <p><strong>Payment Date:</strong> ${booking.payments && booking.payments.length > 0 ? formatDate(booking.payments[0].payment_date) : 'No payments yet'}</p>
+                        <p><strong>Payment Date:</strong> ${displayBooking.payments && displayBooking.payments.length > 0 ? formatDate(displayBooking.payments[0].payment_date) : 'No payments yet'}</p>
 
-                        <p><strong>Payment Method:</strong> ${booking.payments && booking.payments.length > 0 ? booking.payments[0].payment_method : 'N/A'}</p>
+                        <p><strong>Payment Method:</strong> ${displayBooking.payments && displayBooking.payments.length > 0 ? displayBooking.payments[0].payment_method : 'N/A'}</p>
 
                     </div>
 
@@ -1298,15 +1303,15 @@ async function showBookingDetails(bookingId) {
 
             <div class="d-flex flex-wrap gap-2">
 
-                ${booking.status === "Pending" ? `
+                ${displayBooking.status === "Pending" ? `
 
-                    <button class="btn btn-sm btn-outline-success confirm-booking-modal" data-booking-id="${booking.booking_id}">
+                    <button class="btn btn-sm btn-outline-success confirm-booking-modal" data-booking-id="${displayBooking.booking_id}">
 
                         <i class="bi bi-check-circle"></i> Confirm Booking
 
                     </button>
 
-                    <button class="btn btn-sm btn-outline-danger reject-booking-modal" data-booking-id="${booking.booking_id}" data-user-id="${booking.user_id}">
+                    <button class="btn btn-sm btn-outline-danger reject-booking-modal" data-booking-id="${displayBooking.booking_id}" data-user-id="${displayBooking.user_id}">
 
                         <i class="bi bi-x-circle"></i> Reject Booking
 
@@ -1316,13 +1321,13 @@ async function showBookingDetails(bookingId) {
 
                 
 
-                <button class="btn btn-sm btn-outline-primary view-invoice" data-booking-id="${booking.booking_id}">
+                <button class="btn btn-sm btn-outline-primary view-invoice" data-booking-id="${displayBooking.booking_id}">
 
                     <i class="bi bi-file-earmark-text"></i> Invoice
 
                 </button>
 
-                <button class="btn btn-sm btn-outline-success view-contract" data-booking-id="${booking.booking_id}">
+                <button class="btn btn-sm btn-outline-success view-contract" data-booking-id="${displayBooking.booking_id}">
 
                     <i class="bi bi-file-earmark-text"></i> Contract
 
@@ -1810,9 +1815,9 @@ async function getBookingDetails(bookingId) {
 
         // If there's an error, fall back to the rebooking requests data
 
-        const currentRequests = await getRebookingRequests('All', 'asc', 'booking_id');
+        const data = await getRebookingRequestsPaginated('All', 'asc', 'booking_id', 1, 1000);
 
-        const booking = currentRequests.find(b => b.booking_id == bookingId);
+        const booking = (data.items || []).find(b => b.booking_id == bookingId);
 
         console.log("Fallback to current requests:", booking);
 
@@ -1828,9 +1833,9 @@ async function getBookingDetails(bookingId) {
 
         // If there's an exception, fall back to the rebooking requests data
 
-        const currentRequests = await getRebookingRequests('All', 'asc', 'booking_id');
+        const data = await getRebookingRequestsPaginated('All', 'asc', 'booking_id', 1, 1000);
 
-        return currentRequests.find(b => b.booking_id == bookingId);
+        return (data.items || []).find(b => b.booking_id == bookingId);
 
     }
 
@@ -1838,7 +1843,7 @@ async function getBookingDetails(bookingId) {
 
 
 
-async function getBookingAuditDetails(bookingId) {
+async function getBookingAuditDetails(bookingId, requestId = null) {
 
     try {
 
@@ -1848,7 +1853,7 @@ async function getBookingAuditDetails(bookingId) {
 
             headers: { "Content-Type": "application/json" },
 
-            body: JSON.stringify({ bookingId })
+            body: JSON.stringify({ bookingId, requestId })
 
         });
 
@@ -1944,11 +1949,15 @@ async function confirmBookingRequest(bookingId, discount = null, discountType = 
 
         const status = document.getElementById("statusSelect").value;
 
-        const bookings = await getRebookingRequests(status, "asc", "booking_id");
+        const refreshed = await getRebookingRequestsPaginated(status, "asc", "booking_id", 1, getSelectedLimit());
 
-        renderRebookingRequests(bookings);
+        renderRebookingRequests(refreshed.items || []);
 
-        updateStatsCounters(bookings);
+        renderPaginationControls(refreshed.pagination);
+
+        updateRecordInfo(refreshed.pagination);
+
+        updateStatsCounters(refreshed.items || []);
 
     } catch (error) {
 
@@ -2026,11 +2035,15 @@ async function rejectBookingRequest(bookingId, reason, userId) {
 
         const status = document.getElementById("statusSelect").value;
 
-        const bookings = await getRebookingRequests(status, "asc", "booking_id");
+        const refreshed = await getRebookingRequestsPaginated(status, "asc", "booking_id", 1, getSelectedLimit());
 
-        renderRebookingRequests(bookings);
+        renderRebookingRequests(refreshed.items || []);
 
-        updateStatsCounters(bookings);
+        renderPaginationControls(refreshed.pagination);
+
+        updateRecordInfo(refreshed.pagination);
+
+        updateStatsCounters(refreshed.items || []);
 
     } catch (error) {
 
@@ -2050,4 +2063,42 @@ async function rejectBookingRequest(bookingId, reason, userId) {
 
     }
 
+}
+
+function renderPaginationControls(pagination) {
+    const container = document.getElementById('paginationContainer');
+    if (!container) return;
+    container.innerHTML = '';
+    if (!pagination || pagination.totalPages <= 1) return;
+    const pager = createPagination({
+        containerId: 'paginationContainer',
+        totalPages: pagination.totalPages,
+        currentPage: pagination.currentPage,
+        onPageChange: async (page) => {
+            const status = document.getElementById('statusSelect').value;
+            const activeHeader = document.querySelector('.sort[data-order]');
+            const column = activeHeader ? activeHeader.getAttribute('data-column') : 'booking_id';
+            const order = activeHeader ? activeHeader.getAttribute('data-order') : 'asc';
+            const data = await getRebookingRequestsPaginated(status, order, column, page, getSelectedLimit());
+            renderRebookingRequests(data.items || []);
+            updateRecordInfo(data.pagination);
+        }
+    });
+}
+
+function updateRecordInfo(pagination) {
+    const el = document.getElementById('recordInfo');
+    if (!el || !pagination) return;
+    const start = (pagination.currentPage - 1) * pagination.limit + 1;
+    const end = Math.min(pagination.currentPage * pagination.limit, pagination.total);
+    if (pagination.total === 0) {
+        el.textContent = 'No records found';
+    } else {
+        el.textContent = `Showing ${start} to ${end} of ${pagination.total} entries`;
+    }
+}
+
+function getSelectedLimit() {
+    const select = document.getElementById('rowsPerPage');
+    return select ? parseInt(select.value, 10) : 10;
 }

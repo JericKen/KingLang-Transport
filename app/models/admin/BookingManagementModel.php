@@ -408,6 +408,10 @@ class BookingManagementModel {
 
             ]);
 
+            // Revert booking status if it was in 'Rebooking'
+            $stmt = $this->conn->prepare("UPDATE bookings SET status = CASE WHEN status = 'Rebooking' THEN 'Confirmed' ELSE status END WHERE booking_id = :booking_id");
+            $stmt->execute([":booking_id" => $booking_id]);
+
 
 
             // Get booking information
@@ -444,7 +448,7 @@ class BookingManagementModel {
 
 
 
-    public function getRebookingRequests($status, $column, $order) {
+    public function getRebookingRequests($status, $column, $order, $page = null, $limit = null) {
 
         $allowed_status = ["Pending", "Confirmed", "Rejected", "All"];
 
@@ -454,9 +458,17 @@ class BookingManagementModel {
 
 
 
-        $allowed_columns = ["booking_id", "client_name", "contact_number", "new_date_of_tour", "new_end_of_tour", "status"];
+        // Align allowed sort columns with UI headers
+        $allowed_columns = [
+            "booking_id",
+            "client_name",
+            "contact_number",
+            "email",
+            "date_of_tour",
+            "status"
+        ];
 
-        $column = in_array($column, $allowed_columns) ? $column : "client_name";
+        $column = in_array($column, $allowed_columns) ? $column : "booking_id";
 
         $order = $order === "asc" ? "ASC" : "DESC";
 
@@ -464,30 +476,29 @@ class BookingManagementModel {
 
         try {
 
-            $stmt = $this->conn->prepare("
-
+            $sql = "
                 SELECT b.booking_id, r.request_id, r.status as rebooking_status, b.user_id, CONCAT(u.first_name, ' ', u.last_name) AS client_name, u.contact_number, u.email, b.destination, b.pickup_point, b.number_of_days, b.number_of_buses, r.status, b.payment_status, c.total_cost, b.balance, b.date_of_tour, b.end_of_tour
-
                 FROM rebooking_request r
-
                 JOIN users u ON r.user_id = u.user_id
-
                 JOIN bookings b ON r.booking_id = b.booking_id
-
                 JOIN booking_costs c ON r.booking_id = c.booking_id
-
                 $status
-
                 ORDER BY $column $order
+            ";
 
-            ");
-
-            $stmt->execute();
-
-        
+            if (!is_null($page) && !is_null($limit) && (int)$page > 0 && (int)$limit > 0) {
+                $offset = ((int)$page - 1) * (int)$limit;
+                $sql .= " LIMIT :limit OFFSET :offset";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->bindValue(':limit', (int)$limit, PDO::PARAM_INT);
+                $stmt->bindValue(':offset', (int)$offset, PDO::PARAM_INT);
+                $stmt->execute();
+            } else {
+                $stmt = $this->conn->prepare($sql);
+                $stmt->execute();
+            }
 
             return $stmt->fetchAll(PDO::FETCH_ASSOC); 
-
         }  catch (PDOException $e) {
 
             return "Database error: $e";
@@ -1207,6 +1218,10 @@ class BookingManagementModel {
                 ":user_id" => $user_id
 
             ]);
+
+            // Revert booking status if it was in 'Rebooking'
+            $stmt = $this->conn->prepare("UPDATE bookings SET status = CASE WHEN status = 'Rebooking' THEN 'Confirmed' ELSE status END WHERE booking_id = :booking_id");
+            $stmt->execute([":booking_id" => $booking_id]);
 
 
 
@@ -3777,6 +3792,51 @@ class BookingManagementModel {
 			return ['buses' => [], 'drivers' => []];
 		}
 	}
+
+    public function getAuditTrailForRebookingRequest(int $bookingId, int $requestId) {
+        try {
+            // Get request created_at
+            $stmt = $this->conn->prepare("SELECT created_at FROM rebooking_request WHERE request_id = :request_id AND booking_id = :booking_id");
+            $stmt->execute([':request_id' => $requestId, ':booking_id' => $bookingId]);
+            $requestCreatedAt = $stmt->fetchColumn();
+            if (!$requestCreatedAt) {
+                return null;
+            }
+
+            // First preference: audit at or immediately before the request time
+            $stmt = $this->conn->prepare("SELECT * FROM audit_trails WHERE entity_type = 'bookings' AND entity_id = :booking_id AND created_at <= :ts ORDER BY created_at DESC LIMIT 1");
+            $stmt->execute([':booking_id' => $bookingId, ':ts' => $requestCreatedAt]);
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            if ($row) return $row;
+
+            // Fallback: the first audit after the request time
+            $stmt = $this->conn->prepare("SELECT * FROM audit_trails WHERE entity_type = 'bookings' AND entity_id = :booking_id AND created_at >= :ts ORDER BY created_at ASC LIMIT 1");
+            $stmt->execute([':booking_id' => $bookingId, ':ts' => $requestCreatedAt]);
+            return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
+        } catch (PDOException $e) {
+            error_log('Error in getAuditTrailForRebookingRequest: ' . $e->getMessage());
+            return null;
+        }
+    }
+
+    // New: total count for rebooking requests (for pagination)
+    public function getTotalRebookingRequests($status) {
+        $allowed_status = ["Pending", "Confirmed", "Rejected", "All"];
+        $status = in_array($status, $allowed_status) ? $status : "";
+        $where = ($status == "All" || $status === "") ? "" : " WHERE r.status = :status";
+
+        try {
+            $stmt = $this->conn->prepare("SELECT COUNT(*) as total FROM rebooking_request r $where");
+            if ($where) {
+                $stmt->bindValue(':status', $status);
+            }
+            $stmt->execute();
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            return (int)($row['total'] ?? 0);
+        } catch (PDOException $e) {
+            return 0;
+        }
+    }
 
 }
 

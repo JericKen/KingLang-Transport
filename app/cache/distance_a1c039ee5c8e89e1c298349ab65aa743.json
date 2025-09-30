@@ -1,13 +1,13 @@
 {
    "destination_addresses" : 
    [
-      "Caliraya Resort Club Inc., Brgy. Lewin, Lumban, Laguna, Philippines",
-      "Maligaya St, Quezon City, Metro Manila, Philippines"
+      "Resorts World Bayshore Phase 1, Diosdado Macapagal Blvd, Parañaque, Metro Manila, Philippines",
+      "Maligaya, Malaybalay City, Bukidnon, Philippines"
    ],
    "origin_addresses" : 
    [
-      "Maligaya St, Quezon City, Metro Manila, Philippines",
-      "Caliraya Resort Club Inc., Brgy. Lewin, Lumban, Laguna, Philippines"
+      "Maligaya, Malaybalay City, Bukidnon, Philippines",
+      "Resorts World Bayshore Phase 1, Diosdado Macapagal Blvd, Parañaque, Metro Manila, Philippines"
    ],
    "rows" : 
    [
@@ -17,13 +17,13 @@
             {
                "distance" : 
                {
-                  "text" : "130 km",
-                  "value" : 129639
+                  "text" : "1,451 km",
+                  "value" : 1451350
                },
                "duration" : 
                {
-                  "text" : "3 hours 11 mins",
-                  "value" : 11455
+                  "text" : "1 day 10 hours",
+                  "value" : 123091
                },
                "status" : "OK"
             },
@@ -61,13 +61,13 @@
             {
                "distance" : 
                {
-                  "text" : "105 km",
-                  "value" : 104746
+                  "text" : "1,453 km",
+                  "value" : 1453146
                },
                "duration" : 
                {
-                  "text" : "3 hours 8 mins",
-                  "value" : 11260
+                  "text" : "1 day 10 hours",
+                  "value" : 123815
                },
                "status" : "OK"
             }

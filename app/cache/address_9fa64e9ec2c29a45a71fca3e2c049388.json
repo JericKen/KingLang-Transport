@@ -109,58 +109,6 @@
          ]
       },
       {
-         "description" : "Resorts World Bayshore Phase 1, J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines",
-         "matched_substrings" : 
-         [
-            {
-               "length" : 6,
-               "offset" : 0
-            }
-         ],
-         "place_id" : "ChIJO7pUPgLMlzMRq6nOfJ0gHGA",
-         "reference" : "ChIJO7pUPgLMlzMRq6nOfJ0gHGA",
-         "structured_formatting" : 
-         {
-            "main_text" : "Resorts World Bayshore Phase 1",
-            "main_text_matched_substrings" : 
-            [
-               {
-                  "length" : 6,
-                  "offset" : 0
-               }
-            ],
-            "secondary_text" : "J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines"
-         },
-         "terms" : 
-         [
-            {
-               "offset" : 0,
-               "value" : "Resorts World Bayshore Phase 1"
-            },
-            {
-               "offset" : 32,
-               "value" : "J.W. Diokno Boulevard"
-            },
-            {
-               "offset" : 55,
-               "value" : "Parañaque"
-            },
-            {
-               "offset" : 66,
-               "value" : "Metro Manila"
-            },
-            {
-               "offset" : 80,
-               "value" : "Philippines"
-            }
-         ],
-         "types" : 
-         [
-            "establishment",
-            "point_of_interest"
-         ]
-      },
-      {
          "description" : "Resort Paraiso Pampanga, Paraiso street, San Fernando, Pampanga, Philippines",
          "matched_substrings" : 
          [
@@ -213,56 +161,110 @@
          ]
       },
       {
-         "description" : "San Juan Surf Resort, MacArthur Highway, San Juan, La Union, Philippines",
+         "description" : "Resorts World Bayshore Phase 1, J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines",
          "matched_substrings" : 
          [
             {
                "length" : 6,
-               "offset" : 14
+               "offset" : 0
             }
          ],
-         "place_id" : "ChIJV4TZruqNkTMRF01rJyImLAQ",
-         "reference" : "ChIJV4TZruqNkTMRF01rJyImLAQ",
+         "place_id" : "ChIJO7pUPgLMlzMRq6nOfJ0gHGA",
+         "reference" : "ChIJO7pUPgLMlzMRq6nOfJ0gHGA",
          "structured_formatting" : 
          {
-            "main_text" : "San Juan Surf Resort",
+            "main_text" : "Resorts World Bayshore Phase 1",
             "main_text_matched_substrings" : 
             [
                {
                   "length" : 6,
-                  "offset" : 14
+                  "offset" : 0
                }
             ],
-            "secondary_text" : "MacArthur Highway, San Juan, La Union, Philippines"
+            "secondary_text" : "J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines"
          },
          "terms" : 
          [
             {
                "offset" : 0,
-               "value" : "San Juan Surf Resort"
+               "value" : "Resorts World Bayshore Phase 1"
             },
             {
-               "offset" : 22,
-               "value" : "MacArthur Highway"
+               "offset" : 32,
+               "value" : "J.W. Diokno Boulevard"
             },
             {
-               "offset" : 41,
-               "value" : "San Juan"
+               "offset" : 55,
+               "value" : "Parañaque"
             },
             {
-               "offset" : 51,
-               "value" : "La Union"
+               "offset" : 66,
+               "value" : "Metro Manila"
             },
             {
-               "offset" : 61,
+               "offset" : 80,
                "value" : "Philippines"
             }
          ],
          "types" : 
          [
             "establishment",
-            "lodging",
             "point_of_interest"
+         ]
+      },
+      {
+         "description" : "The Orchid Gardens Resort Complex, Lazatin Boulevard, San Fernando, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 19
+            }
+         ],
+         "place_id" : "ChIJu5FFsaj3ljMR1lHjLKQ_CmA",
+         "reference" : "ChIJu5FFsaj3ljMR1lHjLKQ_CmA",
+         "structured_formatting" : 
+         {
+            "main_text" : "The Orchid Gardens Resort Complex",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 19
+               }
+            ],
+            "secondary_text" : "Lazatin Boulevard, San Fernando, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "The Orchid Gardens Resort Complex"
+            },
+            {
+               "offset" : 35,
+               "value" : "Lazatin Boulevard"
+            },
+            {
+               "offset" : 54,
+               "value" : "San Fernando"
+            },
+            {
+               "offset" : 68,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 78,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "lodging",
+            "point_of_interest",
+            "restaurant"
          ]
       }
    ],

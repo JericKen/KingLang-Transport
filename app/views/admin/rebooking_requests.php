@@ -6,7 +6,7 @@
     <title>Rebooking Management</title>
     <link rel="icon" href="../../../public/images/main-logo-icon.png" type="">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/../../../public/css/bootstrap/bootstrap.min.css">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
@@ -116,6 +116,19 @@
             text-align: center;
             margin: 2rem 0;
         }
+
+        /* Pagination styling to match Booking Management */
+        .pagination .page-link {
+            color: #198754;
+            border-radius: 5px;
+            margin: 0 2px;
+            padding: 0.375rem 0.75rem;
+        }
+        .pagination .page-item.active .page-link {
+            background-color: #198754;
+            border-color: #198754;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -196,16 +209,43 @@
                     </div>
                 </div>
             </div>
-            
-        <div class="my-3" style="width: 40%">
-            <div class="input-group">
-                <span class="input-group-text bg-light border-end-0">
-                    <i class="bi bi-search"></i>
-                </span>
-                <input type="text" id="searchRequests" class="form-control border-start-0" placeholder="Search client name or destination...">
-                <button id="searchBtn" class="btn btn-success">Search</button>
+
+            <div class="row g-3 mb-3">
+                <div class="col-xl-6">
+                    <div class="card mb-0 border-0 shadow-sm">
+                        <div class="card-body py-2">
+                            <div class="row g-2 align-items-center">
+                                <div class="col-xl-8 col-lg-4 col-md-5">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0">
+                                            <i class="bi bi-search"></i>
+                                        </span>
+                                        <input type="text" id="searchRequests" class="form-control border-start-0" placeholder="Search client name or destination...">
+                                        <!-- <button id="searchBtn" class="btn btn-success">Search</button> -->
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-2 col-md-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light"><i class="bi bi-list-ol"></i></span>
+                                        <select id="rowsPerPage" class="form-select">
+                                            <option value="5">5 rows</option>
+                                            <option value="10" selected>10 rows</option>
+                                            <option value="25">25 rows</option>
+                                            <option value="50">50 rows</option>
+                                            <option value="100">100 rows</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 d-flex align-items-center d-none">
+                                    <small id="recordInfo" class="text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+            
+        
             <!-- Search and Filter Row -->
             <div class="row g-3 mb-3 d-none">
                 <!-- Search Bar -->
@@ -343,6 +383,7 @@
 
     <script src="../../../public/js/assets/sidebar.js"></script>
     <script src="../../../public/js/admin/rebooking_requests.js"></script>
-    <script src="../../../public/css/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="../../../public/js/utils/pagination.js"></script>
 </body>
 </html>

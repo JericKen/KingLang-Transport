@@ -766,7 +766,27 @@ class BookingManagementController {
 
 
 
-        $reschedRequests = $this->bookingModel->getRebookingRequests($status, $column, $order);
+        $page = isset($data["page"]) ? (int)$data["page"] : null;
+
+        $limit = isset($data["limit"]) ? (int)$data["limit"] : null;
+
+
+
+        // If pagination parameters are provided, use them
+
+        if (!is_null($page) && !is_null($limit) && $page > 0 && $limit > 0) {
+
+            $reschedRequests = $this->bookingModel->getRebookingRequests($status, $column, $order, $page, $limit);
+
+            $total = $this->bookingModel->getTotalRebookingRequests($status);
+
+        } else {
+
+            $reschedRequests = $this->bookingModel->getRebookingRequests($status, $column, $order);
+
+            $total = is_array($reschedRequests) ? count($reschedRequests) : 0;
+
+        }
 
 
 
@@ -776,7 +796,31 @@ class BookingManagementController {
 
         if (is_array($reschedRequests)) {
 
-            echo json_encode(["success" => true, "requests" => $reschedRequests]);
+            $response = [
+
+                "success" => true,
+
+                "requests" => $reschedRequests
+
+            ];
+
+            if (!is_null($page) && !is_null($limit) && $page > 0 && $limit > 0) {
+
+                $response["pagination"] = [
+
+                    "total" => (int)$total,
+
+                    "totalPages" => max(1, (int)ceil($total / $limit)),
+
+                    "currentPage" => $page,
+
+                    "limit" => $limit
+
+                ];
+
+            }
+
+            echo json_encode($response);
 
         } else {
 
@@ -794,13 +838,15 @@ class BookingManagementController {
 
         $bookingId = isset($data["bookingId"]) ? $data["bookingId"] : null;
 
+        $requestId = isset($data["requestId"]) ? (int)$data["requestId"] : null;
+
         
 
         if ($bookingId <= 0) {
 
             header('Content-Type: application/json');
 
-            echo json_encode(['error' => 'Invalid booking ID']);
+            echo json_encode(['success' => false, 'message' => 'Invalid booking ID']);
 
             return;
 
@@ -808,13 +854,27 @@ class BookingManagementController {
 
         
 
-        $auditDetails = $this->bookingModel->getAuditTrailByBookingId($bookingId);
+        // Default: latest audit
 
-        
+        $auditDetails = null;
+
+        // If requestId provided, try to get the audit snapshot closest to request creation
+
+        if ($requestId) {
+
+            $auditDetails = $this->bookingModel->getAuditTrailForRebookingRequest($bookingId, $requestId);
+
+        }
+
+        // Fallback to latest if we didn't find a time-sliced audit
+
+        if (!$auditDetails) {
+
+            $auditDetails = $this->bookingModel->getAuditTrailByBookingId($bookingId);
+
+        }
 
         if ($auditDetails) {
-
-            // Convert JSON strings to arrays for display
 
             if (!empty($auditDetails['old_values'])) {
 
@@ -828,17 +888,9 @@ class BookingManagementController {
 
             }
 
-            
-
-            // Format date
-
             $auditDetails['created_at_formatted'] = convertToManilaTime($auditDetails['created_at'], 'Y-m-d H:i:s');
 
         }
-
-        
-
-        // Return as JSON
 
         header('Content-Type: application/json');
 

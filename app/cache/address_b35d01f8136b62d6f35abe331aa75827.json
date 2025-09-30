@@ -1,0 +1,258 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Eco Park, Bacolor, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJDX7tBt71ljMRNZ83UF0SECk",
+         "reference" : "ChIJDX7tBt71ljMRNZ83UF0SECk",
+         "structured_formatting" : 
+         {
+            "main_text" : "Eco Park",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bacolor, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Eco Park"
+            },
+            {
+               "offset" : 10,
+               "value" : "Bacolor"
+            },
+            {
+               "offset" : 19,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 29,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Eco Park Subdivision East Fairview, Winston Street, Novaliches, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ36pQpPmxlzMRP_ugFpT0qkc",
+         "reference" : "ChIJ36pQpPmxlzMRP_ugFpT0qkc",
+         "structured_formatting" : 
+         {
+            "main_text" : "Eco Park Subdivision East Fairview",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Winston Street, Novaliches, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Eco Park Subdivision East Fairview"
+            },
+            {
+               "offset" : 36,
+               "value" : "Winston Street"
+            },
+            {
+               "offset" : 52,
+               "value" : "Novaliches"
+            },
+            {
+               "offset" : 64,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 77,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 91,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "eco park, City of Digos, Davao del Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJSZtFZgCx-TIRum2RRfcyjws",
+         "reference" : "ChIJSZtFZgCx-TIRum2RRfcyjws",
+         "structured_formatting" : 
+         {
+            "main_text" : "eco park",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "City of Digos, Davao del Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "eco park"
+            },
+            {
+               "offset" : 10,
+               "value" : "City of Digos"
+            },
+            {
+               "offset" : 25,
+               "value" : "Davao del Sur"
+            },
+            {
+               "offset" : 40,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "park",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Eco Park, Alaminos, Pangasinan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJs-ao8WU9kTMRnsWXkeB270k",
+         "reference" : "ChIJs-ao8WU9kTMRnsWXkeB270k",
+         "structured_formatting" : 
+         {
+            "main_text" : "Eco Park",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Alaminos, Pangasinan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Eco Park"
+            },
+            {
+               "offset" : 10,
+               "value" : "Alaminos"
+            },
+            {
+               "offset" : 20,
+               "value" : "Pangasinan"
+            },
+            {
+               "offset" : 32,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "park",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Eco Park - Albur Rental Properties, Alburquerque, Bohol, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJmcH2bwBPqjMR-LrRanHQNgg",
+         "reference" : "ChIJmcH2bwBPqjMR-LrRanHQNgg",
+         "structured_formatting" : 
+         {
+            "main_text" : "Eco Park - Albur Rental Properties",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Alburquerque, Bohol, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Eco Park - Albur Rental Properties"
+            },
+            {
+               "offset" : 36,
+               "value" : "Alburquerque"
+            },
+            {
+               "offset" : 50,
+               "value" : "Bohol"
+            },
+            {
+               "offset" : 57,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

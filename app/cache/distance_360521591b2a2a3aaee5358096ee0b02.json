@@ -1,13 +1,13 @@
 {
    "destination_addresses" : 
    [
-      "Caliraya Resort Club Inc., Brgy. Lewin, Lumban, Laguna, Philippines",
-      "Maligaya St, Quezon City, Metro Manila, Philippines"
+      "Resorts World Bayshore Phase 1, Diosdado Macapagal Blvd, Parañaque, Metro Manila, Philippines",
+      "3HXW+WGM Xevera Bacolor Eco Park, Bacolor, Pampanga, Philippines"
    ],
    "origin_addresses" : 
    [
-      "Maligaya St, Quezon City, Metro Manila, Philippines",
-      "Caliraya Resort Club Inc., Brgy. Lewin, Lumban, Laguna, Philippines"
+      "3HXW+WGM Xevera Bacolor Eco Park, Bacolor, Pampanga, Philippines",
+      "Resorts World Bayshore Phase 1, Diosdado Macapagal Blvd, Parañaque, Metro Manila, Philippines"
    ],
    "rows" : 
    [
@@ -17,13 +17,13 @@
             {
                "distance" : 
                {
-                  "text" : "130 km",
-                  "value" : 129639
+                  "text" : "103 km",
+                  "value" : 102729
                },
                "duration" : 
                {
-                  "text" : "3 hours 11 mins",
-                  "value" : 11455
+                  "text" : "1 hour 55 mins",
+                  "value" : 6887
                },
                "status" : "OK"
             },
@@ -61,13 +61,13 @@
             {
                "distance" : 
                {
-                  "text" : "105 km",
-                  "value" : 104746
+                  "text" : "100 km",
+                  "value" : 100341
                },
                "duration" : 
                {
-                  "text" : "3 hours 8 mins",
-                  "value" : 11260
+                  "text" : "1 hour 51 mins",
+                  "value" : 6688
                },
                "status" : "OK"
             }
