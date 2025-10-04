@@ -4291,19 +4291,76 @@ async function openManageAssignmentsNew(bookingId) {
                 }
 
                 const assignments = {};
-                selectedBuses.forEach(busId => {
+                const seenDriverIds = new Map();
+                for (const busId of selectedBuses) {
                     const busCard = document.querySelector(`[data-bus-id="${busId}"]`);
                     const selectedDrivers = Array.from(busCard.querySelectorAll('.driver-checkbox:checked'))
                         .map(cb => parseInt(cb.value));
                     if (selectedDrivers.length > 0) {
+                        for (const did of selectedDrivers) {
+                            if (seenDriverIds.has(did)) {
+                                const firstBusId = seenDriverIds.get(did);
+                                const driver = drivers.find(d => parseInt(d.driver_id, 10) === did);
+                                const driverName = driver ? driver.full_name : `Driver #${did}`;
+                                const busA = buses.find(b => parseInt(b.bus_id, 10) === firstBusId);
+                                const busB = buses.find(b => parseInt(b.bus_id, 10) === busId);
+                                const busAName = busA ? busA.name : `Bus #${firstBusId}`;
+                                const busBName = busB ? busB.name : `Bus #${busId}`;
+                                Swal.showValidationMessage(`${driverName} is selected for both ${busAName} and ${busBName}. A driver can only be assigned to one bus.`);
+                                return false;
+                            }
+                            seenDriverIds.set(did, busId);
+                        }
                         assignments[busId] = selectedDrivers;
                     }
-                });
+                }
                 
                 return { buses: selectedBuses, assignments };
             },
             didOpen: () => {
                 const selectedCountEl = document.getElementById('selectedBusCount');
+
+                function updateAssignmentPreview() {
+                    const previewEl = document.getElementById('assignmentPreview');
+                    if (!previewEl) return;
+
+                    const selectedBusIds = Array.from(document.querySelectorAll('.bus-checkbox:checked')).map(cb => parseInt(cb.value, 10));
+                    if (selectedBusIds.length === 0) {
+                        previewEl.innerHTML = '<p class=\"text-muted mb-0\">Select buses and drivers to see assignments</p>';
+                        return;
+                    }
+
+                    let html = '';
+                    selectedBusIds.forEach(busId => {
+                        const bus = buses.find(b => parseInt(b.bus_id, 10) === busId);
+                        const busName = bus ? bus.name : (`Bus #${busId}`);
+                        const selectedDriverIds = Array.from(document.querySelectorAll(`.bus-card[data-bus-id=\"${busId}\"] .driver-checkbox:checked`)).map(cb => parseInt(cb.value, 10));
+                        const driverNames = selectedDriverIds.map(did => {
+                            const driver = drivers.find(d => parseInt(d.driver_id, 10) === did);
+                            return driver ? driver.full_name : (`Driver #${did}`);
+                        });
+                        const driversHtml = driverNames.length > 0 ? driverNames.join(', ') : '<span class=\"text-muted\">No drivers selected</span>';
+                        html += `<div class=\"mb-2\"><strong>${busName}</strong>: ${driversHtml}</div>`;
+                    });
+
+                    previewEl.innerHTML = html;
+                }
+
+                function enforceAllUniqueDrivers() {
+                    const checked = Array.from(document.querySelectorAll('.driver-checkbox:checked'));
+                    const byDriverId = new Map();
+                    checked.forEach(cb => {
+                        const id = parseInt(cb.value, 10);
+                        if (!byDriverId.has(id)) byDriverId.set(id, []);
+                        byDriverId.get(id).push(cb);
+                    });
+                    byDriverId.forEach(list => {
+                        if (list.length > 1) {
+                            // Keep the first checked, uncheck the rest
+                            list.slice(1).forEach(cb => { cb.checked = false; });
+                        }
+                    });
+                }
 
                 function enforceLimitAndUpdate() {
                     const checked = Array.from(document.querySelectorAll('.bus-checkbox:checked'));
@@ -4359,12 +4416,25 @@ async function openManageAssignmentsNew(bookingId) {
                                 if (opt) { opt.checked = true; }
                             });
 
+                            // Bind change with uniqueness enforcement
                             checkboxesContainer.querySelectorAll('.driver-checkbox').forEach(checkbox => {
-                                checkbox.addEventListener('change', updateAssignmentPreview);
+                                checkbox.addEventListener('change', function() {
+                                    if (this.checked) {
+                                        const sameDriverChecked = Array.from(document.querySelectorAll(`.driver-checkbox[value=\"${this.value}\"]:checked`));
+                                        if (sameDriverChecked.length > 1) {
+                                            // Uncheck all others except the one just changed
+                                            sameDriverChecked.forEach(cb => { if (cb !== this) cb.checked = false; });
+                                        }
+                                    }
+                                    enforceAllUniqueDrivers();
+                                    updateAssignmentPreview();
+                                });
                             });
                         }
                     });
 
+                    // Ensure uniqueness after rendering and preselecting
+                    enforceAllUniqueDrivers();
                     updateAssignmentPreview();
                 }
 

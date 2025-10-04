@@ -128,29 +128,7 @@ require_once __DIR__ . "/../../controllers/admin/PaymentManagementController.php
             border-radius: 10px;
         }
         
-        .status-badge {
-            display: inline-block;
-            padding: 0.35rem 0.65rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-align: center;
-        }
-        
-        .status-pending {
-            background-color: #fff3cd;
-            color: #664d03;
-        }
-        
-        .status-confirmed {
-            background-color: #d1e7dd;
-            color: #0f5132;
-        }
-        
-        .status-rejected {
-            background-color: #f8d7da;
-            color: #842029;
-        }
+        /* Status badges now use Bootstrap classes */
 
         .pagination .page-link {
             color: #198754;

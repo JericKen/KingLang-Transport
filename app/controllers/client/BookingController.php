@@ -2552,13 +2552,39 @@ class BookingController {
 
         if ($booking) {
 
+            $requestedChanges = null;
+
+            // If this booking is currently in Rebooking status, include the requested changes (latest audit new_values)
+            if (isset($booking['status']) && strtolower($booking['status']) === 'rebooking') {
+                if (!class_exists('AuditTrailModel')) {
+                    require_once __DIR__ . '/../../models/admin/AuditTrailModel.php';
+                }
+                try {
+                    $auditModel = new AuditTrailModel();
+                    $history = $auditModel->getEntityHistory('bookings', (int)$booking_id);
+                    if (is_array($history) && count($history) > 0) {
+                        $latest = $history[0];
+                        if (!empty($latest['new_values'])) {
+                            $decoded = json_decode($latest['new_values'], true);
+                            if (json_last_error() === JSON_ERROR_NONE && is_array($decoded)) {
+                                $requestedChanges = $decoded;
+                            }
+                        }
+                    }
+                } catch (Exception $e) {
+                    // ignore
+                }
+            }
+
             echo json_encode([
 
                 "success" => true,
 
                 "booking" => $booking,
 
-                "payments" => $payments
+                "payments" => $payments,
+
+                "requested_changes" => $requestedChanges
 
             ]);
 

@@ -44,6 +44,11 @@ $company_facebook_link = get_setting('company_facebook_link', 'https://www.faceb
                         <li><a href="#find-us"><i class="fas fa-map-marker-alt"></i> Find us</a></li>
                     </ul>
                 </nav>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <div class="user-actions">
                     <a href="/home/login" class="btn btn-secondary">Log In</a>
                     <a href="/home/signup" class="btn btn-primary">Sign Up</a>

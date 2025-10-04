@@ -1,0 +1,269 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Enchanted Kingdom, RSBS Boulevard, City of Santa Rosa, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJc4aHZRbYlzMRbJ_Oa0wPqP4",
+         "reference" : "ChIJc4aHZRbYlzMRbJ_Oa0wPqP4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Enchanted Kingdom",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "RSBS Boulevard, City of Santa Rosa, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Enchanted Kingdom"
+            },
+            {
+               "offset" : 19,
+               "value" : "RSBS Boulevard"
+            },
+            {
+               "offset" : 35,
+               "value" : "City of Santa Rosa"
+            },
+            {
+               "offset" : 55,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 63,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "amusement_park",
+            "establishment",
+            "point_of_interest",
+            "tourist_attraction"
+         ]
+      },
+      {
+         "description" : "Enchanted River, Hinatuan, Surigao del Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJizyJq3SO_TIRNe-3a13WfUE",
+         "reference" : "ChIJizyJq3SO_TIRNe-3a13WfUE",
+         "structured_formatting" : 
+         {
+            "main_text" : "Enchanted River",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Hinatuan, Surigao del Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Enchanted River"
+            },
+            {
+               "offset" : 17,
+               "value" : "Hinatuan"
+            },
+            {
+               "offset" : 27,
+               "value" : "Surigao del Sur"
+            },
+            {
+               "offset" : 44,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "tourist_attraction"
+         ]
+      },
+      {
+         "description" : "Enchanted Kingdom, San Lorenzo Road, City of Santa Rosa, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJE45UF23ZlzMRabbPxaZpO0w",
+         "reference" : "ChIJE45UF23ZlzMRabbPxaZpO0w",
+         "structured_formatting" : 
+         {
+            "main_text" : "Enchanted Kingdom",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Lorenzo Road, City of Santa Rosa, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Enchanted Kingdom"
+            },
+            {
+               "offset" : 19,
+               "value" : "San Lorenzo Road"
+            },
+            {
+               "offset" : 37,
+               "value" : "City of Santa Rosa"
+            },
+            {
+               "offset" : 57,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "amusement_park",
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Enchanted Cave, Patar Road, Bolinao, Pangasinan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ_ym9jM7JkzMRAZX_F0m4ha8",
+         "reference" : "ChIJ_ym9jM7JkzMRAZX_F0m4ha8",
+         "structured_formatting" : 
+         {
+            "main_text" : "Enchanted Cave",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Patar Road, Bolinao, Pangasinan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Enchanted Cave"
+            },
+            {
+               "offset" : 16,
+               "value" : "Patar Road"
+            },
+            {
+               "offset" : 28,
+               "value" : "Bolinao"
+            },
+            {
+               "offset" : 37,
+               "value" : "Pangasinan"
+            },
+            {
+               "offset" : 49,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "park",
+            "point_of_interest",
+            "tourist_attraction"
+         ]
+      },
+      {
+         "description" : "Enchanted Mountain Cebu, Lumbang Road, Dalaguete, Cebu, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ59Bb8AbHqzMR07MMBSI8mPw",
+         "reference" : "ChIJ59Bb8AbHqzMR07MMBSI8mPw",
+         "structured_formatting" : 
+         {
+            "main_text" : "Enchanted Mountain Cebu",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Lumbang Road, Dalaguete, Cebu, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Enchanted Mountain Cebu"
+            },
+            {
+               "offset" : 25,
+               "value" : "Lumbang Road"
+            },
+            {
+               "offset" : 39,
+               "value" : "Dalaguete"
+            },
+            {
+               "offset" : 50,
+               "value" : "Cebu"
+            },
+            {
+               "offset" : 56,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

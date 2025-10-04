@@ -1956,6 +1956,30 @@ function getStatusIcon(status) {
 }
 
 
+// Get Bootstrap badge class based on booking status
+function getStatusBadgeClass(status) {
+    if (!status || typeof status !== 'string') {
+        return 'badge bg-secondary-subtle text-secondary';
+    }
+    switch (status.toLowerCase()) {
+        case 'pending':
+            return 'badge bg-warning-subtle text-warning';
+        case 'confirmed':
+            return 'badge bg-success-subtle text-success';
+        case 'processing':
+        case 'rebooking':
+            return 'badge bg-info-subtle text-info';
+        case 'canceled':
+        case 'rejected':
+            return 'badge bg-danger-subtle text-danger';
+        case 'completed':
+            return 'badge bg-primary-subtle text-primary';
+        default:
+            return 'badge bg-secondary-subtle text-secondary';
+    }
+}
+
+
 
 function formatNumber(number) {
 
@@ -2675,11 +2699,8 @@ function renderBookings(bookings) {
             const statusCell = document.createElement("td");
 
             const statusBadge = document.createElement("span");
-
-            statusBadge.className = `status-badge status-${booking.status.toLowerCase()}`;
-
+            statusBadge.className = getStatusBadgeClass(booking.status);
             statusBadge.textContent = booking.status.charAt(0).toUpperCase() + booking.status.slice(1);
-
             statusCell.appendChild(statusBadge);
 
             row.appendChild(statusCell);
@@ -3340,9 +3361,32 @@ function openBookingDetailsModal(bookingId) {
 
         if (data.success) {
 
-            const booking = data.booking;
-
+            // Prefer requested_changes when status is Rebooking
+            let booking = data.booking;
             const payment = data.payments;
+            const requested = data.requested_changes || null;
+
+            if (requested && typeof requested === 'object' && booking && (booking.status === 'Rebooking' || (booking.status && booking.status.toLowerCase() === 'rebooking'))) {
+                // Merge only known trip fields that can be updated during rebooking
+                const fieldsToOverride = [
+                    'pickup_point', 'destination', 'date_of_tour', 'end_of_tour', 'number_of_days', 'number_of_buses',
+                    'total_cost', 'balance', 'pickup_time'
+                ];
+
+                const merged = { ...booking };
+                fieldsToOverride.forEach(key => {
+                    if (requested[key] !== undefined && requested[key] !== null) {
+                        merged[key] = requested[key];
+                    }
+                });
+
+                // Merge stops if present
+                if (Array.isArray(requested.stops)) {
+                    merged.stops = requested.stops;
+                }
+
+                booking = merged;
+            }
 
             
 
@@ -3392,7 +3436,7 @@ function openBookingDetailsModal(bookingId) {
 
                             <p class="mb-2"><strong>Number of Buses:</strong> ${booking.number_of_buses}</p>
 
-                            <p class="mb-2"><strong>Status:</strong> <span  class="status-badge status-${booking.status.toLowerCase()}" >${booking.status}</span></p>
+                            <p class="mb-2"><strong>Status:</strong> <span class="${getStatusBadgeClass(booking.status)}">${booking.status}</span></p>
 
                         </div>
 
