@@ -1,0 +1,59 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "sdfas, Bucal Bypass Road, Calamba, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJJUhvJ5xjvTMRkxc6E4d3LZM",
+         "reference" : "ChIJJUhvJ5xjvTMRkxc6E4d3LZM",
+         "structured_formatting" : 
+         {
+            "main_text" : "sdfas",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bucal Bypass Road, Calamba, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "sdfas"
+            },
+            {
+               "offset" : 7,
+               "value" : "Bucal Bypass Road"
+            },
+            {
+               "offset" : 26,
+               "value" : "Calamba"
+            },
+            {
+               "offset" : 35,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 43,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "store"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

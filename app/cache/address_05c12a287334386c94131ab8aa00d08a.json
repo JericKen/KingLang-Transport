@@ -1,0 +1,106 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "ADSFLY Signs and Graphics, Cebu City, Cebu, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJQcjjFBicqTMRfAfFQlxQhzg",
+         "reference" : "ChIJQcjjFBicqTMRfAfFQlxQhzg",
+         "structured_formatting" : 
+         {
+            "main_text" : "ADSFLY Signs and Graphics",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Cebu City, Cebu, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "ADSFLY Signs and Graphics"
+            },
+            {
+               "offset" : 27,
+               "value" : "Cebu City"
+            },
+            {
+               "offset" : 38,
+               "value" : "Cebu"
+            },
+            {
+               "offset" : 44,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Adsfluence, Central Visayas, Cebu City, Cebu, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ67nD-ByZqTMRWyYgcgF6GO0",
+         "reference" : "ChIJ67nD-ByZqTMRWyYgcgF6GO0",
+         "structured_formatting" : 
+         {
+            "main_text" : "Adsfluence",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Central Visayas, Cebu City, Cebu, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Adsfluence"
+            },
+            {
+               "offset" : 12,
+               "value" : "Central Visayas"
+            },
+            {
+               "offset" : 29,
+               "value" : "Cebu City"
+            },
+            {
+               "offset" : 40,
+               "value" : "Cebu"
+            },
+            {
+               "offset" : 46,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

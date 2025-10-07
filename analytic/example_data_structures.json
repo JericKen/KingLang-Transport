@@ -1,0 +1,38 @@
+{
+  "revenue_trends_daily": {
+    "description": "Daily revenue data structure for Chart.js",
+    "data": {
+      "labels": ["2025-01-01", "2025-01-02", "2025-01-03"],
+      "values": [15000, 18500, 12300]
+    }
+  },
+  "most_used_buses": {
+    "description": "Bus usage ranking data",
+    "data": [
+      { "bus_id": 1, "bus_name": "Bus Alpha", "booking_count": 145, "total_revenue": 2900000, "rank": 1 },
+      { "bus_id": 2, "bus_name": "Bus Beta", "booking_count": 132, "total_revenue": 2640000, "rank": 2 }
+    ]
+  },
+  "maintenance_alerts": {
+    "description": "Buses requiring maintenance",
+    "data": [
+      { "bus_id": 5, "bus_name": "Bus Echo", "mileage_since_maintenance": 12000, "status": "URGENT" },
+      { "bus_id": 8, "bus_name": "Bus Hotel", "days_since_maintenance": 195, "status": "URGENT" }
+    ]
+  },
+  "booking_forecast": {
+    "description": "ARIMA+ forecast output",
+    "data": [
+      { "forecast_date": "2025-10-01", "predicted_bookings": 115, "lower_bound": 105, "upper_bound": 125 },
+      { "forecast_date": "2025-10-02", "predicted_bookings": 118, "lower_bound": 104, "upper_bound": 132 }
+    ]
+  },
+  "customer_segmentation": {
+    "description": "RFM customer segments",
+    "data": [
+      { "segment": "Champions", "customer_count": 28, "avg_lifetime_value": 85000 },
+      { "segment": "At Risk", "customer_count": 42, "avg_lifetime_value": 45000 }
+    ]
+  }
+}
+

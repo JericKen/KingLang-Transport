@@ -1,0 +1,617 @@
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+
+/* header */
+
+.header {
+
+    height: 7vh;
+
+}
+
+
+
+.header a {
+
+    text-decoration: none;
+
+}
+
+
+
+.header .logo {
+
+    height: 80%;
+
+}
+
+
+
+.header .logo img {
+
+    height: 100%;
+
+    width: 100%;
+
+}
+
+
+
+.header a.btn {
+
+    width: 100px;   
+
+}
+
+
+
+
+
+/* content */
+
+.content {
+
+    height: 93vh;
+
+    overflow: hidden; /* Prevent scrollbars during animation */
+
+    position: relative;
+
+}
+
+
+
+.content .image-container {
+
+    width: 60%;
+
+    height: 100%;     
+
+    position: relative;
+
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+
+    z-index: 10; /* Higher z-index to stay on top during animations */
+
+    opacity: 0; /* Start with opacity 0 for fade-in effect */
+
+}
+
+
+
+.image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+
+.form-container {
+
+    width: 40%;
+
+    height: 100%;
+
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+
+    z-index: 5; /* Lower z-index to stay behind during animations */
+
+    opacity: 0; /* Start with opacity 0 for fade-in effect */
+
+}
+
+
+
+.form-container form {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+}
+
+
+
+/* Animation complete state - this ensures elements stay visible after animations */
+
+.content.animation-complete .image-container,
+
+.content.animation-complete .form-container,
+
+.content.animation-complete .form-container form,
+
+.content.animation-complete .form-container .mb-3,
+
+.content.animation-complete .form-container .row.mb-3,
+
+.content.animation-complete .form-container .mb-lg-3,
+
+.content.animation-complete .form-container .button-message,
+
+.content.animation-complete .form-container .login-button {
+
+    opacity: 1;
+
+    transform: translateX(0) translateY(0);
+
+}
+
+
+
+/* Initial positions for page load animations */
+
+.content.animate-in .form-container {
+
+    transform: translateX(-100%);
+
+    animation: slideInRight 0.8s forwards 0.2s;
+
+}
+
+
+
+.content.animate-in .image-container {
+
+    transform: translateX(100%);
+
+    animation: slideInLeft 0.8s forwards;
+
+}
+
+
+
+.content.animate-in .form-container form {
+
+    animation: fadeUpIn 0.6s forwards 1s;
+
+}
+
+
+
+/* Animation for Login to Signup transition */
+
+.login-to-signup .form-container {
+
+    animation: swapToRight 0.8s forwards;
+
+}
+
+
+
+.login-to-signup .image-container {
+
+    animation: swapToLeft 0.8s forwards;
+
+}
+
+
+
+/* Animation for Signup to Login transition */
+
+.signup-to-login .form-container {
+
+    animation: swapToLeft 0.8s forwards;
+
+}
+
+
+
+.signup-to-login .image-container {
+
+    animation: swapToRight 0.8s forwards;
+
+}
+
+
+
+/* Animation keyframes */
+
+@keyframes slideInRight {
+
+    from { 
+
+        transform: translateX(-100%); 
+
+        opacity: 0;
+
+    }
+
+    to { 
+
+        transform: translateX(0); 
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+@keyframes slideInLeft {
+
+    from { 
+
+        transform: translateX(100%); 
+
+        opacity: 0;
+
+    }
+
+    to { 
+
+        transform: translateX(0); 
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+@keyframes fadeUpIn {
+
+    from { 
+
+        opacity: 0; 
+
+        transform: translateY(20px);
+
+    }
+
+    to { 
+
+        opacity: 1; 
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes swapToRight {
+
+    0% { transform: translateX(0); z-index: 5; opacity: 1; }
+
+    25% { z-index: 5; }
+
+    50% { transform: translateX(-100%); z-index: 5; opacity: 0.8; }
+
+    51% { transform: translateX(100%); z-index: 5; opacity: 0.8; }
+
+    100% { transform: translateX(0); z-index: 5; opacity: 1; }
+
+}
+
+
+
+@keyframes swapToLeft {
+
+    0% { transform: translateX(0); z-index: 10; opacity: 1; }
+
+    25% { z-index: 10; }
+
+    50% { transform: translateX(100%); z-index: 10; opacity: 0.8; }
+
+    51% { transform: translateX(-100%); z-index: 10; opacity: 0.8; }
+
+    100% { transform: translateX(0); z-index: 10; opacity: 1; }
+
+}
+
+
+
+/* Form elements animation */
+
+.form-container .mb-3,
+
+.form-container .row.mb-3,
+
+.form-container .mb-lg-3,
+
+.form-container .button-message {
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+}
+
+
+
+.content.animate-in .form-container .mb-3:nth-child(1),
+
+.content.animate-in .form-container .row.mb-3:nth-child(1) {
+
+    animation: fadeUpIn 0.5s forwards 1.1s;
+
+}
+
+
+
+.content.animate-in .form-container .mb-3:nth-child(2),
+
+.content.animate-in .form-container .row.mb-3:nth-child(2),
+
+.content.animate-in .form-container .mb-lg-3:nth-child(2) {
+
+    animation: fadeUpIn 0.5s forwards 1.2s;
+
+}
+
+
+
+.content.animate-in .form-container .mb-3:nth-child(3),
+
+.content.animate-in .form-container .row.mb-3:nth-child(3),
+
+.content.animate-in .form-container .mb-lg-3:nth-child(3) {
+
+    animation: fadeUpIn 0.5s forwards 1.3s;
+
+}
+
+
+
+.content.animate-in .form-container .mb-3:nth-child(4) {
+
+    animation: fadeUpIn 0.5s forwards 1.4s;
+
+}
+
+
+
+.content.animate-in .form-container .mb-3:nth-child(5) {
+
+    animation: fadeUpIn 0.5s forwards 1.5s;
+
+}
+
+
+
+.content.animate-in .form-container .mb-3:nth-child(6) {
+
+    animation: fadeUpIn 0.5s forwards 1.6s;
+
+}
+
+
+
+.content.animate-in .form-container .mb-3:nth-child(7) {
+
+    animation: fadeUpIn 0.5s forwards 1.7s;
+
+}
+
+
+
+.content.animate-in .form-container .button-message {
+
+    animation: fadeUpIn 0.5s forwards 1.8s;
+
+}
+
+
+
+.content.animate-in .form-container .login-button {
+
+    animation: fadeUpIn 0.5s forwards 1.4s;
+
+}
+
+
+
+.form-container button {
+
+    background: #5db434;
+
+}
+
+
+
+.form-container button:hover {
+
+    background: #017e04;
+
+}
+
+
+
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+}
+
+
+
+.overlay .overlay-text {
+
+    position: absolute;
+
+    color: #017e04;
+
+    font-size: 3.5rem;
+
+    width: 90%;
+
+    bottom: 1%;
+
+    left: 5%;
+
+}
+
+
+
+.user-actions a {
+
+    color: #555555;
+
+    font-weight: 500;
+
+}
+
+
+
+.user-actions a:hover {
+
+    /* background-color: transparent; */
+
+    color: #0d6832;
+
+    text-decoration: underline;
+
+}
+
+
+
+
+
+
+
+/* Media queries */
+
+@media (max-width: 992px) {
+
+    .content {
+
+        flex-wrap: wrap;
+
+    }
+
+
+
+    .content .image-container,
+
+    .form-container {
+
+        width: 100%;
+
+    }
+
+
+
+    .content .image-container {
+
+        height: 40%;
+
+    }
+
+
+
+    .overlay .overlay-text {
+
+        font-size: 2.5rem;
+
+    }
+
+
+
+    .form-container {
+
+        height: 60%;
+
+        overflow-y: auto;
+
+    }
+
+    
+
+    /* Adjust animations for mobile */
+
+    @keyframes slideInRight {
+
+        from { 
+
+            transform: translateY(-100%); 
+
+            opacity: 0;
+
+        }
+
+        to { 
+
+            transform: translateY(0); 
+
+            opacity: 1;
+
+        }
+
+    }
+
+
+
+    @keyframes slideInLeft {
+
+        from { 
+
+            transform: translateY(100%); 
+
+            opacity: 0;
+
+        }
+
+        to { 
+
+            transform: translateY(0); 
+
+            opacity: 1;
+
+        }
+
+    }
+
+    
+
+    @keyframes swapToRight {
+
+        0% { transform: translateY(0); z-index: 5; opacity: 1; }
+
+        25% { z-index: 5; }
+
+        50% { transform: translateY(-100%); z-index: 5; opacity: 0.8; }
+
+        51% { transform: translateY(100%); z-index: 5; opacity: 0.8; }
+
+        100% { transform: translateY(0); z-index: 5; opacity: 1; }
+
+    }
+
+
+
+    @keyframes swapToLeft {
+
+        0% { transform: translateY(0); z-index: 10; opacity: 1; }
+
+        25% { z-index: 10; }
+
+        50% { transform: translateY(100%); z-index: 10; opacity: 0.8; }
+
+        51% { transform: translateY(-100%); z-index: 10; opacity: 0.8; }
+
+        100% { transform: translateY(0); z-index: 10; opacity: 1; }
+
+    }
+
+}

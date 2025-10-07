@@ -1,0 +1,292 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "EDSA - Shaw Blvd, Shaw Boulevard, Mandaluyong City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 16,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJkSYiuOrJlzMRE6Rgj6_K6oY",
+         "reference" : "ChIJkSYiuOrJlzMRE6Rgj6_K6oY",
+         "structured_formatting" : 
+         {
+            "main_text" : "EDSA - Shaw Blvd",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 16,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Shaw Boulevard, Mandaluyong City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "EDSA - Shaw Blvd"
+            },
+            {
+               "offset" : 18,
+               "value" : "Shaw Boulevard"
+            },
+            {
+               "offset" : 34,
+               "value" : "Mandaluyong City"
+            },
+            {
+               "offset" : 52,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 66,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "EDSA-Shaw Underpass, Mandaluyong City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 19,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "EkBFRFNBLVNoYXcgVW5kZXJwYXNzLCBNYW5kYWx1eW9uZyBDaXR5LCBNZXRybyBNYW5pbGEsIFBoaWxpcHBpbmVzIi4qLAoUChIJYYSTCD_IlzMR1OM6gkPsLZ8SFAoSCXmbe8c1yJczEfg30rnIR0nc",
+         "reference" : "EkBFRFNBLVNoYXcgVW5kZXJwYXNzLCBNYW5kYWx1eW9uZyBDaXR5LCBNZXRybyBNYW5pbGEsIFBoaWxpcHBpbmVzIi4qLAoUChIJYYSTCD_IlzMR1OM6gkPsLZ8SFAoSCXmbe8c1yJczEfg30rnIR0nc",
+         "structured_formatting" : 
+         {
+            "main_text" : "EDSA-Shaw Underpass",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 19,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Mandaluyong City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "EDSA-Shaw Underpass"
+            },
+            {
+               "offset" : 21,
+               "value" : "Mandaluyong City"
+            },
+            {
+               "offset" : 39,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 53,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      },
+      {
+         "description" : "Starmall EDSA-Shaw, Shaw Boulevard, Mandaluyong City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 18,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJJQtY_z7IlzMRcwAbaQrDyWk",
+         "reference" : "ChIJJQtY_z7IlzMRcwAbaQrDyWk",
+         "structured_formatting" : 
+         {
+            "main_text" : "Starmall EDSA-Shaw",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 18,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Shaw Boulevard, Mandaluyong City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Starmall EDSA-Shaw"
+            },
+            {
+               "offset" : 20,
+               "value" : "Shaw Boulevard"
+            },
+            {
+               "offset" : 36,
+               "value" : "Mandaluyong City"
+            },
+            {
+               "offset" : 54,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 68,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "shopping_mall"
+         ]
+      },
+      {
+         "description" : "Shawarma Shack - Caltex EDSA Caloocan, EDSA, Bagong Barrio West, Caloocan, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            },
+            {
+               "length" : 4,
+               "offset" : 39
+            }
+         ],
+         "place_id" : "ChIJ7TYOegC3lzMRIKHXPNvq370",
+         "reference" : "ChIJ7TYOegC3lzMRIKHXPNvq370",
+         "structured_formatting" : 
+         {
+            "main_text" : "Shawarma Shack - Caltex EDSA Caloocan",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "EDSA, Bagong Barrio West, Caloocan, Metro Manila, Philippines",
+            "secondary_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ]
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Shawarma Shack - Caltex EDSA Caloocan"
+            },
+            {
+               "offset" : 39,
+               "value" : "EDSA"
+            },
+            {
+               "offset" : 45,
+               "value" : "Bagong Barrio West"
+            },
+            {
+               "offset" : 65,
+               "value" : "Caloocan"
+            },
+            {
+               "offset" : 75,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 89,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
+         "description" : "Hotel Sogo EDSA Shaw Blvd., EDSA, Mandaluyong City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 16
+            },
+            {
+               "length" : 4,
+               "offset" : 28
+            }
+         ],
+         "place_id" : "ChIJlzLrpD3JlzMRR360hulSFaQ",
+         "reference" : "ChIJlzLrpD3JlzMRR360hulSFaQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Hotel Sogo EDSA Shaw Blvd.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 16
+               }
+            ],
+            "secondary_text" : "EDSA, Mandaluyong City, Metro Manila, Philippines",
+            "secondary_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ]
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Hotel Sogo EDSA Shaw Blvd."
+            },
+            {
+               "offset" : 28,
+               "value" : "EDSA"
+            },
+            {
+               "offset" : 34,
+               "value" : "Mandaluyong City"
+            },
+            {
+               "offset" : 52,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 66,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

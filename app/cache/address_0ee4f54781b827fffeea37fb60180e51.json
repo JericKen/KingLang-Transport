@@ -1,0 +1,261 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "asdfa, miguel, Navotas, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJkUAUvhy1lzMR0ovILmAPve8",
+         "reference" : "ChIJkUAUvhy1lzMR0ovILmAPve8",
+         "structured_formatting" : 
+         {
+            "main_text" : "asdfa",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "miguel, Navotas, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "asdfa"
+            },
+            {
+               "offset" : 7,
+               "value" : "miguel"
+            },
+            {
+               "offset" : 15,
+               "value" : "Navotas"
+            },
+            {
+               "offset" : 24,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 38,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "ASDF PRINTING HUB, Plaridel St, Laur, Nueva Ecija, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJiwTkpG_LkDMR74tEfGGQ-Lk",
+         "reference" : "ChIJiwTkpG_LkDMR74tEfGGQ-Lk",
+         "structured_formatting" : 
+         {
+            "main_text" : "ASDF PRINTING HUB",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Plaridel St, Laur, Nueva Ecija, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "ASDF PRINTING HUB"
+            },
+            {
+               "offset" : 19,
+               "value" : "Plaridel St"
+            },
+            {
+               "offset" : 32,
+               "value" : "Laur"
+            },
+            {
+               "offset" : 38,
+               "value" : "Nueva Ecija"
+            },
+            {
+               "offset" : 51,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "asdfghjkl., Matabya Street, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJMy_xrpq7lzMROShgAPY2IY4",
+         "reference" : "ChIJMy_xrpq7lzMROShgAPY2IY4",
+         "structured_formatting" : 
+         {
+            "main_text" : "asdfghjkl.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Matabya Street, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "asdfghjkl."
+            },
+            {
+               "offset" : 12,
+               "value" : "Matabya Street"
+            },
+            {
+               "offset" : 28,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 41,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 55,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "grocery_or_supermarket",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "ASDF Apartment, San Jose City, Nueva Ecija, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJGckE3fDZkDMRx-C57ggorns",
+         "reference" : "ChIJGckE3fDZkDMRx-C57ggorns",
+         "structured_formatting" : 
+         {
+            "main_text" : "ASDF Apartment",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Jose City, Nueva Ecija, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "ASDF Apartment"
+            },
+            {
+               "offset" : 16,
+               "value" : "San Jose City"
+            },
+            {
+               "offset" : 31,
+               "value" : "Nueva Ecija"
+            },
+            {
+               "offset" : 44,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Asdf, Silang, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ0X0PTLR_vTMRklsOCBRjU7g",
+         "reference" : "ChIJ0X0PTLR_vTMRklsOCBRjU7g",
+         "structured_formatting" : 
+         {
+            "main_text" : "Asdf",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Silang, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Asdf"
+            },
+            {
+               "offset" : 6,
+               "value" : "Silang"
+            },
+            {
+               "offset" : 14,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 22,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

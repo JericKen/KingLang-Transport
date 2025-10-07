@@ -1,0 +1,249 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Cabuyao City, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJN1L8f4TYlzMRZZtXH0X2-u4",
+         "reference" : "ChIJN1L8f4TYlzMRZZtXH0X2-u4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Cabuyao City",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Cabuyao City"
+            },
+            {
+               "offset" : 14,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 22,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Cabuyao Exit (Southbound), Cabuyao City, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJazxLO5NivTMR5LrmELEpd0Q",
+         "reference" : "ChIJazxLO5NivTMR5LrmELEpd0Q",
+         "structured_formatting" : 
+         {
+            "main_text" : "Cabuyao Exit (Southbound)",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Cabuyao City, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Cabuyao Exit (Southbound)"
+            },
+            {
+               "offset" : 27,
+               "value" : "Cabuyao City"
+            },
+            {
+               "offset" : 41,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 49,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "premise"
+         ]
+      },
+      {
+         "description" : "Cabuyao City Hall, F.B. Bailon Street, Cabuyao City, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJS522j2LYlzMR53oSr4YqkRs",
+         "reference" : "ChIJS522j2LYlzMR53oSr4YqkRs",
+         "structured_formatting" : 
+         {
+            "main_text" : "Cabuyao City Hall",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "F.B. Bailon Street, Cabuyao City, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Cabuyao City Hall"
+            },
+            {
+               "offset" : 19,
+               "value" : "F.B. Bailon Street"
+            },
+            {
+               "offset" : 39,
+               "value" : "Cabuyao City"
+            },
+            {
+               "offset" : 53,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 61,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "city_hall",
+            "establishment",
+            "local_government_office",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Cabuyao Town Plaza, Cabuyao City, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJM42PdWDYlzMRUw94QXbN4iQ",
+         "reference" : "ChIJM42PdWDYlzMRUw94QXbN4iQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Cabuyao Town Plaza",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Cabuyao City, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Cabuyao Town Plaza"
+            },
+            {
+               "offset" : 20,
+               "value" : "Cabuyao City"
+            },
+            {
+               "offset" : 34,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 42,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "town_square"
+         ]
+      },
+      {
+         "description" : "cabuyao laguna, San Mateo, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJkZhyGb27lzMRpCoTwm_jFzY",
+         "reference" : "ChIJkZhyGb27lzMRpCoTwm_jFzY",
+         "structured_formatting" : 
+         {
+            "main_text" : "cabuyao laguna",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Mateo, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "cabuyao laguna"
+            },
+            {
+               "offset" : 16,
+               "value" : "San Mateo"
+            },
+            {
+               "offset" : 27,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 34,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

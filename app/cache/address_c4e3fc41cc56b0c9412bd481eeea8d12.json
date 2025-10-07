@@ -1,0 +1,258 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Bagong Silang, 176, Caloocan, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 13,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJv0aID9CvlzMRpTbdg0HEarA",
+         "reference" : "ChIJv0aID9CvlzMRpTbdg0HEarA",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bagong Silang, 176",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Caloocan, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bagong Silang"
+            },
+            {
+               "offset" : 15,
+               "value" : "176"
+            },
+            {
+               "offset" : 20,
+               "value" : "Caloocan"
+            },
+            {
+               "offset" : 30,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 44,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Bagong silang caloocan city, Caloocan, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 13,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJydrULIavlzMRI8WX7usgtGY",
+         "reference" : "ChIJydrULIavlzMRI8WX7usgtGY",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bagong silang caloocan city",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Caloocan, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bagong silang caloocan city"
+            },
+            {
+               "offset" : 29,
+               "value" : "Caloocan"
+            },
+            {
+               "offset" : 39,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 53,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Bagong Silang, Plaridel, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 13,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJSQtYPF9TljMRV5oVInHvPec",
+         "reference" : "ChIJSQtYPF9TljMRV5oVInHvPec",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bagong Silang",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Plaridel, Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bagong Silang"
+            },
+            {
+               "offset" : 15,
+               "value" : "Plaridel"
+            },
+            {
+               "offset" : 25,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 34,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Bagong Silang, Iligan City, Lanao del Norte, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 13,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ8dEI1Hp2VTIRYIOMrZ6qCrY",
+         "reference" : "ChIJ8dEI1Hp2VTIRYIOMrZ6qCrY",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bagong Silang",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Iligan City, Lanao del Norte, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bagong Silang"
+            },
+            {
+               "offset" : 15,
+               "value" : "Iligan City"
+            },
+            {
+               "offset" : 28,
+               "value" : "Lanao del Norte"
+            },
+            {
+               "offset" : 45,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Bagong Silang, Balanga City, Bataan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 13,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJNSYtiTAVljMRONL1PLtuTW4",
+         "reference" : "ChIJNSYtiTAVljMRONL1PLtuTW4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bagong Silang",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Balanga City, Bataan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bagong Silang"
+            },
+            {
+               "offset" : 15,
+               "value" : "Balanga City"
+            },
+            {
+               "offset" : 29,
+               "value" : "Bataan"
+            },
+            {
+               "offset" : 37,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

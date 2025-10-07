@@ -1,0 +1,261 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Mailum, Bago, Negros Occidental, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJUaucL2G1rjMRefbb4OuF6QE",
+         "reference" : "ChIJUaucL2G1rjMRefbb4OuF6QE",
+         "structured_formatting" : 
+         {
+            "main_text" : "Mailum",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bago, Negros Occidental, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Mailum"
+            },
+            {
+               "offset" : 8,
+               "value" : "Bago"
+            },
+            {
+               "offset" : 14,
+               "value" : "Negros Occidental"
+            },
+            {
+               "offset" : 33,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Mailag, Valencia City, Bukidnon, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ67Tinqkc_zIRYX-ZpoYVzLw",
+         "reference" : "ChIJ67Tinqkc_zIRYX-ZpoYVzLw",
+         "structured_formatting" : 
+         {
+            "main_text" : "Mailag",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Valencia City, Bukidnon, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Mailag"
+            },
+            {
+               "offset" : 8,
+               "value" : "Valencia City"
+            },
+            {
+               "offset" : 23,
+               "value" : "Bukidnon"
+            },
+            {
+               "offset" : 33,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Maila Rosario College, Diversion Road, Tuguegarao City, Cagayan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJCeWotH2GhTMRtzexOv9Xo2A",
+         "reference" : "ChIJCeWotH2GhTMRtzexOv9Xo2A",
+         "structured_formatting" : 
+         {
+            "main_text" : "Maila Rosario College",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Diversion Road, Tuguegarao City, Cagayan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Maila Rosario College"
+            },
+            {
+               "offset" : 23,
+               "value" : "Diversion Road"
+            },
+            {
+               "offset" : 39,
+               "value" : "Tuguegarao City"
+            },
+            {
+               "offset" : 56,
+               "value" : "Cagayan"
+            },
+            {
+               "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      },
+      {
+         "description" : "Maillard Café, Fausta Road, Malolos, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ8VkociFTljMRu8nDt0Ttv9E",
+         "reference" : "ChIJ8VkociFTljMRu8nDt0Ttv9E",
+         "structured_formatting" : 
+         {
+            "main_text" : "Maillard Café",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Fausta Road, Malolos, Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Maillard Café"
+            },
+            {
+               "offset" : 15,
+               "value" : "Fausta Road"
+            },
+            {
+               "offset" : 28,
+               "value" : "Malolos"
+            },
+            {
+               "offset" : 37,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 46,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "cafe",
+            "establishment",
+            "food",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Mailum Barangay Hall, Bago, Negros Occidental, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ5X5pwQC1rjMRmzLXD3vtEKQ",
+         "reference" : "ChIJ5X5pwQC1rjMRmzLXD3vtEKQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Mailum Barangay Hall",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bago, Negros Occidental, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Mailum Barangay Hall"
+            },
+            {
+               "offset" : 22,
+               "value" : "Bago"
+            },
+            {
+               "offset" : 28,
+               "value" : "Negros Occidental"
+            },
+            {
+               "offset" : 47,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

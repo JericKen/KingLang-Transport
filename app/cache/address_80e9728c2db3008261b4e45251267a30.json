@@ -1,0 +1,231 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "General Santos City (Dadiangas), South Cotabato, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJY2bKGvOc9zIRSGd9KDIOKsw",
+         "reference" : "ChIJY2bKGvOc9zIRSGd9KDIOKsw",
+         "structured_formatting" : 
+         {
+            "main_text" : "General Santos City (Dadiangas)",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "South Cotabato, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "General Santos City (Dadiangas)"
+            },
+            {
+               "offset" : 33,
+               "value" : "South Cotabato"
+            },
+            {
+               "offset" : 49,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "General Trias, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJfSz5TM0qljMRXZv759A3ecA",
+         "reference" : "ChIJfSz5TM0qljMRXZv759A3ecA",
+         "structured_formatting" : 
+         {
+            "main_text" : "General Trias",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "General Trias"
+            },
+            {
+               "offset" : 15,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 23,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "General Mariano Alvarez, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJKy456FvWlzMRtJywEh8p3do",
+         "reference" : "ChIJKy456FvWlzMRtJywEh8p3do",
+         "structured_formatting" : 
+         {
+            "main_text" : "General Mariano Alvarez",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "General Mariano Alvarez"
+            },
+            {
+               "offset" : 25,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 33,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "General Nakar, Quezon, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJi_C3ltp7lzMRP5RQOcRXDX8",
+         "reference" : "ChIJi_C3ltp7lzMRP5RQOcRXDX8",
+         "structured_formatting" : 
+         {
+            "main_text" : "General Nakar",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Quezon, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "General Nakar"
+            },
+            {
+               "offset" : 15,
+               "value" : "Quezon"
+            },
+            {
+               "offset" : 23,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "General Tinio (Papaya), Nueva Ecija, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJqRbR4IIklzMR9v4yX5jKiu0",
+         "reference" : "ChIJqRbR4IIklzMR9v4yX5jKiu0",
+         "structured_formatting" : 
+         {
+            "main_text" : "General Tinio (Papaya)",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Nueva Ecija, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "General Tinio (Papaya)"
+            },
+            {
+               "offset" : 24,
+               "value" : "Nueva Ecija"
+            },
+            {
+               "offset" : 37,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

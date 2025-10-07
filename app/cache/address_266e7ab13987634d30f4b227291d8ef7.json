@@ -1,0 +1,268 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "SM North EDSA, Epifanio de los Santos Avenue, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ8cYrcse3lzMRLmWd0Z7Ph9w",
+         "reference" : "ChIJ8cYrcse3lzMRLmWd0Z7Ph9w",
+         "structured_formatting" : 
+         {
+            "main_text" : "SM North EDSA",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Epifanio de los Santos Avenue, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SM North EDSA"
+            },
+            {
+               "offset" : 15,
+               "value" : "Epifanio de los Santos Avenue"
+            },
+            {
+               "offset" : 46,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 59,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 73,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "shopping_mall"
+         ]
+      },
+      {
+         "description" : "SM North EDSA | The Annex, SM City North EDSA Annex 1 Tunnel, Bago Bantay, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJx-XC_363lzMR5_LY0_X4Hso",
+         "reference" : "ChIJx-XC_363lzMR5_LY0_X4Hso",
+         "structured_formatting" : 
+         {
+            "main_text" : "SM North EDSA | The Annex",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "SM City North EDSA Annex 1 Tunnel, Bago Bantay, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SM North EDSA | The Annex"
+            },
+            {
+               "offset" : 27,
+               "value" : "SM City North EDSA Annex 1 Tunnel"
+            },
+            {
+               "offset" : 62,
+               "value" : "Bago Bantay"
+            },
+            {
+               "offset" : 75,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 88,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 102,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "shopping_mall"
+         ]
+      },
+      {
+         "description" : "SM North EDSA Annex, Bago Bantay, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ-zO6oeS2lzMRRnbPVpCeidY",
+         "reference" : "ChIJ-zO6oeS2lzMRRnbPVpCeidY",
+         "structured_formatting" : 
+         {
+            "main_text" : "SM North EDSA Annex",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bago Bantay, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SM North EDSA Annex"
+            },
+            {
+               "offset" : 21,
+               "value" : "Bago Bantay"
+            },
+            {
+               "offset" : 34,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 47,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 61,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "premise"
+         ]
+      },
+      {
+         "description" : "SM North EDSA Sky Dome, Bago Bantay, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJYXVDxeK2lzMRtMDenS-MvYY",
+         "reference" : "ChIJYXVDxeK2lzMRtMDenS-MvYY",
+         "structured_formatting" : 
+         {
+            "main_text" : "SM North EDSA Sky Dome",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bago Bantay, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SM North EDSA Sky Dome"
+            },
+            {
+               "offset" : 24,
+               "value" : "Bago Bantay"
+            },
+            {
+               "offset" : 37,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 50,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 64,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "SM Bacoor Entrance, Bacoor, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 18,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "Ei9TTSBCYWNvb3IgRW50cmFuY2UsIEJhY29vciwgQ2F2aXRlLCBQaGlsaXBwaW5lcyIuKiwKFAoSCVPfuQx50pczEZj0X8wy82koEhQKEgk_QwR7QNKXMxFMLT1rzVSRdw",
+         "reference" : "Ei9TTSBCYWNvb3IgRW50cmFuY2UsIEJhY29vciwgQ2F2aXRlLCBQaGlsaXBwaW5lcyIuKiwKFAoSCVPfuQx50pczEZj0X8wy82koEhQKEgk_QwR7QNKXMxFMLT1rzVSRdw",
+         "structured_formatting" : 
+         {
+            "main_text" : "SM Bacoor Entrance",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 18,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bacoor, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SM Bacoor Entrance"
+            },
+            {
+               "offset" : 20,
+               "value" : "Bacoor"
+            },
+            {
+               "offset" : 28,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 36,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

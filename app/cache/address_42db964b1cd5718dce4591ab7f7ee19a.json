@@ -1,0 +1,262 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Enchanted Kingdom, RSBS Boulevard, City of Santa Rosa, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 17,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJc4aHZRbYlzMRbJ_Oa0wPqP4",
+         "reference" : "ChIJc4aHZRbYlzMRbJ_Oa0wPqP4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Enchanted Kingdom",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 17,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "RSBS Boulevard, City of Santa Rosa, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Enchanted Kingdom"
+            },
+            {
+               "offset" : 19,
+               "value" : "RSBS Boulevard"
+            },
+            {
+               "offset" : 35,
+               "value" : "City of Santa Rosa"
+            },
+            {
+               "offset" : 55,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 63,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "amusement_park",
+            "establishment",
+            "point_of_interest",
+            "tourist_attraction"
+         ]
+      },
+      {
+         "description" : "Enchanted Kingdom, San Lorenzo Road, City of Santa Rosa, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 17,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJE45UF23ZlzMRabbPxaZpO0w",
+         "reference" : "ChIJE45UF23ZlzMRabbPxaZpO0w",
+         "structured_formatting" : 
+         {
+            "main_text" : "Enchanted Kingdom",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 17,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Lorenzo Road, City of Santa Rosa, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Enchanted Kingdom"
+            },
+            {
+               "offset" : 19,
+               "value" : "San Lorenzo Road"
+            },
+            {
+               "offset" : 37,
+               "value" : "City of Santa Rosa"
+            },
+            {
+               "offset" : 57,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "amusement_park",
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Enchanted Mountain Cebu, Lumbang Road, Dalaguete, Cebu, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 23,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ59Bb8AbHqzMR07MMBSI8mPw",
+         "reference" : "ChIJ59Bb8AbHqzMR07MMBSI8mPw",
+         "structured_formatting" : 
+         {
+            "main_text" : "Enchanted Mountain Cebu",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 23,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Lumbang Road, Dalaguete, Cebu, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Enchanted Mountain Cebu"
+            },
+            {
+               "offset" : 25,
+               "value" : "Lumbang Road"
+            },
+            {
+               "offset" : 39,
+               "value" : "Dalaguete"
+            },
+            {
+               "offset" : 50,
+               "value" : "Cebu"
+            },
+            {
+               "offset" : 56,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Enchanted Kingdom Road, Cagayan De Oro City, Misamis Oriental, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 17,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "EkpFbmNoYW50ZWQgS2luZ2RvbSBSb2FkLCBDYWdheWFuIERlIE9ybyBDaXR5LCBNaXNhbWlzIE9yaWVudGFsLCBQaGlsaXBwaW5lcyIuKiwKFAoSCaN5FdXsjP8yEeNjYRD83Tx1EhQKEgmBng6B2fL_MhGi4m1KuNXcLg",
+         "reference" : "EkpFbmNoYW50ZWQgS2luZ2RvbSBSb2FkLCBDYWdheWFuIERlIE9ybyBDaXR5LCBNaXNhbWlzIE9yaWVudGFsLCBQaGlsaXBwaW5lcyIuKiwKFAoSCaN5FdXsjP8yEeNjYRD83Tx1EhQKEgmBng6B2fL_MhGi4m1KuNXcLg",
+         "structured_formatting" : 
+         {
+            "main_text" : "Enchanted Kingdom Road",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 17,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Cagayan De Oro City, Misamis Oriental, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Enchanted Kingdom Road"
+            },
+            {
+               "offset" : 24,
+               "value" : "Cagayan De Oro City"
+            },
+            {
+               "offset" : 45,
+               "value" : "Misamis Oriental"
+            },
+            {
+               "offset" : 63,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      },
+      {
+         "description" : "Flying Fiesta, City of Santa Rosa, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 13,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ616-bRbYlzMREaF127UYC2M",
+         "reference" : "ChIJ616-bRbYlzMREaF127UYC2M",
+         "structured_formatting" : 
+         {
+            "main_text" : "Flying Fiesta",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "City of Santa Rosa, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Flying Fiesta"
+            },
+            {
+               "offset" : 15,
+               "value" : "City of Santa Rosa"
+            },
+            {
+               "offset" : 35,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 43,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

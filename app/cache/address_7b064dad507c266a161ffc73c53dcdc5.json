@@ -1,0 +1,271 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "AFPSLAI, Road, Baguio, Benguet, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 7,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJm9j-cGahkTMRtK4HRjbcJfU",
+         "reference" : "ChIJm9j-cGahkTMRtK4HRjbcJfU",
+         "structured_formatting" : 
+         {
+            "main_text" : "AFPSLAI",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 7,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Road, Baguio, Benguet, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "AFPSLAI"
+            },
+            {
+               "offset" : 9,
+               "value" : "Road"
+            },
+            {
+               "offset" : 15,
+               "value" : "Baguio"
+            },
+            {
+               "offset" : 23,
+               "value" : "Benguet"
+            },
+            {
+               "offset" : 32,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "ASF Building, Vivencio Cuyugan Road, St, San Fernando, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJEaXd-3X3ljMRUZdM_48GkHI",
+         "reference" : "ChIJEaXd-3X3ljMRUZdM_48GkHI",
+         "structured_formatting" : 
+         {
+            "main_text" : "ASF Building",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Vivencio Cuyugan Road, St, San Fernando, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "ASF Building"
+            },
+            {
+               "offset" : 14,
+               "value" : "Vivencio Cuyugan Road"
+            },
+            {
+               "offset" : 37,
+               "value" : "St"
+            },
+            {
+               "offset" : 41,
+               "value" : "San Fernando"
+            },
+            {
+               "offset" : 55,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Asfah's Clothing, Buadi Sacayo St, Marawi City, Lanao del Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ7YkJSA-RVTIR462flCslLDA",
+         "reference" : "ChIJ7YkJSA-RVTIR462flCslLDA",
+         "structured_formatting" : 
+         {
+            "main_text" : "Asfah's Clothing",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Buadi Sacayo St, Marawi City, Lanao del Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Asfah's Clothing"
+            },
+            {
+               "offset" : 18,
+               "value" : "Buadi Sacayo St"
+            },
+            {
+               "offset" : 35,
+               "value" : "Marawi City"
+            },
+            {
+               "offset" : 48,
+               "value" : "Lanao del Sur"
+            },
+            {
+               "offset" : 63,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "ASF Sari-Sari Store, City of Digos, Davao del Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJO084Y8-x-TIR08Hqa-Pg3aE",
+         "reference" : "ChIJO084Y8-x-TIR08Hqa-Pg3aE",
+         "structured_formatting" : 
+         {
+            "main_text" : "ASF Sari-Sari Store",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "City of Digos, Davao del Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "ASF Sari-Sari Store"
+            },
+            {
+               "offset" : 21,
+               "value" : "City of Digos"
+            },
+            {
+               "offset" : 36,
+               "value" : "Davao del Sur"
+            },
+            {
+               "offset" : 51,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "grocery_or_supermarket",
+            "point_of_interest",
+            "store",
+            "supermarket"
+         ]
+      },
+      {
+         "description" : "Advance Suburban Facility Services Corp., Marcos Alvarez Avenue, Las Piñas, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 40,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJteJhOfzRlzMRNEzTBqAizD8",
+         "reference" : "ChIJteJhOfzRlzMRNEzTBqAizD8",
+         "structured_formatting" : 
+         {
+            "main_text" : "Advance Suburban Facility Services Corp.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 40,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Marcos Alvarez Avenue, Las Piñas, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Advance Suburban Facility Services Corp."
+            },
+            {
+               "offset" : 42,
+               "value" : "Marcos Alvarez Avenue"
+            },
+            {
+               "offset" : 65,
+               "value" : "Las Piñas"
+            },
+            {
+               "offset" : 76,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 90,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "laundry",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

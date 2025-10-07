@@ -1,0 +1,273 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Four Seasons Fruits Corporation (FSFC), Tagum, Davao del Norte, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 33
+            }
+         ],
+         "place_id" : "ChIJS8tUVYlT-TIRUBZ3nnU6iUc",
+         "reference" : "ChIJS8tUVYlT-TIRUBZ3nnU6iUc",
+         "structured_formatting" : 
+         {
+            "main_text" : "Four Seasons Fruits Corporation (FSFC)",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 33
+               }
+            ],
+            "secondary_text" : "Tagum, Davao del Norte, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Four Seasons Fruits Corporation (FSFC)"
+            },
+            {
+               "offset" : 40,
+               "value" : "Tagum"
+            },
+            {
+               "offset" : 47,
+               "value" : "Davao del Norte"
+            },
+            {
+               "offset" : 64,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "FSF Optical Clinic, Vicente Cruz Street, Sampaloc, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJua1suVzJlzMRDQy16fggH5A",
+         "reference" : "ChIJua1suVzJlzMRDQy16fggH5A",
+         "structured_formatting" : 
+         {
+            "main_text" : "FSF Optical Clinic",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Vicente Cruz Street, Sampaloc, Manila, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "FSF Optical Clinic"
+            },
+            {
+               "offset" : 20,
+               "value" : "Vicente Cruz Street"
+            },
+            {
+               "offset" : 41,
+               "value" : "Sampaloc"
+            },
+            {
+               "offset" : 51,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 59,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 73,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "health",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Five Star Finance, Col. Bonny Serrano Avenue, Cubao, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 17,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJi-OGM-m3lzMRx2R69L4D7VM",
+         "reference" : "ChIJi-OGM-m3lzMRx2R69L4D7VM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Five Star Finance",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 17,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Col. Bonny Serrano Avenue, Cubao, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Five Star Finance"
+            },
+            {
+               "offset" : 19,
+               "value" : "Col. Bonny Serrano Avenue"
+            },
+            {
+               "offset" : 46,
+               "value" : "Cubao"
+            },
+            {
+               "offset" : 53,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 66,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 80,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "finance",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "FSF Enterprise, Ermita, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJMd_-bh_KlzMRMbysP9rg3tg",
+         "reference" : "ChIJMd_-bh_KlzMRMbysP9rg3tg",
+         "structured_formatting" : 
+         {
+            "main_text" : "FSF Enterprise",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Ermita, Manila, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "FSF Enterprise"
+            },
+            {
+               "offset" : 16,
+               "value" : "Ermita"
+            },
+            {
+               "offset" : 24,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 32,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 46,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "FSFC First Standard Finance Corporation, Veteranos Avenida, Tacloban City, Leyte, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJex_pbtRwCDMRfdyauMqRJlU",
+         "reference" : "ChIJex_pbtRwCDMRfdyauMqRJlU",
+         "structured_formatting" : 
+         {
+            "main_text" : "FSFC First Standard Finance Corporation",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Veteranos Avenida, Tacloban City, Leyte, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "FSFC First Standard Finance Corporation"
+            },
+            {
+               "offset" : 41,
+               "value" : "Veteranos Avenida"
+            },
+            {
+               "offset" : 60,
+               "value" : "Tacloban City"
+            },
+            {
+               "offset" : 75,
+               "value" : "Leyte"
+            },
+            {
+               "offset" : 82,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "finance",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

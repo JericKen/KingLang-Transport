@@ -1,0 +1,106 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "ASDF PRINTING HUB, Plaridel St, Laur, Nueva Ecija, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJiwTkpG_LkDMR74tEfGGQ-Lk",
+         "reference" : "ChIJiwTkpG_LkDMR74tEfGGQ-Lk",
+         "structured_formatting" : 
+         {
+            "main_text" : "ASDF PRINTING HUB",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Plaridel St, Laur, Nueva Ecija, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "ASDF PRINTING HUB"
+            },
+            {
+               "offset" : 19,
+               "value" : "Plaridel St"
+            },
+            {
+               "offset" : 32,
+               "value" : "Laur"
+            },
+            {
+               "offset" : 38,
+               "value" : "Nueva Ecija"
+            },
+            {
+               "offset" : 51,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "ASDF Apartment, San Jose City, Nueva Ecija, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJGckE3fDZkDMRx-C57ggorns",
+         "reference" : "ChIJGckE3fDZkDMRx-C57ggorns",
+         "structured_formatting" : 
+         {
+            "main_text" : "ASDF Apartment",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Jose City, Nueva Ecija, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "ASDF Apartment"
+            },
+            {
+               "offset" : 16,
+               "value" : "San Jose City"
+            },
+            {
+               "offset" : 31,
+               "value" : "Nueva Ecija"
+            },
+            {
+               "offset" : 44,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

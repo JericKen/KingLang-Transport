@@ -1,0 +1,261 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Kingsford Hotel Manila, J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ-_mvpATMlzMRkiErfNMwyys",
+         "reference" : "ChIJ-_mvpATMlzMRkiErfNMwyys",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kingsford Hotel Manila",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kingsford Hotel Manila"
+            },
+            {
+               "offset" : 24,
+               "value" : "J.W. Diokno Boulevard"
+            },
+            {
+               "offset" : 47,
+               "value" : "Parañaque"
+            },
+            {
+               "offset" : 58,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 72,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Kingspoint Subdivision, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "Ej5LaW5nc3BvaW50IFN1YmRpdmlzaW9uLCBRdWV6b24gQ2l0eSwgTWV0cm8gTWFuaWxhLCBQaGlsaXBwaW5lcyIuKiwKFAoSCXexYSMpsZczEYwoOqn6gekvEhQKEgl1c-9CCbqXMxFAPQj-2TKaSg",
+         "reference" : "Ej5LaW5nc3BvaW50IFN1YmRpdmlzaW9uLCBRdWV6b24gQ2l0eSwgTWV0cm8gTWFuaWxhLCBQaGlsaXBwaW5lcyIuKiwKFAoSCXexYSMpsZczEYwoOqn6gekvEhQKEgl1c-9CCbqXMxFAPQj-2TKaSg",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kingspoint Subdivision",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kingspoint Subdivision"
+            },
+            {
+               "offset" : 24,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 37,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 51,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      },
+      {
+         "description" : "Kingsville Executive Village Basketball Court, Napoleon Street, Antipolo City, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJvdEPKVq4lzMRziqVz8cSo2c",
+         "reference" : "ChIJvdEPKVq4lzMRziqVz8cSo2c",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kingsville Executive Village Basketball Court",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Napoleon Street, Antipolo City, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kingsville Executive Village Basketball Court"
+            },
+            {
+               "offset" : 47,
+               "value" : "Napoleon Street"
+            },
+            {
+               "offset" : 64,
+               "value" : "Antipolo City"
+            },
+            {
+               "offset" : 79,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 86,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "premise"
+         ]
+      },
+      {
+         "description" : "Kingstown2, Caloocan, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ2Wa1asSxlzMRL1QQFgjeUdg",
+         "reference" : "ChIJ2Wa1asSxlzMRL1QQFgjeUdg",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kingstown2",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Caloocan, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kingstown2"
+            },
+            {
+               "offset" : 12,
+               "value" : "Caloocan"
+            },
+            {
+               "offset" : 22,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 36,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Kingsborough International Convention Center, Jose Abad Santos Avenue, San Fernando, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ_cRDJkL3ljMRp6N3bP9uzzs",
+         "reference" : "ChIJ_cRDJkL3ljMRp6N3bP9uzzs",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kingsborough International Convention Center",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Jose Abad Santos Avenue, San Fernando, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kingsborough International Convention Center"
+            },
+            {
+               "offset" : 46,
+               "value" : "Jose Abad Santos Avenue"
+            },
+            {
+               "offset" : 71,
+               "value" : "San Fernando"
+            },
+            {
+               "offset" : 85,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 95,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,0 +1,269 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Adfil Corporation, Butuan City, Agusan del Norte, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJX9c7Pl7AATMRewAqR58bVoY",
+         "reference" : "ChIJX9c7Pl7AATMRewAqR58bVoY",
+         "structured_formatting" : 
+         {
+            "main_text" : "Adfil Corporation",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Butuan City, Agusan del Norte, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Adfil Corporation"
+            },
+            {
+               "offset" : 19,
+               "value" : "Butuan City"
+            },
+            {
+               "offset" : 32,
+               "value" : "Agusan del Norte"
+            },
+            {
+               "offset" : 50,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "Addas Village IV, White Linen Street, Bacoor, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 16,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJGXO18OzTlzMRppSTeDZwxA8",
+         "reference" : "ChIJGXO18OzTlzMRppSTeDZwxA8",
+         "structured_formatting" : 
+         {
+            "main_text" : "Addas Village IV",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 16,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "White Linen Street, Bacoor, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Addas Village IV"
+            },
+            {
+               "offset" : 18,
+               "value" : "White Linen Street"
+            },
+            {
+               "offset" : 38,
+               "value" : "Bacoor"
+            },
+            {
+               "offset" : 46,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 54,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "ADF Phils II, SPV-AMC, Inc, J Victor, St, Makati City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJsbQWnaHJlzMRm0hGin6dvH8",
+         "reference" : "ChIJsbQWnaHJlzMRm0hGin6dvH8",
+         "structured_formatting" : 
+         {
+            "main_text" : "ADF Phils II, SPV-AMC, Inc",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "J Victor, St, Makati City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "ADF Phils II, SPV-AMC, Inc"
+            },
+            {
+               "offset" : 28,
+               "value" : "J Victor"
+            },
+            {
+               "offset" : 38,
+               "value" : "St"
+            },
+            {
+               "offset" : 42,
+               "value" : "Makati City"
+            },
+            {
+               "offset" : 55,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 69,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "finance",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "ADFIL Corporation - Motorpool, Butuan City, Agusan del Norte, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJJ714dQDrATMRWxv965GfCxs",
+         "reference" : "ChIJJ714dQDrATMRWxv965GfCxs",
+         "structured_formatting" : 
+         {
+            "main_text" : "ADFIL Corporation - Motorpool",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Butuan City, Agusan del Norte, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "ADFIL Corporation - Motorpool"
+            },
+            {
+               "offset" : 31,
+               "value" : "Butuan City"
+            },
+            {
+               "offset" : 44,
+               "value" : "Agusan del Norte"
+            },
+            {
+               "offset" : 62,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "general_contractor",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Adfocus Graphics and Design, Mabini Street, Poblacion District, Davao City, Davao del Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJs6mzFFRt-TIRPMfUZpOXM1A",
+         "reference" : "ChIJs6mzFFRt-TIRPMfUZpOXM1A",
+         "structured_formatting" : 
+         {
+            "main_text" : "Adfocus Graphics and Design",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Mabini Street, Poblacion District, Davao City, Davao del Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Adfocus Graphics and Design"
+            },
+            {
+               "offset" : 29,
+               "value" : "Mabini Street"
+            },
+            {
+               "offset" : 44,
+               "value" : "Poblacion District"
+            },
+            {
+               "offset" : 64,
+               "value" : "Davao City"
+            },
+            {
+               "offset" : 76,
+               "value" : "Davao del Sur"
+            },
+            {
+               "offset" : 91,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

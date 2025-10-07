@@ -1,0 +1,537 @@
+/* Slideshow container */
+
+.slideshow-container {
+
+    width: 100%;
+
+    height: 100%;
+
+    position: relative;
+
+    margin: 0;
+
+    overflow: hidden; /* Prevent any overflow during transitions */
+
+    background-color: #f5f5f5; /* Light background while images load */
+
+}
+
+
+
+/* Hide the images by default */
+
+.slideshow-slide {
+
+    width: 100%;
+
+    height: 100%;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    opacity: 0;
+
+    transform: scale(1.05);
+
+    visibility: hidden;
+
+    transition: 
+
+        opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+
+        transform 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+
+        visibility 0s linear 0.1s; /* Shorter delay before hiding */
+
+    z-index: 1;
+
+}
+
+
+
+/* Active slide */
+
+.slideshow-slide.active-slide {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    visibility: visible;
+
+    transition: 
+
+        opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+
+        transform 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+
+        visibility 0s linear;
+
+    z-index: 2;
+
+}
+
+
+
+/* Entering slide animation */
+
+.slideshow-slide.slide-enter {
+
+    opacity: 0;
+
+    transform: scale(1.05);
+
+    visibility: visible; /* Always visible during enter animation */
+
+    z-index: 3;
+
+}
+
+
+
+/* Leaving slide animation */
+
+.slideshow-slide.slide-leave {
+
+    opacity: 0;
+
+    transform: scale(0.95);
+
+    visibility: visible; /* Keep visible during leave animation */
+
+    transition: 
+
+        opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+
+        transform 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+
+        visibility 0s linear 1.2s; /* Only hide after transition completes */
+
+    z-index: 1;
+
+}
+
+
+
+.slideshow-slide img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 8s ease-in-out;
+
+    will-change: transform;
+
+}
+
+
+
+.slideshow-slide.active-slide img {
+
+    transform: scale(1.1);
+
+}
+
+
+
+/* Caption text */
+
+.slideshow-text {
+
+    position: absolute;
+
+    color: #017e04;
+
+    font-size: 3.5rem;
+
+    font-weight: bolder;
+
+    width: 90%;
+
+    bottom: 10%;
+
+    left: 5%;
+
+    text-align: left;
+
+    line-height: 1.1;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: 
+
+        opacity 0.8s ease 0.5s, 
+
+        transform 0.8s ease 0.5s;
+
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+
+} 
+
+
+
+.slideshow-slide.active-slide .slideshow-text {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+
+/* For progressive loading effect */
+
+.slideshow-container::after {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(255,255,255,0.5);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    transition: opacity 1s ease;
+
+}
+
+
+
+.slideshow-container.loading::after {
+
+    opacity: 1;
+
+}
+
+
+
+/* Responsive text size */
+
+@media (max-width: 1200px) {
+
+    .slideshow-text {
+
+        font-size: 2.5rem;
+
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .slideshow-text {
+
+        font-size: 2rem;
+
+    }
+
+}
+
+
+
+/* Contact info overlay */
+
+.slideshow-contact-info {
+
+    position: absolute;
+
+    bottom: 0;
+
+    border-radius: 12px 12px 0 0;
+
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.50);
+
+    color: black;
+
+    padding: 10px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: 
+
+        opacity 0.8s ease 0.7s, 
+
+        transform 0.8s ease 0.7s;
+
+    z-index: 5;
+
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+.slideshow-slide.active-slide .slideshow-contact-info {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+
+.slideshow-contact-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    font-weight: bold;
+
+    margin-right: 15px;
+
+}
+
+
+
+.slideshow-contact-logo img {
+
+    height: 40px;
+
+    width: auto;
+
+    margin-right: 10px;
+
+    transform: none !important; /* Override the Ken Burns effect */
+
+    transition: none !important;
+
+}
+
+
+
+.slideshow-contact-details {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    font-size: 16px;
+
+    justify-content: center;
+
+    width: 100%;
+
+}
+
+
+
+.contact-item {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-left: 20px;
+
+    color: #000000;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    /* text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); */
+
+}
+
+
+
+.contact-item:hover {
+
+    color: #5db434;
+
+    transition: color 0.3s ease;
+
+}
+
+
+
+.contact-item img {
+
+    height: 18px;
+
+    width: auto;
+
+    margin-right: 6px;
+
+    transform: none !important; /* Override the Ken Burns effect */
+
+    transition: none !important;
+
+}
+
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+
+    .slideshow-contact-info {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 10px;
+
+    }
+
+    
+
+    .slideshow-contact-logo {
+
+        margin-bottom: 5px;
+
+    }
+
+    
+
+    .slideshow-contact-details {
+
+        width: 100%;
+
+    }
+
+    
+
+    .contact-item {
+
+        margin-right: 10px;
+
+        margin-bottom: 5px;
+
+        font-size: 12px;
+
+    }
+
+    
+
+    .slideshow-contact-logo img {
+
+        height: 30px;
+
+    }
+
+} 
+
+/* Slideshow Navigation Dots */
+
+.slideshow-dots {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 10px;
+
+    z-index: 10;
+
+}
+
+.slideshow-dot {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.slideshow-dot:hover {
+
+    background: rgba(255, 255, 255, 0.5);
+
+    transform: scale(1.1);
+
+}
+
+.slideshow-dot.active {
+
+    background: white;
+
+    transform: scale(1.2);
+
+}
+
+/* Responsive dots */
+
+@media (max-width: 768px) {
+
+    .slideshow-dots {
+
+        bottom: 15px;
+
+        gap: 8px;
+
+    }
+
+    
+
+    .slideshow-dot {
+
+        width: 10px;
+
+        height: 10px;
+
+        border-width: 1.5px;
+
+    }
+
+}

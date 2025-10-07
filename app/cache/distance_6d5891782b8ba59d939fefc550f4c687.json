@@ -1,0 +1,48 @@
+{
+   "destination_addresses" : 
+   [
+      "Splaiul Independenței 15, București 050092, Romania",
+      ""
+   ],
+   "origin_addresses" : 
+   [
+      "",
+      "Splaiul Independenței 15, București 050092, Romania"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "status" : "NOT_FOUND"
+            },
+            {
+               "status" : "NOT_FOUND"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "status" : "NOT_FOUND"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

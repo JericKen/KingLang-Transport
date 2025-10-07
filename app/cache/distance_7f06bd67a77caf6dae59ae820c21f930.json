@@ -1,0 +1,78 @@
+{
+   "destination_addresses" : 
+   [
+      "Resorts World Bayshore Phase 1, Diosdado Macapagal Blvd, Parañaque, Metro Manila, Philippines",
+      "Cabuyao City, Laguna, Philippines"
+   ],
+   "origin_addresses" : 
+   [
+      "Cabuyao City, Laguna, Philippines",
+      "Resorts World Bayshore Phase 1, Diosdado Macapagal Blvd, Parañaque, Metro Manila, Philippines"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "43.3 km",
+                  "value" : 43308
+               },
+               "duration" : 
+               {
+                  "text" : "51 mins",
+                  "value" : 3036
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "40.5 km",
+                  "value" : 40528
+               },
+               "duration" : 
+               {
+                  "text" : "50 mins",
+                  "value" : 3010
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

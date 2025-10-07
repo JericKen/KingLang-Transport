@@ -1,0 +1,279 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "KingLang Tours and Transport Services Inc., M. L. Quezon Avenue, Lower Bicutan, Taguig, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJb6l52BbPlzMRcLRMZWqJQMU",
+         "reference" : "ChIJb6l52BbPlzMRcLRMZWqJQMU",
+         "structured_formatting" : 
+         {
+            "main_text" : "KingLang Tours and Transport Services Inc.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "M. L. Quezon Avenue, Lower Bicutan, Taguig, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "KingLang Tours and Transport Services Inc."
+            },
+            {
+               "offset" : 44,
+               "value" : "M. L. Quezon Avenue"
+            },
+            {
+               "offset" : 65,
+               "value" : "Lower Bicutan"
+            },
+            {
+               "offset" : 80,
+               "value" : "Taguig"
+            },
+            {
+               "offset" : 88,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 102,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Kingland Motorcycle Tire & Tubs, Sampaguita Street, Taytay, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJfZ5hbkPGlzMR6KR7N7sZ2Tw",
+         "reference" : "ChIJfZ5hbkPGlzMR6KR7N7sZ2Tw",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kingland Motorcycle Tire & Tubs",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Sampaguita Street, Taytay, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kingland Motorcycle Tire & Tubs"
+            },
+            {
+               "offset" : 33,
+               "value" : "Sampaguita Street"
+            },
+            {
+               "offset" : 52,
+               "value" : "Taytay"
+            },
+            {
+               "offset" : 60,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 67,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "car_repair",
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Kingsland Enterprises Inc, Rizal Avenue Extension, Grace Park West, Caloocan, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 25,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJkfvz39m1lzMRtBqILaDmS_c",
+         "reference" : "ChIJkfvz39m1lzMRtBqILaDmS_c",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kingsland Enterprises Inc",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 25,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Rizal Avenue Extension, Grace Park West, Caloocan, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kingsland Enterprises Inc"
+            },
+            {
+               "offset" : 27,
+               "value" : "Rizal Avenue Extension"
+            },
+            {
+               "offset" : 51,
+               "value" : "Grace Park West"
+            },
+            {
+               "offset" : 68,
+               "value" : "Caloocan"
+            },
+            {
+               "offset" : 78,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 92,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Kinglany store, Mt. Dumagat st, Rodriguez, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJP1ZDRwC_lzMR5maT438KCwQ",
+         "reference" : "ChIJP1ZDRwC_lzMR5maT438KCwQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kinglany store",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Mt. Dumagat st, Rodriguez, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kinglany store"
+            },
+            {
+               "offset" : 16,
+               "value" : "Mt. Dumagat st"
+            },
+            {
+               "offset" : 32,
+               "value" : "Rodriguez"
+            },
+            {
+               "offset" : 43,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 50,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "grocery_or_supermarket",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "Kingland Hopia, Mampang - Arena Blanco Road, Zamboanga City, Zamboanga del Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJu882NZ1DUDIR9JbiqLN5CEs",
+         "reference" : "ChIJu882NZ1DUDIR9JbiqLN5CEs",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kingland Hopia",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Mampang - Arena Blanco Road, Zamboanga City, Zamboanga del Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kingland Hopia"
+            },
+            {
+               "offset" : 16,
+               "value" : "Mampang - Arena Blanco Road"
+            },
+            {
+               "offset" : 45,
+               "value" : "Zamboanga City"
+            },
+            {
+               "offset" : 61,
+               "value" : "Zamboanga del Sur"
+            },
+            {
+               "offset" : 80,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

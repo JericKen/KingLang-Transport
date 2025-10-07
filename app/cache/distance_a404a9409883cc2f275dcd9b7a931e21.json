@@ -1,0 +1,38 @@
+{
+   "destination_addresses" : 
+   [
+      "Dona Remedios Trinidad, Bulacan, Philippines",
+      ""
+   ],
+   "origin_addresses" : 
+   [
+      "",
+      "Dona Remedios Trinidad, Bulacan, Philippines"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "status" : "NOT_FOUND"
+            },
+            {
+               "status" : "NOT_FOUND"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "status" : "ZERO_RESULTS"
+            },
+            {
+               "status" : "NOT_FOUND"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

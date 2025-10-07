@@ -1,0 +1,78 @@
+{
+   "destination_addresses" : 
+   [
+      "Resorts World Bayshore Phase 1, Diosdado Macapagal Blvd, Parañaque, Metro Manila, Philippines",
+      "295-B, Purok 4, M. L. Quezon Ave, Lower Bicutan, Taguig, 1632 Metro Manila, Philippines"
+   ],
+   "origin_addresses" : 
+   [
+      "295-B, Purok 4, M. L. Quezon Ave, Lower Bicutan, Taguig, 1632 Metro Manila, Philippines",
+      "Resorts World Bayshore Phase 1, Diosdado Macapagal Blvd, Parañaque, Metro Manila, Philippines"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "15.7 km",
+                  "value" : 15670
+               },
+               "duration" : 
+               {
+                  "text" : "26 mins",
+                  "value" : 1588
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "17.7 km",
+                  "value" : 17711
+               },
+               "duration" : 
+               {
+                  "text" : "29 mins",
+                  "value" : 1748
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

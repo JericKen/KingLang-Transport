@@ -1,0 +1,78 @@
+{
+   "destination_addresses" : 
+   [
+      "Epifanio de los Santos Ave & Shaw Blvd, Ortigas Center, Mandaluyong City, Metro Manila, Philippines",
+      "7573 Swimming Pool, Novaliches, Caloocan, Metro Manila, Philippines"
+   ],
+   "origin_addresses" : 
+   [
+      "7573 Swimming Pool, Novaliches, Caloocan, Metro Manila, Philippines",
+      "Epifanio de los Santos Ave & Shaw Blvd, Ortigas Center, Mandaluyong City, Metro Manila, Philippines"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "24.5 km",
+                  "value" : 24478
+               },
+               "duration" : 
+               {
+                  "text" : "55 mins",
+                  "value" : 3305
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "22.7 km",
+                  "value" : 22730
+               },
+               "duration" : 
+               {
+                  "text" : "52 mins",
+                  "value" : 3135
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,0 +1,270 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Hiabangan, Dagami, Leyte, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJB_vdQ57dBzMRMX1vh7uBKwY",
+         "reference" : "ChIJB_vdQ57dBzMRMX1vh7uBKwY",
+         "structured_formatting" : 
+         {
+            "main_text" : "Hiabangan",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Dagami, Leyte, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Hiabangan"
+            },
+            {
+               "offset" : 11,
+               "value" : "Dagami"
+            },
+            {
+               "offset" : 19,
+               "value" : "Leyte"
+            },
+            {
+               "offset" : 26,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Hiagsam, Jaro, Leyte, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJZQsHq4IJCDMR7nQH2PSeHNs",
+         "reference" : "ChIJZQsHq4IJCDMR7nQH2PSeHNs",
+         "structured_formatting" : 
+         {
+            "main_text" : "Hiagsam",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Jaro, Leyte, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Hiagsam"
+            },
+            {
+               "offset" : 9,
+               "value" : "Jaro"
+            },
+            {
+               "offset" : 15,
+               "value" : "Leyte"
+            },
+            {
+               "offset" : 22,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Hiatus Coffee Ph, Carbajal Street, Malaybalay City, Bukidnon, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ--kTfaGr_zIRDso2enMjBX0",
+         "reference" : "ChIJ--kTfaGr_zIRDso2enMjBX0",
+         "structured_formatting" : 
+         {
+            "main_text" : "Hiatus Coffee Ph",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Carbajal Street, Malaybalay City, Bukidnon, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Hiatus Coffee Ph"
+            },
+            {
+               "offset" : 18,
+               "value" : "Carbajal Street"
+            },
+            {
+               "offset" : 35,
+               "value" : "Malaybalay City"
+            },
+            {
+               "offset" : 52,
+               "value" : "Bukidnon"
+            },
+            {
+               "offset" : 62,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "cafe",
+            "establishment",
+            "food",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "HiAdvance Philippines Incorporated, San Antonio, Makati City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJU27vDzzJlzMRbeI6LN1Lp0M",
+         "reference" : "ChIJU27vDzzJlzMRbeI6LN1Lp0M",
+         "structured_formatting" : 
+         {
+            "main_text" : "HiAdvance Philippines Incorporated",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Antonio, Makati City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "HiAdvance Philippines Incorporated"
+            },
+            {
+               "offset" : 36,
+               "value" : "San Antonio"
+            },
+            {
+               "offset" : 49,
+               "value" : "Makati City"
+            },
+            {
+               "offset" : 62,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 76,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "HIA'S RESIDENCES, Central District, Poblacion, Liloan, Southern Leyte, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJScweDgAlBzMRY-uC0IHfT-I",
+         "reference" : "ChIJScweDgAlBzMRY-uC0IHfT-I",
+         "structured_formatting" : 
+         {
+            "main_text" : "HIA'S RESIDENCES",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Central District, Poblacion, Liloan, Southern Leyte, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "HIA'S RESIDENCES"
+            },
+            {
+               "offset" : 18,
+               "value" : "Central District"
+            },
+            {
+               "offset" : 36,
+               "value" : "Poblacion"
+            },
+            {
+               "offset" : 47,
+               "value" : "Liloan"
+            },
+            {
+               "offset" : 55,
+               "value" : "Southern Leyte"
+            },
+            {
+               "offset" : 71,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

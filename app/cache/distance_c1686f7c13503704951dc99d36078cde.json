@@ -1,0 +1,78 @@
+{
+   "destination_addresses" : 
+   [
+      "Barangay 171, Caloocan, Metro Manila, Philippines",
+      "Maligaya St, Quezon City, Metro Manila, Philippines"
+   ],
+   "origin_addresses" : 
+   [
+      "Maligaya St, Quezon City, Metro Manila, Philippines",
+      "Barangay 171, Caloocan, Metro Manila, Philippines"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "8.4 km",
+                  "value" : 8360
+               },
+               "duration" : 
+               {
+                  "text" : "25 mins",
+                  "value" : 1478
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "8.4 km",
+                  "value" : 8361
+               },
+               "duration" : 
+               {
+                  "text" : "24 mins",
+                  "value" : 1465
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

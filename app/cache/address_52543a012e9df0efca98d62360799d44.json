@@ -1,0 +1,207 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Kinglong Food Trading, Del Pilar, Valenzuela, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJAQthR5W1lzMRZTyqemCSnqE",
+         "reference" : "ChIJAQthR5W1lzMRZTyqemCSnqE",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kinglong Food Trading",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Del Pilar, Valenzuela, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kinglong Food Trading"
+            },
+            {
+               "offset" : 23,
+               "value" : "Del Pilar"
+            },
+            {
+               "offset" : 34,
+               "value" : "Valenzuela"
+            },
+            {
+               "offset" : 46,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 60,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Kinglong General Merchandise, Valenzuela, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJBzAULjmxlzMRYAYiDTo49FM",
+         "reference" : "ChIJBzAULjmxlzMRYAYiDTo49FM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kinglong General Merchandise",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Valenzuela, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kinglong General Merchandise"
+            },
+            {
+               "offset" : 30,
+               "value" : "Valenzuela"
+            },
+            {
+               "offset" : 42,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 56,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Philippine Kinglong Bus Inc., Caloocan, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 11
+            }
+         ],
+         "place_id" : "ChIJ739EbSm0lzMRHfj_CO_OQPI",
+         "reference" : "ChIJ739EbSm0lzMRHfj_CO_OQPI",
+         "structured_formatting" : 
+         {
+            "main_text" : "Philippine Kinglong Bus Inc.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 11
+               }
+            ],
+            "secondary_text" : "Caloocan, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Philippine Kinglong Bus Inc."
+            },
+            {
+               "offset" : 30,
+               "value" : "Caloocan"
+            },
+            {
+               "offset" : 40,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 54,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Kinglong Employees Multipurpose Cooperative, National Highway, Surigao, Surigao del Norte, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJZVk0BCw3ATMRjNxKM-7pSlE",
+         "reference" : "ChIJZVk0BCw3ATMRjNxKM-7pSlE",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kinglong Employees Multipurpose Cooperative",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "National Highway, Surigao, Surigao del Norte, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kinglong Employees Multipurpose Cooperative"
+            },
+            {
+               "offset" : 45,
+               "value" : "National Highway"
+            },
+            {
+               "offset" : 63,
+               "value" : "Surigao"
+            },
+            {
+               "offset" : 72,
+               "value" : "Surigao del Norte"
+            },
+            {
+               "offset" : 91,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,0 +1,272 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Resorts World Manila Bayshore, Diosdado Macapagal Boulevard, Parañaque, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJN_T81RzMlzMRmxkHxftcH8I",
+         "reference" : "ChIJN_T81RzMlzMRmxkHxftcH8I",
+         "structured_formatting" : 
+         {
+            "main_text" : "Resorts World Manila Bayshore",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Diosdado Macapagal Boulevard, Parañaque, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Resorts World Manila Bayshore"
+            },
+            {
+               "offset" : 31,
+               "value" : "Diosdado Macapagal Boulevard"
+            },
+            {
+               "offset" : 61,
+               "value" : "Parañaque"
+            },
+            {
+               "offset" : 72,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 86,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "premise"
+         ]
+      },
+      {
+         "description" : "Newport World Resorts, Newport Boulevard, Pasay City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 14
+            }
+         ],
+         "place_id" : "ChIJVxSJ6MzOlzMRxWAqyMGQz54",
+         "reference" : "ChIJVxSJ6MzOlzMRxWAqyMGQz54",
+         "structured_formatting" : 
+         {
+            "main_text" : "Newport World Resorts",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 14
+               }
+            ],
+            "secondary_text" : "Newport Boulevard, Pasay City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Newport World Resorts"
+            },
+            {
+               "offset" : 23,
+               "value" : "Newport Boulevard"
+            },
+            {
+               "offset" : 42,
+               "value" : "Pasay City"
+            },
+            {
+               "offset" : 54,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 68,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "casino",
+            "establishment",
+            "lodging",
+            "point_of_interest",
+            "shopping_mall"
+         ]
+      },
+      {
+         "description" : "Resorts World Bayshore Phase 1, J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJO7pUPgLMlzMRq6nOfJ0gHGA",
+         "reference" : "ChIJO7pUPgLMlzMRq6nOfJ0gHGA",
+         "structured_formatting" : 
+         {
+            "main_text" : "Resorts World Bayshore Phase 1",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Resorts World Bayshore Phase 1"
+            },
+            {
+               "offset" : 32,
+               "value" : "J.W. Diokno Boulevard"
+            },
+            {
+               "offset" : 55,
+               "value" : "Parañaque"
+            },
+            {
+               "offset" : 66,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 80,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Resort Paraiso Pampanga, Paraiso street, San Fernando, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJxwSfWPzzljMRO0UtytYFDIs",
+         "reference" : "ChIJxwSfWPzzljMRO0UtytYFDIs",
+         "structured_formatting" : 
+         {
+            "main_text" : "Resort Paraiso Pampanga",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Paraiso street, San Fernando, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Resort Paraiso Pampanga"
+            },
+            {
+               "offset" : 25,
+               "value" : "Paraiso street"
+            },
+            {
+               "offset" : 41,
+               "value" : "San Fernando"
+            },
+            {
+               "offset" : 55,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "The Orchid Gardens Resort Complex, Lazatin Boulevard, San Fernando, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 19
+            }
+         ],
+         "place_id" : "ChIJu5FFsaj3ljMR1lHjLKQ_CmA",
+         "reference" : "ChIJu5FFsaj3ljMR1lHjLKQ_CmA",
+         "structured_formatting" : 
+         {
+            "main_text" : "The Orchid Gardens Resort Complex",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 19
+               }
+            ],
+            "secondary_text" : "Lazatin Boulevard, San Fernando, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "The Orchid Gardens Resort Complex"
+            },
+            {
+               "offset" : 35,
+               "value" : "Lazatin Boulevard"
+            },
+            {
+               "offset" : 54,
+               "value" : "San Fernando"
+            },
+            {
+               "offset" : 68,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 78,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "lodging",
+            "point_of_interest",
+            "restaurant"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

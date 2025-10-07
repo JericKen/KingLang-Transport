@@ -1,0 +1,256 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Maligaya Street, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "EjdNYWxpZ2F5YSBTdHJlZXQsIFF1ZXpvbiBDaXR5LCBNZXRybyBNYW5pbGEsIFBoaWxpcHBpbmVzIi4qLAoUChIJH4rYqGmwlzMR0a0YPRADHeESFAoSCXVz70IJupczEUA9CP7ZMppK",
+         "reference" : "EjdNYWxpZ2F5YSBTdHJlZXQsIFF1ZXpvbiBDaXR5LCBNZXRybyBNYW5pbGEsIFBoaWxpcHBpbmVzIi4qLAoUChIJH4rYqGmwlzMR0a0YPRADHeESFAoSCXVz70IJupczEUA9CP7ZMppK",
+         "structured_formatting" : 
+         {
+            "main_text" : "Maligaya Street",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Maligaya Street"
+            },
+            {
+               "offset" : 17,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 30,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 44,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      },
+      {
+         "description" : "Maligaya, Floridablanca, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJayQuR3dgljMR47dqXm20h94",
+         "reference" : "ChIJayQuR3dgljMR47dqXm20h94",
+         "structured_formatting" : 
+         {
+            "main_text" : "Maligaya",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Floridablanca, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Maligaya"
+            },
+            {
+               "offset" : 10,
+               "value" : "Floridablanca"
+            },
+            {
+               "offset" : 25,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 35,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Maligaya, Tarlac City, Tarlac, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJhY2iZCjEljMRlZRKqSwLlGA",
+         "reference" : "ChIJhY2iZCjEljMRlZRKqSwLlGA",
+         "structured_formatting" : 
+         {
+            "main_text" : "Maligaya",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Tarlac City, Tarlac, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Maligaya"
+            },
+            {
+               "offset" : 10,
+               "value" : "Tarlac City"
+            },
+            {
+               "offset" : 23,
+               "value" : "Tarlac"
+            },
+            {
+               "offset" : 31,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Maligaya Elementary School, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJLwgAQGmwlzMRcEuu63QHI6A",
+         "reference" : "ChIJLwgAQGmwlzMRcEuu63QHI6A",
+         "structured_formatting" : 
+         {
+            "main_text" : "Maligaya Elementary School",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Maligaya Elementary School"
+            },
+            {
+               "offset" : 28,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 41,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 55,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      },
+      {
+         "description" : "Maligaya Park, Novaliches, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJqadJ8XixlzMRx007ulxb-vE",
+         "reference" : "ChIJqadJ8XixlzMRx007ulxb-vE",
+         "structured_formatting" : 
+         {
+            "main_text" : "Maligaya Park",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Novaliches, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Maligaya Park"
+            },
+            {
+               "offset" : 15,
+               "value" : "Novaliches"
+            },
+            {
+               "offset" : 27,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 40,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 54,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "university"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

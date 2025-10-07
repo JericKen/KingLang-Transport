@@ -1,0 +1,58 @@
+{
+   "destination_addresses" : 
+   [
+      "Resorts World Bayshore Phase 1, Diosdado Macapagal Blvd, Parañaque, Metro Manila, Philippines",
+      "Eco Park, Major Arterial Road(South-East, Biswa Bangla Sarani, AA II, Newtown, Kolkata, New Town, West Bengal 700156, India"
+   ],
+   "origin_addresses" : 
+   [
+      "Eco Park, Major Arterial Road(South-East, Biswa Bangla Sarani, AA II, Newtown, Kolkata, New Town, West Bengal 700156, India",
+      "Resorts World Bayshore Phase 1, Diosdado Macapagal Blvd, Parañaque, Metro Manila, Philippines"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "status" : "ZERO_RESULTS"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "status" : "ZERO_RESULTS"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

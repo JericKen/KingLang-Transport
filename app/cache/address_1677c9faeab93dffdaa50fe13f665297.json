@@ -1,0 +1,282 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Colegio de San Gabriel Arcangel, Dr. Eduardo V. Roquero Sr. Avenue, San Jose del Monte, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 12,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJyTFOFzOvlzMRJ53rhnwndGI",
+         "reference" : "ChIJyTFOFzOvlzMRJ53rhnwndGI",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio de San Gabriel Arcangel",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 12,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Dr. Eduardo V. Roquero Sr. Avenue, San Jose del Monte, Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio de San Gabriel Arcangel"
+            },
+            {
+               "offset" : 33,
+               "value" : "Dr. Eduardo V. Roquero Sr. Avenue"
+            },
+            {
+               "offset" : 68,
+               "value" : "San Jose del Monte"
+            },
+            {
+               "offset" : 88,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 97,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school",
+            "university"
+         ]
+      },
+      {
+         "description" : "Colegio de San Juan de Letran, Muralla Street, Intramuros, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 12,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJGTPGLBjKlzMRIgKdBKLi_Yc",
+         "reference" : "ChIJGTPGLBjKlzMRIgKdBKLi_Yc",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio de San Juan de Letran",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 12,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Muralla Street, Intramuros, Manila, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio de San Juan de Letran"
+            },
+            {
+               "offset" : 31,
+               "value" : "Muralla Street"
+            },
+            {
+               "offset" : 47,
+               "value" : "Intramuros"
+            },
+            {
+               "offset" : 59,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 67,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 81,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school",
+            "university"
+         ]
+      },
+      {
+         "description" : "Colegio de San Juan de Letran Calamba, Bucal Bypass Road, Calamba, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 12,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ2WIuKOFjvTMRTXhW8dkmZp0",
+         "reference" : "ChIJ2WIuKOFjvTMRTXhW8dkmZp0",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio de San Juan de Letran Calamba",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 12,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bucal Bypass Road, Calamba, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio de San Juan de Letran Calamba"
+            },
+            {
+               "offset" : 39,
+               "value" : "Bucal Bypass Road"
+            },
+            {
+               "offset" : 58,
+               "value" : "Calamba"
+            },
+            {
+               "offset" : 67,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 75,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school",
+            "university"
+         ]
+      },
+      {
+         "description" : "Colegio De Sebastian Pampanga Incorporated, MacArthur Highway, San Fernando, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 12,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJH4ld_tz2ljMRQeWXo9CrNbk",
+         "reference" : "ChIJH4ld_tz2ljMRQeWXo9CrNbk",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio De Sebastian Pampanga Incorporated",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 12,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "MacArthur Highway, San Fernando, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio De Sebastian Pampanga Incorporated"
+            },
+            {
+               "offset" : 44,
+               "value" : "MacArthur Highway"
+            },
+            {
+               "offset" : 63,
+               "value" : "San Fernando"
+            },
+            {
+               "offset" : 77,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 87,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "university"
+         ]
+      },
+      {
+         "description" : "Colegio de San Jose, East Lopez Street, Jaro, Iloilo City, Iloilo, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 12,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJx5zxoRjlrjMRVQ4DrLrBLPw",
+         "reference" : "ChIJx5zxoRjlrjMRVQ4DrLrBLPw",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio de San Jose",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 12,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "East Lopez Street, Jaro, Iloilo City, Iloilo, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio de San Jose"
+            },
+            {
+               "offset" : 21,
+               "value" : "East Lopez Street"
+            },
+            {
+               "offset" : 40,
+               "value" : "Jaro"
+            },
+            {
+               "offset" : 46,
+               "value" : "Iloilo City"
+            },
+            {
+               "offset" : 59,
+               "value" : "Iloilo"
+            },
+            {
+               "offset" : 67,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

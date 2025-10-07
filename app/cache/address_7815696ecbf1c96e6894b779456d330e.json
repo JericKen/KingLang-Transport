@@ -1,0 +1,262 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "ASD Badminton Center, INDIA STREET, Angat, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJw8sz4nYHlzMRTfVOYfNcjB4",
+         "reference" : "ChIJw8sz4nYHlzMRTfVOYfNcjB4",
+         "structured_formatting" : 
+         {
+            "main_text" : "ASD Badminton Center",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "INDIA STREET, Angat, Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "ASD Badminton Center"
+            },
+            {
+               "offset" : 22,
+               "value" : "INDIA STREET"
+            },
+            {
+               "offset" : 36,
+               "value" : "Angat"
+            },
+            {
+               "offset" : 43,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 52,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Asdum, San Vicente, Camarines Norte, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ3dBbOC2kmDMRJfe-VHYYsG8",
+         "reference" : "ChIJ3dBbOC2kmDMRJfe-VHYYsG8",
+         "structured_formatting" : 
+         {
+            "main_text" : "Asdum",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Vicente, Camarines Norte, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Asdum"
+            },
+            {
+               "offset" : 7,
+               "value" : "San Vicente"
+            },
+            {
+               "offset" : 20,
+               "value" : "Camarines Norte"
+            },
+            {
+               "offset" : 37,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "ASD OBGYN AND ULTRASOUND CLINIC, Valenzuela, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJi9-azIKxlzMR4H1wF8rnDFA",
+         "reference" : "ChIJi9-azIKxlzMR4H1wF8rnDFA",
+         "structured_formatting" : 
+         {
+            "main_text" : "ASD OBGYN AND ULTRASOUND CLINIC",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Valenzuela, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "ASD OBGYN AND ULTRASOUND CLINIC"
+            },
+            {
+               "offset" : 33,
+               "value" : "Valenzuela"
+            },
+            {
+               "offset" : 45,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 59,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "doctor",
+            "establishment",
+            "health",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "AsDi Photo Studio, 6th Avenue, San Fernando, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJPcOuWF73ljMRAXFuDHfYUZA",
+         "reference" : "ChIJPcOuWF73ljMRAXFuDHfYUZA",
+         "structured_formatting" : 
+         {
+            "main_text" : "AsDi Photo Studio",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "6th Avenue, San Fernando, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "AsDi Photo Studio"
+            },
+            {
+               "offset" : 19,
+               "value" : "6th Avenue"
+            },
+            {
+               "offset" : 31,
+               "value" : "San Fernando"
+            },
+            {
+               "offset" : 45,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 55,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "ASD Apartments, Cardona, Makati City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJfY-f467JlzMRWkRWKcWytX0",
+         "reference" : "ChIJfY-f467JlzMRWkRWKcWytX0",
+         "structured_formatting" : 
+         {
+            "main_text" : "ASD Apartments",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Cardona, Makati City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "ASD Apartments"
+            },
+            {
+               "offset" : 16,
+               "value" : "Cardona"
+            },
+            {
+               "offset" : 25,
+               "value" : "Makati City"
+            },
+            {
+               "offset" : 38,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 52,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking Analytics Dashboard</title>
+    
+    <!-- Chart Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.44.0/dist/apexcharts.min.js"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; }
+        .dashboard-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px 0; }
+        .card { border: none; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .card-header { background: #fff; border-bottom: 2px solid #f0f0f0; font-weight: 600; }
+        .metric-card { text-align: center; padding: 20px; }
+        .metric-value { font-size: 2.5rem; font-weight: bold; color: #667eea; }
+        .metric-label { color: #6c757d; font-size: 0.9rem; text-transform: uppercase; }
+        .chart-container { position: relative; height: 400px; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="container">
+            <h1>📊 Bus Booking Analytics Dashboard</h1>
+            <p>Comprehensive Analytics & Predictive Insights</p>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <!-- KPI Metrics Row -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card metric-card">
+                    <div class="metric-value" id="totalRevenue">₱2.5M</div>
+                    <div class="metric-label">Total Revenue</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card metric-card">
+                    <div class="metric-value" id="totalBookings">1,248</div>
+                    <div class="metric-label">Total Bookings</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card metric-card">
+                    <div class="metric-value" id="avgRating">4.5</div>
+                    <div class="metric-label">Avg Rating</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card metric-card">
+                    <div class="metric-value" id="fleetUtilization">78%</div>
+                    <div class="metric-label">Fleet Utilization</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Revenue & Bookings -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">📈 Daily Revenue Trends</div>
+                    <div class="chart-container">
+                        <canvas id="dailyRevenueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">🚌 Most-Used Buses</div>
+                    <div class="chart-container">
+                        <canvas id="mostUsedBusesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Predictive Analytics -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">🔮 30-Day Booking Forecast (ARIMA+)</div>
+                    <div class="card-body">
+                        <canvas id="forecastChart" height="120"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Patterns -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">📆 Busiest Booking Days</div>
+                    <div class="card-body">
+                        <canvas id="busyDaysChart" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">🌍 Top Destinations</div>
+                    <div class="card-body">
+                        <canvas id="topDestinationsChart" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback & Sentiment -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">⭐ Average Ratings per Bus</div>
+                    <div class="chart-container">
+                        <canvas id="busRatingsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">💬 Feedback Keywords</div>
+                    <div class="chart-container">
+                        <canvas id="keywordFrequencyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Maintenance Alerts -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">⚠️ Maintenance Alerts</div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Bus Name</th>
+                                    <th>Mileage Since Maintenance</th>
+                                    <th>Days Since Maintenance</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="maintenanceTableBody">
+                                <tr>
+                                    <td>Bus Echo</td>
+                                    <td>12,000 km</td>
+                                    <td>195 days</td>
+                                    <td><span class="badge bg-danger">URGENT</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Bus Hotel</td>
+                                    <td>9,500 km</td>
+                                    <td>210 days</td>
+                                    <td><span class="badge bg-danger">URGENT</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Bus Gamma</td>
+                                    <td>8,200 km</td>
+                                    <td>165 days</td>
+                                    <td><span class="badge bg-warning">WARNING</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Load chart scripts
+        // Include: revenue_trends_chart.js, bus_performance_charts.js, 
+        //          booking_patterns_apexcharts.js, predictive_analytics_apexcharts.js,
+        //          customer_feedback_charts.js
+
+        // Fetch data from backend API
+        async function loadDashboardData() {
+            try {
+                console.log('Loading dashboard data...');
+                
+                // Revenue data
+                const revenueRes = await fetch('api/analytics.php?endpoint=revenue-daily');
+                const revenueData = await revenueRes.json();
+                console.log('Revenue data:', revenueData);
+                
+                // Update KPI metrics
+                const totalRevenue = revenueData.reduce((sum, item) => sum + item.daily_revenue, 0);
+                const totalBookings = revenueData.reduce((sum, item) => sum + item.booking_count, 0);
+                
+                document.getElementById('totalRevenue').textContent = '₱' + (totalRevenue / 1000000).toFixed(1) + 'M';
+                document.getElementById('totalBookings').textContent = totalBookings.toLocaleString();
+                
+                // Load bus data
+                const busRes = await fetch('api/analytics.php?endpoint=buses-most-used');
+                const busData = await busRes.json();
+                console.log('Bus data:', busData);
+                
+                // Load maintenance alerts
+                const maintenanceRes = await fetch('api/analytics.php?endpoint=maintenance-alerts');
+                const maintenanceData = await maintenanceRes.json();
+                console.log('Maintenance data:', maintenanceData);
+                
+                // Load forecast data
+                const forecastRes = await fetch('api/analytics.php?endpoint=forecast-bookings');
+                const forecastData = await forecastRes.json();
+                console.log('Forecast data:', forecastData);
+                
+                // Load busiest days data
+                const busyDaysRes = await fetch('api/analytics.php?endpoint=busiest-days');
+                const busyDaysData = await busyDaysRes.json();
+                console.log('Busiest days data:', busyDaysData);
+                
+                // Load destinations data
+                const destinationsRes = await fetch('api/analytics.php?endpoint=destinations-top');
+                const destinationsData = await destinationsRes.json();
+                console.log('Destinations data:', destinationsData);
+                
+                // Load bus ratings data
+                const ratingsRes = await fetch('api/analytics.php?endpoint=bus-ratings');
+                const ratingsData = await ratingsRes.json();
+                console.log('Ratings data:', ratingsData);
+                
+                // Load feedback keywords data
+                const keywordsRes = await fetch('api/analytics.php?endpoint=feedback-keywords');
+                const keywordsData = await keywordsRes.json();
+                console.log('Keywords data:', keywordsData);
+                
+                // Update maintenance table
+                updateMaintenanceTable(maintenanceData);
+                
+                // Initialize charts with real data
+                initializeCharts(revenueData, busData, forecastData, busyDaysData, destinationsData, ratingsData, keywordsData);
+                
+            } catch (error) {
+                console.error('Error loading dashboard data:', error);
+                // Fallback to sample data
+                console.log('Using sample data as fallback');
+            }
+        }
+
+        function updateMaintenanceTable(data) {
+            const tbody = document.getElementById('maintenanceTableBody');
+            tbody.innerHTML = '';
+            
+            data.forEach(bus => {
+                const row = document.createElement('tr');
+                const statusClass = bus.status === 'URGENT' ? 'bg-danger' : 'bg-warning';
+                row.innerHTML = `
+                    <td>${bus.bus_name}</td>
+                    <td>${bus.mileage_since_maintenance.toLocaleString()} km</td>
+                    <td>${bus.days_since_maintenance} days</td>
+                    <td><span class="badge ${statusClass}">${bus.status}</span></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function initializeCharts(revenueData, busData, forecastData, busyDaysData, destinationsData, ratingsData, keywordsData) {
+            // Update revenue chart with real data
+            if (typeof Chart !== 'undefined') {
+                // Daily Revenue Chart
+                const revenueCtx = document.getElementById('dailyRevenueChart');
+                if (revenueCtx) {
+                    const labels = revenueData.map(item => item.revenue_date);
+                    const values = revenueData.map(item => item.daily_revenue);
+                    
+                    new Chart(revenueCtx, {
+                        type: 'line',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                label: 'Daily Revenue',
+                                data: values,
+                                borderColor: 'rgb(75, 192, 192)',
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                tension: 0.4,
+                                fill: true
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'Daily Revenue Trends'
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    ticks: {
+                                        callback: function(value) {
+                                            return '₱' + value.toLocaleString();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Most-Used Buses Chart
+                const busCtx = document.getElementById('mostUsedBusesChart');
+                if (busCtx && busData) {
+                    const busLabels = busData.map(item => item.bus_name);
+                    const busValues = busData.map(item => item.booking_count);
+                    
+                    new Chart(busCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: busLabels,
+                            datasets: [{
+                                label: 'Booking Count',
+                                data: busValues,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.8)',
+                                    'rgba(54, 162, 235, 0.8)',
+                                    'rgba(255, 205, 86, 0.8)',
+                                    'rgba(75, 192, 192, 0.8)',
+                                    'rgba(153, 102, 255, 0.8)'
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 205, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            indexAxis: 'y',
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'Most-Used Buses (by Booking Count)'
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // 30-Day Booking Forecast Chart
+                const forecastCtx = document.getElementById('forecastChart');
+                if (forecastCtx && forecastData) {
+                    const forecastLabels = forecastData.map(item => item.forecast_date);
+                    const forecastValues = forecastData.map(item => item.predicted_bookings);
+                    const lowerBounds = forecastData.map(item => item.lower_bound);
+                    const upperBounds = forecastData.map(item => item.upper_bound);
+                    
+                    new Chart(forecastCtx, {
+                        type: 'line',
+                        data: {
+                            labels: forecastLabels,
+                            datasets: [{
+                                label: '📈 Predicted Bookings',
+                                data: forecastValues,
+                                borderColor: 'rgb(147, 51, 234)',
+                                backgroundColor: 'rgba(147, 51, 234, 0.3)',
+                                borderWidth: 3,
+                                tension: 0.4,
+                                fill: false,
+                                pointRadius: 5,
+                                pointBackgroundColor: 'rgb(147, 51, 234)',
+                                pointBorderColor: '#fff',
+                                pointBorderWidth: 2
+                            }, {
+                                label: '📊 Upper Confidence Bound',
+                                data: upperBounds,
+                                borderColor: 'rgba(239, 68, 68, 0.5)',
+                                backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                                borderDash: [5, 5],
+                                borderWidth: 2,
+                                tension: 0.4,
+                                fill: false,
+                                pointRadius: 0
+                            }, {
+                                label: '📊 Lower Confidence Bound',
+                                data: lowerBounds,
+                                borderColor: 'rgba(34, 197, 94, 0.5)',
+                                backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                                borderDash: [5, 5],
+                                borderWidth: 2,
+                                tension: 0.4,
+                                fill: false,
+                                pointRadius: 0
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: true,
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: '🔮 Future Booking Predictions (Next 10 Days)',
+                                    font: {
+                                        size: 16,
+                                        weight: 'bold'
+                                    }
+                                },
+                                subtitle: {
+                                    display: true,
+                                    text: 'Forecasted using ARIMA+ Machine Learning Model',
+                                    font: {
+                                        size: 12
+                                    },
+                                    color: '#666'
+                                },
+                                legend: {
+                                    display: true,
+                                    position: 'top'
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            let label = context.dataset.label || '';
+                                            if (label) {
+                                                label += ': ';
+                                            }
+                                            label += Math.round(context.parsed.y) + ' bookings';
+                                            return label;
+                                        }
+                                    }
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    title: {
+                                        display: true,
+                                        text: 'Expected Number of Bookings',
+                                        font: {
+                                            size: 14,
+                                            weight: 'bold'
+                                        }
+                                    },
+                                    ticks: {
+                                        callback: function(value) {
+                                            return value + ' bookings';
+                                        }
+                                    }
+                                },
+                                x: {
+                                    title: {
+                                        display: true,
+                                        text: 'Future Dates →',
+                                        font: {
+                                            size: 14,
+                                            weight: 'bold'
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Busiest Booking Days Chart
+                const busyDaysCtx = document.getElementById('busyDaysChart');
+                if (busyDaysCtx && busyDaysData) {
+                    const dayLabels = busyDaysData.map(item => item.day_of_week);
+                    const dayValues = busyDaysData.map(item => item.booking_count);
+                    
+                    console.log('Creating Busiest Days chart with:', dayLabels, dayValues);
+                    
+                    new Chart(busyDaysCtx.getContext('2d'), {
+                        type: 'bar',
+                        data: {
+                            labels: dayLabels,
+                            datasets: [{
+                                label: 'Bookings per Day',
+                                data: dayValues,
+                                backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                                borderColor: 'rgba(59, 130, 246, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: true,
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'Busiest Booking Days'
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    title: {
+                                        display: true,
+                                        text: 'Number of Bookings'
+                                    }
+                                }
+                            }
+                        }
+                    });
+                } else {
+                    console.error('Busiest Days Chart: Element or data not found', {
+                        element: busyDaysCtx,
+                        hasData: !!busyDaysData
+                    });
+                }
+
+                // Top Destinations Chart
+                const destCtx = document.getElementById('topDestinationsChart');
+                if (destCtx && destinationsData) {
+                    const destLabels = destinationsData.map(item => item.destination);
+                    const destValues = destinationsData.map(item => item.booking_count);
+                    
+                    console.log('Creating Top Destinations chart with:', destLabels, destValues);
+                    
+                    new Chart(destCtx.getContext('2d'), {
+                        type: 'doughnut',
+                        data: {
+                            labels: destLabels,
+                            datasets: [{
+                                label: 'Bookings',
+                                data: destValues,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.8)',
+                                    'rgba(54, 162, 235, 0.8)',
+                                    'rgba(255, 205, 86, 0.8)',
+                                    'rgba(75, 192, 192, 0.8)',
+                                    'rgba(153, 102, 255, 0.8)'
+                                ],
+                                borderWidth: 2
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: true,
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'Top Destinations'
+                                },
+                                legend: {
+                                    position: 'bottom'
+                                }
+                            }
+                        }
+                    });
+                } else {
+                    console.error('Top Destinations Chart: Element or data not found', {
+                        element: destCtx,
+                        hasData: !!destinationsData
+                    });
+                }
+
+                // Average Ratings per Bus Chart
+                const ratingsCtx = document.getElementById('busRatingsChart');
+                if (ratingsCtx && ratingsData) {
+                    const busNames = ratingsData.map(item => item.bus_name);
+                    const avgRatings = ratingsData.map(item => item.avg_rating);
+                    
+                    new Chart(ratingsCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: busNames,
+                            datasets: [{
+                                label: 'Average Rating',
+                                data: avgRatings,
+                                backgroundColor: 'rgba(251, 191, 36, 0.8)',
+                                borderColor: 'rgba(251, 191, 36, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            indexAxis: 'y',
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'Average Ratings per Bus'
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    min: 0,
+                                    max: 5,
+                                    title: {
+                                        display: true,
+                                        text: 'Rating (out of 5)'
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Feedback Keywords Chart
+                const keywordsCtx = document.getElementById('keywordFrequencyChart');
+                if (keywordsCtx && keywordsData) {
+                    const keywords = keywordsData.map(item => item.keyword);
+                    const frequencies = keywordsData.map(item => item.frequency);
+                    
+                    new Chart(keywordsCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: keywords,
+                            datasets: [{
+                                label: 'Frequency',
+                                data: frequencies,
+                                backgroundColor: 'rgba(16, 185, 129, 0.8)',
+                                borderColor: 'rgba(16, 185, 129, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'Most Common Feedback Keywords'
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    title: {
+                                        display: true,
+                                        text: 'Frequency'
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+        }
+
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', loadDashboardData);
+    </script>
+</body>
+</html>
+

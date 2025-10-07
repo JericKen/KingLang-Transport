@@ -1,0 +1,78 @@
+{
+   "destination_addresses" : 
+   [
+      "Baguio, Benguet, Philippines",
+      "P3M2+GFP, Skylark, Novaliches, Quezon City, Metro Manila, Philippines"
+   ],
+   "origin_addresses" : 
+   [
+      "P3M2+GFP, Skylark, Novaliches, Quezon City, Metro Manila, Philippines",
+      "Baguio, Benguet, Philippines"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "239 km",
+                  "value" : 238883
+               },
+               "duration" : 
+               {
+                  "text" : "3 hours 57 mins",
+                  "value" : 14241
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "241 km",
+                  "value" : 241305
+               },
+               "duration" : 
+               {
+                  "text" : "3 hours 58 mins",
+                  "value" : 14266
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

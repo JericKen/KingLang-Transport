@@ -1,0 +1,266 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "FSD Home Furnishings Davao, Bajada, Davao City, Davao del Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJF7ug7vFt-TIR0lC0YwxhHMs",
+         "reference" : "ChIJF7ug7vFt-TIR0lC0YwxhHMs",
+         "structured_formatting" : 
+         {
+            "main_text" : "FSD Home Furnishings Davao",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bajada, Davao City, Davao del Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "FSD Home Furnishings Davao"
+            },
+            {
+               "offset" : 28,
+               "value" : "Bajada"
+            },
+            {
+               "offset" : 36,
+               "value" : "Davao City"
+            },
+            {
+               "offset" : 48,
+               "value" : "Davao del Sur"
+            },
+            {
+               "offset" : 63,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "furniture_store",
+            "home_goods_store",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "FSD AUTO INSURANCE SERVICES - PASIG BRANCH, Doctor Sixto Antonio Avenue, Pasig, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ1UAfW_bHlzMRfr0QZ9fRc4U",
+         "reference" : "ChIJ1UAfW_bHlzMRfr0QZ9fRc4U",
+         "structured_formatting" : 
+         {
+            "main_text" : "FSD AUTO INSURANCE SERVICES - PASIG BRANCH",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Doctor Sixto Antonio Avenue, Pasig, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "FSD AUTO INSURANCE SERVICES - PASIG BRANCH"
+            },
+            {
+               "offset" : 44,
+               "value" : "Doctor Sixto Antonio Avenue"
+            },
+            {
+               "offset" : 73,
+               "value" : "Pasig"
+            },
+            {
+               "offset" : 80,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 94,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "insurance_agency",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "FSDP Lights & Sounds Providers, Borbon, Cebu, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJMxPg_9xFqDMRI6fqkJZHsZs",
+         "reference" : "ChIJMxPg_9xFqDMRI6fqkJZHsZs",
+         "structured_formatting" : 
+         {
+            "main_text" : "FSDP Lights & Sounds Providers",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Borbon, Cebu, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "FSDP Lights & Sounds Providers"
+            },
+            {
+               "offset" : 32,
+               "value" : "Borbon"
+            },
+            {
+               "offset" : 40,
+               "value" : "Cebu"
+            },
+            {
+               "offset" : 46,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Techscapades - FS Digital Studios, 25th St, Taguig, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 33,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJH9-7tNnJlzMRMgX3ECDFTbQ",
+         "reference" : "ChIJH9-7tNnJlzMRMgX3ECDFTbQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Techscapades - FS Digital Studios",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 33,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "25th St, Taguig, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Techscapades - FS Digital Studios"
+            },
+            {
+               "offset" : 35,
+               "value" : "25th St"
+            },
+            {
+               "offset" : 44,
+               "value" : "Taguig"
+            },
+            {
+               "offset" : 52,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 66,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Fluid Systems & Design Inc., Marcelo H. Del Pilar Street, Valenzuela, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 27,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ4QDiBni0lzMRTD0ic1umzAo",
+         "reference" : "ChIJ4QDiBni0lzMRTD0ic1umzAo",
+         "structured_formatting" : 
+         {
+            "main_text" : "Fluid Systems & Design Inc.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 27,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Marcelo H. Del Pilar Street, Valenzuela, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Fluid Systems & Design Inc."
+            },
+            {
+               "offset" : 29,
+               "value" : "Marcelo H. Del Pilar Street"
+            },
+            {
+               "offset" : 58,
+               "value" : "Valenzuela"
+            },
+            {
+               "offset" : 70,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 84,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,0 +1,254 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "BGC High Street, Taguig, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJPSRB9O7IlzMRyWGILpcpHEs",
+         "reference" : "ChIJPSRB9O7IlzMRyWGILpcpHEs",
+         "structured_formatting" : 
+         {
+            "main_text" : "BGC High Street",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Taguig, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "BGC High Street"
+            },
+            {
+               "offset" : 17,
+               "value" : "Taguig"
+            },
+            {
+               "offset" : 25,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 39,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "shopping_mall"
+         ]
+      },
+      {
+         "description" : "Fort Bonifacio, Taguig, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJr5Qp-vPIlzMRCuRgR6-IyYk",
+         "reference" : "ChIJr5Qp-vPIlzMRCuRgR6-IyYk",
+         "structured_formatting" : 
+         {
+            "main_text" : "Fort Bonifacio",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 14,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Taguig, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Fort Bonifacio"
+            },
+            {
+               "offset" : 16,
+               "value" : "Taguig"
+            },
+            {
+               "offset" : 24,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 38,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "BGC, Taguig, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJC5sndwDJlzMRJLdu81ikVbY",
+         "reference" : "ChIJC5sndwDJlzMRJLdu81ikVbY",
+         "structured_formatting" : 
+         {
+            "main_text" : "BGC",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Taguig, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "BGC"
+            },
+            {
+               "offset" : 5,
+               "value" : "Taguig"
+            },
+            {
+               "offset" : 13,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 27,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "BGC Corporate Center, 30th Street, City of Makati, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJM7Pnq_PIlzMRyPhlZodfx-Q",
+         "reference" : "ChIJM7Pnq_PIlzMRyPhlZodfx-Q",
+         "structured_formatting" : 
+         {
+            "main_text" : "BGC Corporate Center",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "30th Street, City of Makati, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "BGC Corporate Center"
+            },
+            {
+               "offset" : 22,
+               "value" : "30th Street"
+            },
+            {
+               "offset" : 35,
+               "value" : "City of Makati"
+            },
+            {
+               "offset" : 51,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "premise"
+         ]
+      },
+      {
+         "description" : "BGC 3D LED SCREEN, City of Makati, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ-2f36CnJlzMRlDM94yNEask",
+         "reference" : "ChIJ-2f36CnJlzMRlDM94yNEask",
+         "structured_formatting" : 
+         {
+            "main_text" : "BGC 3D LED SCREEN",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "City of Makati, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "BGC 3D LED SCREEN"
+            },
+            {
+               "offset" : 19,
+               "value" : "City of Makati"
+            },
+            {
+               "offset" : 35,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 49,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

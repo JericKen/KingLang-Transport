@@ -1,0 +1,78 @@
+{
+   "destination_addresses" : 
+   [
+      "Resorts World Bayshore Phase 1, Diosdado Macapagal Blvd, Parañaque, Metro Manila, Philippines",
+      "6394 Tatalon St. Valenzuela Metro Manila, Valenzuela, Metro Manila, Philippines"
+   ],
+   "origin_addresses" : 
+   [
+      "6394 Tatalon St. Valenzuela Metro Manila, Valenzuela, Metro Manila, Philippines",
+      "Resorts World Bayshore Phase 1, Diosdado Macapagal Blvd, Parañaque, Metro Manila, Philippines"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "35.1 km",
+                  "value" : 35143
+               },
+               "duration" : 
+               {
+                  "text" : "46 mins",
+                  "value" : 2773
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "35.6 km",
+                  "value" : 35559
+               },
+               "duration" : 
+               {
+                  "text" : "45 mins",
+                  "value" : 2697
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

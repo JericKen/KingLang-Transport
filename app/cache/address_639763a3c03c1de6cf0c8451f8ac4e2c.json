@@ -1,0 +1,251 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "King Fisher, Taguig, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 11,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "Ei5LaW5nIEZpc2hlciwgVGFndWlnLCBNZXRybyBNYW5pbGEsIFBoaWxpcHBpbmVzIi4qLAoUChIJ617cocjIlzMRYiaqCp6CPcQSFAoSCQEw_lRKz5czEa3SmKnweq4v",
+         "reference" : "Ei5LaW5nIEZpc2hlciwgVGFndWlnLCBNZXRybyBNYW5pbGEsIFBoaWxpcHBpbmVzIi4qLAoUChIJ617cocjIlzMRYiaqCp6CPcQSFAoSCQEw_lRKz5czEa3SmKnweq4v",
+         "structured_formatting" : 
+         {
+            "main_text" : "King Fisher",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 11,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Taguig, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "King Fisher"
+            },
+            {
+               "offset" : 13,
+               "value" : "Taguig"
+            },
+            {
+               "offset" : 21,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 35,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      },
+      {
+         "description" : "King Fisher Hotel Iskong Bantay, Iskong Bantay St, Atimonan, Quezon, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 11,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJYZWiM_qjojMRUlI46l9fePE",
+         "reference" : "ChIJYZWiM_qjojMRUlI46l9fePE",
+         "structured_formatting" : 
+         {
+            "main_text" : "King Fisher Hotel Iskong Bantay",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 11,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Iskong Bantay St, Atimonan, Quezon, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "King Fisher Hotel Iskong Bantay"
+            },
+            {
+               "offset" : 33,
+               "value" : "Iskong Bantay St"
+            },
+            {
+               "offset" : 51,
+               "value" : "Atimonan"
+            },
+            {
+               "offset" : 61,
+               "value" : "Quezon"
+            },
+            {
+               "offset" : 69,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "King Fisher Street, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 11,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "EjpLaW5nIEZpc2hlciBTdHJlZXQsIFF1ZXpvbiBDaXR5LCBNZXRybyBNYW5pbGEsIFBoaWxpcHBpbmVzIi4qLAoUChIJzWTI8ADIlzMR1x5KddJB9GQSFAoSCXVz70IJupczEUA9CP7ZMppK",
+         "reference" : "EjpLaW5nIEZpc2hlciBTdHJlZXQsIFF1ZXpvbiBDaXR5LCBNZXRybyBNYW5pbGEsIFBoaWxpcHBpbmVzIi4qLAoUChIJzWTI8ADIlzMR1x5KddJB9GQSFAoSCXVz70IJupczEUA9CP7ZMppK",
+         "structured_formatting" : 
+         {
+            "main_text" : "King Fisher Street",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 11,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "King Fisher Street"
+            },
+            {
+               "offset" : 20,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 33,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 47,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      },
+      {
+         "description" : "King Fisher, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 11,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "EjNLaW5nIEZpc2hlciwgUXVlem9uIENpdHksIE1ldHJvIE1hbmlsYSwgUGhpbGlwcGluZXMiLiosChQKEgnTvnpDW7CXMxEXq--Hz19-QhIUChIJdXPvQgm6lzMRQD0I_tkymko",
+         "reference" : "EjNLaW5nIEZpc2hlciwgUXVlem9uIENpdHksIE1ldHJvIE1hbmlsYSwgUGhpbGlwcGluZXMiLiosChQKEgnTvnpDW7CXMxEXq--Hz19-QhIUChIJdXPvQgm6lzMRQD0I_tkymko",
+         "structured_formatting" : 
+         {
+            "main_text" : "King Fisher",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 11,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "King Fisher"
+            },
+            {
+               "offset" : 13,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 26,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 40,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      },
+      {
+         "description" : "Kingfisher Street, Calamba, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 17,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "Ei9LaW5nZmlzaGVyIFN0cmVldCwgQ2FsYW1iYSwgTGFndW5hLCBQaGlsaXBwaW5lcyIuKiwKFAoSCTHChTmEZL0zEXZIZizGHQ4lEhQKEgnTd-BcZWO9MxHtrO3GWR_dOQ",
+         "reference" : "Ei9LaW5nZmlzaGVyIFN0cmVldCwgQ2FsYW1iYSwgTGFndW5hLCBQaGlsaXBwaW5lcyIuKiwKFAoSCTHChTmEZL0zEXZIZizGHQ4lEhQKEgnTd-BcZWO9MxHtrO3GWR_dOQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kingfisher Street",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 17,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Calamba, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kingfisher Street"
+            },
+            {
+               "offset" : 19,
+               "value" : "Calamba"
+            },
+            {
+               "offset" : 28,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 36,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

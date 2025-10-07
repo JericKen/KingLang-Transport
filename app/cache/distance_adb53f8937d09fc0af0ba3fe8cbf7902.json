@@ -1,0 +1,48 @@
+{
+   "destination_addresses" : 
+   [
+      "Dona Remedios Trinidad, Bulacan, Philippines",
+      "P3M2+GFP, Skylark, Novaliches, Quezon City, Metro Manila, Philippines"
+   ],
+   "origin_addresses" : 
+   [
+      "P3M2+GFP, Skylark, Novaliches, Quezon City, Metro Manila, Philippines",
+      "Dona Remedios Trinidad, Bulacan, Philippines"
+   ],
+   "rows" : 
+   [
+      {
+         "elements" : 
+         [
+            {
+               "status" : "ZERO_RESULTS"
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "status" : "OK"
+            }
+         ]
+      },
+      {
+         "elements" : 
+         [
+            {
+               "status" : "ZERO_RESULTS"
+            },
+            {
+               "status" : "ZERO_RESULTS"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

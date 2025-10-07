@@ -1,0 +1,266 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Sagada, Mountain Province, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJo3OHqxktjjMRXVK60iKvogo",
+         "reference" : "ChIJo3OHqxktjjMRXVK60iKvogo",
+         "structured_formatting" : 
+         {
+            "main_text" : "Sagada",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Mountain Province, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Sagada"
+            },
+            {
+               "offset" : 8,
+               "value" : "Mountain Province"
+            },
+            {
+               "offset" : 27,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Sagada Municipal Tourist Information Center, South Road, Sagada, Mountain Province, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJgwSzjivTjzMR4nm1g_u-zqk",
+         "reference" : "ChIJgwSzjivTjzMR4nm1g_u-zqk",
+         "structured_formatting" : 
+         {
+            "main_text" : "Sagada Municipal Tourist Information Center",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "South Road, Sagada, Mountain Province, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Sagada Municipal Tourist Information Center"
+            },
+            {
+               "offset" : 45,
+               "value" : "South Road"
+            },
+            {
+               "offset" : 57,
+               "value" : "Sagada"
+            },
+            {
+               "offset" : 65,
+               "value" : "Mountain Province"
+            },
+            {
+               "offset" : 84,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "local_government_office",
+            "point_of_interest",
+            "travel_agency"
+         ]
+      },
+      {
+         "description" : "Sagada Heritage Village, South Road, Sagada, Mountain Province, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJtZduOknTjzMR2kHOKsXtWf4",
+         "reference" : "ChIJtZduOknTjzMR2kHOKsXtWf4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Sagada Heritage Village",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "South Road, Sagada, Mountain Province, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Sagada Heritage Village"
+            },
+            {
+               "offset" : 25,
+               "value" : "South Road"
+            },
+            {
+               "offset" : 37,
+               "value" : "Sagada"
+            },
+            {
+               "offset" : 45,
+               "value" : "Mountain Province"
+            },
+            {
+               "offset" : 64,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "campground",
+            "establishment",
+            "lodging",
+            "park",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Sagada Blue Mountain Cabins, Mabisil - Payag-eo - Balili Road, Sagada, Mountain Province, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ9azhTV7TjzMRyigF8WSEXlQ",
+         "reference" : "ChIJ9azhTV7TjzMRyigF8WSEXlQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Sagada Blue Mountain Cabins",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Mabisil - Payag-eo - Balili Road, Sagada, Mountain Province, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Sagada Blue Mountain Cabins"
+            },
+            {
+               "offset" : 29,
+               "value" : "Mabisil - Payag-eo - Balili Road"
+            },
+            {
+               "offset" : 63,
+               "value" : "Sagada"
+            },
+            {
+               "offset" : 71,
+               "value" : "Mountain Province"
+            },
+            {
+               "offset" : 90,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Sagada Cellar Door, Sagada - Besao Road, Sagada, Mountain Province, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJy8oMHAAtjjMRn-zEe0BYhn4",
+         "reference" : "ChIJy8oMHAAtjjMRn-zEe0BYhn4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Sagada Cellar Door",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Sagada - Besao Road, Sagada, Mountain Province, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Sagada Cellar Door"
+            },
+            {
+               "offset" : 20,
+               "value" : "Sagada - Besao Road"
+            },
+            {
+               "offset" : 41,
+               "value" : "Sagada"
+            },
+            {
+               "offset" : 49,
+               "value" : "Mountain Province"
+            },
+            {
+               "offset" : 68,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "bar",
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

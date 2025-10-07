@@ -1,0 +1,264 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Aws Distribution Philippines Corporation., Doctor Jose Fernandez, Brgy, Mandaluyong City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJv8Es5DnIlzMRFbXi3b8fyqw",
+         "reference" : "ChIJv8Es5DnIlzMRFbXi3b8fyqw",
+         "structured_formatting" : 
+         {
+            "main_text" : "Aws Distribution Philippines Corporation.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Doctor Jose Fernandez, Brgy, Mandaluyong City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Aws Distribution Philippines Corporation."
+            },
+            {
+               "offset" : 43,
+               "value" : "Doctor Jose Fernandez"
+            },
+            {
+               "offset" : 66,
+               "value" : "Brgy"
+            },
+            {
+               "offset" : 72,
+               "value" : "Mandaluyong City"
+            },
+            {
+               "offset" : 90,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 104,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "hardware_store",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "Baler Radar AWS, Baler, Aurora, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 12
+            }
+         ],
+         "place_id" : "ChIJZ-fuvPUJmjMRk56DJBQsdm0",
+         "reference" : "ChIJZ-fuvPUJmjMRk56DJBQsdm0",
+         "structured_formatting" : 
+         {
+            "main_text" : "Baler Radar AWS",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 12
+               }
+            ],
+            "secondary_text" : "Baler, Aurora, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Baler Radar AWS"
+            },
+            {
+               "offset" : 17,
+               "value" : "Baler"
+            },
+            {
+               "offset" : 24,
+               "value" : "Aurora"
+            },
+            {
+               "offset" : 32,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Aws&Paws KennelCattery, Lumban, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJZc0QYnH9lzMRPFUi9TwkR78",
+         "reference" : "ChIJZc0QYnH9lzMRPFUi9TwkR78",
+         "structured_formatting" : 
+         {
+            "main_text" : "Aws&Paws KennelCattery",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Lumban, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Aws&Paws KennelCattery"
+            },
+            {
+               "offset" : 24,
+               "value" : "Lumban"
+            },
+            {
+               "offset" : 32,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 40,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "AWS Archer's Learning Club, Taft Avenue, Malate, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJn_4TT0jJlzMRXd1jSuNICiE",
+         "reference" : "ChIJn_4TT0jJlzMRXd1jSuNICiE",
+         "structured_formatting" : 
+         {
+            "main_text" : "AWS Archer's Learning Club",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Taft Avenue, Malate, Manila, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "AWS Archer's Learning Club"
+            },
+            {
+               "offset" : 28,
+               "value" : "Taft Avenue"
+            },
+            {
+               "offset" : 41,
+               "value" : "Malate"
+            },
+            {
+               "offset" : 49,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 57,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 71,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Echague, Isabela AWS, Echague, Isabela, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 17
+            }
+         ],
+         "place_id" : "ChIJOyLUGTepmjMR1abg1sRZjF0",
+         "reference" : "ChIJOyLUGTepmjMR1abg1sRZjF0",
+         "structured_formatting" : 
+         {
+            "main_text" : "Echague, Isabela AWS",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 17
+               }
+            ],
+            "secondary_text" : "Echague, Isabela, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Echague, Isabela AWS"
+            },
+            {
+               "offset" : 22,
+               "value" : "Echague"
+            },
+            {
+               "offset" : 31,
+               "value" : "Isabela"
+            },
+            {
+               "offset" : 40,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

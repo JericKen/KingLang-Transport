@@ -1,0 +1,262 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "SFDM, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJQdIoYVy2lzMROYt2Sf_8cxo",
+         "reference" : "ChIJQdIoYVy2lzMROYt2Sf_8cxo",
+         "structured_formatting" : 
+         {
+            "main_text" : "SFDM",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SFDM"
+            },
+            {
+               "offset" : 6,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 19,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 33,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_1"
+         ]
+      },
+      {
+         "description" : "sfd.homeideals, Brgy, A Ferrera Street, Baras, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJG363n4HrlzMREAtEj5a3lbs",
+         "reference" : "ChIJG363n4HrlzMREAtEj5a3lbs",
+         "structured_formatting" : 
+         {
+            "main_text" : "sfd.homeideals",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Brgy, A Ferrera Street, Baras, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "sfd.homeideals"
+            },
+            {
+               "offset" : 16,
+               "value" : "Brgy"
+            },
+            {
+               "offset" : 22,
+               "value" : "A Ferrera Street"
+            },
+            {
+               "offset" : 40,
+               "value" : "Baras"
+            },
+            {
+               "offset" : 47,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 54,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "SFDEO-DPWH, Calbayog, Samar, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJNyYl5-3ZCTMRMmMvsCURL7M",
+         "reference" : "ChIJNyYl5-3ZCTMRMmMvsCURL7M",
+         "structured_formatting" : 
+         {
+            "main_text" : "SFDEO-DPWH",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Calbayog, Samar, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SFDEO-DPWH"
+            },
+            {
+               "offset" : 12,
+               "value" : "Calbayog"
+            },
+            {
+               "offset" : 22,
+               "value" : "Samar"
+            },
+            {
+               "offset" : 29,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "SFD Motorcycle Parts and Accessories, Sun Valley Drive, Parañaque, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJyR3iXSPPlzMRoVvx2zb0ML4",
+         "reference" : "ChIJyR3iXSPPlzMRoVvx2zb0ML4",
+         "structured_formatting" : 
+         {
+            "main_text" : "SFD Motorcycle Parts and Accessories",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Sun Valley Drive, Parañaque, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SFD Motorcycle Parts and Accessories"
+            },
+            {
+               "offset" : 38,
+               "value" : "Sun Valley Drive"
+            },
+            {
+               "offset" : 56,
+               "value" : "Parañaque"
+            },
+            {
+               "offset" : 67,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 81,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "car_repair",
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "SFDO BULK WATER SUPPLY, San Fernando, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJwdJulwP3ljMRtrx0zHUByXM",
+         "reference" : "ChIJwdJulwP3ljMRtrx0zHUByXM",
+         "structured_formatting" : 
+         {
+            "main_text" : "SFDO BULK WATER SUPPLY",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 3,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Fernando, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "SFDO BULK WATER SUPPLY"
+            },
+            {
+               "offset" : 24,
+               "value" : "San Fernando"
+            },
+            {
+               "offset" : 38,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 48,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

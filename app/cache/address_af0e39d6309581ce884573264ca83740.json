@@ -1,0 +1,63 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Colegio De Sta. Teresa De Avila Foundation, Skylark, Novaliches, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 42,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJyZFeZ1uwlzMRqOg1m3FPVJg",
+         "reference" : "ChIJyZFeZ1uwlzMRqOg1m3FPVJg",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio De Sta. Teresa De Avila Foundation",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 42,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Skylark, Novaliches, Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio De Sta. Teresa De Avila Foundation"
+            },
+            {
+               "offset" : 44,
+               "value" : "Skylark"
+            },
+            {
+               "offset" : 53,
+               "value" : "Novaliches"
+            },
+            {
+               "offset" : 65,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 78,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 92,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "university"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

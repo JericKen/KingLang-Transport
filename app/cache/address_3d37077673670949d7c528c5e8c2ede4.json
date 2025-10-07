@@ -1,0 +1,313 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Maligaya park, Swimming Pool, camarin, Caloocan, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            },
+            {
+               "length" : 13,
+               "offset" : 15
+            }
+         ],
+         "place_id" : "ChIJJzUPjhixlzMRyjzjKDHFVMI",
+         "reference" : "ChIJJzUPjhixlzMRyjzjKDHFVMI",
+         "structured_formatting" : 
+         {
+            "main_text" : "Maligaya park",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Swimming Pool, camarin, Caloocan, Metro Manila, Philippines",
+            "secondary_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 0
+               }
+            ]
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Maligaya park"
+            },
+            {
+               "offset" : 15,
+               "value" : "Swimming Pool"
+            },
+            {
+               "offset" : 30,
+               "value" : "camarin"
+            },
+            {
+               "offset" : 39,
+               "value" : "Caloocan"
+            },
+            {
+               "offset" : 49,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 63,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "9993 Magalang Street Maligaya Park Caloocan City, Swimming Pool, Novaliches, Caloocan, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 21
+            },
+            {
+               "length" : 13,
+               "offset" : 50
+            }
+         ],
+         "place_id" : "ChIJy5TRjEaxlzMR8FzRoim1Bms",
+         "reference" : "ChIJy5TRjEaxlzMR8FzRoim1Bms",
+         "structured_formatting" : 
+         {
+            "main_text" : "9993 Magalang Street Maligaya Park Caloocan City",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 21
+               }
+            ],
+            "secondary_text" : "Swimming Pool, Novaliches, Caloocan, Metro Manila, Philippines",
+            "secondary_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 0
+               }
+            ]
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "9993 Magalang Street Maligaya Park Caloocan City"
+            },
+            {
+               "offset" : 50,
+               "value" : "Swimming Pool"
+            },
+            {
+               "offset" : 65,
+               "value" : "Novaliches"
+            },
+            {
+               "offset" : 77,
+               "value" : "Caloocan"
+            },
+            {
+               "offset" : 87,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 101,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "WILZ Swimming Pool and Chemicals Trading, Primera homes subdivision, Santo Tomas, Batangas, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 13,
+               "offset" : 5
+            },
+            {
+               "length" : 11,
+               "offset" : 69
+            }
+         ],
+         "place_id" : "ChIJzQ1s8aZnvTMR75ybg2VEDfw",
+         "reference" : "ChIJzQ1s8aZnvTMR75ybg2VEDfw",
+         "structured_formatting" : 
+         {
+            "main_text" : "WILZ Swimming Pool and Chemicals Trading",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 5
+               }
+            ],
+            "secondary_text" : "Primera homes subdivision, Santo Tomas, Batangas, Philippines",
+            "secondary_text_matched_substrings" : 
+            [
+               {
+                  "length" : 11,
+                  "offset" : 27
+               }
+            ]
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "WILZ Swimming Pool and Chemicals Trading"
+            },
+            {
+               "offset" : 42,
+               "value" : "Primera homes subdivision"
+            },
+            {
+               "offset" : 69,
+               "value" : "Santo Tomas"
+            },
+            {
+               "offset" : 82,
+               "value" : "Batangas"
+            },
+            {
+               "offset" : 92,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "storage"
+         ]
+      },
+      {
+         "description" : "Camella Homes Classic Swimming Pool, Camella, Las Piñas, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 35,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJd-yHApHRlzMRPpXuY950Ju0",
+         "reference" : "ChIJd-yHApHRlzMRPpXuY950Ju0",
+         "structured_formatting" : 
+         {
+            "main_text" : "Camella Homes Classic Swimming Pool",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 35,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Camella, Las Piñas, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Camella Homes Classic Swimming Pool"
+            },
+            {
+               "offset" : 37,
+               "value" : "Camella"
+            },
+            {
+               "offset" : 46,
+               "value" : "Las Piñas"
+            },
+            {
+               "offset" : 57,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 71,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Karen Joy's Private Swimming Pool, Barangay, Purok 2, Cabanatuan City, Nueva Ecija, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 33,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJkTF2Ei4rlzMRu0mQXkaZy-k",
+         "reference" : "ChIJkTF2Ei4rlzMRu0mQXkaZy-k",
+         "structured_formatting" : 
+         {
+            "main_text" : "Karen Joy's Private Swimming Pool",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 33,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Barangay, Purok 2, Cabanatuan City, Nueva Ecija, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Karen Joy's Private Swimming Pool"
+            },
+            {
+               "offset" : 35,
+               "value" : "Barangay"
+            },
+            {
+               "offset" : 45,
+               "value" : "Purok 2"
+            },
+            {
+               "offset" : 54,
+               "value" : "Cabanatuan City"
+            },
+            {
+               "offset" : 71,
+               "value" : "Nueva Ecija"
+            },
+            {
+               "offset" : 84,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

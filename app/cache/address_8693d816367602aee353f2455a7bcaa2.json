@@ -1,0 +1,256 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Caliraya Lake, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJaVNLquH7lzMR-aWlmRY-U_k",
+         "reference" : "ChIJaVNLquH7lzMR-aWlmRY-U_k",
+         "structured_formatting" : 
+         {
+            "main_text" : "Caliraya Lake",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Caliraya Lake"
+            },
+            {
+               "offset" : 15,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 23,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "natural_feature"
+         ]
+      },
+      {
+         "description" : "Caliraya Skypod, Lumban - Caliraya - Cavinti Road, Lumban, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJWc9iEQD7lzMR2rcMSMHc58Y",
+         "reference" : "ChIJWc9iEQD7lzMR2rcMSMHc58Y",
+         "structured_formatting" : 
+         {
+            "main_text" : "Caliraya Skypod",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Lumban - Caliraya - Cavinti Road, Lumban, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Caliraya Skypod"
+            },
+            {
+               "offset" : 17,
+               "value" : "Lumban - Caliraya - Cavinti Road"
+            },
+            {
+               "offset" : 51,
+               "value" : "Lumban"
+            },
+            {
+               "offset" : 59,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 67,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
+         "description" : "Caliraya, Lumban, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ8_jIXmz5lzMRAuhmO9jpr5o",
+         "reference" : "ChIJ8_jIXmz5lzMRAuhmO9jpr5o",
+         "structured_formatting" : 
+         {
+            "main_text" : "Caliraya",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Lumban, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Caliraya"
+            },
+            {
+               "offset" : 10,
+               "value" : "Lumban"
+            },
+            {
+               "offset" : 18,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 26,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Caliraya Resort Club, Lumban, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ58HJo5v7lzMRJo77ggmeJhI",
+         "reference" : "ChIJ58HJo5v7lzMRJo77ggmeJhI",
+         "structured_formatting" : 
+         {
+            "main_text" : "Caliraya Resort Club",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Lumban, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Caliraya Resort Club"
+            },
+            {
+               "offset" : 22,
+               "value" : "Lumban"
+            },
+            {
+               "offset" : 30,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 38,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Caliraya Ecoville Recreation and Farm Resort, Lumban - Caliraya - Cavinti Road, Cavinti, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ_6fFafX7lzMRdwmdiM_CT-s",
+         "reference" : "ChIJ_6fFafX7lzMRdwmdiM_CT-s",
+         "structured_formatting" : 
+         {
+            "main_text" : "Caliraya Ecoville Recreation and Farm Resort",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Lumban - Caliraya - Cavinti Road, Cavinti, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Caliraya Ecoville Recreation and Farm Resort"
+            },
+            {
+               "offset" : 46,
+               "value" : "Lumban - Caliraya - Cavinti Road"
+            },
+            {
+               "offset" : 80,
+               "value" : "Cavinti"
+            },
+            {
+               "offset" : 89,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 97,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

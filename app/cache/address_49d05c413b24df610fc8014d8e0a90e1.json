@@ -1,0 +1,272 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Colegio de Sto. Tomas Chapel, Azcona Street, San Carlos City, Negros Occidental, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 13,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ7y9ThEc-qTMRtuS5yYCPUZ4",
+         "reference" : "ChIJ7y9ThEc-qTMRtuS5yYCPUZ4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio de Sto. Tomas Chapel",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Azcona Street, San Carlos City, Negros Occidental, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio de Sto. Tomas Chapel"
+            },
+            {
+               "offset" : 30,
+               "value" : "Azcona Street"
+            },
+            {
+               "offset" : 45,
+               "value" : "San Carlos City"
+            },
+            {
+               "offset" : 62,
+               "value" : "Negros Occidental"
+            },
+            {
+               "offset" : 81,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "church",
+            "establishment",
+            "place_of_worship",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Colegio de Santo Tomas – Recoletos, Azcona Street, San Carlos City, Negros Occidental, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 34,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ7y9ThEc-qTMRgYHBVrh7ag4",
+         "reference" : "ChIJ7y9ThEc-qTMRgYHBVrh7ag4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio de Santo Tomas – Recoletos",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 34,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Azcona Street, San Carlos City, Negros Occidental, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio de Santo Tomas – Recoletos"
+            },
+            {
+               "offset" : 36,
+               "value" : "Azcona Street"
+            },
+            {
+               "offset" : 51,
+               "value" : "San Carlos City"
+            },
+            {
+               "offset" : 68,
+               "value" : "Negros Occidental"
+            },
+            {
+               "offset" : 87,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school",
+            "secondary_school"
+         ]
+      },
+      {
+         "description" : "Colegio San Nicolas De Tolentino, Burgos St, Talisay, Negros Occidental, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 32,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJJ44fJ8DWrjMRdRYCE-788ow",
+         "reference" : "ChIJJ44fJ8DWrjMRdRYCE-788ow",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio San Nicolas De Tolentino",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 32,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Burgos St, Talisay, Negros Occidental, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio San Nicolas De Tolentino"
+            },
+            {
+               "offset" : 34,
+               "value" : "Burgos St"
+            },
+            {
+               "offset" : 45,
+               "value" : "Talisay"
+            },
+            {
+               "offset" : 54,
+               "value" : "Negros Occidental"
+            },
+            {
+               "offset" : 73,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "premise"
+         ]
+      },
+      {
+         "description" : "Colegio San Nicolas De Tolentino - Recoletos, Inc., Don Simplicio Lizares Street, Talisay, Negros Occidental, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 50,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJj40oourWrjMR1CvqOKFQfTM",
+         "reference" : "ChIJj40oourWrjMR1CvqOKFQfTM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio San Nicolas De Tolentino - Recoletos, Inc.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 50,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Don Simplicio Lizares Street, Talisay, Negros Occidental, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio San Nicolas De Tolentino - Recoletos, Inc."
+            },
+            {
+               "offset" : 52,
+               "value" : "Don Simplicio Lizares Street"
+            },
+            {
+               "offset" : 82,
+               "value" : "Talisay"
+            },
+            {
+               "offset" : 91,
+               "value" : "Negros Occidental"
+            },
+            {
+               "offset" : 110,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      },
+      {
+         "description" : "Colegio del Santo Niño, Magallanes Street, Cebu City, Cebu, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 10,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJMaZf2uObqTMReyl6NTNB_hU",
+         "reference" : "ChIJMaZf2uObqTMReyl6NTNB_hU",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio del Santo Niño",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 10,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Magallanes Street, Cebu City, Cebu, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio del Santo Niño"
+            },
+            {
+               "offset" : 24,
+               "value" : "Magallanes Street"
+            },
+            {
+               "offset" : 43,
+               "value" : "Cebu City"
+            },
+            {
+               "offset" : 54,
+               "value" : "Cebu"
+            },
+            {
+               "offset" : 60,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,0 +1,262 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "KingLang Tours and Transport Services Inc., M. L. Quezon Avenue, Lower Bicutan, Taguig, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJb6l52BbPlzMRcLRMZWqJQMU",
+         "reference" : "ChIJb6l52BbPlzMRcLRMZWqJQMU",
+         "structured_formatting" : 
+         {
+            "main_text" : "KingLang Tours and Transport Services Inc.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "M. L. Quezon Avenue, Lower Bicutan, Taguig, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "KingLang Tours and Transport Services Inc."
+            },
+            {
+               "offset" : 44,
+               "value" : "M. L. Quezon Avenue"
+            },
+            {
+               "offset" : 65,
+               "value" : "Lower Bicutan"
+            },
+            {
+               "offset" : 80,
+               "value" : "Taguig"
+            },
+            {
+               "offset" : 88,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 102,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Kings Rubber International Incorporated, Dasmariñas, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJvz77jtZ_vTMR64xzqWYVZLM",
+         "reference" : "ChIJvz77jtZ_vTMR64xzqWYVZLM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kings Rubber International Incorporated",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Dasmariñas, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kings Rubber International Incorporated"
+            },
+            {
+               "offset" : 41,
+               "value" : "Dasmariñas"
+            },
+            {
+               "offset" : 53,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 61,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Dairy Kings & Ice Creme Deluxe, San Pedro, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 6
+            }
+         ],
+         "place_id" : "ChIJb57iQe7WlzMRD4v5dFlWtvI",
+         "reference" : "ChIJb57iQe7WlzMRD4v5dFlWtvI",
+         "structured_formatting" : 
+         {
+            "main_text" : "Dairy Kings & Ice Creme Deluxe",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 6
+               }
+            ],
+            "secondary_text" : "San Pedro, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Dairy Kings & Ice Creme Deluxe"
+            },
+            {
+               "offset" : 32,
+               "value" : "San Pedro"
+            },
+            {
+               "offset" : 43,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 51,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "King's Coffee Green Breeze, Langkaan 2, Dasmariñas, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 26,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJN4XlVl3VlzMRQDWIdLyjLFo",
+         "reference" : "ChIJN4XlVl3VlzMRQDWIdLyjLFo",
+         "structured_formatting" : 
+         {
+            "main_text" : "King's Coffee Green Breeze",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 26,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Langkaan 2, Dasmariñas, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "King's Coffee Green Breeze"
+            },
+            {
+               "offset" : 28,
+               "value" : "Langkaan 2"
+            },
+            {
+               "offset" : 40,
+               "value" : "Dasmariñas"
+            },
+            {
+               "offset" : 52,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 60,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
+         "description" : "king's Apartments Dasmariñas, Dasmanriñas, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 28,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ3S1hkiLVlzMRoYfEIvWowh8",
+         "reference" : "ChIJ3S1hkiLVlzMRoYfEIvWowh8",
+         "structured_formatting" : 
+         {
+            "main_text" : "king's Apartments Dasmariñas",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 28,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Dasmanriñas, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "king's Apartments Dasmariñas"
+            },
+            {
+               "offset" : 30,
+               "value" : "Dasmanriñas"
+            },
+            {
+               "offset" : 43,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 51,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,0 +1,165 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Formative Academic and Skills Development School, Central Nautical Highway, Liloan, Cebu, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 48,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJlbm6-5a8qTMRpinZWtxBY0Q",
+         "reference" : "ChIJlbm6-5a8qTMRpinZWtxBY0Q",
+         "structured_formatting" : 
+         {
+            "main_text" : "Formative Academic and Skills Development School",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 48,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Central Nautical Highway, Liloan, Cebu, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Formative Academic and Skills Development School"
+            },
+            {
+               "offset" : 50,
+               "value" : "Central Nautical Highway"
+            },
+            {
+               "offset" : 76,
+               "value" : "Liloan"
+            },
+            {
+               "offset" : 84,
+               "value" : "Cebu"
+            },
+            {
+               "offset" : 90,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      },
+      {
+         "description" : "Filipinas Asia Shutter Door Corporation, Metrobank Driveway, Cainta, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 39,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ9WE02ojHlzMRbzpVCyrJg28",
+         "reference" : "ChIJ9WE02ojHlzMRbzpVCyrJg28",
+         "structured_formatting" : 
+         {
+            "main_text" : "Filipinas Asia Shutter Door Corporation",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 39,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Metrobank Driveway, Cainta, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Filipinas Asia Shutter Door Corporation"
+            },
+            {
+               "offset" : 41,
+               "value" : "Metrobank Driveway"
+            },
+            {
+               "offset" : 61,
+               "value" : "Cainta"
+            },
+            {
+               "offset" : 69,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 76,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "FAF's, M. H. Del Pilar St, Alaminos, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJmZgZcz9pvTMRLIILsgWXIb8",
+         "reference" : "ChIJmZgZcz9pvTMRLIILsgWXIb8",
+         "structured_formatting" : 
+         {
+            "main_text" : "FAF's",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "M. H. Del Pilar St, Alaminos, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "FAF's"
+            },
+            {
+               "offset" : 7,
+               "value" : "M. H. Del Pilar St"
+            },
+            {
+               "offset" : 27,
+               "value" : "Alaminos"
+            },
+            {
+               "offset" : 37,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 45,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "restaurant"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

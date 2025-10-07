@@ -1,0 +1,267 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Imus, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJETxPuFLSlzMR3-gz-OHysDg",
+         "reference" : "ChIJETxPuFLSlzMR3-gz-OHysDg",
+         "structured_formatting" : 
+         {
+            "main_text" : "Imus",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Imus"
+            },
+            {
+               "offset" : 6,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 14,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Imus Cathedral, General Castañeda Street, Imus, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJLVAtnvTSlzMRD_EUKZPNK9M",
+         "reference" : "ChIJLVAtnvTSlzMRD_EUKZPNK9M",
+         "structured_formatting" : 
+         {
+            "main_text" : "Imus Cathedral",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "General Castañeda Street, Imus, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Imus Cathedral"
+            },
+            {
+               "offset" : 16,
+               "value" : "General Castañeda Street"
+            },
+            {
+               "offset" : 42,
+               "value" : "Imus"
+            },
+            {
+               "offset" : 48,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 56,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "church",
+            "establishment",
+            "place_of_worship",
+            "point_of_interest",
+            "tourist_attraction"
+         ]
+      },
+      {
+         "description" : "Imus City Hall Open Parking, Malagasang Road, Imus, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJcTcUhnLTlzMRST98hW9UZv4",
+         "reference" : "ChIJcTcUhnLTlzMRST98hW9UZv4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Imus City Hall Open Parking",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Malagasang Road, Imus, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Imus City Hall Open Parking"
+            },
+            {
+               "offset" : 29,
+               "value" : "Malagasang Road"
+            },
+            {
+               "offset" : 46,
+               "value" : "Imus"
+            },
+            {
+               "offset" : 52,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 60,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "parking",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Imus City Plaza, Carsadang Bago, Imus, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ4YzdmvTSlzMR3Yu0wCutiXc",
+         "reference" : "ChIJ4YzdmvTSlzMR3Yu0wCutiXc",
+         "structured_formatting" : 
+         {
+            "main_text" : "Imus City Plaza",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Carsadang Bago, Imus, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Imus City Plaza"
+            },
+            {
+               "offset" : 17,
+               "value" : "Carsadang Bago"
+            },
+            {
+               "offset" : 33,
+               "value" : "Imus"
+            },
+            {
+               "offset" : 39,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 47,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "park",
+            "point_of_interest",
+            "premise"
+         ]
+      },
+      {
+         "description" : "Imus Pilot Elementary School, Nueno Avenue, Imus, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJVSH-s_XSlzMRqB4T36J8x0o",
+         "reference" : "ChIJVSH-s_XSlzMRqB4T36J8x0o",
+         "structured_formatting" : 
+         {
+            "main_text" : "Imus Pilot Elementary School",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Nueno Avenue, Imus, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Imus Pilot Elementary School"
+            },
+            {
+               "offset" : 30,
+               "value" : "Nueno Avenue"
+            },
+            {
+               "offset" : 44,
+               "value" : "Imus"
+            },
+            {
+               "offset" : 50,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 58,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "primary_school",
+            "school"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

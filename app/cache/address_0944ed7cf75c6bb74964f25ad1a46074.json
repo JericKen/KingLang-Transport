@@ -1,0 +1,307 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Swimming Pool STMTCC COLLEGE, Tigbauan, Iloilo, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 16,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ5e3oYQD3rjMRYnSSCY-bf4Q",
+         "reference" : "ChIJ5e3oYQD3rjMRYnSSCY-bf4Q",
+         "structured_formatting" : 
+         {
+            "main_text" : "Swimming Pool STMTCC COLLEGE",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 16,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Tigbauan, Iloilo, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Swimming Pool STMTCC COLLEGE"
+            },
+            {
+               "offset" : 30,
+               "value" : "Tigbauan"
+            },
+            {
+               "offset" : 40,
+               "value" : "Iloilo"
+            },
+            {
+               "offset" : 48,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "university"
+         ]
+      },
+      {
+         "description" : "Terra Fortuna I Swimming Pool, City of Santa Rosa, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 13,
+               "offset" : 16
+            },
+            {
+               "length" : 18,
+               "offset" : 31
+            }
+         ],
+         "place_id" : "ChIJ76ClkBLYlzMRXuLkS-Ll_Jw",
+         "reference" : "ChIJ76ClkBLYlzMRXuLkS-Ll_Jw",
+         "structured_formatting" : 
+         {
+            "main_text" : "Terra Fortuna I Swimming Pool",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 16
+               }
+            ],
+            "secondary_text" : "City of Santa Rosa, Laguna, Philippines",
+            "secondary_text_matched_substrings" : 
+            [
+               {
+                  "length" : 18,
+                  "offset" : 0
+               }
+            ]
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Terra Fortuna I Swimming Pool"
+            },
+            {
+               "offset" : 31,
+               "value" : "City of Santa Rosa"
+            },
+            {
+               "offset" : 51,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 59,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "premise"
+         ]
+      },
+      {
+         "description" : "Swimming Pool, South Hampton, Kings Borough Drive, City of Santa Rosa, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 13,
+               "offset" : 0
+            },
+            {
+               "length" : 18,
+               "offset" : 51
+            }
+         ],
+         "place_id" : "ChIJudhBL3PZlzMRqL90NJd9Qro",
+         "reference" : "ChIJudhBL3PZlzMRqL90NJd9Qro",
+         "structured_formatting" : 
+         {
+            "main_text" : "Swimming Pool, South Hampton",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Kings Borough Drive, City of Santa Rosa, Laguna, Philippines",
+            "secondary_text_matched_substrings" : 
+            [
+               {
+                  "length" : 18,
+                  "offset" : 21
+               }
+            ]
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Swimming Pool, South Hampton"
+            },
+            {
+               "offset" : 30,
+               "value" : "Kings Borough Drive"
+            },
+            {
+               "offset" : 51,
+               "value" : "City of Santa Rosa"
+            },
+            {
+               "offset" : 71,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 79,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Manila Grand Opera Hotel, Doroteo Jose Street, Sta. Cruz, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 24,
+               "offset" : 0
+            },
+            {
+               "length" : 2,
+               "offset" : 47
+            }
+         ],
+         "place_id" : "ChIJIwr8AQTKlzMR2tYLCUkDCfU",
+         "reference" : "ChIJIwr8AQTKlzMR2tYLCUkDCfU",
+         "structured_formatting" : 
+         {
+            "main_text" : "Manila Grand Opera Hotel",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 24,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Doroteo Jose Street, Sta. Cruz, Manila, Metro Manila, Philippines",
+            "secondary_text_matched_substrings" : 
+            [
+               {
+                  "length" : 2,
+                  "offset" : 21
+               }
+            ]
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Manila Grand Opera Hotel"
+            },
+            {
+               "offset" : 26,
+               "value" : "Doroteo Jose Street"
+            },
+            {
+               "offset" : 47,
+               "value" : "Sta. Cruz"
+            },
+            {
+               "offset" : 58,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 66,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 80,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "lodging",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
+         "description" : "Camella Sto. Tomas Swimming Pool, Santo Tomas, Batangas, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 13,
+               "offset" : 19
+            },
+            {
+               "length" : 11,
+               "offset" : 34
+            }
+         ],
+         "place_id" : "ChIJt5AHgJFlvTMRdutxCWAMAZc",
+         "reference" : "ChIJt5AHgJFlvTMRdutxCWAMAZc",
+         "structured_formatting" : 
+         {
+            "main_text" : "Camella Sto. Tomas Swimming Pool",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 13,
+                  "offset" : 19
+               }
+            ],
+            "secondary_text" : "Santo Tomas, Batangas, Philippines",
+            "secondary_text_matched_substrings" : 
+            [
+               {
+                  "length" : 11,
+                  "offset" : 0
+               }
+            ]
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Camella Sto. Tomas Swimming Pool"
+            },
+            {
+               "offset" : 34,
+               "value" : "Santo Tomas"
+            },
+            {
+               "offset" : 47,
+               "value" : "Batangas"
+            },
+            {
+               "offset" : 57,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,0 +1,266 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Bagumbong, Caloocan, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 9,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ2Wa1asSxlzMRL1QQFgjeUdg",
+         "reference" : "ChIJ2Wa1asSxlzMRL1QQFgjeUdg",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bagumbong",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 9,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Caloocan, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bagumbong"
+            },
+            {
+               "offset" : 11,
+               "value" : "Caloocan"
+            },
+            {
+               "offset" : 21,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 35,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Bagumbong High School, Rainbow Avenue, Caloocan City North, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 9,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ87L8dLaxlzMROCSgYA1z4rM",
+         "reference" : "ChIJ87L8dLaxlzMROCSgYA1z4rM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bagumbong High School",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 9,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Rainbow Avenue, Caloocan City North, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bagumbong High School"
+            },
+            {
+               "offset" : 23,
+               "value" : "Rainbow Avenue"
+            },
+            {
+               "offset" : 39,
+               "value" : "Caloocan City North"
+            },
+            {
+               "offset" : 60,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 74,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school",
+            "secondary_school"
+         ]
+      },
+      {
+         "description" : "Bagumbong, Jala-jala, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 9,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJcZfgyNHllzMRJCdJhKaf7Ts",
+         "reference" : "ChIJcZfgyNHllzMRJCdJhKaf7Ts",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bagumbong",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 9,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Jala-jala, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bagumbong"
+            },
+            {
+               "offset" : 11,
+               "value" : "Jala-jala"
+            },
+            {
+               "offset" : 22,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 29,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "political",
+            "sublocality",
+            "sublocality_level_2"
+         ]
+      },
+      {
+         "description" : "Bagumbong Elementary School, Taas Road, Caloocan, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 9,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJTf2I8rexlzMRUmWVv_CzR7U",
+         "reference" : "ChIJTf2I8rexlzMRUmWVv_CzR7U",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bagumbong Elementary School",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 9,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Taas Road, Caloocan, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bagumbong Elementary School"
+            },
+            {
+               "offset" : 29,
+               "value" : "Taas Road"
+            },
+            {
+               "offset" : 40,
+               "value" : "Caloocan"
+            },
+            {
+               "offset" : 50,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 64,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "primary_school",
+            "school"
+         ]
+      },
+      {
+         "description" : "Bagumbong Dulo - Novaliches Bayan and VV PUJ Terminal, Bagumbong Road, Caloocan, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 9,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJtSvxw5OxlzMRCzW_ERaSAPI",
+         "reference" : "ChIJtSvxw5OxlzMRCzW_ERaSAPI",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bagumbong Dulo - Novaliches Bayan and VV PUJ Terminal",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 9,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bagumbong Road, Caloocan, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bagumbong Dulo - Novaliches Bayan and VV PUJ Terminal"
+            },
+            {
+               "offset" : 55,
+               "value" : "Bagumbong Road"
+            },
+            {
+               "offset" : 71,
+               "value" : "Caloocan"
+            },
+            {
+               "offset" : 81,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 95,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,0 +1,273 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Colegio de San Gabriel Arcangel, Dr. Eduardo V. Roquero Sr. Avenue, San Jose del Monte, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJyTFOFzOvlzMRJ53rhnwndGI",
+         "reference" : "ChIJyTFOFzOvlzMRJ53rhnwndGI",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio de San Gabriel Arcangel",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Dr. Eduardo V. Roquero Sr. Avenue, San Jose del Monte, Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio de San Gabriel Arcangel"
+            },
+            {
+               "offset" : 33,
+               "value" : "Dr. Eduardo V. Roquero Sr. Avenue"
+            },
+            {
+               "offset" : 68,
+               "value" : "San Jose del Monte"
+            },
+            {
+               "offset" : 88,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 97,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school",
+            "university"
+         ]
+      },
+      {
+         "description" : "Colegio San Agustin Makati, Palm Avenue, Makati City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ5REboBjJlzMRMPNHyz42n4g",
+         "reference" : "ChIJ5REboBjJlzMRMPNHyz42n4g",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio San Agustin Makati",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Palm Avenue, Makati City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio San Agustin Makati"
+            },
+            {
+               "offset" : 28,
+               "value" : "Palm Avenue"
+            },
+            {
+               "offset" : 41,
+               "value" : "Makati City"
+            },
+            {
+               "offset" : 54,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 68,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      },
+      {
+         "description" : "Colegio de San Juan de Letran, Muralla Street, Intramuros, Manila, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJGTPGLBjKlzMRIgKdBKLi_Yc",
+         "reference" : "ChIJGTPGLBjKlzMRIgKdBKLi_Yc",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio de San Juan de Letran",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Muralla Street, Intramuros, Manila, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio de San Juan de Letran"
+            },
+            {
+               "offset" : 31,
+               "value" : "Muralla Street"
+            },
+            {
+               "offset" : 47,
+               "value" : "Intramuros"
+            },
+            {
+               "offset" : 59,
+               "value" : "Manila"
+            },
+            {
+               "offset" : 67,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 81,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school",
+            "university"
+         ]
+      },
+      {
+         "description" : "Colegio de Muntinlupa, Mayor J.Posadas Avenue, Muntinlupa, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJBxem0rjPlzMRRCTqypaZ1FU",
+         "reference" : "ChIJBxem0rjPlzMRRCTqypaZ1FU",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio de Muntinlupa",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Mayor J.Posadas Avenue, Muntinlupa, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio de Muntinlupa"
+            },
+            {
+               "offset" : 23,
+               "value" : "Mayor J.Posadas Avenue"
+            },
+            {
+               "offset" : 47,
+               "value" : "Muntinlupa"
+            },
+            {
+               "offset" : 59,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 73,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "university"
+         ]
+      },
+      {
+         "description" : "Colegio San Agustin-Bulacan, San Jose del Monte, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJbSFo2WGllzMR6uV71uFyR1s",
+         "reference" : "ChIJbSFo2WGllzMR6uV71uFyR1s",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio San Agustin-Bulacan",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Jose del Monte, Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio San Agustin-Bulacan"
+            },
+            {
+               "offset" : 29,
+               "value" : "San Jose del Monte"
+            },
+            {
+               "offset" : 49,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 58,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

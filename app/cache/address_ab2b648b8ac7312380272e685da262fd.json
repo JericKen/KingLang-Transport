@@ -1,0 +1,267 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "De Stress Massage & Spa Matina Pangi Davao branch, Matina Pangi Road, Talomo, Davao City, Davao del Sur, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJU_QqeYBt-TIRToIr_O-s_1E",
+         "reference" : "ChIJU_QqeYBt-TIRToIr_O-s_1E",
+         "structured_formatting" : 
+         {
+            "main_text" : "De Stress Massage & Spa Matina Pangi Davao branch",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Matina Pangi Road, Talomo, Davao City, Davao del Sur, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "De Stress Massage & Spa Matina Pangi Davao branch"
+            },
+            {
+               "offset" : 51,
+               "value" : "Matina Pangi Road"
+            },
+            {
+               "offset" : 70,
+               "value" : "Talomo"
+            },
+            {
+               "offset" : 78,
+               "value" : "Davao City"
+            },
+            {
+               "offset" : 90,
+               "value" : "Davao del Sur"
+            },
+            {
+               "offset" : 105,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "spa"
+         ]
+      },
+      {
+         "description" : "De-Stress Massage & spa Panabo 2nd branch, Quezon Street, Panabo City, Davao del Norte, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 41,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJtXuxMLxF-TIRLoPtB8byGbU",
+         "reference" : "ChIJtXuxMLxF-TIRLoPtB8byGbU",
+         "structured_formatting" : 
+         {
+            "main_text" : "De-Stress Massage & spa Panabo 2nd branch",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 41,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Quezon Street, Panabo City, Davao del Norte, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "De-Stress Massage & spa Panabo 2nd branch"
+            },
+            {
+               "offset" : 43,
+               "value" : "Quezon Street"
+            },
+            {
+               "offset" : 58,
+               "value" : "Panabo City"
+            },
+            {
+               "offset" : 71,
+               "value" : "Davao del Norte"
+            },
+            {
+               "offset" : 88,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "spa"
+         ]
+      },
+      {
+         "description" : "Colegio de Sta Virginia Leonzon, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 8
+            }
+         ],
+         "place_id" : "ChIJqY-Zgwa6lzMRHaCaGn2x0FQ",
+         "reference" : "ChIJqY-Zgwa6lzMRHaCaGn2x0FQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Colegio de Sta Virginia Leonzon",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 8
+               }
+            ],
+            "secondary_text" : "Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Colegio de Sta Virginia Leonzon"
+            },
+            {
+               "offset" : 33,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 46,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 60,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "university"
+         ]
+      },
+      {
+         "description" : "Instituto De Sto. Nino Inc., Drexel Tech, Caloocan, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 10
+            }
+         ],
+         "place_id" : "ChIJ739EbSm0lzMR38CQqEwQgZM",
+         "reference" : "ChIJ739EbSm0lzMR38CQqEwQgZM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Instituto De Sto. Nino Inc.",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 10
+               }
+            ],
+            "secondary_text" : "Drexel Tech, Caloocan, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Instituto De Sto. Nino Inc."
+            },
+            {
+               "offset" : 29,
+               "value" : "Drexel Tech"
+            },
+            {
+               "offset" : 42,
+               "value" : "Caloocan"
+            },
+            {
+               "offset" : 52,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 66,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      },
+      {
+         "description" : "Academia De Sta. Faustina Incorporated, Quezon City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 9
+            }
+         ],
+         "place_id" : "ChIJVTqMwTy6lzMR0uxxBsNAaPs",
+         "reference" : "ChIJVTqMwTy6lzMR0uxxBsNAaPs",
+         "structured_formatting" : 
+         {
+            "main_text" : "Academia De Sta. Faustina Incorporated",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 9
+               }
+            ],
+            "secondary_text" : "Quezon City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Academia De Sta. Faustina Incorporated"
+            },
+            {
+               "offset" : 40,
+               "value" : "Quezon City"
+            },
+            {
+               "offset" : 53,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 67,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      }
+   ],
+   "status" : "OK"
+}
