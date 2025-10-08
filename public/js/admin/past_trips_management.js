@@ -138,8 +138,17 @@ class PastTripsManager {
             const response = await fetch('/admin/past-trips/upload', { method: 'POST', body: formData });
             const data = await response.json();
             if (data.success) {
-                this.showSuccess(data.message);
-                bootstrap.Modal.getInstance(document.getElementById('pt-uploadImageModal')).hide();
+                // this.showSuccess(data.message);
+                const modal = bootstrap.Modal.getInstance(document.getElementById('pt-uploadImageModal'));
+                modal.hide();
+                // Remove any lingering backdrop
+                setTimeout(() => {
+                    const backdrops = document.querySelectorAll('.modal-backdrop');
+                    backdrops.forEach(backdrop => backdrop.remove());
+                    document.body.classList.remove('modal-open');
+                    document.body.style.overflow = '';
+                    document.body.style.paddingRight = '';
+                }, 300);
                 this.loadImages();
             } else {
                 this.showError(data.message);
@@ -182,8 +191,17 @@ class PastTripsManager {
             });
             const data = await response.json();
             if (data.success) {
-                this.showSuccess(data.message);
-                bootstrap.Modal.getInstance(document.getElementById('pt-editImageModal')).hide();
+                // this.showSuccess(data.message);
+                const modal = bootstrap.Modal.getInstance(document.getElementById('pt-editImageModal'));
+                modal.hide();
+                // Remove any lingering backdrop
+                setTimeout(() => {
+                    const backdrops = document.querySelectorAll('.modal-backdrop');
+                    backdrops.forEach(backdrop => backdrop.remove());
+                    document.body.classList.remove('modal-open');
+                    document.body.style.overflow = '';
+                    document.body.style.paddingRight = '';
+                }, 300);
                 this.loadImages();
             } else {
                 this.showError(data.message);
@@ -203,7 +221,7 @@ class PastTripsManager {
             });
             const data = await response.json();
             if (data.success) {
-                this.showSuccess(data.message);
+                // this.showSuccess(data.message);
                 this.loadImages();
             } else {
                 this.showError(data.message);
@@ -229,8 +247,17 @@ class PastTripsManager {
             });
             const data = await response.json();
             if (data.success) {
-                this.showSuccess(data.message);
-                bootstrap.Modal.getInstance(document.getElementById('pt-deleteImageModal')).hide();
+                // this.showSuccess(data.message);
+                const modal = bootstrap.Modal.getInstance(document.getElementById('pt-deleteImageModal'));
+                modal.hide();
+                // Remove any lingering backdrop
+                setTimeout(() => {
+                    const backdrops = document.querySelectorAll('.modal-backdrop');
+                    backdrops.forEach(backdrop => backdrop.remove());
+                    document.body.classList.remove('modal-open');
+                    document.body.style.overflow = '';
+                    document.body.style.paddingRight = '';
+                }, 300);
                 this.loadImages();
             } else {
                 this.showError(data.message);
@@ -339,10 +366,24 @@ class PastTripsManager {
             alert(message);
         }
     }
+    
+    // Global function to clean up modal backdrops
+    static cleanupModalBackdrops() {
+        const backdrops = document.querySelectorAll('.modal-backdrop');
+        backdrops.forEach(backdrop => backdrop.remove());
+        document.body.classList.remove('modal-open');
+        document.body.style.overflow = '';
+        document.body.style.paddingRight = '';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     window.pastTripsManager = new PastTripsManager();
+    
+    // Add global event listeners for modal cleanup
+    document.addEventListener('hidden.bs.modal', function(e) {
+        PastTripsManager.cleanupModalBackdrops();
+    });
 });
 
 

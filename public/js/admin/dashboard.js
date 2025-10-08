@@ -384,6 +384,18 @@ let bookingStatusChartInstance = null;
 
 let revenueTrendsChartInstance = null;
 
+let unpaidBookingsChartInstance = null;
+
+let peakBookingPeriodsChartInstance = null;
+
+let totalIncomeChartInstance = null;
+
+let outstandingBalancesChartInstance = null;
+
+let topPayingClientsChartInstance = null;
+
+let discountsGivenChartInstance = null;
+
 
 
 async function renderCharts() {
@@ -399,6 +411,18 @@ async function renderCharts() {
         await renderBookingStatusChart();
 
         await renderRevenueTrendsChart();
+
+        await renderUnpaidBookingsChart();
+
+        await renderPeakBookingPeriodsChart();
+
+        await renderTotalIncomeChart();
+
+        await renderOutstandingBalancesChart();
+
+        await renderTopPayingClientsChart();
+
+        await renderDiscountsGivenChart();
 
     } catch (error) {
 
@@ -1112,9 +1136,11 @@ async function renderMonthlyTrendsChart() {
 
                         data: trendsData.counts,
 
-                        fill: false,
+                        fill: true,
 
                         borderColor: 'rgb(75, 192, 192)',
+
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
 
                         tension: 0.4,
 
@@ -2061,6 +2087,1172 @@ async function renderRevenueTrendsChart() {
         console.error("Error rendering revenue trends chart:", error);
 
         displayChartError("revenueTrendsChart", "Error rendering chart. Please try again.");
+
+    }
+
+}
+
+
+
+// Unpaid/Partially Paid Bookings Chart
+
+async function getUnpaidBookingsData() {
+
+    try {
+
+        const response = await $.ajax({
+
+            url: "/admin/unpaid-bookings-data",
+
+            type: "POST",
+
+            dataType: "json",
+
+            contentType: "application/json",
+
+            data: JSON.stringify({
+
+                start_date: window.filters.startDate,
+
+                end_date: window.filters.endDate
+
+            })
+
+        });
+
+
+
+        console.log("Unpaid Bookings Data:", response);
+
+        return response;
+
+    } catch (error) {
+
+        console.error("Error fetching unpaid bookings data: ", error);
+
+        return null;
+
+    }
+
+}
+
+
+
+async function renderUnpaidBookingsChart() {
+
+    try {
+
+        const unpaidData = await getUnpaidBookingsData();
+
+        
+
+        console.log("Unpaid Bookings Data:", unpaidData);
+
+        
+
+        if (!unpaidData || !unpaidData.labels || !unpaidData.counts) {
+
+            console.error("Invalid unpaid bookings data received:", unpaidData);
+
+            displayChartError("unpaidBookingsChart", "Unable to load unpaid bookings data. Please try again later.");
+
+            return;
+
+        }
+
+        
+
+        const ctx = $("#unpaidBookingsChart")[0].getContext("2d");
+
+
+
+        if (unpaidBookingsChartInstance) {
+
+            unpaidBookingsChartInstance.destroy();
+
+        }
+
+
+
+        unpaidBookingsChartInstance = new Chart(ctx, {
+
+            type: "doughnut",
+
+            data: {
+
+                labels: unpaidData.labels,
+
+                datasets: [{
+
+                    data: unpaidData.counts,
+
+                    backgroundColor: [
+
+                        'rgba(255, 99, 132, 0.7)', // Unpaid
+
+                        'rgba(255, 206, 86, 0.7)',  // Partially Paid
+
+                        'rgba(75, 192, 192, 0.7)'   // Paid
+
+                    ],
+
+                    borderColor: [
+
+                        'rgb(255, 99, 132)', // Unpaid
+
+                        'rgb(255, 206, 86)',  // Partially Paid
+
+                        'rgb(75, 192, 192)'   // Paid
+
+                    ],
+
+                    borderWidth: 1
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                plugins: {
+
+                    legend: {
+
+                        position: 'bottom'
+
+                    },
+
+                    tooltip: {
+
+                        callbacks: {
+
+                            label: function(context) {
+
+                                const label = context.label;
+
+                                const value = context.raw;
+
+                                const totalBookings = unpaidData.counts.reduce((a, b) => a + b, 0);
+
+                                const percentage = ((value / totalBookings) * 100).toFixed(1);
+
+                                const amount = unpaidData.amounts[context.dataIndex];
+
+                                
+
+                                return [
+
+                                    `${label}: ${value} (${percentage}%)`,
+
+                                    `Amount: ₱${amount.toLocaleString()}`
+
+                                ];
+
+                            }
+
+                        }
+
+                    },
+
+                    title: {
+
+                        display: true,
+
+                        text: 'Payment Status Distribution',
+
+                        font: {
+
+                            size: 16,
+
+                            weight: 'bold'
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+
+
+    } catch (error) {
+
+        console.error("Error rendering unpaid bookings chart:", error);
+
+        displayChartError("unpaidBookingsChart", "Error rendering chart. Please try again.");
+
+    }
+
+}
+
+
+
+// Peak Booking Periods Chart
+
+async function getPeakBookingPeriodsData() {
+
+    try {
+
+        const response = await $.ajax({
+
+            url: "/admin/peak-booking-periods-data",
+
+            type: "POST",
+
+            dataType: "json",
+
+            contentType: "application/json",
+
+            data: JSON.stringify({
+
+                start_date: window.filters.startDate,
+
+                end_date: window.filters.endDate
+
+            })
+
+        });
+
+
+
+        console.log("Peak Booking Periods Data:", response);
+
+        return response;
+
+    } catch (error) {
+
+        console.error("Error fetching peak booking periods data: ", error);
+
+        return null;
+
+    }
+
+}
+
+
+
+async function renderPeakBookingPeriodsChart() {
+
+    try {
+
+        const peakData = await getPeakBookingPeriodsData();
+
+        
+
+        console.log("Peak Booking Periods Data:", peakData);
+
+        
+
+        if (!peakData || !peakData.labels || !peakData.counts) {
+
+            console.error("Invalid peak booking periods data received:", peakData);
+
+            displayChartError("peakBookingPeriodsChart", "Unable to load peak booking periods data. Please try again later.");
+
+            return;
+
+        }
+
+        
+
+        const ctx = $("#peakBookingPeriodsChart")[0].getContext("2d");
+
+
+
+        if (peakBookingPeriodsChartInstance) {
+
+            peakBookingPeriodsChartInstance.destroy();
+
+        }
+
+
+
+        peakBookingPeriodsChartInstance = new Chart(ctx, {
+
+            type: "bar",
+
+            data: {
+
+                labels: peakData.labels,
+
+                datasets: [{
+
+                    label: "Bookings",
+
+                    data: peakData.counts,
+
+                    backgroundColor: 'rgba(25, 135, 84, 0.7)',
+
+                    borderColor: 'rgb(25, 135, 84)',
+
+                    borderWidth: 1
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                plugins: {
+
+                    legend: {
+
+                        display: false
+
+                    },
+
+                    tooltip: {
+
+                        callbacks: {
+
+                            label: function(context) {
+
+                                const value = context.raw;
+
+                                const totalBookings = peakData.counts.reduce((a, b) => a + b, 0);
+
+                                const percentage = ((value / totalBookings) * 100).toFixed(1);
+
+                                
+
+                                return `Bookings: ${value} (${percentage}%)`;
+
+                            }
+
+                        }
+
+                    },
+
+                    title: {
+
+                        display: true,
+
+                        text: 'Peak Booking Periods',
+
+                        font: {
+
+                            size: 16,
+
+                            weight: 'bold'
+
+                        }
+
+                    }
+
+                },
+
+                scales: {
+
+                    y: {
+
+                        beginAtZero: true,
+
+                        title: {
+
+                            display: true,
+
+                            text: 'Number of Bookings'
+
+                        }
+
+                    },
+
+                    x: {
+
+                        title: {
+
+                            display: true,
+
+                            text: 'Period'
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+
+
+    } catch (error) {
+
+        console.error("Error rendering peak booking periods chart:", error);
+
+        displayChartError("peakBookingPeriodsChart", "Error rendering chart. Please try again.");
+
+    }
+
+}
+
+
+
+// Total Income Chart
+
+async function getTotalIncomeData() {
+
+    try {
+
+        const response = await $.ajax({
+
+            url: "/admin/total-income-data",
+
+            type: "POST",
+
+            dataType: "json",
+
+            contentType: "application/json",
+
+            data: JSON.stringify({
+
+                start_date: window.filters.startDate,
+
+                end_date: window.filters.endDate
+
+            })
+
+        });
+
+
+
+        console.log("Total Income Data:", response);
+
+        return response;
+
+    } catch (error) {
+
+        console.error("Error fetching total income data: ", error);
+
+        return null;
+
+    }
+
+}
+
+
+
+async function renderTotalIncomeChart() {
+
+    try {
+
+        const incomeData = await getTotalIncomeData();
+
+        
+
+        console.log("Total Income Data:", incomeData);
+
+        
+
+        if (!incomeData || !incomeData.labels || !incomeData.amounts) {
+
+            console.error("Invalid total income data received:", incomeData);
+
+            displayChartError("totalIncomeChart", "Unable to load total income data. Please try again later.");
+
+            return;
+
+        }
+
+        
+
+        const ctx = $("#totalIncomeChart")[0].getContext("2d");
+
+
+
+        if (totalIncomeChartInstance) {
+
+            totalIncomeChartInstance.destroy();
+
+        }
+
+
+
+        totalIncomeChartInstance = new Chart(ctx, {
+
+            type: "line",
+
+            data: {
+
+                labels: incomeData.labels,
+
+                datasets: [{
+
+                    label: "Total Income",
+
+                    data: incomeData.amounts,
+
+                    borderColor: 'rgb(25, 135, 84)',
+
+                    backgroundColor: 'rgba(25, 135, 84, 0.1)',
+
+                    borderWidth: 3,
+
+                    fill: true,
+
+                    tension: 0.4
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                plugins: {
+
+                    legend: {
+
+                        display: false
+
+                    },
+
+                    tooltip: {
+
+                        callbacks: {
+
+                            label: function(context) {
+
+                                return `Income: ₱${context.raw.toLocaleString()}`;
+
+                            }
+
+                        }
+
+                    },
+
+                    title: {
+
+                        display: true,
+
+                        text: 'Income Trends',
+
+                        font: {
+
+                            size: 16,
+
+                            weight: 'bold'
+
+                        }
+
+                    }
+
+                },
+
+                scales: {
+
+                    y: {
+
+                        beginAtZero: true,
+
+                        title: {
+
+                            display: true,
+
+                            text: 'Amount (₱)'
+
+                        },
+
+                        ticks: {
+
+                            callback: function(value) {
+
+                                return '₱' + value.toLocaleString();
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+
+
+    } catch (error) {
+
+        console.error("Error rendering total income chart:", error);
+
+        displayChartError("totalIncomeChart", "Error rendering chart. Please try again.");
+
+    }
+
+}
+
+
+
+// Outstanding Balances Chart
+
+async function getOutstandingBalancesData() {
+
+    try {
+
+        const response = await $.ajax({
+
+            url: "/admin/outstanding-balances-data",
+
+            type: "POST",
+
+            dataType: "json",
+
+            contentType: "application/json",
+
+            data: JSON.stringify({
+
+                start_date: window.filters.startDate,
+
+                end_date: window.filters.endDate
+
+            })
+
+        });
+
+
+
+        console.log("Outstanding Balances Data:", response);
+
+        return response;
+
+    } catch (error) {
+
+        console.error("Error fetching outstanding balances data: ", error);
+
+        return null;
+
+    }
+
+}
+
+
+
+async function renderOutstandingBalancesChart() {
+
+    try {
+
+        const balancesData = await getOutstandingBalancesData();
+
+        
+
+        console.log("Outstanding Balances Data:", balancesData);
+
+        
+
+        if (!balancesData || !balancesData.labels || !balancesData.amounts) {
+
+            console.error("Invalid outstanding balances data received:", balancesData);
+
+            displayChartError("outstandingBalancesChart", "Unable to load outstanding balances data. Please try again later.");
+
+            return;
+
+        }
+
+        
+
+        const ctx = $("#outstandingBalancesChart")[0].getContext("2d");
+
+
+
+        if (outstandingBalancesChartInstance) {
+
+            outstandingBalancesChartInstance.destroy();
+
+        }
+
+
+
+        outstandingBalancesChartInstance = new Chart(ctx, {
+
+            type: "bar",
+
+            data: {
+
+                labels: balancesData.labels,
+
+                datasets: [{
+
+                    label: "Outstanding Amount",
+
+                    data: balancesData.amounts,
+
+                    backgroundColor: 'rgba(255, 193, 7, 0.7)',
+
+                    borderColor: 'rgb(255, 193, 7)',
+
+                    borderWidth: 1
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                plugins: {
+
+                    legend: {
+
+                        display: false
+
+                    },
+
+                    tooltip: {
+
+                        callbacks: {
+
+                            label: function(context) {
+
+                                return `Outstanding: ₱${context.raw.toLocaleString()}`;
+
+                            }
+
+                        }
+
+                    },
+
+                    title: {
+
+                        display: true,
+
+                        text: 'Outstanding Balances',
+
+                        font: {
+
+                            size: 16,
+
+                            weight: 'bold'
+
+                        }
+
+                    }
+
+                },
+
+                scales: {
+
+                    y: {
+
+                        beginAtZero: true,
+
+                        title: {
+
+                            display: true,
+
+                            text: 'Amount (₱)'
+
+                        },
+
+                        ticks: {
+
+                            callback: function(value) {
+
+                                return '₱' + value.toLocaleString();
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+
+
+    } catch (error) {
+
+        console.error("Error rendering outstanding balances chart:", error);
+
+        displayChartError("outstandingBalancesChart", "Error rendering chart. Please try again.");
+
+    }
+
+}
+
+
+
+// Top-Paying Clients Chart
+
+async function getTopPayingClientsData() {
+
+    try {
+
+        const response = await $.ajax({
+
+            url: "/admin/top-paying-clients-data",
+
+            type: "POST",
+
+            dataType: "json",
+
+            contentType: "application/json",
+
+            data: JSON.stringify({
+
+                start_date: window.filters.startDate,
+
+                end_date: window.filters.endDate
+
+            })
+
+        });
+
+
+
+        console.log("Top-Paying Clients Data:", response);
+
+        return response;
+
+    } catch (error) {
+
+        console.error("Error fetching top-paying clients data: ", error);
+
+        return null;
+
+    }
+
+}
+
+
+
+async function renderTopPayingClientsChart() {
+
+    try {
+
+        const clientsData = await getTopPayingClientsData();
+
+        
+
+        console.log("Top-Paying Clients Data:", clientsData);
+
+        
+
+        if (!clientsData || !clientsData.labels || !clientsData.amounts) {
+
+            console.error("Invalid top-paying clients data received:", clientsData);
+
+            displayChartError("topPayingClientsChart", "Unable to load top-paying clients data. Please try again later.");
+
+            return;
+
+        }
+
+        
+
+        const ctx = $("#topPayingClientsChart")[0].getContext("2d");
+
+
+
+        if (topPayingClientsChartInstance) {
+
+            topPayingClientsChartInstance.destroy();
+
+        }
+
+
+
+        topPayingClientsChartInstance = new Chart(ctx, {
+
+            type: "bar",
+
+            data: {
+
+                labels: clientsData.labels,
+
+                datasets: [{
+
+                    label: "Total Paid",
+
+                    data: clientsData.amounts,
+
+                    backgroundColor: 'rgba(13, 110, 253, 0.7)',
+
+                    borderColor: 'rgb(13, 110, 253)',
+
+                    borderWidth: 1
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                indexAxis: 'y',
+
+                plugins: {
+
+                    legend: {
+
+                        display: false
+
+                    },
+
+                    tooltip: {
+
+                        callbacks: {
+
+                            label: function(context) {
+
+                                return `Total Paid: ₱${context.raw.toLocaleString()}`;
+
+                            }
+
+                        }
+
+                    },
+
+                    title: {
+
+                        display: true,
+
+                        text: 'Top-Paying Clients',
+
+                        font: {
+
+                            size: 16,
+
+                            weight: 'bold'
+
+                        }
+
+                    }
+
+                },
+
+                scales: {
+
+                    x: {
+
+                        beginAtZero: true,
+
+                        title: {
+
+                            display: true,
+
+                            text: 'Amount (₱)'
+
+                        },
+
+                        ticks: {
+
+                            callback: function(value) {
+
+                                return '₱' + value.toLocaleString();
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+
+
+    } catch (error) {
+
+        console.error("Error rendering top-paying clients chart:", error);
+
+        displayChartError("topPayingClientsChart", "Error rendering chart. Please try again.");
+
+    }
+
+}
+
+
+
+// Discounts Given Chart
+
+async function getDiscountsGivenData() {
+
+    try {
+
+        const response = await $.ajax({
+
+            url: "/admin/discounts-given-data",
+
+            type: "POST",
+
+            dataType: "json",
+
+            contentType: "application/json",
+
+            data: JSON.stringify({
+
+                start_date: window.filters.startDate,
+
+                end_date: window.filters.endDate
+
+            })
+
+        });
+
+
+
+        console.log("Discounts Given Data:", response);
+
+        return response;
+
+    } catch (error) {
+
+        console.error("Error fetching discounts given data: ", error);
+
+        return null;
+
+    }
+
+}
+
+
+
+async function renderDiscountsGivenChart() {
+
+    try {
+
+        const discountsData = await getDiscountsGivenData();
+
+        
+
+        console.log("Discounts Given Data:", discountsData);
+
+        
+
+        if (!discountsData || !discountsData.labels || !discountsData.amounts) {
+
+            console.error("Invalid discounts given data received:", discountsData);
+
+            displayChartError("discountsGivenChart", "Unable to load discounts given data. Please try again later.");
+
+            return;
+
+        }
+
+        
+
+        const ctx = $("#discountsGivenChart")[0].getContext("2d");
+
+
+
+        if (discountsGivenChartInstance) {
+
+            discountsGivenChartInstance.destroy();
+
+        }
+
+
+
+        discountsGivenChartInstance = new Chart(ctx, {
+
+            type: "doughnut",
+
+            data: {
+
+                labels: discountsData.labels,
+
+                datasets: [{
+
+                    data: discountsData.amounts,
+
+                    backgroundColor: [
+
+                        'rgba(25, 135, 84, 0.7)',   // Total Revenue
+                        'rgba(13, 202, 240, 0.7)'    // Total Discount Amount
+                    ],
+
+                    borderColor: [
+
+                        'rgb(25, 135, 84)',
+                        'rgb(13, 202, 240)'
+                    ],
+
+                    borderWidth: 1
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                plugins: {
+
+                    legend: {
+
+                        position: 'bottom'
+
+                    },
+
+                    tooltip: {
+
+                        callbacks: {
+
+                            label: function(context) {
+
+                                const label = context.label;
+
+                                const value = context.raw;
+
+                                return `${label}: ₱${Number(value).toLocaleString()}`;
+
+                            }
+
+                        }
+
+                    },
+
+                    title: {
+
+                        display: true,
+
+                        text: 'Revenue vs Discounts',
+
+                        font: {
+
+                            size: 16,
+
+                            weight: 'bold'
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+
+
+    } catch (error) {
+
+        console.error("Error rendering discounts given chart:", error);
+
+        displayChartError("discountsGivenChart", "Error rendering chart. Please try again.");
 
     }
 

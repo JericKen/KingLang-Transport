@@ -815,6 +815,66 @@ switch ($requestPath) {
 
         break;
 
+    case "/admin/unpaid-bookings-data":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->unpaidBookingsData();
+
+        break;
+
+    case "/admin/peak-booking-periods-data":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->peakBookingPeriodsData();
+
+        break;
+
+    case "/admin/total-income-data":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->totalIncomeData();
+
+        break;
+
+    case "/admin/outstanding-balances-data":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->outstandingBalancesData();
+
+        break;
+
+    case "/admin/top-paying-clients-data":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->topPayingClientsData();
+
+        break;
+
+    case "/admin/discounts-given-data":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->discountsGivenData();
+
+        break;
+
 
 
     case "/admin/booking-requests":

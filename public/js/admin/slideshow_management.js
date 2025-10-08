@@ -156,8 +156,17 @@ class SlideshowManager {
             const data = await response.json();
             
             if (data.success) {
-                this.showSuccess(data.message);
-                bootstrap.Modal.getInstance(document.getElementById('uploadImageModal')).hide();
+                // this.showSuccess(data.message);
+                const modal = bootstrap.Modal.getInstance(document.getElementById('uploadImageModal'));
+                modal.hide();
+                // Remove any lingering backdrop
+                setTimeout(() => {
+                    const backdrops = document.querySelectorAll('.modal-backdrop');
+                    backdrops.forEach(backdrop => backdrop.remove());
+                    document.body.classList.remove('modal-open');
+                    document.body.style.overflow = '';
+                    document.body.style.paddingRight = '';
+                }, 300);
                 this.loadImages();
             } else {
                 this.showError(data.message);
@@ -210,8 +219,17 @@ class SlideshowManager {
             const data = await response.json();
             
             if (data.success) {
-                this.showSuccess(data.message);
-                bootstrap.Modal.getInstance(document.getElementById('editImageModal')).hide();
+                // this.showSuccess(data.message);
+                const modal = bootstrap.Modal.getInstance(document.getElementById('editImageModal'));
+                modal.hide();
+                // Remove any lingering backdrop
+                setTimeout(() => {
+                    const backdrops = document.querySelectorAll('.modal-backdrop');
+                    backdrops.forEach(backdrop => backdrop.remove());
+                    document.body.classList.remove('modal-open');
+                    document.body.style.overflow = '';
+                    document.body.style.paddingRight = '';
+                }, 300);
                 this.loadImages();
             } else {
                 this.showError(data.message);
@@ -267,8 +285,17 @@ class SlideshowManager {
             const data = await response.json();
             
             if (data.success) {
-                this.showSuccess(data.message);
-                bootstrap.Modal.getInstance(document.getElementById('deleteImageModal')).hide();
+                // this.showSuccess(data.message);
+                const modal = bootstrap.Modal.getInstance(document.getElementById('deleteImageModal'));
+                modal.hide();
+                // Remove any lingering backdrop
+                setTimeout(() => {
+                    const backdrops = document.querySelectorAll('.modal-backdrop');
+                    backdrops.forEach(backdrop => backdrop.remove());
+                    document.body.classList.remove('modal-open');
+                    document.body.style.overflow = '';
+                    document.body.style.paddingRight = '';
+                }, 300);
                 this.loadImages();
             } else {
                 this.showError(data.message);
@@ -387,11 +414,25 @@ class SlideshowManager {
             confirmButtonColor: '#dc3545'
         });
     }
+    
+    // Global function to clean up modal backdrops
+    static cleanupModalBackdrops() {
+        const backdrops = document.querySelectorAll('.modal-backdrop');
+        backdrops.forEach(backdrop => backdrop.remove());
+        document.body.classList.remove('modal-open');
+        document.body.style.overflow = '';
+        document.body.style.paddingRight = '';
+    }
 }
 
 // Initialize slideshow manager when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     window.slideshowManager = new SlideshowManager();
+    
+    // Add global event listeners for modal cleanup
+    document.addEventListener('hidden.bs.modal', function(e) {
+        SlideshowManager.cleanupModalBackdrops();
+    });
 });
 
 // Global function for refresh

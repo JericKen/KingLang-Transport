@@ -284,7 +284,7 @@ class BookingManagementModel {
 
                     ":discount_type" => $discountType,
 
-                    ":discount_amount" => ($discountType === 'flat') ? $discount : null,
+                    ":discount_amount" => ($discountType === 'flat') ? $discount : round(max(0, $originalCost - $discountedCost), 2),
 
                     ":booking_id" => $booking_id
 
@@ -715,7 +715,7 @@ class BookingManagementModel {
 
                     ":discount_type" => $discountType,
 
-                    ":discount_amount" => ($discountType === 'flat') ? $discount : null,
+                    ":discount_amount" => ($discountType === 'flat') ? $discount : round(max(0, $originalCost - $discountedCost), 2),
 
                     ":booking_id" => $booking_id
 
@@ -3844,6 +3844,680 @@ class BookingManagementModel {
         } catch (PDOException $e) {
             return 0;
         }
+    }
+
+    
+
+    public function getUnpaidBookingsData($startDate = null, $endDate = null) {
+
+        try {
+
+            $dateFilter = "";
+
+            $params = [];
+
+            
+
+            if ($startDate && $endDate) {
+
+                $dateFilter = "AND b.date_of_tour BETWEEN :start_date AND :end_date";
+
+                $params[':start_date'] = $startDate;
+
+                $params[':end_date'] = $endDate;
+
+            }
+
+            
+
+            $query = "
+
+                SELECT 
+
+                    CASE 
+
+                        WHEN b.payment_status = 'Unpaid' THEN 'Unpaid'
+
+                        WHEN b.payment_status = 'Partially Paid' THEN 'Partially Paid'
+
+                        ELSE 'Paid'
+
+                    END as payment_status,
+
+                    COUNT(*) as count,
+
+                    SUM(c.total_cost) as total_amount
+
+                FROM bookings b
+
+                JOIN booking_costs c ON b.booking_id = c.booking_id
+
+                WHERE b.status IN ('Confirmed', 'Processing', 'Completed')
+
+                $dateFilter
+
+                GROUP BY 
+
+                    CASE 
+
+                        WHEN b.payment_status = 'Unpaid' THEN 'Unpaid'
+
+                        WHEN b.payment_status = 'Partially Paid' THEN 'Partially Paid'
+
+                        ELSE 'Paid'
+
+                    END
+
+                ORDER BY 
+
+                    CASE 
+
+                        WHEN b.payment_status = 'Unpaid' THEN 1
+
+                        WHEN b.payment_status = 'Partially Paid' THEN 2
+
+                        ELSE 3
+
+                    END
+
+            ";
+
+            
+
+            $stmt = $this->conn->prepare($query);
+
+            foreach ($params as $key => $value) {
+
+                $stmt->bindValue($key, $value);
+
+            }
+
+            $stmt->execute();
+
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            
+
+            $labels = [];
+
+            $counts = [];
+
+            $amounts = [];
+
+            
+
+            foreach ($results as $row) {
+
+                $labels[] = $row['payment_status'];
+
+                $counts[] = (int)$row['count'];
+
+                $amounts[] = (float)$row['total_amount'];
+
+            }
+
+            
+
+            return [
+
+                'labels' => $labels,
+
+                'counts' => $counts,
+
+                'amounts' => $amounts
+
+            ];
+
+            
+
+        } catch (PDOException $e) {
+
+            error_log("Error in getUnpaidBookingsData: " . $e->getMessage());
+
+            return "Database error: " . $e->getMessage();
+
+        }
+
+    }
+
+    
+
+    public function getPeakBookingPeriodsData($startDate = null, $endDate = null) {
+
+        try {
+
+            $dateFilter = "";
+
+            $params = [];
+
+            
+
+            if ($startDate && $endDate) {
+
+                $dateFilter = "AND date_of_tour BETWEEN :start_date AND :end_date";
+
+                $params[':start_date'] = $startDate;
+
+                $params[':end_date'] = $endDate;
+
+            }
+
+            
+
+            // Get peak booking periods by day of week
+
+            $query = "
+
+                SELECT 
+
+                    CASE DAYOFWEEK(date_of_tour)
+
+                        WHEN 1 THEN 'Sunday'
+
+                        WHEN 2 THEN 'Monday'
+
+                        WHEN 3 THEN 'Tuesday'
+
+                        WHEN 4 THEN 'Wednesday'
+
+                        WHEN 5 THEN 'Thursday'
+
+                        WHEN 6 THEN 'Friday'
+
+                        WHEN 7 THEN 'Saturday'
+
+                    END as day_of_week,
+
+                    COUNT(*) as booking_count
+
+                FROM bookings
+
+                WHERE status IN ('Confirmed', 'Processing', 'Completed')
+
+                $dateFilter
+
+                GROUP BY DAYOFWEEK(date_of_tour)
+
+                ORDER BY booking_count DESC
+
+                LIMIT 7
+
+            ";
+
+            
+
+            $stmt = $this->conn->prepare($query);
+
+            foreach ($params as $key => $value) {
+
+                $stmt->bindValue($key, $value);
+
+            }
+
+            $stmt->execute();
+
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            
+
+            $labels = [];
+
+            $counts = [];
+
+            
+
+            foreach ($results as $row) {
+
+                $labels[] = $row['day_of_week'];
+
+                $counts[] = (int)$row['booking_count'];
+
+            }
+
+            
+
+            return [
+
+                'labels' => $labels,
+
+                'counts' => $counts
+
+            ];
+
+            
+
+        } catch (PDOException $e) {
+
+            error_log("Error in getPeakBookingPeriodsData: " . $e->getMessage());
+
+            return "Database error: " . $e->getMessage();
+
+        }
+
+    }
+
+    
+
+    public function getTotalIncomeData($startDate = null, $endDate = null) {
+
+        try {
+
+            $dateFilter = "";
+
+            $params = [];
+
+            
+
+            if ($startDate && $endDate) {
+
+                $dateFilter = "AND p.payment_date BETWEEN :start_date AND :end_date";
+
+                $params[':start_date'] = $startDate;
+
+                $params[':end_date'] = $endDate;
+
+            }
+
+            
+
+            // Get monthly income trends
+
+            $query = "
+
+                SELECT 
+
+                    DATE_FORMAT(p.payment_date, '%Y-%m') as month,
+
+                    SUM(p.amount) as total_income
+
+                FROM payments p
+
+                WHERE p.status = 'Confirmed' AND p.is_canceled = 0
+
+                $dateFilter
+
+                GROUP BY DATE_FORMAT(p.payment_date, '%Y-%m')
+
+                ORDER BY month
+
+                LIMIT 12
+
+            ";
+
+            
+
+            $stmt = $this->conn->prepare($query);
+
+            foreach ($params as $key => $value) {
+
+                $stmt->bindValue($key, $value);
+
+            }
+
+            $stmt->execute();
+
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            
+
+            $labels = [];
+
+            $amounts = [];
+
+            
+
+            foreach ($results as $row) {
+
+                $labels[] = date('M Y', strtotime($row['month'] . '-01'));
+
+                $amounts[] = (float)$row['total_income'];
+
+            }
+
+            
+
+            return [
+
+                'labels' => $labels,
+
+                'amounts' => $amounts
+
+            ];
+
+            
+
+        } catch (PDOException $e) {
+
+            error_log("Error in getTotalIncomeData: " . $e->getMessage());
+
+            return "Database error: " . $e->getMessage();
+
+        }
+
+    }
+
+    
+
+    public function getOutstandingBalancesData($startDate = null, $endDate = null) {
+
+        try {
+
+            $dateFilter = "";
+
+            $params = [];
+
+            
+
+            if ($startDate && $endDate) {
+
+                $dateFilter = "AND b.date_of_tour BETWEEN :start_date AND :end_date";
+
+                $params[':start_date'] = $startDate;
+
+                $params[':end_date'] = $endDate;
+
+            }
+
+            
+
+            // Get outstanding balances by month
+
+            $query = "
+
+                SELECT 
+
+                    DATE_FORMAT(b.date_of_tour, '%Y-%m') as month,
+
+                    SUM(c.total_cost - COALESCE(paid_amounts.total_paid, 0)) as outstanding_amount
+
+                FROM bookings b
+
+                JOIN booking_costs c ON b.booking_id = c.booking_id
+
+                LEFT JOIN (
+
+                    SELECT 
+
+                        booking_id,
+
+                        SUM(amount) as total_paid
+
+                    FROM payments
+
+                    WHERE status = 'Confirmed' AND is_canceled = 0
+
+                    GROUP BY booking_id
+
+                ) paid_amounts ON b.booking_id = paid_amounts.booking_id
+
+                WHERE b.status IN ('Confirmed', 'Processing', 'Completed')
+
+                AND (c.total_cost - COALESCE(paid_amounts.total_paid, 0)) > 0
+
+                $dateFilter
+
+                GROUP BY DATE_FORMAT(b.date_of_tour, '%Y-%m')
+
+                ORDER BY month
+
+                LIMIT 12
+
+            ";
+
+            
+
+            $stmt = $this->conn->prepare($query);
+
+            foreach ($params as $key => $value) {
+
+                $stmt->bindValue($key, $value);
+
+            }
+
+            $stmt->execute();
+
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            
+
+            $labels = [];
+
+            $amounts = [];
+
+            
+
+            foreach ($results as $row) {
+
+                $labels[] = date('M Y', strtotime($row['month'] . '-01'));
+
+                $amounts[] = (float)$row['outstanding_amount'];
+
+            }
+
+            
+
+            return [
+
+                'labels' => $labels,
+
+                'amounts' => $amounts
+
+            ];
+
+            
+
+        } catch (PDOException $e) {
+
+            error_log("Error in getOutstandingBalancesData: " . $e->getMessage());
+
+            return "Database error: " . $e->getMessage();
+
+        }
+
+    }
+
+    
+
+    public function getTopPayingClientsData($startDate = null, $endDate = null) {
+
+        try {
+
+            $dateFilter = "";
+
+            $params = [];
+
+            
+
+            if ($startDate && $endDate) {
+
+                $dateFilter = "AND p.payment_date BETWEEN :start_date AND :end_date";
+
+                $params[':start_date'] = $startDate;
+
+                $params[':end_date'] = $endDate;
+
+            }
+
+            
+
+            // Get top paying clients
+
+            $query = "
+
+                SELECT 
+
+                    CONCAT(u.first_name, ' ', u.last_name) as client_name,
+
+                    SUM(p.amount) as total_paid
+
+                FROM payments p
+
+                JOIN bookings b ON p.booking_id = b.booking_id
+
+                JOIN users u ON b.user_id = u.user_id
+
+                WHERE p.status = 'Confirmed' AND p.is_canceled = 0
+
+                $dateFilter
+
+                GROUP BY u.user_id, u.first_name, u.last_name
+
+                ORDER BY total_paid DESC
+
+                LIMIT 10
+
+            ";
+
+            
+
+            $stmt = $this->conn->prepare($query);
+
+            foreach ($params as $key => $value) {
+
+                $stmt->bindValue($key, $value);
+
+            }
+
+            $stmt->execute();
+
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            
+
+            $labels = [];
+
+            $amounts = [];
+
+            
+
+            foreach ($results as $row) {
+
+                $labels[] = $row['client_name'];
+
+                $amounts[] = (float)$row['total_paid'];
+
+            }
+
+            
+
+            return [
+
+                'labels' => $labels,
+
+                'amounts' => $amounts
+
+            ];
+
+            
+
+        } catch (PDOException $e) {
+
+            error_log("Error in getTopPayingClientsData: " . $e->getMessage());
+
+            return "Database error: " . $e->getMessage();
+
+        }
+
+    }
+
+    
+
+    public function getDiscountsGivenData($startDate = null, $endDate = null) {
+
+        try {
+
+            $dateFilter = "";
+
+            $params = [];
+
+            
+
+            if ($startDate && $endDate) {
+
+                $dateFilter = "AND b.date_of_tour BETWEEN :start_date AND :end_date";
+
+                $params[':start_date'] = $startDate;
+
+                $params[':end_date'] = $endDate;
+
+            }
+
+            
+
+            // Get total discounts given within the date range (sum peso value)
+            $query = "
+
+                SELECT 
+
+                    SUM(
+                        COALESCE(
+                            c.discount_amount,
+                            CASE 
+                                WHEN c.discount_type = 'percentage' THEN ROUND((c.total_cost / NULLIF(100 - c.discount, 0)) * c.discount, 2) / 100
+                                WHEN c.discount_type = 'flat' THEN c.discount
+                                ELSE 0
+                            END
+                        )
+                    ) as total_discount_amount
+
+                FROM bookings b
+            
+                JOIN booking_costs c ON b.booking_id = c.booking_id
+
+                WHERE b.status IN ('Confirmed', 'Processing', 'Completed')
+
+                AND (c.discount_amount IS NOT NULL OR c.discount > 0)
+
+                $dateFilter
+
+            ";
+
+            $stmt = $this->conn->prepare($query);
+            foreach ($params as $key => $value) {
+                $stmt->bindValue($key, $value);
+            }
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $totalDiscountAmount = (float)($result['total_discount_amount'] ?? 0);
+
+            // Compute confirmed revenue within the same date range for percentage calculation
+            $revenueQuery = "
+                SELECT 
+                    SUM(p.amount) as total_revenue
+                FROM payments p
+                JOIN bookings b ON p.booking_id = b.booking_id
+                WHERE p.is_canceled = 0 
+                  AND p.status = 'Confirmed' 
+                  " . ($startDate && $endDate ? " AND b.date_of_tour BETWEEN :start_date AND :end_date" : "") . "
+            ";
+
+            $revenueStmt = $this->conn->prepare($revenueQuery);
+            if (!empty($params)) {
+                foreach ($params as $key => $value) {
+                    $revenueStmt->bindValue($key, $value);
+                }
+            }
+            $revenueStmt->execute();
+            $totalRevenue = (float)($revenueStmt->fetchColumn() ?? 0);
+
+            $discountsAsPercentOfRevenue = $totalRevenue > 0 
+                ? ($totalDiscountAmount / $totalRevenue) * 100 
+                : 0.0;
+
+            return [
+                'labels' => ['Total Revenue', 'Total Discount Amount'],
+                'amounts' => [$totalRevenue, $totalDiscountAmount]
+            ];
+
+        } catch (PDOException $e) {
+
+            error_log("Error in getDiscountsGivenData: " . $e->getMessage());
+
+            return "Database error: " . $e->getMessage();
+
+        }
+
     }
 
 }

@@ -64,7 +64,7 @@ class PastTripsController {
         ];
         $imageId = $this->model->addImage($imageData);
         if ($imageId) {
-            $this->logAudit('CREATE', 'Past Trip Image', $imageId, null, $imageData);
+            $this->logAudit('CREATE', 'Past Trip Image', $imageId, null, $imageData, $_SESSION['admin_id'] ?? null);
             echo json_encode(['success' => true, 'message' => 'Image uploaded successfully', 'image_id' => $imageId]);
         } else {
             if (file_exists($filepath)) { unlink($filepath); }
@@ -92,7 +92,7 @@ class PastTripsController {
         ];
         $success = $this->model->updateImage($imageId, $updateData);
         if ($success) {
-            $this->logAudit('UPDATE', 'Past Trip Image', $imageId, null, $updateData);
+            $this->logAudit('UPDATE', 'Past Trip Image', $imageId, null, $updateData, $_SESSION['admin_id'] ?? null);
             echo json_encode(['success' => true, 'message' => 'Image updated successfully']);
         } else {
             echo json_encode(['success' => false, 'message' => 'Failed to update image']);
@@ -113,7 +113,7 @@ class PastTripsController {
         $imageId = (int)$data['id'];
         $success = $this->model->deleteImage($imageId);
         if ($success) {
-            $this->logAudit('DELETE', 'Past Trip Image', $imageId, null, null);
+            $this->logAudit('DELETE', 'Past Trip Image', $imageId, null, null, $_SESSION['admin_id'] ?? null);
             echo json_encode(['success' => true, 'message' => 'Image deleted successfully']);
         } else {
             echo json_encode(['success' => false, 'message' => 'Failed to delete image']);
@@ -134,7 +134,7 @@ class PastTripsController {
         $imageId = (int)$data['id'];
         $success = $this->model->toggleStatus($imageId);
         if ($success) {
-            $this->logAudit('UPDATE', 'Past Trip Image', $imageId, null, ['toggle' => 'is_active']);
+            $this->logAudit('UPDATE', 'Past Trip Image', $imageId, null, ['toggle' => 'is_active'], $_SESSION['admin_id'] ?? null);
             echo json_encode(['success' => true, 'message' => 'Image status updated successfully']);
         } else {
             echo json_encode(['success' => false, 'message' => 'Failed to update image status']);
@@ -154,7 +154,7 @@ class PastTripsController {
         }
         $success = $this->model->updateDisplayOrder($data['orders']);
         if ($success) {
-            $this->logAudit('UPDATE', 'Past Trip Images', 0, null, $data['orders']);
+            $this->logAudit('UPDATE', 'Past Trip Images', 0, null, $data['orders'], $_SESSION['admin_id'] ?? null);
             echo json_encode(['success' => true, 'message' => 'Display order updated successfully']);
         } else {
             echo json_encode(['success' => false, 'message' => 'Failed to update display order']);

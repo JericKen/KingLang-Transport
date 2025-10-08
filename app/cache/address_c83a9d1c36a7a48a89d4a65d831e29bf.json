@@ -1,0 +1,258 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "San Jose del Monte, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 18,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJgTVpIqSvlzMRXZeDQ0MBEZg",
+         "reference" : "ChIJgTVpIqSvlzMRXZeDQ0MBEZg",
+         "structured_formatting" : 
+         {
+            "main_text" : "San Jose del Monte",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 18,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "San Jose del Monte"
+            },
+            {
+               "offset" : 20,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 29,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Template, Calle Hama, El Nido, Palawan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJf90vyT9VtjMRT_A33DE5OKk",
+         "reference" : "ChIJf90vyT9VtjMRT_A33DE5OKk",
+         "structured_formatting" : 
+         {
+            "main_text" : "Template",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Calle Hama, El Nido, Palawan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Template"
+            },
+            {
+               "offset" : 10,
+               "value" : "Calle Hama"
+            },
+            {
+               "offset" : 22,
+               "value" : "El Nido"
+            },
+            {
+               "offset" : 31,
+               "value" : "Palawan"
+            },
+            {
+               "offset" : 40,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
+         "description" : "Templates Hub PH, Natalio B. Bacalso Avenue, Cebu City, Cebu, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ6xXhY12dqTMR6vOpGLf7MdQ",
+         "reference" : "ChIJ6xXhY12dqTMR6vOpGLf7MdQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Templates Hub PH",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Natalio B. Bacalso Avenue, Cebu City, Cebu, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Templates Hub PH"
+            },
+            {
+               "offset" : 18,
+               "value" : "Natalio B. Bacalso Avenue"
+            },
+            {
+               "offset" : 45,
+               "value" : "Cebu City"
+            },
+            {
+               "offset" : 56,
+               "value" : "Cebu"
+            },
+            {
+               "offset" : 62,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Template Hub, Alvear East, Lingayen, Pangasinan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJF03UYgBfkTMRSGfuVTtXIcM",
+         "reference" : "ChIJF03UYgBfkTMRSGfuVTtXIcM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Template Hub",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Alvear East, Lingayen, Pangasinan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Template Hub"
+            },
+            {
+               "offset" : 14,
+               "value" : "Alvear East"
+            },
+            {
+               "offset" : 27,
+               "value" : "Lingayen"
+            },
+            {
+               "offset" : 37,
+               "value" : "Pangasinan"
+            },
+            {
+               "offset" : 49,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "shopping_mall"
+         ]
+      },
+      {
+         "description" : "TemplateForgePH, Bacoor, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJ4dcHLPXTlzMROmnsrv8OYqM",
+         "reference" : "ChIJ4dcHLPXTlzMROmnsrv8OYqM",
+         "structured_formatting" : 
+         {
+            "main_text" : "TemplateForgePH",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bacoor, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "TemplateForgePH"
+            },
+            {
+               "offset" : 17,
+               "value" : "Bacoor"
+            },
+            {
+               "offset" : 25,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 33,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

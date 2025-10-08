@@ -1,0 +1,260 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Tagaytay City, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJj0y1Gnt3vTMR6CvOUURRzG4",
+         "reference" : "ChIJj0y1Gnt3vTMR6CvOUURRzG4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Tagaytay City",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Tagaytay City"
+            },
+            {
+               "offset" : 15,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 23,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Tagaytay Picnic Grove, Tagaytay City, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJt2CcbBp6vTMRVLWvxFJ5-vY",
+         "reference" : "ChIJt2CcbBp6vTMRVLWvxFJ5-vY",
+         "structured_formatting" : 
+         {
+            "main_text" : "Tagaytay Picnic Grove",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Tagaytay City, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Tagaytay Picnic Grove"
+            },
+            {
+               "offset" : 23,
+               "value" : "Tagaytay City"
+            },
+            {
+               "offset" : 38,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 46,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "landmark",
+            "park",
+            "point_of_interest",
+            "tourist_attraction"
+         ]
+      },
+      {
+         "description" : "Tagaytay Rotonda, Tagaytay City, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "EjRUYWdheXRheSBSb3RvbmRhLCBUYWdheXRheSBDaXR5LCBDYXZpdGUsIFBoaWxpcHBpbmVzIi4qLAoUChIJIzRpU2B3vTMRFsoG9UblQBYSFAoSCY9MtRp7d70zEegrzlFEUcxu",
+         "reference" : "EjRUYWdheXRheSBSb3RvbmRhLCBUYWdheXRheSBDaXR5LCBDYXZpdGUsIFBoaWxpcHBpbmVzIi4qLAoUChIJIzRpU2B3vTMRFsoG9UblQBYSFAoSCY9MtRp7d70zEegrzlFEUcxu",
+         "structured_formatting" : 
+         {
+            "main_text" : "Tagaytay Rotonda",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Tagaytay City, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Tagaytay Rotonda"
+            },
+            {
+               "offset" : 18,
+               "value" : "Tagaytay City"
+            },
+            {
+               "offset" : 33,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 41,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "route"
+         ]
+      },
+      {
+         "description" : "Tagaytay City Market, Tagaytay - Sta. Rosa Rd, Tagaytay City, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJtdvFGPF5vTMRLgsHI6Y5cgw",
+         "reference" : "ChIJtdvFGPF5vTMRLgsHI6Y5cgw",
+         "structured_formatting" : 
+         {
+            "main_text" : "Tagaytay City Market",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Tagaytay - Sta. Rosa Rd, Tagaytay City, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Tagaytay City Market"
+            },
+            {
+               "offset" : 22,
+               "value" : "Tagaytay - Sta. Rosa Rd"
+            },
+            {
+               "offset" : 47,
+               "value" : "Tagaytay City"
+            },
+            {
+               "offset" : 62,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 70,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "premise"
+         ]
+      },
+      {
+         "description" : "Tagaytay Medical Center, Aguinaldo Highway, SILANG JUNCTION NORTH, Tagaytay City, Cavite, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJR91VoWF3vTMRv-UsfCrlECQ",
+         "reference" : "ChIJR91VoWF3vTMRv-UsfCrlECQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Tagaytay Medical Center",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Aguinaldo Highway, SILANG JUNCTION NORTH, Tagaytay City, Cavite, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Tagaytay Medical Center"
+            },
+            {
+               "offset" : 25,
+               "value" : "Aguinaldo Highway"
+            },
+            {
+               "offset" : 44,
+               "value" : "SILANG JUNCTION NORTH"
+            },
+            {
+               "offset" : 67,
+               "value" : "Tagaytay City"
+            },
+            {
+               "offset" : 82,
+               "value" : "Cavite"
+            },
+            {
+               "offset" : 90,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "health",
+            "hospital",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

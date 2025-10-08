@@ -1,0 +1,255 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Bocaue, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJf-88S6etlzMRsLfWdsvBAlM",
+         "reference" : "ChIJf-88S6etlzMRsLfWdsvBAlM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bocaue",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bocaue"
+            },
+            {
+               "offset" : 8,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 17,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "locality",
+            "political"
+         ]
+      },
+      {
+         "description" : "Bocaue Toll Plaza (Easytrip), E1, Bocaue, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJZdkkM9qtlzMR3gpZTxEuYoQ",
+         "reference" : "ChIJZdkkM9qtlzMR3gpZTxEuYoQ",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bocaue Toll Plaza (Easytrip)",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "E1, Bocaue, Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bocaue Toll Plaza (Easytrip)"
+            },
+            {
+               "offset" : 30,
+               "value" : "E1"
+            },
+            {
+               "offset" : 34,
+               "value" : "Bocaue"
+            },
+            {
+               "offset" : 42,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 51,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Bocaue Pet Market, Bocaue, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJoRBGjomtlzMR0v57Gr5Vph8",
+         "reference" : "ChIJoRBGjomtlzMR0v57Gr5Vph8",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bocaue Pet Market",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Bocaue, Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bocaue Pet Market"
+            },
+            {
+               "offset" : 19,
+               "value" : "Bocaue"
+            },
+            {
+               "offset" : 27,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 36,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "pet_store",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "Bocaue Specialists Medical Center, Inc. - Bocaue Bulacan, MacArthur Highway, Bocaue, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJl8GrSYGylzMR27VE2t6VKbY",
+         "reference" : "ChIJl8GrSYGylzMR27VE2t6VKbY",
+         "structured_formatting" : 
+         {
+            "main_text" : "Bocaue Specialists Medical Center, Inc. - Bocaue Bulacan",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "MacArthur Highway, Bocaue, Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Bocaue Specialists Medical Center, Inc. - Bocaue Bulacan"
+            },
+            {
+               "offset" : 58,
+               "value" : "MacArthur Highway"
+            },
+            {
+               "offset" : 77,
+               "value" : "Bocaue"
+            },
+            {
+               "offset" : 85,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 94,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "health",
+            "hospital",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Toll Booth Nlex Exit North Bocaue, Bocaue, Bulacan, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 5,
+               "offset" : 27
+            }
+         ],
+         "place_id" : "ChIJT2aqNAqtlzMRrXbtOzZb7xM",
+         "reference" : "ChIJT2aqNAqtlzMRrXbtOzZb7xM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Toll Booth Nlex Exit North Bocaue",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 5,
+                  "offset" : 27
+               }
+            ],
+            "secondary_text" : "Bocaue, Bulacan, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Toll Booth Nlex Exit North Bocaue"
+            },
+            {
+               "offset" : 35,
+               "value" : "Bocaue"
+            },
+            {
+               "offset" : 43,
+               "value" : "Bulacan"
+            },
+            {
+               "offset" : 52,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "geocode",
+            "premise"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

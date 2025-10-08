@@ -142,7 +142,7 @@ require_admin_auth(); // Use helper function
                         </button>
                     </div>
                 </div>
-                <div class="row mt-3">
+                <div class="row mt-2">
                     <div class="col-12">
                         <div class="d-flex flex-wrap gap-2">
                             <button type="button" class="btn btn-sm btn-outline-success quick-filter" data-range="today">Today</button>
@@ -159,7 +159,7 @@ require_admin_auth(); // Use helper function
                 </div>
             </div>
 
-            <div class="row mt-3">
+            <div class="row mt-2">
                 <div class="col-md-6 col-lg-4 col-xl mb-4">
                     <div class="summary-metrics-card d-flex gap-4 align-items-center p-4 h-100">
                         <div class="stats-icon bg-primary-subtle text-primary">
@@ -217,38 +217,50 @@ require_admin_auth(); // Use helper function
                 </div>  
             </div>
 
-            <div class="row mt-4">
-                <div class="col-md-6 mb-4">
+            <div class="row mt-2">
+                <div class="col-md-4 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
                         <h4>Booking Trends</h4>
                         <canvas id="monthlyTrendsChart" height="300"></canvas>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
+                <div class="col-md-4 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
                         <h4>Revenue Trends</h4>
                         <canvas id="revenueTrendsChart" height="300"></canvas>
                     </div>
                 </div>
-            </div>
-
-            <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
                         <h4>Top Destinations</h4>
                         <canvas id="destinationsChart" height="300"></canvas>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+            </div>  
+
+            <div class="row">
+                <div class="col-md-3 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
-                        <h4>Booking Status</h4>
+                        <h5>Booking Status</h5>
                         <canvas id="bookingStatusChart" height="300"></canvas>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-3 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
-                        <h4>Payment Method Distribution</h4>
+                        <h5>Payment Method Distribution</h5>
                         <canvas id="paymentMethodChart" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h5><i class="bi bi-exclamation-triangle text-warning me-2"></i>Unpaid/Partially Paid Bookings</h5>
+                        <canvas id="unpaidBookingsChart" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h5><i class="bi bi-graph-up text-success me-2"></i>Peak Booking Periods</h5>
+                        <canvas id="peakBookingPeriodsChart" height="300"></canvas>
                     </div>
                 </div>
             </div>
@@ -286,6 +298,72 @@ require_admin_auth(); // Use helper function
                     <div class="rounded p-4 summary-metrics-card">
                         <h4>Maintenance Alerts</h4>
                         <canvas id="maintenanceAlertsChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Analytics -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h3><i class="bi bi-cash-stack me-2 text-success"></i>Financial Analytics</h3>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h5><i class="bi bi-currency-dollar text-success me-2"></i>Total Income Trends</h5>
+                        <canvas id="totalIncomeChart" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h5><i class="bi bi-exclamation-circle text-warning me-2"></i>Outstanding Balances</h5>
+                        <canvas id="outstandingBalancesChart" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h5><i class="bi bi-people-fill text-primary me-2"></i>Top-Paying Clients</h5>
+                        <canvas id="topPayingClientsChart" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h5><i class="bi bi-percent text-info me-2"></i>Discounts Given</h5>
+                        <canvas id="discountsGivenChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-none">
+                <div class="col-md-6 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4><i class="bi bi-people-fill text-primary me-2"></i>Top-Paying Clients</h4>
+                        <canvas id="topPayingClientsChart" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4><i class="bi bi-percent text-info me-2"></i>Discounts Given</h4>
+                        <canvas id="discountsGivenChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment and Booking Analysis -->
+            <div class="row d-none">
+                <div class="col-md-6 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4><i class="bi bi-exclamation-triangle text-warning me-2"></i>Unpaid/Partially Paid Bookings</h4>
+                        <canvas id="unpaidBookingsChart" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4><i class="bi bi-graph-up text-success me-2"></i>Peak Booking Periods</h4>
+                        <canvas id="peakBookingPeriodsChart" height="300"></canvas>
                     </div>
                 </div>
             </div>

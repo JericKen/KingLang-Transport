@@ -39,7 +39,8 @@ function formatDate($date) {
 $totalCost = (float)($booking['total_cost'] ?? 0);
 $numberOfBuses = (int)($booking['number_of_buses'] ?? 1);
 $unitCost = $numberOfBuses > 0 ? $totalCost / $numberOfBuses : 0;
-$regularRate = $unitCost * 1.4; // 40% markup for "regular" rate
+// $regularRate = $unitCost * 1.4; // 40% markup for "regular" rate
+$regularRate = (float)($booking['gross_price'] ?? $unitCost ?? 0); // Use gross_price if available
 
 // Format currency
 function formatCurrency($amount) {

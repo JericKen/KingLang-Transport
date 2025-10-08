@@ -1723,6 +1723,222 @@ class BookingManagementController {
 
     }
 
+    
+
+    public function unpaidBookingsData() {
+
+        header("Content-Type: application/json");
+
+        
+
+        try {
+
+            // Get data from POST request
+
+            $jsonData = file_get_contents('php://input');
+
+            $data = json_decode($jsonData, true);
+
+            
+
+            $startDate = isset($data['start_date']) ? $data['start_date'] : null;
+
+            $endDate = isset($data['end_date']) ? $data['end_date'] : null;
+
+            
+
+            $unpaidData = $this->bookingModel->getUnpaidBookingsData($startDate, $endDate);
+
+            echo json_encode($unpaidData);
+
+        } catch (Exception $e) {
+
+            echo json_encode(["error" => "Failed to retrieve unpaid bookings data: " . $e->getMessage()]);
+
+        }
+
+    }
+
+    
+
+    public function peakBookingPeriodsData() {
+
+        header("Content-Type: application/json");
+
+        
+
+        try {
+
+            // Get data from POST request
+
+            $jsonData = file_get_contents('php://input');
+
+            $data = json_decode($jsonData, true);
+
+            
+
+            $startDate = isset($data['start_date']) ? $data['start_date'] : null;
+
+            $endDate = isset($data['end_date']) ? $data['end_date'] : null;
+
+            
+
+            $peakData = $this->bookingModel->getPeakBookingPeriodsData($startDate, $endDate);
+
+            echo json_encode($peakData);
+
+        } catch (Exception $e) {
+
+            echo json_encode(["error" => "Failed to retrieve peak booking periods data: " . $e->getMessage()]);
+
+        }
+
+    }
+
+    
+
+    public function totalIncomeData() {
+
+        header("Content-Type: application/json");
+
+        
+
+        try {
+
+            // Get data from POST request
+
+            $jsonData = file_get_contents('php://input');
+
+            $data = json_decode($jsonData, true);
+
+            
+
+            $startDate = isset($data['start_date']) ? $data['start_date'] : null;
+
+            $endDate = isset($data['end_date']) ? $data['end_date'] : null;
+
+            
+
+            $incomeData = $this->bookingModel->getTotalIncomeData($startDate, $endDate);
+
+            echo json_encode($incomeData);
+
+        } catch (Exception $e) {
+
+            echo json_encode(["error" => "Failed to retrieve total income data: " . $e->getMessage()]);
+
+        }
+
+    }
+
+    
+
+    public function outstandingBalancesData() {
+
+        header("Content-Type: application/json");
+
+        
+
+        try {
+
+            // Get data from POST request
+
+            $jsonData = file_get_contents('php://input');
+
+            $data = json_decode($jsonData, true);
+
+            
+
+            $startDate = isset($data['start_date']) ? $data['start_date'] : null;
+
+            $endDate = isset($data['end_date']) ? $data['end_date'] : null;
+
+            
+
+            $balancesData = $this->bookingModel->getOutstandingBalancesData($startDate, $endDate);
+
+            echo json_encode($balancesData);
+
+        } catch (Exception $e) {
+
+            echo json_encode(["error" => "Failed to retrieve outstanding balances data: " . $e->getMessage()]);
+
+        }
+
+    }
+
+    
+
+    public function topPayingClientsData() {
+
+        header("Content-Type: application/json");
+
+        
+
+        try {
+
+            // Get data from POST request
+
+            $jsonData = file_get_contents('php://input');
+
+            $data = json_decode($jsonData, true);
+
+            
+
+            $startDate = isset($data['start_date']) ? $data['start_date'] : null;
+
+            $endDate = isset($data['end_date']) ? $data['end_date'] : null;
+
+            
+
+            $clientsData = $this->bookingModel->getTopPayingClientsData($startDate, $endDate);
+
+            echo json_encode($clientsData);
+
+        } catch (Exception $e) {
+
+            echo json_encode(["error" => "Failed to retrieve top-paying clients data: " . $e->getMessage()]);
+
+        }
+
+    }
+
+    
+
+    public function discountsGivenData() {
+
+        header("Content-Type: application/json");
+
+        
+
+        try {
+
+            // Get data from POST request
+
+            $jsonData = file_get_contents('php://input');
+
+            $data = json_decode($jsonData, true);
+
+            
+
+            $startDate = isset($data['start_date']) ? $data['start_date'] : null;
+
+            $endDate = isset($data['end_date']) ? $data['end_date'] : null;
+
+            
+
+            $discountsData = $this->bookingModel->getDiscountsGivenData($startDate, $endDate);
+
+            echo json_encode($discountsData);
+
+        } catch (Exception $e) {
+
+            echo json_encode(["error" => "Failed to retrieve discounts given data: " . $e->getMessage()]);
+
+        }
+
+    }
+
 }
 
 ?>
