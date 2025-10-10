@@ -126,7 +126,7 @@ require_admin_auth(); // Use helper function
                         <div class="date-input-wrapper">
                             <input type="text" class="form-control" id="startDate" placeholder="Select start date">
                             <i class="bi bi-calendar-date"></i>
-                        </div>
+                        </div>  
                     </div>
                     <div class="col-md-5">
                         <label for="endDate" class="form-label">End Date</label>
@@ -241,41 +241,102 @@ require_admin_auth(); // Use helper function
             <div class="row">
                 <div class="col-md-3 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
-                        <h5>Booking Status</h5>
-                        <canvas id="bookingStatusChart" height="300"></canvas>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="rounded p-4 summary-metrics-card">
                         <h5>Payment Method Distribution</h5>
                         <canvas id="paymentMethodChart" height="300"></canvas>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
-                        <h5><i class="bi bi-exclamation-triangle text-warning me-2"></i>Unpaid/Partially Paid Bookings</h5>
+                        <h5>Unpaid/Partially Paid Bookings</h5>
                         <canvas id="unpaidBookingsChart" height="300"></canvas>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
-                        <h5><i class="bi bi-graph-up text-success me-2"></i>Peak Booking Periods</h5>
+                        <h4>Peak Booking Periods</h4>
                         <canvas id="peakBookingPeriodsChart" height="300"></canvas>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4>Peak Booking Hours</h4>
+                        <canvas id="peakHoursChart" height="300"></canvas>
                     </div>
                 </div>
             </div>
 
-            <!-- Advanced Analytics Section -->
-            <div class="row mt-4">
-                <div class="col-12">
-                    <h3><i class="bi bi-graph-up me-2 text-success"></i>Advanced Analytics</h3>
-                    <hr>
+            <!-- New row for additional charts -->
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4>Booking Status</h4>
+                        <canvas id="bookingStatusChart" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4>Cancellations by Reason</h4>
+                        <canvas id="cancellationsByReasonChart" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4>Avg Revenue per Trip</h4>
+                        <canvas id="avgRevenuePerTripChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operational & Client Insights -->
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4>Active vs Unavailable Buses</h4>
+                        <canvas id="busAvailabilityChart" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4>Driver Assignments per Day</h4>
+                        <canvas id="driverAssignmentsChart" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4>Average Trip Duration</h4>
+                        <canvas id="avgTripDurationChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4>Repeat Clients</h4>
+                        <canvas id="repeatClientsChart" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4>New Clients (Selected Range)</h4>
+                        <div class="d-flex align-items-center justify-content-center" style="height:300px;">
+                            <h2 id="newClientsCount" class="mb-0 text-success"></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="rounded p-4 summary-metrics-card">
+                        <h4>Client Satisfaction</h4>
+                        <canvas id="clientSatisfactionChart" height="300"></canvas>
+                        <div class="text-center mt-2"><small>Avg Rating: <span id="avgSatisfactionRating">-</span> / 5</small></div>
+                    </div>
                 </div>
             </div>
 
 
             <!-- Booking Patterns and Maintenance -->
-            <div class="row">
+            <div class="row d-none">
                 <div class="col-md-4 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
                         <h4>Busiest Booking Days</h4>
@@ -313,38 +374,23 @@ require_admin_auth(); // Use helper function
             <div class="row">
                 <div class="col-md-3 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
-                        <h5><i class="bi bi-currency-dollar text-success me-2"></i>Total Income Trends</h5>
+                        <h4><i class="bi bi-currency-dollar text-success me-2"></i>Total Income Trends</h4>
                         <canvas id="totalIncomeChart" height="300"></canvas>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
-                        <h5><i class="bi bi-exclamation-circle text-warning me-2"></i>Outstanding Balances</h5>
+                        <h4><i class="bi bi-exclamation-circle text-warning me-2"></i>Outstanding Balances</h4>
                         <canvas id="outstandingBalancesChart" height="300"></canvas>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
-                        <h5><i class="bi bi-people-fill text-primary me-2"></i>Top-Paying Clients</h5>
-                        <canvas id="topPayingClientsChart" height="300"></canvas>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="rounded p-4 summary-metrics-card">
-                        <h5><i class="bi bi-percent text-info me-2"></i>Discounts Given</h5>
-                        <canvas id="discountsGivenChart" height="300"></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row d-none">
-                <div class="col-md-6 mb-4">
-                    <div class="rounded p-4 summary-metrics-card">
                         <h4><i class="bi bi-people-fill text-primary me-2"></i>Top-Paying Clients</h4>
                         <canvas id="topPayingClientsChart" height="300"></canvas>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
+                <div class="col-md-3 mb-4">
                     <div class="rounded p-4 summary-metrics-card">
                         <h4><i class="bi bi-percent text-info me-2"></i>Discounts Given</h4>
                         <canvas id="discountsGivenChart" height="300"></canvas>

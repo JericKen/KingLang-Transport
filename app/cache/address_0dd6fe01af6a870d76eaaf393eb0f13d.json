@@ -1,0 +1,244 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Talim Island, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJO-_pk5fdlzMRyB5xz2QVvIM",
+         "reference" : "ChIJO-_pk5fdlzMRyB5xz2QVvIM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Talim Island",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Talim Island"
+            },
+            {
+               "offset" : 14,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "natural_feature"
+         ]
+      },
+      {
+         "description" : "Binangonan - Talim Island Boat Service, Binangonan, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 13
+            }
+         ],
+         "place_id" : "ChIJOSq52ZjDlzMRhmauWTAqUgc",
+         "reference" : "ChIJOSq52ZjDlzMRhmauWTAqUgc",
+         "structured_formatting" : 
+         {
+            "main_text" : "Binangonan - Talim Island Boat Service",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 13
+               }
+            ],
+            "secondary_text" : "Binangonan, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Binangonan - Talim Island Boat Service"
+            },
+            {
+               "offset" : 40,
+               "value" : "Binangonan"
+            },
+            {
+               "offset" : 52,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 59,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Hospital for Talim Island Residents, IV A - Southern Tagalog, Binangonan, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 13
+            }
+         ],
+         "place_id" : "ChIJ9ce-5ZjDlzMRtG11jqtf9HU",
+         "reference" : "ChIJ9ce-5ZjDlzMRtG11jqtf9HU",
+         "structured_formatting" : 
+         {
+            "main_text" : "Hospital for Talim Island Residents",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 13
+               }
+            ],
+            "secondary_text" : "IV A - Southern Tagalog, Binangonan, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Hospital for Talim Island Residents"
+            },
+            {
+               "offset" : 37,
+               "value" : "IV A - Southern Tagalog"
+            },
+            {
+               "offset" : 62,
+               "value" : "Binangonan"
+            },
+            {
+               "offset" : 74,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 81,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "health",
+            "hospital",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Talim Island Academy Foundation (T.I.A.F), Cardona, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJPcsKvk7dlzMR8d8zHRUHSI4",
+         "reference" : "ChIJPcsKvk7dlzMR8d8zHRUHSI4",
+         "structured_formatting" : 
+         {
+            "main_text" : "Talim Island Academy Foundation (T.I.A.F)",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Cardona, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Talim Island Academy Foundation (T.I.A.F)"
+            },
+            {
+               "offset" : 43,
+               "value" : "Cardona"
+            },
+            {
+               "offset" : 52,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 59,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Port of Talim Island, Cardona, Laguna, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 8
+            }
+         ],
+         "place_id" : "ChIJjWkL2ZvdlzMRmgMJjRXrRWw",
+         "reference" : "ChIJjWkL2ZvdlzMRmgMJjRXrRWw",
+         "structured_formatting" : 
+         {
+            "main_text" : "Port of Talim Island",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 8
+               }
+            ],
+            "secondary_text" : "Cardona, Laguna, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Port of Talim Island"
+            },
+            {
+               "offset" : 22,
+               "value" : "Cardona"
+            },
+            {
+               "offset" : 31,
+               "value" : "Laguna"
+            },
+            {
+               "offset" : 39,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

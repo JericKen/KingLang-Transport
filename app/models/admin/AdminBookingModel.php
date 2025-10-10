@@ -1,229 +1,106 @@
 <?php
-
 require_once __DIR__ . "/../../../config/database.php";
 
-
-
 class AdminBookingModel {
-
     private $conn;
 
-    
-
     public function __construct() {
-
         global $pdo;
-
         $this->conn = $pdo;
-
     }
 
-    
-
     /**
-
      * Create a new booking in the database
-
      * 
-
      * @param array $bookingData Booking information
-
      * @param array|null $initialPayment Optional initial payment details
-
      * @return int|bool The booking ID if successful, false otherwise
-
      */
-
     public function createBooking($bookingData, $initialPayment = null) {
-
         try {
-
             $this->conn->beginTransaction();
 
-            
-
             // Insert into bookings table
-
             $sql = "INSERT INTO bookings (
-
                 client_name, contact_number, email, company_name, 
-
                 pickup_point, destination, stops, 
-
                 date_of_tour, pickup_time, number_of_days, number_of_buses, 
-
                 total_cost, notes, status, payment_status, created_by, created_at
-
             ) VALUES (
-
                 :client_name, :contact_number, :email, :company_name,
-
                 :pickup_point, :destination, :stops,
-
                 :date_of_tour, :pickup_time, :number_of_days, :number_of_buses,
-
                 :total_cost, :notes, :status, :payment_status, :created_by, :created_at
-
             )";
-
-            
 
             $stmt = $this->conn->prepare($sql);
 
-            
-
             // Bind parameters
-
             $stmt->bindParam(':client_name', $bookingData['client_name']);
-
             $stmt->bindParam(':contact_number', $bookingData['contact_number']);
-
             $stmt->bindParam(':email', $bookingData['email']);
-
             $stmt->bindParam(':company_name', $bookingData['company_name']);
-
             $stmt->bindParam(':pickup_point', $bookingData['pickup_point']);
-
             $stmt->bindParam(':destination', $bookingData['destination']);
-
             $stmt->bindParam(':stops', $bookingData['stops']);
-
             $stmt->bindParam(':date_of_tour', $bookingData['date_of_tour']);
-
             $stmt->bindParam(':pickup_time', $bookingData['pickup_time']);
-
             $stmt->bindParam(':number_of_days', $bookingData['number_of_days']);
-
             $stmt->bindParam(':number_of_buses', $bookingData['number_of_buses']);
-
             $stmt->bindParam(':total_cost', $bookingData['total_cost']);
-
             $stmt->bindParam(':notes', $bookingData['notes']);
-
             $stmt->bindParam(':status', $bookingData['status']);
-
             $stmt->bindParam(':payment_status', $bookingData['payment_status']);
-
             $stmt->bindParam(':created_by', $bookingData['created_by']);
-
             $stmt->bindParam(':created_at', $bookingData['created_at']);
-
-            
-
             $stmt->execute();
 
-            
-
             // Get the booking ID
-
             $bookingId = $this->conn->lastInsertId();
 
-            
-
             // If initial payment is provided, add it to the payments table
-
             if ($initialPayment && $initialPayment['amount'] > 0) {
-
                 $paymentSql = "INSERT INTO payments (
-
                     booking_id, amount, payment_method, reference_number, payment_date, created_at
-
                 ) VALUES (
-
                     :booking_id, :amount, :payment_method, :reference_number, :payment_date, :created_at
-
                 )";
 
-                
-
                 $paymentStmt = $this->conn->prepare($paymentSql);
-
-                
-
-                // Bind payment parameters
-
                 $paymentStmt->bindParam(':booking_id', $bookingId);
-
                 $paymentStmt->bindParam(':amount', $initialPayment['amount']);
-
                 $paymentStmt->bindParam(':payment_method', $initialPayment['payment_method']);
-
                 $paymentStmt->bindParam(':reference_number', $initialPayment['reference_number']);
-
                 $paymentStmt->bindParam(':payment_date', $initialPayment['payment_date']);
-
                 $paymentStmt->bindParam(':created_at', $bookingData['created_at']);
-
-                
-
                 $paymentStmt->execute();
-
             }
 
-            
-
             // Add a booking history record
-
             $historySql = "INSERT INTO booking_history (
-
                 booking_id, status, notes, changed_by, created_at
-
             ) VALUES (
-
                 :booking_id, :status, :notes, :changed_by, :created_at
-
             )";
 
-            
-
             $historyStmt = $this->conn->prepare($historySql);
-
-            
-
-            // Bind history parameters
-
             $historyStmt->bindParam(':booking_id', $bookingId);
-
             $historyStmt->bindParam(':status', $bookingData['status']);
-
             $notes = "Booking created by admin";
-
             $historyStmt->bindParam(':notes', $notes);
-
             $historyStmt->bindParam(':changed_by', $bookingData['created_by']);
-
             $historyStmt->bindParam(':created_at', $bookingData['created_at']);
-
-            
-
             $historyStmt->execute();
 
-            
-
             // Commit the transaction
-
             $this->conn->commit();
-
-            
-
             return $bookingId;
-
-            
-
         } catch (PDOException $e) {
-
-            // Roll back the transaction on error
-
             $this->conn->rollBack();
-
             error_log("Error creating booking: " . $e->getMessage());
-
             return false;
-
         }
-
     }
-
     
 
     /**

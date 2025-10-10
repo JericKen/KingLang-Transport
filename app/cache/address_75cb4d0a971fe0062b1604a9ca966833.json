@@ -1,0 +1,269 @@
+{
+   "predictions" : 
+   [
+      {
+         "description" : "Resort Paraiso Pampanga, Paraiso street, San Fernando, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJxwSfWPzzljMRO0UtytYFDIs",
+         "reference" : "ChIJxwSfWPzzljMRO0UtytYFDIs",
+         "structured_formatting" : 
+         {
+            "main_text" : "Resort Paraiso Pampanga",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Paraiso street, San Fernando, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Resort Paraiso Pampanga"
+            },
+            {
+               "offset" : 25,
+               "value" : "Paraiso street"
+            },
+            {
+               "offset" : 41,
+               "value" : "San Fernando"
+            },
+            {
+               "offset" : 55,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "The Orchid Gardens Resort Complex, Lazatin Boulevard, San Fernando, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 19
+            }
+         ],
+         "place_id" : "ChIJu5FFsaj3ljMR1lHjLKQ_CmA",
+         "reference" : "ChIJu5FFsaj3ljMR1lHjLKQ_CmA",
+         "structured_formatting" : 
+         {
+            "main_text" : "The Orchid Gardens Resort Complex",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 19
+               }
+            ],
+            "secondary_text" : "Lazatin Boulevard, San Fernando, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "The Orchid Gardens Resort Complex"
+            },
+            {
+               "offset" : 35,
+               "value" : "Lazatin Boulevard"
+            },
+            {
+               "offset" : 54,
+               "value" : "San Fernando"
+            },
+            {
+               "offset" : 68,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 78,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "lodging",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
+         "description" : "Lawas Seaside Resort, Lobo - Malabrigo Road, Lobo, Batangas, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 14
+            }
+         ],
+         "place_id" : "ChIJLTiyXFUevTMRn-ij9pJR1fI",
+         "reference" : "ChIJLTiyXFUevTMRn-ij9pJR1fI",
+         "structured_formatting" : 
+         {
+            "main_text" : "Lawas Seaside Resort",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 14
+               }
+            ],
+            "secondary_text" : "Lobo - Malabrigo Road, Lobo, Batangas, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Lawas Seaside Resort"
+            },
+            {
+               "offset" : 22,
+               "value" : "Lobo - Malabrigo Road"
+            },
+            {
+               "offset" : 45,
+               "value" : "Lobo"
+            },
+            {
+               "offset" : 51,
+               "value" : "Batangas"
+            },
+            {
+               "offset" : 61,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Rizal Beach Resort, Sorsogon City, Sorsogon, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 12
+            }
+         ],
+         "place_id" : "ChIJGRk8Am_roDMRLErMBMKB_Rs",
+         "reference" : "ChIJGRk8Am_roDMRLErMBMKB_Rs",
+         "structured_formatting" : 
+         {
+            "main_text" : "Rizal Beach Resort",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 12
+               }
+            ],
+            "secondary_text" : "Sorsogon City, Sorsogon, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Rizal Beach Resort"
+            },
+            {
+               "offset" : 20,
+               "value" : "Sorsogon City"
+            },
+            {
+               "offset" : 35,
+               "value" : "Sorsogon"
+            },
+            {
+               "offset" : 45,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest",
+            "tourist_attraction"
+         ]
+      },
+      {
+         "description" : "Ella Ville Resort, National Rd, Binangonan, Rizal, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 11
+            }
+         ],
+         "place_id" : "ChIJFX0-mezDlzMRHN1xTuaVyYI",
+         "reference" : "ChIJFX0-mezDlzMRHN1xTuaVyYI",
+         "structured_formatting" : 
+         {
+            "main_text" : "Ella Ville Resort",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 11
+               }
+            ],
+            "secondary_text" : "National Rd, Binangonan, Rizal, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Ella Ville Resort"
+            },
+            {
+               "offset" : 19,
+               "value" : "National Rd"
+            },
+            {
+               "offset" : 32,
+               "value" : "Binangonan"
+            },
+            {
+               "offset" : 44,
+               "value" : "Rizal"
+            },
+            {
+               "offset" : 51,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "lodging",
+            "point_of_interest"
+         ]
+      }
+   ],
+   "status" : "OK"
+}

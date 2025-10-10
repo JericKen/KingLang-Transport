@@ -875,6 +875,86 @@ switch ($requestPath) {
 
         break;
 
+    case "/admin/cancellations-by-reason":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->cancellationsByReasonData();
+
+        break;
+
+    case "/admin/average-revenue-per-trip":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->averageRevenuePerTripData();
+
+        break;
+
+    case "/admin/bus-availability-data":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->busAvailabilityData();
+
+        break;
+
+    case "/admin/driver-assignments-per-day":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->driverAssignmentsPerDayData();
+
+        break;
+
+    case "/admin/average-trip-duration":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->averageTripDurationData();
+
+        break;
+
+    case "/admin/repeat-clients-data":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->repeatClientsData();
+
+        break;
+
+    case "/admin/new-clients-data":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->newClientsData();
+
+        break;
+
+    case "/admin/client-satisfaction-summary":
+
+        require_once $controllerClasses['admin']['BookingManagementController'];
+
+        $controller = new BookingManagementController();
+
+        $controller->clientSatisfactionSummaryData();
+
+        break;
+
 
 
     case "/admin/booking-requests":

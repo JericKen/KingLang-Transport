@@ -1532,7 +1532,7 @@ $current_page = "chat";
                             if (self.state.messages.length !== newMessages.length) {
                                 hasNewMessages = true;
                                 if (silentRefresh) {
-                                    console.log("=𕄠New message received! Updating conversation " + conversationId);
+                                    console.log("New message received! Updating conversation " + conversationId);
                                 }
                             }
                             

@@ -3764,78 +3764,7 @@ function openBookingDetailsModal(bookingId) {
             modalContent.querySelector(".cancel-booking")?.addEventListener("click", function() {
 
                 const bookingId = this.dataset.bookingId;
-
-                
-
-                // Close the details modal
-
-                modalInstance.hide();
-
-                
-
-                Swal.fire({
-
-                    title: 'Cancel Booking?',
-
-                    html: '<p>Are you sure you want to cancel your booking?</p>',
-
-                    input: 'textarea',
-
-                    inputPlaceholder: 'Kindly provide the reason here.',
-
-                    inputAttributes: {
-
-                        'aria-label': 'Cancellation reason'
-
-                    },
-
-                    footer: '<p class="text-secondary mb-0">Note: This action cannot be undone.</p>',
-
-                    showCancelButton: true,
-
-                    cancelButtonText: 'Cancel',
-
-                    confirmButtonText: 'Confirm',
-
-                    confirmButtonColor: '#28a745',
-
-                    cancelButtonColor: '#6c757d',
-
-                    showCloseButton: true,
-
-                    focusConfirm: false,
-
-                    allowOutsideClick: false,
-
-                    width: '32em',
-
-                    padding: '1em',
-
-                    customClass: {
-
-                    container: 'swal2-container',
-
-                    popup: 'swal2-popup',
-
-                    header: 'swal2-header',
-
-                    title: 'swal2-title',
-
-                    input: 'form-control'
-
-                },
-
-                }).then(result => {
-
-                    if (result.isConfirmed) {
-
-                        const reason = result.value;
-
-                        cancelBooking(bookingId, reason);
-
-                    }
-
-                });
+                showCancellationReasonModal(bookingId)
 
             });
 

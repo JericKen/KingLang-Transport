@@ -1939,6 +1939,105 @@ class BookingManagementController {
 
     }
 
+    public function cancellationsByReasonData() {
+        header("Content-Type: application/json");
+        try {
+            $jsonData = file_get_contents('php://input');
+            $data = json_decode($jsonData, true);
+            $startDate = isset($data['start_date']) ? $data['start_date'] : null;
+            $endDate = isset($data['end_date']) ? $data['end_date'] : null;
+            $result = $this->bookingModel->getCancellationsByReason($startDate, $endDate);
+            echo json_encode($result);
+        } catch (Exception $e) {
+            echo json_encode(["error" => "Failed to retrieve cancellations by reason: " . $e->getMessage()]);
+        }
+    }
+
+    public function averageRevenuePerTripData() {
+        header("Content-Type: application/json");
+        try {
+            $jsonData = file_get_contents('php://input');
+            $data = json_decode($jsonData, true);
+            $startDate = isset($data['start_date']) ? $data['start_date'] : null;
+            $endDate = isset($data['end_date']) ? $data['end_date'] : null;
+            $result = $this->bookingModel->getAverageRevenuePerTripData($startDate, $endDate);
+            echo json_encode($result);
+        } catch (Exception $e) {
+            echo json_encode(["error" => "Failed to retrieve average revenue per trip: " . $e->getMessage()]);
+        }
+    }
+
+    public function busAvailabilityData() {
+        header("Content-Type: application/json");
+        try {
+            $data = json_decode(file_get_contents('php://input'), true);
+            $startDate = $data['start_date'] ?? null;
+            $endDate = $data['end_date'] ?? null;
+            echo json_encode($this->bookingModel->getBusAvailabilityData($startDate, $endDate));
+        } catch (Exception $e) {
+            echo json_encode(["error" => "Failed to retrieve bus availability: " . $e->getMessage()]);
+        }
+    }
+
+    public function driverAssignmentsPerDayData() {
+        header("Content-Type: application/json");
+        try {
+            $data = json_decode(file_get_contents('php://input'), true);
+            $startDate = $data['start_date'] ?? null;
+            $endDate = $data['end_date'] ?? null;
+            echo json_encode($this->bookingModel->getDriverAssignmentsPerDay($startDate, $endDate));
+        } catch (Exception $e) {
+            echo json_encode(["error" => "Failed to retrieve driver assignments: " . $e->getMessage()]);
+        }
+    }
+
+    public function averageTripDurationData() {
+        header("Content-Type: application/json");
+        try {
+            $data = json_decode(file_get_contents('php://input'), true);
+            $startDate = $data['start_date'] ?? null;
+            $endDate = $data['end_date'] ?? null;
+            echo json_encode($this->bookingModel->getAverageTripDurationData($startDate, $endDate));
+        } catch (Exception $e) {
+            echo json_encode(["error" => "Failed to retrieve average trip duration: " . $e->getMessage()]);
+        }
+    }
+
+    public function repeatClientsData() {
+        header("Content-Type: application/json");
+        try {
+            $data = json_decode(file_get_contents('php://input'), true);
+            $startDate = $data['start_date'] ?? null;
+            $endDate = $data['end_date'] ?? null;
+            echo json_encode($this->bookingModel->getRepeatClientsData($startDate, $endDate));
+        } catch (Exception $e) {
+            echo json_encode(["error" => "Failed to retrieve repeat clients: " . $e->getMessage()]);
+        }
+    }
+
+    public function newClientsData() {
+        header("Content-Type: application/json");
+        try {
+            $data = json_decode(file_get_contents('php://input'), true);
+            $startDate = $data['start_date'] ?? null;
+            $endDate = $data['end_date'] ?? null;
+            echo json_encode($this->bookingModel->getNewClientsData($startDate, $endDate));
+        } catch (Exception $e) {
+            echo json_encode(["error" => "Failed to retrieve new clients: " . $e->getMessage()]);
+        }
+    }
+
+    public function clientSatisfactionSummaryData() {
+        header("Content-Type: application/json");
+        try {
+            $data = json_decode(file_get_contents('php://input'), true);
+            $startDate = $data['start_date'] ?? null;
+            $endDate = $data['end_date'] ?? null;
+            echo json_encode($this->bookingModel->getClientSatisfactionSummary($startDate, $endDate));
+        } catch (Exception $e) {
+            echo json_encode(["error" => "Failed to retrieve client satisfaction: " . $e->getMessage()]);
+        }
+    }
 }
 
 ?>

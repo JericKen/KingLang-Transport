@@ -55,54 +55,6 @@
          ]
       },
       {
-         "description" : "Kinglong General Merchandise, Valenzuela, Metro Manila, Philippines",
-         "matched_substrings" : 
-         [
-            {
-               "length" : 8,
-               "offset" : 0
-            }
-         ],
-         "place_id" : "ChIJBzAULjmxlzMRYAYiDTo49FM",
-         "reference" : "ChIJBzAULjmxlzMRYAYiDTo49FM",
-         "structured_formatting" : 
-         {
-            "main_text" : "Kinglong General Merchandise",
-            "main_text_matched_substrings" : 
-            [
-               {
-                  "length" : 8,
-                  "offset" : 0
-               }
-            ],
-            "secondary_text" : "Valenzuela, Metro Manila, Philippines"
-         },
-         "terms" : 
-         [
-            {
-               "offset" : 0,
-               "value" : "Kinglong General Merchandise"
-            },
-            {
-               "offset" : 30,
-               "value" : "Valenzuela"
-            },
-            {
-               "offset" : 42,
-               "value" : "Metro Manila"
-            },
-            {
-               "offset" : 56,
-               "value" : "Philippines"
-            }
-         ],
-         "types" : 
-         [
-            "establishment",
-            "point_of_interest"
-         ]
-      },
-      {
          "description" : "Philippine Kinglong Bus Inc., Caloocan, Metro Manila, Philippines",
          "matched_substrings" : 
          [
@@ -193,6 +145,54 @@
             },
             {
                "offset" : 91,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Kinglong General Merchandise, Valenzuela, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJBzAULjmxlzMRYAYiDTo49FM",
+         "reference" : "ChIJBzAULjmxlzMRYAYiDTo49FM",
+         "structured_formatting" : 
+         {
+            "main_text" : "Kinglong General Merchandise",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 8,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Valenzuela, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Kinglong General Merchandise"
+            },
+            {
+               "offset" : 30,
+               "value" : "Valenzuela"
+            },
+            {
+               "offset" : 42,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 56,
                "value" : "Philippines"
             }
          ],

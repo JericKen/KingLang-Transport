@@ -2,7 +2,7 @@
    "predictions" : 
    [
       {
-         "description" : "Kingsford Hotel Manila, J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines",
+         "description" : "Localhost Coffee & Co., A. Guisama Street, Marikina, Metro Manila, Philippines",
          "matched_substrings" : 
          [
             {
@@ -10,11 +10,11 @@
                "offset" : 0
             }
          ],
-         "place_id" : "ChIJ-_mvpATMlzMRkiErfNMwyys",
-         "reference" : "ChIJ-_mvpATMlzMRkiErfNMwyys",
+         "place_id" : "ChIJKftkUKu5lzMRARprNo1vEJs",
+         "reference" : "ChIJKftkUKu5lzMRARprNo1vEJs",
          "structured_formatting" : 
          {
-            "main_text" : "Kingsford Hotel Manila",
+            "main_text" : "Localhost Coffee & Co.",
             "main_text_matched_substrings" : 
             [
                {
@@ -22,28 +22,241 @@
                   "offset" : 0
                }
             ],
-            "secondary_text" : "J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines"
+            "secondary_text" : "A. Guisama Street, Marikina, Metro Manila, Philippines"
          },
          "terms" : 
          [
             {
                "offset" : 0,
-               "value" : "Kingsford Hotel Manila"
+               "value" : "Localhost Coffee & Co."
             },
             {
                "offset" : 24,
-               "value" : "J.W. Diokno Boulevard"
+               "value" : "A. Guisama Street"
             },
             {
-               "offset" : 47,
-               "value" : "Parañaque"
+               "offset" : 43,
+               "value" : "Marikina"
             },
             {
-               "offset" : 58,
+               "offset" : 53,
                "value" : "Metro Manila"
             },
             {
-               "offset" : 72,
+               "offset" : 67,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "cafe",
+            "establishment",
+            "food",
+            "point_of_interest",
+            "store"
+         ]
+      },
+      {
+         "description" : "Locabomb, Fil-Am Friendship Highway, Angeles, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJRRI7aQDzljMRxo0VujTlHYI",
+         "reference" : "ChIJRRI7aQDzljMRxo0VujTlHYI",
+         "structured_formatting" : 
+         {
+            "main_text" : "Locabomb",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Fil-Am Friendship Highway, Angeles, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Locabomb"
+            },
+            {
+               "offset" : 10,
+               "value" : "Fil-Am Friendship Highway"
+            },
+            {
+               "offset" : 37,
+               "value" : "Angeles"
+            },
+            {
+               "offset" : 46,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 56,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
+         "description" : "Locabomb, Lazatin Boulevard, San Fernando, Pampanga, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJPfew-GD3ljMRoTNBrkZ4mZ8",
+         "reference" : "ChIJPfew-GD3ljMRoTNBrkZ4mZ8",
+         "structured_formatting" : 
+         {
+            "main_text" : "Locabomb",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Lazatin Boulevard, San Fernando, Pampanga, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Locabomb"
+            },
+            {
+               "offset" : 10,
+               "value" : "Lazatin Boulevard"
+            },
+            {
+               "offset" : 29,
+               "value" : "San Fernando"
+            },
+            {
+               "offset" : 43,
+               "value" : "Pampanga"
+            },
+            {
+               "offset" : 53,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
+         "description" : "Locavore, Burgos Circle, Makati City, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJzYV6pvrIlzMRPSKQQ0prfeg",
+         "reference" : "ChIJzYV6pvrIlzMRPSKQQ0prfeg",
+         "structured_formatting" : 
+         {
+            "main_text" : "Locavore",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "Burgos Circle, Makati City, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Locavore"
+            },
+            {
+               "offset" : 10,
+               "value" : "Burgos Circle"
+            },
+            {
+               "offset" : 25,
+               "value" : "Makati City"
+            },
+            {
+               "offset" : 38,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 52,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "food",
+            "point_of_interest",
+            "restaurant"
+         ]
+      },
+      {
+         "description" : "Location One Eighty, San Fernando City, La Union, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJxRM8C3OOkTMRBXIwSKZJ3Gw",
+         "reference" : "ChIJxRM8C3OOkTMRBXIwSKZJ3Gw",
+         "structured_formatting" : 
+         {
+            "main_text" : "Location One Eighty",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 4,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "San Fernando City, La Union, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Location One Eighty"
+            },
+            {
+               "offset" : 21,
+               "value" : "San Fernando City"
+            },
+            {
+               "offset" : 40,
+               "value" : "La Union"
+            },
+            {
+               "offset" : 50,
                "value" : "Philippines"
             }
          ],
@@ -52,204 +265,6 @@
             "establishment",
             "lodging",
             "point_of_interest"
-         ]
-      },
-      {
-         "description" : "Kingspoint Subdivision, Quezon City, Metro Manila, Philippines",
-         "matched_substrings" : 
-         [
-            {
-               "length" : 4,
-               "offset" : 0
-            }
-         ],
-         "place_id" : "Ej5LaW5nc3BvaW50IFN1YmRpdmlzaW9uLCBRdWV6b24gQ2l0eSwgTWV0cm8gTWFuaWxhLCBQaGlsaXBwaW5lcyIuKiwKFAoSCXexYSMpsZczEYwoOqn6gekvEhQKEgl1c-9CCbqXMxFAPQj-2TKaSg",
-         "reference" : "Ej5LaW5nc3BvaW50IFN1YmRpdmlzaW9uLCBRdWV6b24gQ2l0eSwgTWV0cm8gTWFuaWxhLCBQaGlsaXBwaW5lcyIuKiwKFAoSCXexYSMpsZczEYwoOqn6gekvEhQKEgl1c-9CCbqXMxFAPQj-2TKaSg",
-         "structured_formatting" : 
-         {
-            "main_text" : "Kingspoint Subdivision",
-            "main_text_matched_substrings" : 
-            [
-               {
-                  "length" : 4,
-                  "offset" : 0
-               }
-            ],
-            "secondary_text" : "Quezon City, Metro Manila, Philippines"
-         },
-         "terms" : 
-         [
-            {
-               "offset" : 0,
-               "value" : "Kingspoint Subdivision"
-            },
-            {
-               "offset" : 24,
-               "value" : "Quezon City"
-            },
-            {
-               "offset" : 37,
-               "value" : "Metro Manila"
-            },
-            {
-               "offset" : 51,
-               "value" : "Philippines"
-            }
-         ],
-         "types" : 
-         [
-            "geocode",
-            "route"
-         ]
-      },
-      {
-         "description" : "Kingsville Executive Village Basketball Court, Napoleon Street, Antipolo City, Rizal, Philippines",
-         "matched_substrings" : 
-         [
-            {
-               "length" : 4,
-               "offset" : 0
-            }
-         ],
-         "place_id" : "ChIJvdEPKVq4lzMRziqVz8cSo2c",
-         "reference" : "ChIJvdEPKVq4lzMRziqVz8cSo2c",
-         "structured_formatting" : 
-         {
-            "main_text" : "Kingsville Executive Village Basketball Court",
-            "main_text_matched_substrings" : 
-            [
-               {
-                  "length" : 4,
-                  "offset" : 0
-               }
-            ],
-            "secondary_text" : "Napoleon Street, Antipolo City, Rizal, Philippines"
-         },
-         "terms" : 
-         [
-            {
-               "offset" : 0,
-               "value" : "Kingsville Executive Village Basketball Court"
-            },
-            {
-               "offset" : 47,
-               "value" : "Napoleon Street"
-            },
-            {
-               "offset" : 64,
-               "value" : "Antipolo City"
-            },
-            {
-               "offset" : 79,
-               "value" : "Rizal"
-            },
-            {
-               "offset" : 86,
-               "value" : "Philippines"
-            }
-         ],
-         "types" : 
-         [
-            "geocode",
-            "premise"
-         ]
-      },
-      {
-         "description" : "Kingstown2, Caloocan, Metro Manila, Philippines",
-         "matched_substrings" : 
-         [
-            {
-               "length" : 4,
-               "offset" : 0
-            }
-         ],
-         "place_id" : "ChIJ2Wa1asSxlzMRL1QQFgjeUdg",
-         "reference" : "ChIJ2Wa1asSxlzMRL1QQFgjeUdg",
-         "structured_formatting" : 
-         {
-            "main_text" : "Kingstown2",
-            "main_text_matched_substrings" : 
-            [
-               {
-                  "length" : 4,
-                  "offset" : 0
-               }
-            ],
-            "secondary_text" : "Caloocan, Metro Manila, Philippines"
-         },
-         "terms" : 
-         [
-            {
-               "offset" : 0,
-               "value" : "Kingstown2"
-            },
-            {
-               "offset" : 12,
-               "value" : "Caloocan"
-            },
-            {
-               "offset" : 22,
-               "value" : "Metro Manila"
-            },
-            {
-               "offset" : 36,
-               "value" : "Philippines"
-            }
-         ],
-         "types" : 
-         [
-            "geocode",
-            "political",
-            "sublocality",
-            "sublocality_level_2"
-         ]
-      },
-      {
-         "description" : "King Solomon, Caloocan, Metro Manila, Philippines",
-         "matched_substrings" : 
-         [
-            {
-               "length" : 4,
-               "offset" : 0
-            }
-         ],
-         "place_id" : "EjFLaW5nIFNvbG9tb24sIENhbG9vY2FuLCBNZXRybyBNYW5pbGEsIFBoaWxpcHBpbmVzIi4qLAoUChIJ16TGDCGwlzMR7tD3JIlI9OMSFAoSCV8bhBm1sZczERotBCXicOcF",
-         "reference" : "EjFLaW5nIFNvbG9tb24sIENhbG9vY2FuLCBNZXRybyBNYW5pbGEsIFBoaWxpcHBpbmVzIi4qLAoUChIJ16TGDCGwlzMR7tD3JIlI9OMSFAoSCV8bhBm1sZczERotBCXicOcF",
-         "structured_formatting" : 
-         {
-            "main_text" : "King Solomon",
-            "main_text_matched_substrings" : 
-            [
-               {
-                  "length" : 4,
-                  "offset" : 0
-               }
-            ],
-            "secondary_text" : "Caloocan, Metro Manila, Philippines"
-         },
-         "terms" : 
-         [
-            {
-               "offset" : 0,
-               "value" : "King Solomon"
-            },
-            {
-               "offset" : 14,
-               "value" : "Caloocan"
-            },
-            {
-               "offset" : 24,
-               "value" : "Metro Manila"
-            },
-            {
-               "offset" : 38,
-               "value" : "Philippines"
-            }
-         ],
-         "types" : 
-         [
-            "geocode",
-            "route"
          ]
       }
    ],

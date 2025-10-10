@@ -109,58 +109,6 @@
          ]
       },
       {
-         "description" : "Resorts World Bayshore Phase 1, J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines",
-         "matched_substrings" : 
-         [
-            {
-               "length" : 6,
-               "offset" : 0
-            }
-         ],
-         "place_id" : "ChIJO7pUPgLMlzMRq6nOfJ0gHGA",
-         "reference" : "ChIJO7pUPgLMlzMRq6nOfJ0gHGA",
-         "structured_formatting" : 
-         {
-            "main_text" : "Resorts World Bayshore Phase 1",
-            "main_text_matched_substrings" : 
-            [
-               {
-                  "length" : 6,
-                  "offset" : 0
-               }
-            ],
-            "secondary_text" : "J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines"
-         },
-         "terms" : 
-         [
-            {
-               "offset" : 0,
-               "value" : "Resorts World Bayshore Phase 1"
-            },
-            {
-               "offset" : 32,
-               "value" : "J.W. Diokno Boulevard"
-            },
-            {
-               "offset" : 55,
-               "value" : "Parañaque"
-            },
-            {
-               "offset" : 66,
-               "value" : "Metro Manila"
-            },
-            {
-               "offset" : 80,
-               "value" : "Philippines"
-            }
-         ],
-         "types" : 
-         [
-            "establishment",
-            "point_of_interest"
-         ]
-      },
-      {
          "description" : "Resort Paraiso Pampanga, Paraiso street, San Fernando, Pampanga, Philippines",
          "matched_substrings" : 
          [
@@ -203,6 +151,58 @@
             },
             {
                "offset" : 65,
+               "value" : "Philippines"
+            }
+         ],
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest"
+         ]
+      },
+      {
+         "description" : "Resorts World Bayshore Phase 1, J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines",
+         "matched_substrings" : 
+         [
+            {
+               "length" : 6,
+               "offset" : 0
+            }
+         ],
+         "place_id" : "ChIJO7pUPgLMlzMRq6nOfJ0gHGA",
+         "reference" : "ChIJO7pUPgLMlzMRq6nOfJ0gHGA",
+         "structured_formatting" : 
+         {
+            "main_text" : "Resorts World Bayshore Phase 1",
+            "main_text_matched_substrings" : 
+            [
+               {
+                  "length" : 6,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "J.W. Diokno Boulevard, Parañaque, Metro Manila, Philippines"
+         },
+         "terms" : 
+         [
+            {
+               "offset" : 0,
+               "value" : "Resorts World Bayshore Phase 1"
+            },
+            {
+               "offset" : 32,
+               "value" : "J.W. Diokno Boulevard"
+            },
+            {
+               "offset" : 55,
+               "value" : "Parañaque"
+            },
+            {
+               "offset" : 66,
+               "value" : "Metro Manila"
+            },
+            {
+               "offset" : 80,
                "value" : "Philippines"
             }
          ],

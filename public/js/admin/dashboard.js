@@ -1,212 +1,118 @@
 // Global filters state
-
 window.filters = {
-
     startDate: null,
-
     endDate: null
-
 };
 
 
 
 // Initialize date pickers
-
 let startDatePicker = null;
-
 let endDatePicker = null;
 
 
-
 $(document).ready(function() {
-
     initializeDatePickers();
-
     renderSummaryMetrics();
-
     renderCharts();
 
     // Initialize advanced analytics charts
     initializeAnalyticsCharts();
-
     triggerAutoCancellation();
 
-    
-
     // Event listener for apply filters button
-
     $('#applyFilters').on('click', applyFilters);
 
-    
-
     // Event listener for quick filter buttons
-
     $('.quick-filter').on('click', function() {
-
         const range = $(this).data('range');
-
         applyQuickFilter(range);
-
     });
 
-    
-
     // Event listener for reset button
-
     $('#resetFilters').on('click', resetFilters);
-
 });
 
 
 
 // Function to reset filters to default (This Year)
-
 function resetFilters() {
-
     // Reset to default date range (This Year)
-
     applyQuickFilter('this-year');
-
 }
 
-
-
 function initializeDatePickers() {
-
     // Initialize date inputs with Flatpickr
-
     const today = new Date();
-
     const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
 
-    
-
     // Flatpickr configuration
-
     const dateConfig = {
-
         altInput: true,
-
         altFormat: "F j, Y",
-
         dateFormat: "Y-m-d",
-
         allowInput: false,
-
         theme: "light"
-
     };
 
-    
-
     // Initialize start date picker
-
     startDatePicker = flatpickr("#startDate", {
-
         ...dateConfig,
-
         defaultDate: firstDayOfYear,
-
         allowInput: false,
-
         maxDate: today,
-
         onChange: function(selectedDates, dateStr) {
-
             if (selectedDates[0]) {
-
                 endDatePicker.set("minDate", selectedDates[0]);
-
                 // Clear active state from all quick filter buttons
-
                 $('.quick-filter').removeClass('active').addClass('btn-outline-success');
-
             }
-
         }
-
     });
-
-    
 
     // Initialize end date picker
-
     endDatePicker = flatpickr("#endDate", {
-
         ...dateConfig,
-
         defaultDate: today,
-
         maxDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
-
         minDate: firstDayOfYear,
-
         onChange: function(selectedDates, dateStr) {
-
             if (selectedDates[0]) {
-
                 startDatePicker.set("maxDate", selectedDates[0]);
-
                 // Clear active state from all quick filter buttons
-
                 $('.quick-filter').removeClass('active').addClass('btn-outline-success');
-
             }
-
         }
-
     });
 
-    
-
     window.filters.startDate = formatDate(firstDayOfYear);
-
     window.filters.endDate = formatDate(today);
 
-    
-
     // Highlight the "This Year" button by default
-
     $('.quick-filter[data-range="this-year"]').addClass('active').removeClass('btn-outline-success');
-
 }
 
 
 
 // Helper function to format date
-
 function formatDate(date) {
-
     const year = date.getFullYear();
-
     const month = String(date.getMonth() + 1).padStart(2, '0');
-
     const day = String(date.getDate()).padStart(2, '0');
-
     return `${year}-${month}-${day}`;
-
 }
 
 
 
 function applyFilters() {
-
     window.filters.startDate = startDatePicker.input.value;
-
     window.filters.endDate = endDatePicker.input.value;
 
-    
-
     // Clear active state from all quick filter buttons when manually applying filters
-
     $('.quick-filter').removeClass('active').addClass('btn-outline-success');
 
-    
-
     renderSummaryMetrics();
-
     renderCharts();
-
 }
 
 
@@ -214,638 +120,364 @@ function applyFilters() {
 // Function to apply quick filter based on predefined date ranges
 
 function applyQuickFilter(range) {
-
     const today = new Date();
-
     let startDate, endDate;
 
-    
-
     // Highlight the selected button
-
     $('.quick-filter').removeClass('active').addClass('btn-outline-success');
-
     $(`.quick-filter[data-range="${range}"]`).removeClass('btn-outline-success').addClass('active');
 
     
-
     switch (range) {
-
         case 'today':
-
             startDate = new Date(today);
-
             endDate = new Date(today);
-
             break;
-
-            
 
         case 'yesterday':
-
             startDate = new Date(today);
-
             startDate.setDate(startDate.getDate() - 1);
-
             endDate = new Date(startDate);
-
             break;
-
-            
 
         case 'this-week':
-
             startDate = new Date(today);
-
             startDate.setDate(startDate.getDate() - startDate.getDay()); // Start of week (Sunday)
-
             endDate = new Date(today);
-
             break;
-
-            
-
+          
         case 'last-week':
-
             startDate = new Date(today);
-
             startDate.setDate(startDate.getDate() - startDate.getDay() - 7); // Start of last week
-
             endDate = new Date(startDate);
-
             endDate.setDate(endDate.getDate() + 6); // End of last week (Saturday)
-
             break;
-
-            
 
         case 'this-month':
-
             startDate = new Date(today.getFullYear(), today.getMonth(), 1);
-
             endDate = new Date(today);
-
             break;
-
-            
 
         case 'last-month':
-
             startDate = new Date(today.getFullYear(), today.getMonth() - 1, 1);
-
             endDate = new Date(today.getFullYear(), today.getMonth(), 0);
-
             break;
-
-            
 
         case 'this-year':
-
             startDate = new Date(today.getFullYear(), 0, 1);
-
             endDate = new Date(today);
-
             break;
-
-            
 
         case 'last-year':
-
             startDate = new Date(today.getFullYear() - 1, 0, 1);
-
             endDate = new Date(today.getFullYear() - 1, 11, 31);
-
             break;
-
-            
 
         case 'all-time':
-
             startDate = new Date(2000, 0, 1); // Far past date
-
             endDate = new Date(today);
-
             $('.quick-filter').removeClass('active').addClass('btn-outline-success');
-
             $(`.quick-filter[data-range="all-time"]`).removeClass('btn-outline-success').addClass('btn-outline-secondary active');
-
             break;
 
-            
-
         default:
-
             return;
-
     }
 
-    
-
     // Update the date pickers
-
     startDatePicker.setDate(startDate);
-
     endDatePicker.setDate(endDate);
 
-    
-
     // Update the filters
-
     window.filters.startDate = formatDate(startDate);
-
     window.filters.endDate = formatDate(endDate);
 
     
-
     // Apply the filters
-
     renderSummaryMetrics();
-
     renderCharts();
 
     // Refresh advanced analytics charts
     if (typeof refreshAnalyticsCharts === 'function') {
         refreshAnalyticsCharts();
     }
-
 }
 
 
 
 // Global variable to hold chart instances
-
 let monthlyTrendsChartInstance = null;
-
 let paymentMethodChartInstance = null;  
-
 let destinationsChartInstance = null;
-
 let bookingStatusChartInstance = null;
-
 let revenueTrendsChartInstance = null;
-
 let unpaidBookingsChartInstance = null;
-
 let peakBookingPeriodsChartInstance = null;
-
 let totalIncomeChartInstance = null;
-
 let outstandingBalancesChartInstance = null;
-
 let topPayingClientsChartInstance = null;
-
 let discountsGivenChartInstance = null;
-
+let cancellationsByReasonChartInstance = null;
+let avgRevenuePerTripChartInstance = null;
+let busAvailabilityChartInstance = null;
+let driverAssignmentsChartInstance = null;
+let avgTripDurationChartInstance = null;
+let repeatClientsChartInstance = null;
+let clientSatisfactionChartInstance = null;
 
 
 async function renderCharts() {
-
     try {
-
         await renderPaymentMethodChart();
-
         await renderMonthlyTrendsChart();
-
         await renderTopDestinationsChart();
-
         await renderBookingStatusChart();
-
         await renderRevenueTrendsChart();
-
         await renderUnpaidBookingsChart();
-
         await renderPeakBookingPeriodsChart();
-
         await renderTotalIncomeChart();
-
         await renderOutstandingBalancesChart();
-
         await renderTopPayingClientsChart();
-
         await renderDiscountsGivenChart();
-
+        await renderCancellationsByReasonChart();
+        await renderAvgRevenuePerTripChart();
+        await renderBusAvailabilityChart();
+        await renderDriverAssignmentsChart();
+        await renderAvgTripDurationChart();
+        await renderRepeatClientsChart();
+        await renderClientSatisfactionChart();
     } catch (error) {
-
         console.error("Error rendering charts:", error);
-
     }
-
 }
 
 
 
 // Check for bookings that need urgent review
-
 async function checkUrgentReviewBookings() {
-
     try {
-
         const response = await $.ajax({
-
             url: "/admin/urgent-review-bookings",
-
             type: "GET",
-
             dataType: "json"    
-
         }); 
 
 
-
         if (response.success && response.count > 0) {
-
             showUrgentReviewAlert(response.bookings);
-
         }
-
     } catch (error) {
-
         console.error("Error checking urgent review bookings:", error);
-
     }
-
 }
 
 
-
 // Display an alert for urgent booking reviews
-
 function showUrgentReviewAlert(bookings) {
-
     // Create the alert container
-
     const alertContainer = $('<div class="alert alert-warning alert-dismissible fade show" role="alert">');
-
     
-
     // Create the alert content
-
     const alertTitle = $('<h4 class="alert-heading">').text('Urgent Booking Reviews Needed!');
-
     const alertText = $('<p>').text(`You have ${bookings.length} booking request(s) that need urgent review. These bookings will be automatically cancelled if not reviewed by their tour date.`);
 
-    
-
     // Create the booking list
-
     const bookingList = $('<ul class="list-group mt-3 mb-3">');
 
-    
-
     bookings.forEach(booking => {
-
         const daysText = booking.days_remaining == 0 ? 
-
             'TODAY' : 
-
             (booking.days_remaining == 1 ? 'TOMORROW' : `in ${booking.days_remaining} days`);
 
-            
-
         const urgencyClass = booking.days_remaining == 0 ? 
-
             'list-group-item-danger' : 
-
             (booking.days_remaining == 1 ? 'list-group-item-warning' : 'list-group-item-info');
 
-            
-
         const bookingItem = $(`
-
             <li class="list-group-item ${urgencyClass} d-flex justify-content-between align-items-center">
-
                 <div>
-
                     <strong>ID #${booking.booking_id}:</strong> ${booking.client_name} - ${booking.destination}
-
                     <br><small>Tour date: ${booking.formatted_date} (${daysText})</small>
-
                 </div>
-
                 <a href="print-invoice/${booking.booking_id}" target="blank" class="btn btn-sm btn-primary">Review</a>
-
             </li>
-
         `);
 
-        
-
         bookingList.append(bookingItem);
-
     });
 
-    
 
     // Check if there are any bookings with days_remaining <= 0 (overdue)
-
     const hasOverdueBookings = bookings.some(booking => booking.days_remaining <= 0);
 
-    
-
     // If there are overdue bookings, add an auto-cancel button
-
     let autoCancelButton = '';
 
     if (hasOverdueBookings) {
-
         autoCancelButton = $(`
-
             <div class="d-flex justify-content-end mt-3">
-
                 <button id="autoCancelOverdueBtn" class="btn btn-danger">
-
                     <i class="bi bi-x-circle"></i> Auto-Cancel Overdue Bookings
-
                 </button>
-
             </div>
-
         `);
-
     }
 
-    
 
     // Create the dismiss button
-
     const dismissButton = $('<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">');
 
-    
-
     // Assemble the alert
-
     alertContainer.append(alertTitle, alertText, bookingList);
 
     if (hasOverdueBookings) {
-
         alertContainer.append(autoCancelButton);
 
     }
 
     alertContainer.append(dismissButton);
 
-    
-
     // Add the alert to the page
-
     alertContainer.insertAfter('hr:first');
 
-    
-
     // Add event listener for auto-cancel button
-
     $('#autoCancelOverdueBtn').on('click', function() {
-
         if (confirm('Are you sure you want to automatically cancel all overdue booking requests? This action cannot be undone.')) {
-
             triggerAutoCancellation();
-
         }
-
     });
-
 }
 
 
 
 // Function to trigger auto-cancellation
-
 async function triggerAutoCancellation() {
-
     try {
-
         // Show loading state
-
         $('#autoCancelOverdueBtn').prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Processing...');
 
-        
-
         const response = await $.ajax({
-
             url: "/admin/manual-auto-cancellation",
-
             type: "GET",
-
             dataType: "json"
-
         });
 
-        
-
         if (response.success && response.cancelled_bookings && response.cancelled_bookings.length > 0) {
-
             // Create success alert only if something was actually cancelled
-
             const successAlert = $(`
-
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-
                     <h4 class="alert-heading">Auto-Cancellation Complete</h4>
-
                     <p>${response.message}</p>
-
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-
                 </div>
-
             `);
 
-            
-
             // If there were cancelled bookings, show details
-
             const cancelledList = $('<ul class="list-group mt-3 mb-3">');
-
             response.cancelled_bookings.forEach(booking => {
-
                 const formattedDate = new Date(booking.date_of_tour).toLocaleDateString('en-US', {
-
                     year: 'numeric', 
-
                     month: 'long', 
-
                     day: 'numeric'
-
                 });
 
                 const bookingItem = $(`
-
                     <li class="list-group-item list-group-item-danger">
-
                         <strong>ID #${booking.booking_id}:</strong> ${booking.client_name} - ${booking.destination}
-
                         <br><small>Tour date: ${formattedDate}</small>
-
                     </li>
-
                 `);
 
                 cancelledList.append(bookingItem);
-
             });
 
             successAlert.append(cancelledList);
 
             // Add to page and remove original alert if present
-
             successAlert.insertAfter('hr:first');
-
             $('.alert-warning').alert('close');
-
-            
 
             // Refresh metrics after a short delay
-
             setTimeout(() => {
-
                 renderSummaryMetrics();
-
             }, 1000);
-
         } else {
-
             // No overdue bookings cancelled; ensure no success banner is shown
-
             // Optionally close any stale warning alert
-
             $('.alert-warning').alert('close');
-
         }
 
     } catch (error) {
-
         console.error("Error triggering auto-cancellation:", error);
-
         // Avoid noisy alerts when nothing to cancel; only show if explicit failure
-
         // alert('An error occurred while processing auto-cancellations. Please try again.');
-
         $('#autoCancelOverdueBtn').prop('disabled', false).html('<i class="bi bi-x-circle"></i> Auto-Cancel Overdue Bookings');
-
     }
 
 }
 
 
-
 // Helper function to display error message in chart container
-
 function displayChartError(containerId, message) {
-
     const container = $(`#${containerId}`).parent();
-
     container.html(`
-
         <div class="text-center py-5">
-
             <div class="text-danger mb-2"><i class="bi bi-exclamation-triangle fs-3"></i></div>
-
             <p class="text-muted">${message}</p>
-
             <button class="btn btn-sm btn-outline-secondary mt-2" onclick="location.reload()">
-
                 <i class="bi bi-arrow-clockwise"></i> Reload
-
             </button>
-
         </div>
-
     `);
-
 }
 
 
 
 async function getSummaryMetrics() {
-
     try {
-
         const response = await $.ajax({
-
             url: "/admin/summary-metrics",
-
             type: "POST",
-
             dataType: "json",
-
             contentType: "application/json",
-
             data: JSON.stringify({
-
                 start_date: window.filters.startDate,
-
                 end_date: window.filters.endDate
-
             })
-
         });
 
-    
-
         return response;
-
     } catch (error) {
-
         console.error("Error fetching data: ", error);
-
     }
-
 }
 
 
 
 async function renderSummaryMetrics() {
-
     try {
-
         const summaryMetrics = await getSummaryMetrics();
 
-        
-
         if (!summaryMetrics) {
-
             console.error("Invalid summary metrics received:", summaryMetrics);
-
             return;
-
         }
 
-
-
-        console.log(summaryMetrics);
-
-
-
         $("#totalBookings").text(summaryMetrics.total_bookings || 0);
-
         $("#totalRevenue").text(parseFloat(summaryMetrics.total_revenue || 0).toLocaleString('en-PH', { style: 'currency', currency: 'PHP' }));
-
         $("#upcomingTrips").text(summaryMetrics.upcoming_trips || 0);
-
         $("#pendingBookings").text(summaryMetrics.pending_bookings || 0);
-
         $("#flaggedBookings").text(summaryMetrics.flagged_bookings || 0); 
-
     } catch (error) {
-
         console.error("Error rendering summary metrics:", error);
 
-        
-
         // Set default values in case of error
-
         $("#totalBookings").text("0");
-
         $("#totalRevenue").text("0");
-
         $("#upcomingTrips").text("0");
-
         $("#pendingBookings").text("0");
-
         $("#flaggedBookings").text("0");
-
     }
-
 }
 
 
@@ -1014,9 +646,26 @@ async function renderPaymentMethodChart() {
 
                                 const amount = paymentMethodData.amounts[context.dataIndex];
 
-                                return `${context.label}: ${value} (${percentage}%) - ₱${amount.toLocaleString()}`;
+                                return [
+                                    `${context.label}: ${value} (${percentage}%)`,
+                                    `Amount: ₱${amount.toLocaleString()}`
+                                ]
 
                             }
+
+                        }
+
+                    },
+
+                    title: {
+
+                        display: true,
+
+                        font: {
+
+                            size: 16,
+
+                            weight: 'bold'
 
                         }
 
@@ -1191,8 +840,6 @@ async function renderMonthlyTrendsChart() {
                     title: {
 
                         display: true,
-
-                        text: `Booking Trends`,
 
                         font: {
 
@@ -1772,8 +1419,6 @@ async function renderBookingStatusChart() {
 
                         display: true,
 
-                        text: 'Booking Status Distribution',
-
                         font: {
 
                             size: 16,
@@ -1828,15 +1473,9 @@ async function getRevenueTrendsData() {
 
         });
 
-
-
-        console.log("Revenue Trends Data:", response);
-
         return response;
 
     } catch (error) {
-
-        console.error("Error fetching revenue trends data: ", error);
 
         return null;
 
@@ -1973,8 +1612,6 @@ async function renderRevenueTrendsChart() {
                     title: {
 
                         display: true,
-
-                        text: 'Revenue Trends',
 
                         font: {
 
@@ -2259,8 +1896,6 @@ async function renderUnpaidBookingsChart() {
                     title: {
 
                         display: true,
-
-                        text: 'Payment Status Distribution',
 
                         font: {
 
@@ -2799,79 +2434,42 @@ async function renderOutstandingBalancesChart() {
             },
 
             options: {
-
                 responsive: true,
-
                 plugins: {
-
                     legend: {
-
                         display: false
-
                     },
-
                     tooltip: {
-
                         callbacks: {
-
                             label: function(context) {
-
                                 return `Outstanding: ₱${context.raw.toLocaleString()}`;
-
                             }
-
                         }
-
                     },
-
                     title: {
-
                         display: true,
-
                         text: 'Outstanding Balances',
-
                         font: {
-
                             size: 16,
-
                             weight: 'bold'
-
                         }
-
                     }
-
                 },
-
                 scales: {
-
                     y: {
-
                         beginAtZero: true,
-
                         title: {
-
                             display: true,
-
                             text: 'Amount (₱)'
-
                         },
-
                         ticks: {
-
                             callback: function(value) {
-
                                 return '₱' + value.toLocaleString();
-
                             }
-
                         }
-
                     }
-
                 }
-
             }
-
         });
 
 
@@ -3256,4 +2854,303 @@ async function renderDiscountsGivenChart() {
 
     }
 
+}
+
+
+// Cancellations by Reason Chart
+async function getCancellationsByReasonData() {
+    try {
+        const response = await $.ajax({
+            url: "/admin/cancellations-by-reason",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify({
+                start_date: window.filters.startDate,
+                end_date: window.filters.endDate
+            })
+        });
+        return response;
+    } catch (error) {
+        console.error("Error fetching cancellations by reason data: ", error);
+        return null;
+    }
+}
+
+async function renderCancellationsByReasonChart() {
+    try {
+        const data = await getCancellationsByReasonData();
+        if (!data || !data.labels || !data.counts) {
+            displayChartError("cancellationsByReasonChart", "Unable to load cancellations data. Please try again later.");
+            return;
+        }
+
+        const ctx = $("#cancellationsByReasonChart")[0].getContext("2d");
+        if (cancellationsByReasonChartInstance) {
+            cancellationsByReasonChartInstance.destroy();
+        }
+        cancellationsByReasonChartInstance = new Chart(ctx, {
+            type: "doughnut",
+            data: {
+                labels: data.labels,
+                datasets: [{
+                    data: data.counts,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)',
+                        'rgba(255, 159, 64, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 206, 86)',
+                        'rgb(75, 192, 192)',
+                        'rgb(153, 102, 255)',
+                        'rgb(255, 159, 64)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    title: {
+                        display: true,
+                        text: 'Cancellations by Reason',
+                        font: { size: 16, weight: 'bold' }
+                    }
+                }
+            }
+        });
+    } catch (error) {
+        console.error("Error rendering cancellations by reason chart:", error);
+        displayChartError("cancellationsByReasonChart", "Error rendering chart. Please try again.");
+    }
+}
+
+
+// Average Revenue per Trip Chart
+async function getAvgRevenuePerTripData() {
+    try {
+        const response = await $.ajax({
+            url: "/admin/average-revenue-per-trip",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify({
+                start_date: window.filters.startDate,
+                end_date: window.filters.endDate
+            })
+        });
+        return response;
+    } catch (error) {
+        console.error("Error fetching average revenue per trip data: ", error);
+        return null;
+    }
+}
+
+async function renderAvgRevenuePerTripChart() {
+    try {
+        const data = await getAvgRevenuePerTripData();
+        if (!data || !data.labels || !data.amounts) {
+            displayChartError("avgRevenuePerTripChart", "Unable to load average revenue data. Please try again later.");
+            return;
+        }
+
+        const ctx = $("#avgRevenuePerTripChart")[0].getContext("2d");
+        if (avgRevenuePerTripChartInstance) {
+            avgRevenuePerTripChartInstance.destroy();
+        }
+        avgRevenuePerTripChartInstance = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: data.labels,
+                datasets: [{
+                    label: "Avg Revenue / Trip",
+                    data: data.amounts,
+                    borderColor: 'rgb(13, 110, 253)',
+                    backgroundColor: 'rgba(13, 110, 253, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `Avg: ₱${Number(context.raw || 0).toLocaleString()}`;
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Average Revenue per Trip',
+                        font: { size: 16, weight: 'bold' }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Amount (₱)' },
+                        ticks: {
+                            callback: function(value) { return '₱' + Number(value).toLocaleString(); }
+                        }
+                    }
+                }
+            }
+        });
+    } catch (error) {
+        console.error("Error rendering average revenue per trip chart:", error);
+        displayChartError("avgRevenuePerTripChart", "Error rendering chart. Please try again.");
+    }
+}
+
+
+// Active vs Unavailable Buses
+async function getBusAvailabilityData() {
+    try {
+        const response = await $.ajax({
+            url: "/admin/bus-availability-data",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify({ start_date: window.filters.startDate, end_date: window.filters.endDate })
+        });
+        return response;
+    } catch (e) { console.error("Error fetching bus availability:", e); return null; }
+}
+
+async function renderBusAvailabilityChart() {
+    try {
+        const data = await getBusAvailabilityData();
+        if (!data || !data.labels || !data.counts) { displayChartError("busAvailabilityChart", "Unable to load bus availability data."); return; }
+        const ctx = $("#busAvailabilityChart")[0].getContext("2d");
+        if (busAvailabilityChartInstance) busAvailabilityChartInstance.destroy();
+        busAvailabilityChartInstance = new Chart(ctx, {
+            type: "doughnut",
+            data: { labels: data.labels, datasets: [{ data: data.counts, backgroundColor: ['#19875466','#0d6efd66','#ffc10766'], borderColor: ['#198754','#0d6efd','#ffc107'] }] },
+            options: { responsive: true, plugins: { legend: { position: 'bottom' }, title: { display: true, text: 'Bus Availability' } } }
+        });
+    } catch (e) { console.error("Error rendering bus availability chart:", e); displayChartError("busAvailabilityChart", "Error rendering chart."); }
+}
+
+// Driver Assignments per Day
+async function getDriverAssignmentsPerDayData() {
+    try {
+        const response = await $.ajax({
+            url: "/admin/driver-assignments-per-day",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify({ start_date: window.filters.startDate, end_date: window.filters.endDate })
+        });
+        return response;
+    } catch (e) { console.error("Error fetching driver assignments:", e); return null; }
+}
+
+async function renderDriverAssignmentsChart() {
+    try {
+        const data = await getDriverAssignmentsPerDayData();
+        if (!data || !data.labels || !data.counts) { displayChartError("driverAssignmentsChart", "Unable to load driver assignments data."); return; }
+        const ctx = $("#driverAssignmentsChart")[0].getContext("2d");
+        if (driverAssignmentsChartInstance) driverAssignmentsChartInstance.destroy();
+        driverAssignmentsChartInstance = new Chart(ctx, {
+            type: "bar",
+            data: { labels: data.labels, datasets: [{ label: 'Assignments', data: data.counts, backgroundColor: '#20c99766', borderColor: '#20c997' }] },
+            options: { responsive: true, plugins: { legend: { display: false }, title: { display: true, text: 'Driver Assignments per Day' } }, scales: { y: { beginAtZero: true } } }
+        });
+    } catch (e) { console.error("Error rendering driver assignments chart:", e); displayChartError("driverAssignmentsChart", "Error rendering chart."); }
+}
+
+// Average Trip Duration
+async function getAvgTripDurationData() {
+    try {
+        const response = await $.ajax({
+            url: "/admin/average-trip-duration",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify({ start_date: window.filters.startDate, end_date: window.filters.endDate })
+        });
+        return response;
+    } catch (e) { console.error("Error fetching avg trip duration:", e); return null; }
+}
+
+async function renderAvgTripDurationChart() {
+    try {
+        const data = await getAvgTripDurationData();
+        if (!data || !data.labels || !data.amounts) { displayChartError("avgTripDurationChart", "Unable to load avg trip duration data."); return; }
+        const ctx = $("#avgTripDurationChart")[0].getContext("2d");
+        if (avgTripDurationChartInstance) avgTripDurationChartInstance.destroy();
+        avgTripDurationChartInstance = new Chart(ctx, {
+            type: "line",
+            data: { labels: data.labels, datasets: [{ label: 'Avg Days', data: data.amounts, borderColor: '#6610f2', backgroundColor: '#6610f233', fill: true, tension: 0.4 }] },
+            options: { responsive: true, plugins: { legend: { display: false }, title: { display: true, text: 'Average Trip Duration (days)' } }, scales: { y: { beginAtZero: true } } }
+        });
+    } catch (e) { console.error("Error rendering avg trip duration chart:", e); displayChartError("avgTripDurationChart", "Error rendering chart."); }
+}
+
+// Repeat Clients
+async function getRepeatClientsData() {
+    try {
+        const response = await $.ajax({
+            url: "/admin/repeat-clients-data",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify({ start_date: window.filters.startDate, end_date: window.filters.endDate })
+        });
+        return response;
+    } catch (e) { console.error("Error fetching repeat clients:", e); return null; }
+}
+
+async function renderRepeatClientsChart() {
+    try {
+        const data = await getRepeatClientsData();
+        if (!data || !data.labels || !data.counts) { displayChartError("repeatClientsChart", "Unable to load repeat clients data."); return; }
+        const ctx = $("#repeatClientsChart")[0].getContext("2d");
+        if (repeatClientsChartInstance) repeatClientsChartInstance.destroy();
+        repeatClientsChartInstance = new Chart(ctx, {
+            type: "doughnut",
+            data: { labels: data.labels, datasets: [{ data: data.counts, backgroundColor: ['#0dcaf066','#19875466'], borderColor: ['#0dcaf0','#198754'] }] },
+            options: { responsive: true, plugins: { legend: { position: 'bottom' }, title: { display: true, text: 'Repeat vs Single Clients' } } }
+        });
+    } catch (e) { console.error("Error rendering repeat clients chart:", e); displayChartError("repeatClientsChart", "Error rendering chart."); }
+}
+
+// Client Satisfaction
+async function getClientSatisfactionSummary() {
+    try {
+        const response = await $.ajax({
+            url: "/admin/client-satisfaction-summary",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify({ start_date: window.filters.startDate, end_date: window.filters.endDate })
+        });
+        return response;
+    } catch (e) { console.error("Error fetching client satisfaction:", e); return null; }
+}
+
+async function renderClientSatisfactionChart() {
+    try {
+        const data = await getClientSatisfactionSummary();
+        if (!data || !data.labels || !data.counts) { displayChartError("clientSatisfactionChart", "Unable to load satisfaction data."); return; }
+        const ctx = $("#clientSatisfactionChart")[0].getContext("2d");
+        if (clientSatisfactionChartInstance) clientSatisfactionChartInstance.destroy();
+        clientSatisfactionChartInstance = new Chart(ctx, {
+            type: "bar",
+            data: { labels: data.labels, datasets: [{ label: 'Ratings Count', data: data.counts, backgroundColor: '#fd7e1466', borderColor: '#fd7e14' }] },
+            options: { responsive: true, plugins: { legend: { display: false }, title: { display: true, text: 'Client Satisfaction (Approved Reviews)' } }, scales: { y: { beginAtZero: true } } }
+        });
+        $("#avgSatisfactionRating").text((data.average ?? '-'));
+    } catch (e) { console.error("Error rendering client satisfaction chart:", e); displayChartError("clientSatisfactionChart", "Error rendering chart."); }
 }

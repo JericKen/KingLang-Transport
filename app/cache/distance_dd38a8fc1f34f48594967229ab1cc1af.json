@@ -1,13 +1,13 @@
 {
    "destination_addresses" : 
    [
-      "G299+GW5, Newport Blvd, Pasay City, 1309 Metro Manila, Philippines",
+      "Tallinn, Estonia",
       "295-B, Purok 4, M. L. Quezon Ave, Lower Bicutan, Taguig, 1632 Metro Manila, Philippines"
    ],
    "origin_addresses" : 
    [
       "295-B, Purok 4, M. L. Quezon Ave, Lower Bicutan, Taguig, 1632 Metro Manila, Philippines",
-      "G299+GW5, Newport Blvd, Pasay City, 1309 Metro Manila, Philippines"
+      "Tallinn, Estonia"
    ],
    "rows" : 
    [
@@ -15,17 +15,7 @@
          "elements" : 
          [
             {
-               "distance" : 
-               {
-                  "text" : "8.2 km",
-                  "value" : 8214
-               },
-               "duration" : 
-               {
-                  "text" : "22 mins",
-                  "value" : 1344
-               },
-               "status" : "OK"
+               "status" : "ZERO_RESULTS"
             },
             {
                "distance" : 
@@ -59,17 +49,7 @@
                "status" : "OK"
             },
             {
-               "distance" : 
-               {
-                  "text" : "10.0 km",
-                  "value" : 10011
-               },
-               "duration" : 
-               {
-                  "text" : "24 mins",
-                  "value" : 1415
-               },
-               "status" : "OK"
+               "status" : "ZERO_RESULTS"
             }
          ]
       }
